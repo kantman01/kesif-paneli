@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Fauna+One&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="card.css">
-    <link rel="stylesheet" href="filter.css">
+    <link rel="stylesheet" href="./card.css">
+    <link rel="stylesheet" href="./filter.css">
     
     <style>
         /* TEMEL YERLEŞİM */
@@ -293,6 +293,12 @@
 
     <button id="open-sidebar" onclick="toggleSidebar()" style="display:none;">❯</button>
 
+    <!-- Ancient Language Slogan Overlay -->
+    <div id="ancientSlogan" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.85); color: #d4af37; padding: 30px 50px; border-radius: 10px; font-family: 'Cinzel', serif; font-size: 2rem; text-align: center; z-index: 10000; display: none; box-shadow: 0 10px 40px rgba(0,0,0,0.6); border: 2px solid #d4af37;">
+        <div id="sloganText"></div>
+        <div id="sloganTranslation" style="font-size: 1rem; margin-top: 10px; color: #ccc; font-family: 'Lora', serif;"></div>
+    </div>
+
     <div id="map"></div>
 
     <div class="card-container" id="infoCard" style="display:none;">
@@ -318,8 +324,9 @@
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="card.js"></script>
-    <script src="filter.js"></script>
+    <script src="./data.js"></script>
+    <script src="./card.js"></script>
+    <script src="./filter.js"></script>
     <script>
         // Harita Başlatma
         var map = L.map('map', {
@@ -332,30 +339,35 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
         var markers = [];
+        var ancientMarkers = [];
         var allData = [];
-        var ancientSites = [];
+        var allAncientSites = [];
 
-        async function loadData() {
+        function loadData() {
+            // Posts verisi yükleme (Netlify API)
             try {
-                // Eski veri yükleme (posts/)
-                const response = await fetch('/.netlify/functions/scan'); 
-                if (response.ok) {
-                    allData = await response.json();
-                    renderMarkers(allData);
-                }
+                fetch('/.netlify/functions/scan')
+                    .then(response => response.json())
+                    .then(data => {
+                        allData = data;
+                        renderMarkers(allData);
+                        updateTotalCount();
+                    })
+                    .catch(err => {
+                        console.warn('⚠️ Posts verisi yüklenemedi (bu yerel ortamda normal):', err.message);
+                        // Yerel ortamda sorun değil - sadece harita görüntülenecek
+                    });
             } catch (err) {
-                console.error("Veri yüklenemedi:", err);
+                console.warn('⚠️ Posts API ulaşılamaz.', err.message);
             }
             
-            // Yunan ve Roma eserleri yükle
-            try {
-                const ancientResponse = await fetch('../data/ancient-sites.json');
-                if (ancientResponse.ok) {
-                    ancientSites = await ancientResponse.json();
-                    renderAncientSiteMarkers(ancientSites);
-                }
-            } catch (err) {
-                console.error("Ancient sites verileri yüklenemedi:", err);
+            // Yunan ve Roma eserleri (global data.js dosyasından)
+            if (typeof ANCIENT_SITES !== 'undefined' && Array.isArray(ANCIENT_SITES)) {
+                allAncientSites = ANCIENT_SITES;
+                console.log(`✓ ${ANCIENT_SITES.length} antik site yüklendi`);
+                renderAncientSiteMarkers();
+            } else {
+                console.warn('⚠️ ANCIENT_SITES verisi bulunamadı. data.js dosyası yüklenmemiş olabilir.');
             }
         }
 
@@ -372,11 +384,30 @@
                     markers.push(m);
                 }
             });
-            document.getElementById('count').innerText = markers.length;
+            updateTotalCount();
         }
 
-        function renderAncientSiteMarkers(sites) {
-            sites.forEach(site => {
+        function updateTotalCount() {
+            const totalCount = markers.length + ancientMarkers.length;
+            document.getElementById('count').innerText = totalCount;
+        }
+
+        function renderAncientSiteMarkers() {
+            // Eski marker'ları temizle
+            ancientMarkers.forEach(m => map.removeLayer(m));
+            ancientMarkers = [];
+            
+            // Filtreleri al
+            const civFilter = document.getElementById('civilizationFilter').value;
+            
+            // Filtreleme
+            let filteredSites = allAncientSites;
+            if (civFilter !== 'all') {
+                filteredSites = allAncientSites.filter(site => site.type.includes(civFilter));
+            }
+            
+            // Marker'ları render et
+            filteredSites.forEach(site => {
                 if (site.latitude && site.longitude) {
                     // Tür ve renge göre marker rengi
                     let markerColor = '#8b0000'; // Kırmızı - varsayılan
@@ -401,8 +432,11 @@
                     marker.on('click', () => {
                         showAncientSiteCard(site);
                     });
+                    ancientMarkers.push(marker);
                 }
             });
+            
+            updateTotalCount();
         }
 
         function showAncientSiteCard(site) {

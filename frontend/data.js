@@ -1,2991 +1,3866 @@
-﻿const ANCIENT_SITES = [
-    {
-        "name":  "Abydos (Hellespont)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Gold_stater_reverse_Philippos_CdM_Paris_FG1973-1-71.jpg/600px-Gold_stater_reverse_Philippos_CdM_Paris_FG1973-1-71.jpg",
-        "latitude":  40.19528,
-        "description":  "Abydos (Ancient Greek: Ἄβυδος, Latin: Abydus) was an ancient city and bishopric in Mysia.[nb 1] It was located at the Nara Burnu promontory on the Asian coast of the Hellespont (the straits of Dardanelles), opposite the ancient city of Sestos, and near the city of Çanakkale in Turkey. Abydos was founded in c. 670 BC at the most narrow point in the straits,[1] and thus was one of the main crossing points between Europe and Asia, until its replacement by the crossing between Lampsacus and Kallipolis in the 13th century,[5] and the abandonment of Abydos in the early 14th century.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Abydos_(Hellespont)",
-        "type":  "Greek",
-        "longitude":  26.405
-    },
-    {
-        "name":  "Acharaca",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  37.9,
-        "description":  "Acharaca (Ancient Greek: Ἀχάρακα) was a village of ancient Lydia, Anatolia on the road from Tralles (modern Aydın, Turkey) to Nysa on the Maeander, with a Ploutonion or a temple of Pluto, and a cave, named Charonium (Ancient Greek: Χαρώνειον άντρον), where the sick were healed under the direction of the priests.[1] There is some indication that it once bore the name Charax (Χάραξ), but that name may have belonged to Tralles.[2][3] Its location is now the site of the modern town of Salavatlı. Recoveries from archaeological excavations are housed at the Aydın Archaeological Museum.\n",
-        "link":  "https://en.wikipedia.org//wiki/Acharaca",
-        "type":  "Greek",
-        "longitude":  28.1
-    },
-    {
-        "name":  "Achilleion (Troad)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.915,
-        "description":  "Achilleion (Ancient Greek: Ἀχίλλειον, romanized: Achilleion; Latin: Achilleum or Achilleium) was an ancient Greek city in the south-west of the Troad region of Anatolia.[1] It has been located on a promontory known as Beşika Burnu (\u0027cradle promontory\u0027) about 8 km south of Sigeion.[2] Beşika Burnu is 2 km south of the modern village of Yeniköy in the Ezine district of Çanakkale Province, Turkey.[3] The site considered in classical antiquity to be the tomb of Achilles is a short distance inland at a tumulus known as Beşiktepe.[4] Achilleion in the Troad is not to be confused with Achilleion near Smyrna and Achilleion in the territory of Tanagra.[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Achilleion_(Troad)",
-        "type":  "Greek",
-        "longitude":  26.1525
-    },
-    {
-        "name":  "Adada (Pisidia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  37.57528,
-        "description":  "Adada is an ancient city and archaeological site in ancient Pisidia, north of Selge and east of Kestros River, near the village of Sağrak, in Isparta Province’s Sütçüler township. The location was identified as Karabavullu or Karabavli, about 35 km south of Lake Egridir.\n",
-        "link":  "https://en.wikipedia.org//wiki/Adada_(Pisidia)",
-        "type":  "Greek",
-        "longitude":  30.9830551
-    },
-    {
-        "name":  "Adıyaman",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/AdiyamanUhrturm.jpg/800px-AdiyamanUhrturm.jpg",
-        "latitude":  37.76389,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Ad%C4%B1yaman",
-        "type":  "Greek/Roman",
-        "longitude":  38.27778
-    },
-    {
-        "name":  "Adramyttium",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.497776,
-        "description":  "Adramyttium[nb 1] (Greek: Άδραμύττιον Adramyttion, Άδραμύττειον Adramytteion, or Άτραμύττιον Atramyttion) was an ancient city and bishopric in Aeolis, in modern-day Turkey. It was originally located at the head of the Gulf of Adramyttium, at Ören in the Plain of Thebe, 4 kilometres west of the modern town of Burhaniye, but later moved 13 kilometres northeast to its current location and became known as Edremit.\n",
-        "link":  "https://en.wikipedia.org//wiki/Adramyttium",
-        "type":  "Greek",
-        "longitude":  26.9375
-    },
-    {
-        "name":  "Aegospotami",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
-        "latitude":  40.36407,
-        "description":  "Aegospotami (Ancient Greek: Αἰγὸς Ποταμοί, Aigos Potamoi) or Aegospotamos[1] (i.e. Goat Streams) is the ancient Greek name for a small river issuing into the Hellespont (Modern Turkish Çanakkale Boğazı), northeast of Sestos.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Aegospotami",
-        "type":  "Greek",
-        "longitude":  26.6308327
-    },
-    {
-        "name":  "Ağlasun",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blick_auf_A%C4%9Flasun.jpg/800px-Blick_auf_A%C4%9Flasun.jpg",
-        "latitude":  37.6494446,
-        "description":  "Ağlasun (from Greek Αγαλασσός Agalassos, in turn from Koine Greek Σαγαλασσός Sagalassos, in turn from Hittite Salawassa) is a town and district of Burdur Province in the Mediterranean region of Turkey. The mayor is Aydın Kaplan (MHP).\n",
-        "link":  "https://en.wikipedia.org//wiki/A%C4%9Flasun",
-        "type":  "Greek",
-        "longitude":  30.53389
-    },
-    {
-        "name":  "Aigai (Aeolis)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/AigaiMarkthalle1.jpg/800px-AigaiMarkthalle1.jpg",
-        "latitude":  38.8311119,
-        "description":  "Aigai, also Aigaiai (Ancient Greek: Αἰγαί or Αἰγαῖαι; Latin: Aegae or Aegaeae; Turkish: Nemrutkale or Nemrut Kalesi), was an ancient Greek, later Roman (Ægæ, Aegae), city and bishopric in Aeolis. Aegae is mentioned by both Herodotus[1] and Strabo[2] as being a member of the Aeolian dodecapolis. It was also an important sanctuary of Apollo. Aigai had its brightest period under the Attalid dynasty, which ruled from nearby Pergamon in the 3rd and 2nd century BC.\n",
-        "link":  "https://en.wikipedia.org//wiki/Aigai_(Aeolis)",
-        "type":  "Greek",
-        "longitude":  27.188612
-    },
-    {
-        "name":  "Aizanoi",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Aizanoi.ZeusTemple.jpg/800px-Aizanoi.ZeusTemple.jpg",
-        "latitude":  39.2,
-        "description":  "Aizanoi (Ancient Greek: Αἰζανοί), Latinized as Aezani, was an Ancient Greek city in western Anatolia. Located in what is now Çavdarhisar, near Kütahya, its ruins are situated astride the River Penkalas, some 1,000 m (3,300 ft) above sea level. The city was an important political and economic centre in Roman times; surviving remains from the period include a well-preserved Temple of Zeus, unusual combined theatre-stadium complex, and macellum inscribed with the Price Edict of Diocletian. The city fell into decline in Late Antiquity. Later serving as a citadel, in 2012 the site was submitted for inscription on the UNESCO World Heritage List.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Aizanoi",
-        "type":  "Greek/Roman",
-        "longitude":  29.6166668
-    },
-    {
-        "name":  "Alaşehir",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Manisa_districts.png/776px-Manisa_districts.png",
-        "latitude":  38.35,
-        "description":  "Alaşehir (Turkish pronunciation: [aˈɫaʃehiɾ]), in Antiquity and the Middle Ages known as Philadelphia (Greek: Φιλαδέλφεια, i.e., \"the city of him who loves his brother\"), is a town and district of Manisa Province in the Aegean region of Turkey. It is situated in the valley of the Kuzuçay (Cogamus in antiquity), at the foot of the Bozdağ Mountain (Mount Tmolus in antiquity). The town is connected to İzmir by a 105 km (65 mi) railway. The longtime mayor is Gökhan Karaçoban.\n",
-        "link":  "https://en.wikipedia.org//wiki/Ala%C5%9Fehir",
-        "type":  "Greek",
-        "longitude":  28.5166664
-    },
-    {
-        "name":  "Alexandria Troas",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Troas_Therme_2.JPG/800px-Troas_Therme_2.JPG",
-        "latitude":  39.751667,
-        "description":  "Alexandria Troas (\"Alexandria of the Troad\"; Greek: Αλεξάνδρεια Τρωάς; Turkish: Eski Stambul) is the site of an ancient Greek city situated on the Aegean Sea near the northern tip of Turkey\u0027s western coast, the area known historically as Troad. a little south of Tenedos (modern Bozcaada). It is located southeast of modern Dalyan, a village in the Ezine district of Çanakkale Province. The site sprawls over an estimated 400 hectares (990 acres); among the few structures remaining today are a ruined bath, an odeon, a theatre, gymnasium complex[1] and a recently uncovered stadion.[2]  The circuit of the old walls can still be traced.\n",
-        "link":  "https://en.wikipedia.org//wiki/Alexandria_Troas",
-        "type":  "Greek/Roman",
-        "longitude":  26.1586113
-    },
-    {
-        "name":  "Alinda",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Alinda_Agora.JPG/800px-Alinda_Agora.JPG",
-        "latitude":  37.5583344,
-        "description":  "Alinda (Ancient Greek: Ἄλινδα) was an inland city and bishopric in ancient Caria, in Asia Minor (Anatolia). Modern scholars identify Alinda with the Hellenistic foundation of Alexandria ad Latmum (Ἀλεξάνδρεια πρὸς τῷ Λάτμῳ) noted by Stephanus of Byzantium.[1][2][3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Alinda",
-        "type":  "Greek/Roman",
-        "longitude":  27.82361
-    },
-    {
-        "name":  "Allianoi",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  39.2347221,
-        "description":  "Allianoi (Greek: Αλλιανοί), is an ancient spa settlement, with remains dating predominantly from the Roman Empire period (2nd century AD) located near the city of Bergama (ancient Pergamon) in Turkey\u0027s İzmir Province. The site is at a distance of 18 kilometers to the northeast of Bergama, on the road to the neighboring town of İvrindi. Allianoi is directly inside the reservoir of the Yortanlı Dam, built by the Turkish State Hydraulic Works. After ongoing discussion in Turkey with regards to preserving Allianoi\u0027s ruins, the site was covered with sand and the dam was activated, resulting in Allianoi\u0027s complete inundation and destruction in February 2011.[citation needed]\n",
-        "link":  "https://en.wikipedia.org//wiki/Allianoi",
-        "type":  "Greek/Roman",
-        "longitude":  27.3055553
-    },
-    {
-        "name":  "Amasra",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Amasra%2C_Turkey%2C_Castle%2C_view_from_the_island.jpg/800px-Amasra%2C_Turkey%2C_Castle%2C_view_from_the_island.jpg",
-        "latitude":  41.7494431,
-        "description":  "Amasra (from Greek Amastris Ἄμαστρις, gen. Ἀμάστριδος) is a small Black Sea port town in the Bartın Province, Turkey, formerly known as Amastris.\n",
-        "link":  "https://en.wikipedia.org//wiki/Amasra",
-        "type":  "Greek",
-        "longitude":  32.38639
-    },
-    {
-        "name":  "Amasya",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Amasya_evleri_ve_Ye%C5%9Fil%C4%B1rmak.jpg/800px-Amasya_evleri_ve_Ye%C5%9Fil%C4%B1rmak.jpg",
-        "latitude":  40.65,
-        "description":  "Amasya (Turkish pronunciation: [aˈmasja]; Greek: Ἀμάσεια) is a city in northern Turkey and is the capital of Amasya Province, in the Black Sea Region. It used to be called Amaseia or Amasia in antiquity.[3] Amasya stands in the mountains above the Black Sea coast, set apart from the rest of Anatolia in a narrow valley along the banks of the Yeşilırmak River. Although near the Black Sea, this area is high above the coast and has an inland climate, well-suited to growing apples, for which Amasya province, one of the provinces in north-central Anatolia Turkey, is famed. It was the home of the geographer Strabo and the birthplace of the 15th century scholar and physician Amirdovlat Amasiatsi. Located in a narrow cleft of the Yeşilırmak (Iris) river, it has a history of 7,500 years which has left many traces still evident today.\n",
-        "link":  "https://en.wikipedia.org//wiki/Amasya",
-        "type":  "Greek",
-        "longitude":  35.8330574
-    },
-    {
-        "name":  "Amos (ancient city)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Amos_theatre.jpg/450px-Amos_theatre.jpg",
-        "latitude":  36.7575569,
-        "description":  "Amos (Ancient Greek: Ἄμος, possibly from ἄμμος \"sandy\") was a settlement (dēmē) of ancient Caria, located near the modern town of Turunç, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Amos_(ancient_city)",
-        "type":  "Greek",
-        "longitude":  28.2688942
-    },
-    {
-        "name":  "Anazarbus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Anavarza_Triumphal_arch_in_Anazarbus_2754.jpg/800px-Anavarza_Triumphal_arch_in_Anazarbus_2754.jpg",
-        "latitude":  37.26389,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Anazarbus",
-        "type":  "Greek/Roman",
-        "longitude":  35.9055557
-    },
-    {
-        "name":  "Anchiale",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Karaduvar_aqueduct.jpg/800px-Karaduvar_aqueduct.jpg",
-        "latitude":  36.8097229,
-        "description":  "Anchiale (Ancient Greek: Ἀγχιάλη) or Anchialeia was a historic city of ancient Cilicia now a part of modern Mersin, Turkey. It was inhabited during the Hellenistic, Roman, and Byzantine eras.\n",
-        "link":  "https://en.wikipedia.org//wiki/Anchiale",
-        "type":  "Greek",
-        "longitude":  34.6994438
-    },
-    {
-        "name":  "Andriake",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  36.2472229,
-        "description":  "Andriake or Andriaca (Ancient Greek: Ἀνδριάκη) was an ancient city and the port of the ancient town of Myra in Lycia. Appian (B.C. iv. 82) says that Lentulus broke through the chain which crossed the entrance of the port, and went up the river to Myra. Beaufort (Karamania, p. 26) gives the name Andráki to the river of Myra. On the north side of the entrance are the remains of large Roman horrea, with a perfect inscription, which states that the horrea were Hadrian\u0027s: the date is Hadrian\u0027s third consulate, which is 119 CE.\n",
-        "link":  "https://en.wikipedia.org//wiki/Andriake",
-        "type":  "Greek",
-        "longitude":  29.9827785
-    },
-    {
-        "name":  "Anemurium",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Anemurium_path.jpg/800px-Anemurium_path.jpg",
-        "latitude":  36.02427,
-        "description":  "Anemurium (Ancient Greek: Ἀνεμούριον, romanized: Anemourion), also called Animurium,[1] is an ancient city whose ruins, now called Eski Anamur or Anemuryum, are close to the modern Turkish city of Anamur.  It was in the Roman province of Cilicia, later Isauria, and was situated near a high promontory (Cape Anamur) that marks the southernmost point of Asia Minor, only 64 km from Cyprus. In the Middle Ages, it was called Stallimur.[2][3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Anemurium",
-        "type":  "Greek",
-        "longitude":  32.8026
-    },
-    {
-        "name":  "Antakya",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Antakya_-_panoramio_%281%29.jpg/800px-Antakya_-_panoramio_%281%29.jpg",
-        "latitude":  36.2025,
-        "description":  "Antakya (Turkish pronunciation: [ɑnˈtɑkjɑ]), historically known as Antioch (Greek: Ἀντιόχεια, Armenian: Andiok - Անտիոք), is the capital of Hatay Province, the southernmost province of Turkey. The city is located in a well-watered and fertile valley on the Orontes River, about 20 kilometers (12 mi) from the Levantine Sea.\n",
-        "link":  "https://en.wikipedia.org//wiki/Antakya",
-        "type":  "Greek/Roman",
-        "longitude":  36.1605568
-    },
-    {
-        "name":  "Antalya",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg/800px-Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg",
-        "latitude":  36.8875,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Antalya",
-        "type":  "Greek",
-        "longitude":  30.7075
-    },
-    {
-        "name":  "Antandrus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.5758324,
-        "description":  "Antandrus or Antandros (Ancient Greek: Ἄντανδρος) was an ancient Greek city on the north side of the Gulf of Adramyttium in the Troad region of Anatolia. Its surrounding territory was known in Greek as Ἀντανδρία (Antandria),[1] and included the towns of Aspaneus on the coast and Astyra to the east.[2] It has been located on Devren hill between the modern village of Avcılar and the town of Altınoluk in the Edremit district of Balıkesir Province, Turkey.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Antandrus",
-        "type":  "Greek",
-        "longitude":  26.790556
-    },
-    {
-        "name":  "Antigonia (Syria)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  36.2539177,
-        "description":  "Antigonia (Greek: Αντιγόνεια) also transliterated as Antigonea and Antigoneia was a Hellenistic city in Seleucid Empire, Syria (in modern Turkey), on the Orontes, founded by Antigonus I Monophthalmus in 307 BC, and intended to be the capital of his empire; the site is approximately 7 km northeast of Antakya, Hatay Province, Turkey. After the Battle of Ipsus, 301 BC, in which Antigonus perished, the inhabitants of Antigonia were removed by his successful rival Seleucus I Nicator to the city of Antioch, which Seleucus founded a little lower down the river. (Strabo xvi. p. 750; Diod. xx. 47; Liban. Antioch. p. 349; Malalas, p. 256.) Diodorus erroneously says that the inhabitants were removed to Seleucia Pieria. Antigonia continued, however, to exist, and is mentioned in the war with the Parthians after the defeat of Crassus. (Dion Cass. xl. 29.)\n",
-        "link":  "https://en.wikipedia.org//wiki/Antigonia_(Syria)",
-        "type":  "Greek",
-        "longitude":  36.2051659
-    },
-    {
-        "name":  "Antioch",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Antiochia_su_Oronte.PNG/494px-Antiochia_su_Oronte.PNG",
-        "latitude":  36.2047234,
-        "description":  "Antioch on the Orontes (/ˈænti.ɒk/; Ancient Greek: Ἀντιόχεια ἡ ἐπὶ Ὀρόντου, Antiókheia hē epì Oróntou; also Syrian Antioch)[note 1] was an ancient Greek city[1] on the eastern side of the Orontes River. Its ruins lie near the current city of Antakya, Turkey, to which the ancient city lends its name.\n",
-        "link":  "https://en.wikipedia.org//wiki/Antioch",
-        "type":  "Greek/Roman",
-        "longitude":  36.1816673
-    },
-    {
-        "name":  "Antiochia ad Cragum",
-        "imageUrl":  "",
-        "latitude":  36.1572227,
-        "description":  "Antiochia ad Cragum (Greek: Αντιόχεια του Κράγου) also known as Antiochetta or Latin: Antiochia Parva (meaning \"Little Antiochia\") is an ancient Hellenistic city on Mount Cragus overlooking the Mediterranean coast, in the region of Cilicia, in Anatolia. In modern-day Turkey the site is encompassed in the village of Güneyköy, District of Gazipaşa, Antalya Province.\n",
-        "link":  "https://en.wikipedia.org//wiki/Antiochia_ad_Cragum",
-        "type":  "Greek/Roman",
-        "longitude":  32.415554
-    },
-    {
-        "name":  "Antiochia Lamotis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  36.55722,
-        "description":  "Antiochia Lamotis (Greek: Αντιόχεια η Λαμωτίς), Antiochia in Isauria (Αντιόχεια της Ισαυρίας), or Antiochia super Cragum[1] is a Hellenistic city in ancient Cilicia, Anatolia at the mouth of Lamos (or Lamus) river. The site is on the coast a few km southwest of Erdemli, Mersin Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Antiochia_Lamotis",
-        "type":  "Greek/Roman",
-        "longitude":  34.24111
-    },
-    {
-        "name":  "Antiphellus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Antiphellus_Ancient_Theatre_-_2014.10_-_panoramio.jpg/800px-Antiphellus_Ancient_Theatre_-_2014.10_-_panoramio.jpg",
-        "latitude":  36.2,
-        "description":  "Antiphellus or Antiphellos (Ancient Greek: Ἀντίφελλος) was city that acted as the port of Phellus (Phellos) in Lycia. It was at the head of a bay on the south coast.[1] Sir Francis Beaufort, the discoverer of this ancient site, gave the contemporary name of Vathy to the bay at the head of which Antiphellus stands.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Antiphellus",
-        "type":  "Greek",
-        "longitude":  29.635
-    },
-    {
-        "name":  "Apamea (Euphrates)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Zeugma.jpg/800px-Zeugma.jpg",
-        "latitude":  37.0666656,
-        "description":  "Apamea or Apameia (Greek: Απάμεια) was a Hellenistic city on the left (viz., the eastern) bank of the Euphrates, opposite the famous city of Zeugma, at the end of a bridge of boats (Greek: Ζεῦγμα zeugma) connecting the two, founded by Seleucus I Nicator (Pliny, v. 21). The city was rebuilt by Seleucus I. The site, once partially covered by the village of Tilmusa [tr] (formerly Rumkale), Şanlıurfa Province, Turkey, is now flooded by the lake formed by the Birecik Dam (Birejik Dam).[1][2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Apamea_(Euphrates)",
-        "type":  "Greek",
-        "longitude":  37.88361
-    },
-    {
-        "name":  "Apamea (Phrygia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkey_relief_location_map.jpg/800px-Turkey_relief_location_map.jpg",
-        "latitude":  38.0716667,
-        "description":  "Apamea Cibotus, Apamea ad Maeandrum (on the Maeander), Apamea or Apameia (Ancient Greek: Ἀπάμεια, Ancient Greek: κιβωτός) was an ancient city in Anatolia founded in the 3rd century BC by Antiochus I Soter, who named it after his mother Apama. It was in Hellenistic Phrygia,[1] but became part of the Roman province of Pisidia.[2][3] It was near, but on lower ground than, Celaenae (Kelainai).\n",
-        "link":  "https://en.wikipedia.org//wiki/Apamea_(Phrygia)",
-        "type":  "Greek",
-        "longitude":  30.165556
-    },
-    {
-        "name":  "Apamea Myrlea",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  40.37639,
-        "description":  "Apamea Myrlea (/ˌæpəˈmiːə mərˈliːə/; Ancient Greek: Απάμεια Μύρλεια) was an ancient city and bishopric (Apamea in Bithynia) on the Sea of Marmara, in Bithynia, Anatolia; its ruins are a few kilometers south of Mudanya, Bursa Province in the Marmara Region of Asian Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Apamea_Myrlea",
-        "type":  "Greek",
-        "longitude":  28.8833332
-    },
-    {
-        "name":  "Aphrodisias",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Temple_of_Aphrodite%2C_built_in_the_Ionic_order_in_stages_during_the_Roman_period_%28from_1st_century_BC_to_2nd_century_AD%29_and_later_converted_into_a_Christian_basilica%2C_Aphrodisias%2C_Caria%2C_Turkey_%2820300922019%29.jpg/800px-thumbnail.jpg",
-        "latitude":  37.7083321,
-        "description":  "Aphrodisias (/æfrəˈdɪsiəs/;[1] Ancient Greek: Ἀφροδισιάς, romanized: Aphrodisiás) was a small ancient Greek Hellenistic city in the historic Caria cultural region of western Anatolia, Turkey. It is located near the modern village of Geyre, about 100 km (62 mi) east/inland from the coast of the Aegean Sea, and 230 km (140 mi) southeast of İzmir.\n",
-        "link":  "https://en.wikipedia.org//wiki/Aphrodisias",
-        "type":  "Greek",
-        "longitude":  28.7236118
-    },
-    {
-        "name":  "Aphrodisias (Cilicia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tisan_mosaic.jpg/800px-Tisan_mosaic.jpg",
-        "latitude":  36.1580544,
-        "description":  "Aphrodisias (Ancient Greek: Ἀφροδισιάς), sometimes called Aphrodisias of Cilicia to distinguish it from the town of the same name in Caria, was a port city of ancient Cilicia whose ruins now lie near Cape Tisan in Mersin Province, Turkey.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Aphrodisias_(Cilicia)",
-        "type":  "Greek",
-        "longitude":  33.6916656
-    },
-    {
-        "name":  "Apollonia (Lycia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  36.18667,
-        "description":  "Apollonia (Ancient Greek: Ἀπολλωνία) was a city in ancient Lycia. Its ruins are located near Kiliçli (Sıçak), a small village in the Kaş district of Antalya Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Apollonia_(Lycia)",
-        "type":  "Greek/Roman",
-        "longitude":  29.76389
-    },
-    {
-        "name":  "Apollonia (Mysia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.2025,
-        "description":  "Apollonia (Ancient Greek: Ἀπολλωνία) was a town of ancient Mysia, Anatolia, situated on an eminence east of Pergamum, on the way to Sardis.[1] It seems to have been near the borders of Mysia and Lydia. \n",
-        "link":  "https://en.wikipedia.org//wiki/Apollonia_(Mysia)",
-        "type":  "Greek",
-        "longitude":  27.4944439
-    },
-    {
-        "name":  "Apollonia ad Rhyndacum",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  40.169445,
-        "description":  "Apollonia or Apollonia-on-the-Rhyndacus (Ancient Greek: Ἀπολλωνία ἐπὶ Ῥυνδακῷ, Apollōnía épì Ryndakō; Latin: Apollonia ad Rhyndacum) was an ancient town near the Rhyndacus river in northwestern Anatolia. Strabo placed it in Mysia, causing some to misidentify the site as Uluabat on the western shore of Lake Uluabat. However, the site is actually the promontory tombolo on the northeastern shore, near modern Gölyazı. The remains of Apollonia are inconsiderable. The Rhyndacus flows into the lake and issues from it a deep and muddy river. The lake extends from east to west and is studded with several islands in the northeast part, on one of which is Gölyazı, but the dimensions vary greatly through the seasons.\n",
-        "link":  "https://en.wikipedia.org//wiki/Apollonia_ad_Rhyndacum",
-        "type":  "Greek",
-        "longitude":  28.6825
-    },
-    {
-        "name":  "Apollonia Salbaces",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
-        "latitude":  37.50639,
-        "description":  "Apollonia Salbaces or Apollonia Salbakes (Ancient Greek: Ἀπολλωνία Σαλβάκη) was a town in ancient Caria, Anatolia.\n",
-        "link":  "https://en.wikipedia.org//wiki/Apollonia_Salbaces",
-        "type":  "Greek/Roman",
-        "longitude":  29.023056
-    },
-    {
-        "name":  "Apollonos Hieron",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  38.045,
-        "description":  "Apollonos Hieron (Greek: Ἀπόλλωνος ἱερόν, \"Temple of Apollo\")[1] was an ancient city of Lydia.\n",
-        "link":  "https://en.wikipedia.org//wiki/Apollonos_Hieron",
-        "type":  "Greek",
-        "longitude":  28.830555
-    },
-    {
-        "name":  "Araxa",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
-        "latitude":  36.7455559,
-        "description":  "Araxa (Ancient Greek: Ἄραξα) was a city of ancient Lycia, according to Alexander Polyhistor, in the second book of his Lyciaca.[1] Ptolemy places it near Sidyma.  It is located at place called Ören, near Fethiye, on the upper portion of the Xanthus River.  An inscription in honour of a local citizen, Orthagoras, provides some details of its history in the 2nd century B.C.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Araxa",
-        "type":  "Greek",
-        "longitude":  29.3694439
-    },
-    {
-        "name":  "Ariassus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ariassos_6.jpg/800px-Ariassos_6.jpg",
-        "latitude":  37.18111,
-        "description":  "Ariassus or Ariassos (Ancient Greek: Άριασσός) was a town in Pisidia, Asia Minor built on a steep hillside about 50 kilometres inland from Attaleia (modern Antalya).  \n",
-        "link":  "https://en.wikipedia.org//wiki/Ariassus",
-        "type":  "Greek",
-        "longitude":  30.4725
-    },
-    {
-        "name":  "Arisba",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Troas_el.svg/520px-Troas_el.svg.png",
-        "latitude":  40.1997223,
-        "description":  "Arisba or Arisbe (Ancient Greek: Ἀρίσβη; Eth. Ἀρισβαἰος), was a town of Mysia, mentioned by Homer in the same line with Sestos and Abydus.[1] It was between Percote and Abydus,[2] a colony of Mytilene, founded by Scamandrius and Ascanius, son of Aeneas. It was a member of the Delian League.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Arisba",
-        "type":  "Greek",
-        "longitude":  26.542223
-    },
-    {
-        "name":  "Armene",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
-        "latitude":  42.0491676,
-        "description":  "Armene (Ancient Greek: Ἀρμένη[1] or Ἁρμένη or Ἀρμήνη[2]) was an ancient Greek city[3] on the Black Sea coast of ancient Paphlagonia.[4][1] Xenophon in his Anabasis writes that the Ten Thousand on their return anchored their ships here, and stayed five days.[2] The place belonged to the Sinopians. It was 50 stadia west of Sinope, and had a port.[5] A small river, named Ochosbanes by Marcian of Heraclea,[6] and named also Ochthomanes in the Anonymous Periplus, and Ocheraenus in the Periplus of Pseudo-Scylax, falls into the harbour.\n",
-        "link":  "https://en.wikipedia.org//wiki/Armene",
-        "type":  "Greek",
-        "longitude":  35.0419426
-    },
-    {
-        "name":  "Arneae",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
-        "latitude":  36.4419441,
-        "description":  "Arneae or Arneai (Ancient Greek: Ἀρνεαί) was a small city of ancient Lycia mentioned by Capito in his Isaurica.[1] It is located near Ernes,[2] in the interior of Lycia where archaeological remains have been found.\n",
-        "link":  "https://en.wikipedia.org//wiki/Arneae",
-        "type":  "Greek",
-        "longitude":  29.87139
-    },
-    {
-        "name":  "Arsuz",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  36.4127769,
-        "description":  "Arsuz (Arabic: أرسوز‎, Greek: Αρσούς), also known as Uluçınar, is a municipality in Hatay Province, southern Anatolia (Asian Turkey). In the ancient times, it was known as Rhosus (Ancient Greek: Ῥῶσός and Ῥωσός[1]) and was a former bishopric and titular see.\n",
-        "link":  "https://en.wikipedia.org//wiki/Arsuz",
-        "type":  "Greek",
-        "longitude":  35.8866653
-    },
-    {
-        "name":  "Aspendos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Aspendos_Amphitheatre.jpg/800px-Aspendos_Amphitheatre.jpg",
-        "latitude":  36.93889,
-        "description":  "Aspendos or Aspendus (Pamphylian: ΕΣΤϜΕΔΥΣ; Attic: Ἄσπενδος) was an ancient Greco-Roman city in Antalya province of Turkey. The site is located 7 kilometres (4.3 mi) northeast of central Serik.\n",
-        "link":  "https://en.wikipedia.org//wiki/Aspendos",
-        "type":  "Greek",
-        "longitude":  31.1722221
-    },
-    {
-        "name":  "Assos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Tuerkei-7460-PS87-PS88.jpg/800px-Tuerkei-7460-PS87-PS88.jpg",
-        "latitude":  39.4877777,
-        "description":  "Assos (/ˈæsɒs/; Greek: Ἄσσος, Latin: Assus), also known as Behramkale or for short Behram, is a small historically rich town in the Ayvacık district of the Çanakkale Province, Turkey. During Pliny the Elder\u0027s time (1st century CE), the city also bore the name Apollonia (Ἀπολλωνία).[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Assos",
-        "type":  "Greek",
-        "longitude":  26.3369446
-    },
-    {
-        "name":  "Astacus (Bithynia)",
-        "imageUrl":  "",
-        "latitude":  40.7144432,
-        "description":  "Astacus /ˈæstəkəs/ (Greek Ἀστακός Βιθυνίας) is an ancient city in Bithynia; it was also called Olbia /ˈɒlbiə/. Stephanus of Byzantium records  an aetiological myth that it was founded by Astacus, son of Poseidon and the nymph Olbia. \n",
-        "link":  "https://en.wikipedia.org//wiki/Astacus_(Bithynia)",
-        "type":  "Greek",
-        "longitude":  29.9288883
-    },
-    {
-        "name":  "Atarneus",
-        "imageUrl":  "",
-        "latitude":  39.09139,
-        "description":  "Atarneus (/əˈtɑːrniəs/; Ancient Greek: Ἀταρνεύς), also known as Atarna (Ἄταρνα)[1] and Atarneites (Ἀταρνείτης),[2] was an ancient Greek city in the region of Aeolis, Asia Minor. It lies on the mainland opposite the island of Lesbos. It was on the road from Adramyttium to the plain of the Caicus.[3] Its territory was called the Atarneitis.\n",
-        "link":  "https://en.wikipedia.org//wiki/Atarneus",
-        "type":  "Greek",
-        "longitude":  26.9208336
-    },
-    {
-        "name":  "Athena relief of Sömek",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/AthenaS%C3%B6mek1.jpg/400px-AthenaS%C3%B6mek1.jpg",
-        "latitude":  36.6044426,
-        "description":  "The Athena relief of Sömek is a Greco-Roman rock relief, located some two kilometres north of the village of Sömek in Silifke district of Mersin province in Turkey, near the valley of the Limonlu river, the ancient Lamos. In antiquity, the river formed the border between \"Rugged Cilicia\" (Kilikia Tracheia) in the west and \"Flat Cilicia\" (Kilikia Pedias) in the east.\n",
-        "link":  "https://en.wikipedia.org//wiki/Athena_relief_of_S%C3%B6mek",
-        "type":  "Greek",
-        "longitude":  34.0808334
-    },
-    {
-        "name":  "Athenae (Pontus)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Heinrich_Kiepert._Asia_citerior.Pontus.jpg/800px-Heinrich_Kiepert._Asia_citerior.Pontus.jpg",
-        "latitude":  41.18111,
-        "description":  "Athenae or Athenai (Ancient Greek: Ἀθῆναι) was a city and port of ancient Pontus,[1] with a Greek temple of Athena.[2] According to Arrian, it was 180 stadia east of the river Adienus, and 280 stadia west of Apsarus.[3] Procopius writes that the name of the village came from a certain woman named Athenaea (Ancient Greek: Ἀθηναία) in early times who ruled over the land and not because, as some believe, of colonists from Athens settled there. He also adds that the tomb of the woman was still there.[4]\nArrian speaks of the place as a deserted fort, but Procopius describes it as a populous place in his time.[5] Konrad Mannert assumes it to be the same place as the Odeinius of the Periplus of Pseudo-Scylax.[6]\n",
-        "link":  "https://en.wikipedia.org//wiki/Athenae_(Pontus)",
-        "type":  "Greek",
-        "longitude":  40.88889
-    },
-    {
-        "name":  "Attuda",
-        "imageUrl":  "",
-        "latitude":  37.8422241,
-        "description":  "Attuda or Attouda (Ancient Greek: Ἄττουδα) was a Hellenistic city in ancient Caria and later in the Roman province of Phrygia Pacatiana. There are coins of the place with the Greek epigraph Ἱερὰ Βουλὴ Ἀττουδέων, of the time of Augustus and later. The coins show that the Men Carus was worshipped there.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Attuda",
-        "type":  "Greek",
-        "longitude":  28.8058338
-    },
-    {
-        "name":  "Augusta (Cilicia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
-        "latitude":  37.2452774,
-        "description":  "Augusta (Ancient Greek: Αὔγουστα[1] or Αὐγοῦστα[2]) was a town in the interior of ancient Cilicia, inhabited during Roman and Byzantine times.[3] It was founded in 20 AD and named after Livia, the widow of the Emperor Augustus.[4]\nPtolemy places this town in a district named Bryelice. The town also bore the name Augustopolis, and possibly Thebae.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Augusta_(Cilicia)",
-        "type":  "Greek",
-        "longitude":  35.3441658
-    },
-    {
-        "name":  "Aulae (Cilicia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
-        "latitude":  36.81111,
-        "description":  "Aulae or Aulai (Ancient Greek: Αὐλαί) was a town in ancient Cilicia, and now is an archaeological site close to Mersin, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Aulae_(Cilicia)",
-        "type":  "Greek",
-        "longitude":  34.7019463
-    },
-    {
-        "name":  "Aydın",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Tetrapylon_-_Aphrodisias_%287471662848%29.jpg/800px-Tetrapylon_-_Aphrodisias_%287471662848%29.jpg",
-        "latitude":  37.8480568,
-        "description":  "Aydın (// EYE-din; Turkish: [ˈajdɯn]; formerly named Güzelhisar, Ancient and Modern Greek: Τράλλεις /Tralleis/) is a city in and the seat of Aydın Province in Turkey\u0027s Aegean Region. The city is located at the heart of the lower valley of Büyük Menderes River (ancient Meander River) at a commanding position for the region extending from the uplands of the valley down to the seacoast. Its population was 207,554 in 2014.[3] \nAydın city is located along a region which was famous for its fertility and productivity since ancient times. Figs remain the province\u0027s best-known crop, although other agricultural products are also grown intensively and the city has some light industry.\n",
-        "link":  "https://en.wikipedia.org//wiki/Ayd%C4%B1n",
-        "type":  "Greek/Roman",
-        "longitude":  27.8452778
-    },
-    {
-        "name":  "Balbura (Lycia)",
-        "imageUrl":  "",
-        "latitude":  36.9552765,
-        "description":  "Balbura or Balboura (Ancient Greek: Βάλβουρα) was a town of ancient Lycia, the site of which is at Çölkayiği. The acropolis hill is about 90 metres above the plain of Katara, and the plain is 1,500 feet (460 m) above the level of the sea. The ruins occupy a considerable space on both sides of the stream. There are two theatres at Balbura; one is on the south side of the acropolis hill, and the other is in a hollow in the front of the mountain on the south side of the stream: the hollow in the mountain formed the cavea. There are also remains of several temples at Katara; and of Christian churches. The ethnic name Βαλβουρεύς occurs on two inscriptions at least at Katara. The site was discovered by Hoskyn and Forbes. Balbura was part of a district called Cabalia,[1] named Cabalis by Strabo with two other cities, Bubon and Oenoanda.\n",
-        "link":  "https://en.wikipedia.org//wiki/Balbura_(Lycia)",
-        "type":  "Greek",
-        "longitude":  29.5811119
-    },
-    {
-        "name":  "Bargylia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  37.2,
-        "description":  "Bargylia (/ˌbɑːrˈdʒɪliə/; Ancient Greek: Βαργυλία), was a city on the coast of ancient Caria in southwestern Anatolia (modern-day Turkey) between Iasos and Myndus. Bargylia\u0027s location corresponds to the modern Turkish town of Boğaziçi in Muğla Province.\n",
-        "link":  "https://en.wikipedia.org//wiki/Bargylia",
-        "type":  "Greek",
-        "longitude":  27.5755558
-    },
-    {
-        "name":  "Bathonea",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
-        "latitude":  41.03361,
-        "description":  "Bathonea (Ancient Greek: Βαθονεία) is a long-lost ancient Greek city that was located on the European shore of the sea of Marmara, 20 km west from Istanbul in Turkey.[1][2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Bathonea",
-        "type":  "Greek",
-        "longitude":  28.7338886
-    },
-    {
-        "name":  "Beçin",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Becin_5237.jpg/800px-Becin_5237.jpg",
-        "latitude":  37.275,
-        "description":  "Beçin (also known as Berçin or Peçin) was a historical fort in Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Be%C3%A7in",
-        "type":  "Greek",
-        "longitude":  27.7891674
-    },
-    {
-        "name":  "Bergama",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bergama%2C_Turkey.jpg/800px-Bergama%2C_Turkey.jpg",
-        "latitude":  39.1166649,
-        "description":  "Bergama is a populous district, as well as the center city of the same district, in İzmir Province in western Turkey. By excluding İzmir\u0027s metropolitan area, it is one of the prominent districts of the province in terms of population and is largely urbanized at the rate of 53.6%. Bergama center is situated at a distance of 118 km (73 mi) to the north from the point of departure of the traditional center of İzmir (Konak Square in Konak, İzmir) and lies at a distance of 27 km (17 mi) inland from the nearest seacoast at the town of Dikili to its west. Bergama district area neighbors the areas of three districts of Balıkesir Province to its north, namely Ayvalık, Burhaniye and İvrindi, İzmir Province district of Kınık and Manisa Province district of Soma, Manisa to its east, while to the south it is bordered by the central provincial of Manisa and two other İzmir Province districts along the coast that are Aliağa and Dikili from its south towards its west. The district area\u0027s physical features are determined by the alluvial plain of Bakırçay River.\n",
-        "link":  "https://en.wikipedia.org//wiki/Bergama",
-        "type":  "Greek/Roman",
-        "longitude":  27.1833324
-    },
-    {
-        "name":  "Beşparmak Mountains",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Bafa_Lake_Kapikiri.JPG/800px-Bafa_Lake_Kapikiri.JPG",
-        "latitude":  37.4981079,
-        "description":  "Beşparmak Mountains (Latin: Latmus; Ancient Greek: Λάτμος, romanized: Latmos) are a ridge of many spurs located in the Muğla and Aydın provinces of Turkey, running in an east-west direction along the north shore of the former Latmian Gulf[3] on the coast of Caria, which became part of Hellenised Ionia. The city of Latmus, located on the south slopes of Mount Latmus 25 kilometres (16 mi) east of Miletus,[4] was originally a port on the narrow gulf, as reported by Strabo.[5] He also states that Latmus is the same as Mount Phthires in the Catalogue of Trojans.[6]\n",
-        "link":  "https://en.wikipedia.org//wiki/Be%C5%9Fparmak_Mountains",
-        "type":  "Greek",
-        "longitude":  27.5268078
-    },
-    {
-        "name":  "Beyşehir",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tas_Kopru2.JPG/800px-Tas_Kopru2.JPG",
-        "latitude":  37.6833344,
-        "description":  "Beyşehir (pronounced [ˈbejʃeˌhiɾ]) is a large town and district of Konya Province in the Akdeniz region of Turkey. The town is located on the southeastern shore of Lake Beyşehir and is marked to the west and the southwest by the steep lines and forests of the Taurus Mountains, while a fertile plain, an extension of the lake area, extends in the southeastern direction. According to 2000 census, the population of the district is 118,144 of which 41,312 live in the town of Beyşehir.[3][4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Bey%C5%9Fehir",
-        "type":  "Greek/Roman",
-        "longitude":  31.7333336
-    },
-    {
-        "name":  "Birecik",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Birecik%2C_Turkey_2009-10-26.jpg/800px-Birecik%2C_Turkey_2009-10-26.jpg",
-        "latitude":  37.025,
-        "description":  "Birecik (Greek and Latin: Birtha, Βίρθα; Arabic: البيرة‎, romanized: al-Bīrah; Kurdish: Bêrecûk‎,[3] Ottoman Turkish: بيره جك‎), also formerly known as Bir, Biré, Biradjik  and during the Crusades as Bile, is a town and district of Şanlıurfa Province of Turkey, on the River Euphrates.\n",
-        "link":  "https://en.wikipedia.org//wiki/Birecik",
-        "type":  "Greek",
-        "longitude":  37.976944
-    },
-    {
-        "name":  "Bisanthe",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
-        "latitude":  40.9833336,
-        "description":  "Bisanthe (Ancient Greek: Βισάνθη) was a great city in ancient Thrace, on the coast of the Propontis, which had been founded by the Samians.[1][2][3][4] About 400 BCE, Bisanthe belonged to the kingdom of the Thracian prince Seuthes II.[5] At a later period its name was changed into Raedestum, Rhaedestum or Rhaideston (Ῥαίδεστον), or Raedestus, Rhaedestus or Rhaidestos (Ῥαίδεστος); but when this change took place is unknown. In the 6th century CE, the emperor Justinian did much to restore the city, which seems to have fallen into decay;[6] but after that time it was twice destroyed by the Bulgarians, first in 813,[7] and a second time in 1206.[8] The further history of this city, which was of great importance to Byzantium, was covered by Byzantine historians George Pachymeres and Cantacuzenus. It is generally believed that the town of Resistos or Resisto, mentioned by Pliny the Elder,[9] and in the Antonine Itinerary, is the same as Bisanthe; but Pliny mentions Bisanthe and Resistos as distinct towns.[9] Coins minted by Bisanthe survive.[10] Under the name Rhaedestus, it remains a titular see of the Roman Catholic Church.[11]\n",
-        "link":  "https://en.wikipedia.org//wiki/Bisanthe",
-        "type":  "Greek",
-        "longitude":  27.5166664
-    },
-    {
-        "name":  "Bodrum",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Bodrum_castle_3.JPG/800px-Bodrum_castle_3.JPG",
-        "latitude":  37.0333328,
-        "description":  "Bodrum (Turkish pronunciation: [ˈbodɾum]) is a district and a port city in Muğla Province, in the southwestern Aegean Region of Turkey. It is located on the southern coast of Bodrum Peninsula, at a point that checks the entry into the Gulf of Gökova, and is also the center of the eponymous district. The city was called Halicarnassus of Caria (Ancient Greek: Ἁλικαρνᾱσσός) in ancient times and was famous for housing the Mausoleum of Mausolus, one of the Seven Wonders of the Ancient World. Built by the Knights Hospitaller in the 15th century, Bodrum Castle overlooks the harbour and the marina. The castle includes a museum of underwater archaeology and hosts several cultural festivals throughout the year. The city had a population of 35,795 in 2012. It takes 50 minutes via boat to reach Kos from Bodrum, with services running multiple times a day by at least three operators.\n",
-        "link":  "https://en.wikipedia.org//wiki/Bodrum",
-        "type":  "Greek",
-        "longitude":  27.4333324
-    },
-    {
-        "name":  "Bolu",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Bolu_Ta%C5%9Fhan.jpg/800px-Bolu_Ta%C5%9Fhan.jpg",
-        "latitude":  40.7347221,
-        "description":  "Bolu is a city in Turkey, and administrative center of the Bolu Province. The population is 131,264 (2012 census).[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Bolu",
-        "type":  "Greek/Roman",
-        "longitude":  31.6075
-    },
-    {
-        "name":  "Bubon (Lycia)",
-        "imageUrl":  "",
-        "latitude":  36.9691658,
-        "description":  "Bubon or Boubon (Ancient Greek: Βούβων) was a city of ancient Lycia noted by Stephanus of Byzantium; the ethnic name, he adds, ought to be Βουβώνιος, but it is Βουβωνεύς, for the Lycians rejoice in this form.[1] The truth of this observation of Stephanus is proved by the inscription found on the spot: Βουβωνέων ἡ Βουλὴ καὶ ὁ Δῆμος. Bubon is placed in the map in Spratt\u0027s Lycia, near 37° N. lat. west of Balbura, near a place named Ibecik, which location is confirmed by modern scholars.[2][3] Bubon is mentioned by Pliny, Ptolemy, and Hierocles. Pliny mentions a kind of chalk (creta) that was found about Bubon. [4] The city stood on a hill side. The ruins are not striking. There is a small theatre built of sandstone, and on the summit of the hill was the acropolis. Bubon is in a mountainous tract and it commands the entrance to the pass over the mountains. Bubon, along with Balbura and Oenoanda formed the district Cabalia. [5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Bubon_(Lycia)",
-        "type":  "Greek",
-        "longitude":  29.4069443
-    },
-    {
-        "name":  "Bursa",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Hudavendigar_Park_in_Bursa_Turkey.jpg/800px-Hudavendigar_Park_in_Bursa_Turkey.jpg",
-        "latitude":  40.1833344,
-        "description":  "Bursa (Turkish pronunciation: [buɾsa]; Ancient Greek: Προύσσα, Latin: Prusa) is a city in northwestern Turkey and the administrative center of Bursa Province. The fourth-most populous city in Turkey and second-most populous in the Marmara Region, Bursa is one of the industrial centers of the country. Most of Turkey\u0027s automotive production takes place in Bursa.\n",
-        "link":  "https://en.wikipedia.org//wiki/Bursa",
-        "type":  "Greek",
-        "longitude":  29.05
-    },
-    {
-        "name":  "Byzantium",
-        "imageUrl":  "",
-        "latitude":  41.0152779,
-        "description":  "Coordinates: 41°00′55″N 28°59′05″E﻿ / ﻿41.01528°N 28.98472°E﻿ / 41.01528; 28.98472\n",
-        "link":  "https://en.wikipedia.org//wiki/Byzantium",
-        "type":  "Greek",
-        "longitude":  28.9847221
-    },
-    {
-        "name":  "Cabira",
-        "imageUrl":  "",
-        "latitude":  40.5894432,
-        "description":  "Cabira or Kabeira (/kəˈbaɪrə/; Greek: τὰ Κάβειρα) was a town of ancient Pontus in Asia minor, at the base of the range of Paryadres, about 150 stadia south of Eupatoria or Magnopolis, which was at the junction of the Iris and the Lycus. Eupatoria was in the midst of the plain called Phanaroea, whereas Cabira, as Strabo says was at the base of the Paryadres.[1] Mithridates the Great built a palace at Cabira; and there was a water-mill there (Greek: ὑδραλέτης), and places for keeping wild animals, hunting grounds, and mines. Less than 200 stadia from Cabira was the remarkable rock or fortress called Caenon (Greek: Καινόν [χωρίον]), where Mithridates kept his most valuable things. Cn. Pompeius took the place and its treasures, which, when Strabo wrote, were in the Roman Capitol. In Strabo\u0027s time a woman, Pythodoris, the widow of King Polemon, had Cabira with the Zelitis and Magnopolitis. Pompeius made Cabira a city, and gave it the name Diospolis (Διόσπολις). Pythodoris enlarged it, gave it the name Sebaste (Σεβαστή), which is the Greek equivalent to Augusta, and used it as her royal residence. Near Cabira probably at a village named Ameria, there was a temple with a great number of slaves belonging to it, and the high priest enjoyed this benefice.[2] The god Men of Pharnaces (Μήν Φαρνάκου) was worshipped at Cabira. Mithridates was at Cabira during the winter that L. Lucullus was besieging Amisus and Eupatoria.[3] Lucullus afterwards took Cabira.[4] There are some autonomous coins of Cabira with the epigraph \"Καβηρων\".[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Cabira",
-        "type":  "Greek",
-        "longitude":  36.955
-    },
-    {
-        "name":  "Calynda",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
-        "latitude":  36.7505569,
-        "description":  "Calynda (also Calinda, Calydna, or Karynda; Ancient Greek: Κάλυνδα) was a city in ancient Caria.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Calynda",
-        "type":  "Greek",
-        "longitude":  28.8358326
-    },
-    {
-        "name":  "Çankırı",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/General_view_of_%C3%87ank%C4%B1r%C4%B1.jpeg/800px-General_view_of_%C3%87ank%C4%B1r%C4%B1.jpeg",
-        "latitude":  40.6,
-        "description":  "Çankırı is the capital city of Çankırı Province, in Turkey, about 140 km (87 mi) northeast of Ankara. It is situated about 800 m (2500 ft) above sea level.\n",
-        "link":  "https://en.wikipedia.org//wiki/%C3%87ank%C4%B1r%C4%B1",
-        "type":  "Greek",
-        "longitude":  33.6166649
-    },
-    {
-        "name":  "Carallia (Pamphylia)",
-        "imageUrl":  "",
-        "latitude":  36.6836128,
-        "description":  "Carallia (Ancient Greek: Καραλλία) was a city of the Roman province of Pamphylia Prima and is mentioned in the acts of the Council of Ephesus (431).[1] The same form of the name is given in the acts of the Council of Chalcedon (451).[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Carallia_(Pamphylia)",
-        "type":  "Greek/Roman",
-        "longitude":  31.8858337
-    },
-    {
-        "name":  "Carambis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
-        "latitude":  42.01361,
-        "description":  "Carambis or Karambis (Ancient Greek: Κάραμβις) was an ancient Greek city[1] of ancient Paphlagonia, on a promontory of the same name.[2] The town is mentioned in the Periplus of Pseudo-Scylax (under the name Caramus or Karamos) and by Pliny the Elder.[3] The name occurs as Carambas in the Peutinger Table.[4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Carambis",
-        "type":  "Greek",
-        "longitude":  33.36972
-    },
-    {
-        "name":  "Cardia (Thrace)",
-        "imageUrl":  "",
-        "latitude":  40.5472221,
-        "description":  "Cardia or Kardia (Ancient Greek: Kαρδία), anciently the chief town of the Thracian Chersonese (today Gallipoli peninsula), was situated at the head of the Gulf of Melas (today the Gulf of Saros). It was originally a colony of the Milesians and Clazomenians; but subsequently, in the time of Miltiades (late 6th century BC), the place also received Athenian colonists,[1] as proved by Miltiades tyranny (515–493 BC). But this didn\u0027t make Cardia necessarily always pro-Athenian: when in 357 BC Athens took control of the Chersonese, the latter, under the rule of a Thracian prince, was the only city to remain neutral; but the decisive year was 352 BC when the city concluded a treaty of amity with king Philip II of Macedonia. A great crisis exploded when Diopeithes, an Athenian mercenary captain, had in 343 BC brought Attic settlers to the town; and since Cardia was unwilling to receive them, Philip immediately sent help to the town. The king proposed to settle the dispute between the two cities by arbitration, but Athens refused.[2]  Demosthenes, the famous Greek patriot and orator, spoke on this very matter to the Athenian Senate in 341 BC his \"Oration On The State Of The Chersonesus\":[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Cardia_(Thrace)",
-        "type":  "Greek",
-        "longitude":  26.7408333
-    },
-    {
-        "name":  "Caria",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/DALYAN-KAUNOS_-_panoramio.jpg/800px-DALYAN-KAUNOS_-_panoramio.jpg",
-        "latitude":  37.5,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Caria",
-        "type":  "Greek",
-        "longitude":  28
-    },
-    {
-        "name":  "Carissa (Galatia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Brue%2C_Adrien_Hubert%2C_Asie-Mineure%2C_Armenie%2C_Syrie%2C_Mesopotamie%2C_Caucase._1839._%28EC%29.jpg/589px-Brue%2C_Adrien_Hubert%2C_Asie-Mineure%2C_Armenie%2C_Syrie%2C_Mesopotamie%2C_Caucase._1839._%28EC%29.jpg",
-        "latitude":  40.52778,
-        "description":  "Carissa, also called Garsi, was a town of the Trocmi in ancient Galatia, Anatolia, located between Etonea and Amasya.[1][2] It was inhabited during Roman and Byzantine times.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Carissa_(Galatia)",
-        "type":  "Greek",
-        "longitude":  35.1405563
-    },
-    {
-        "name":  "Carmylessus",
-        "imageUrl":  "",
-        "latitude":  36.5744438,
-        "description":  "Carmylessus or Karmylessos (Ancient Greek: Καρμυλησσός) was a town of ancient Lycia, described by Strabo between Telmissus and the mouth of the Xanthus.[1] After Telmissus, he says, then Anticragus (Ancient Greek: Ἀντίκραγος), an abrupt mountain on which is the small place Carmylessus, lying in a ravine.\n",
-        "link":  "https://en.wikipedia.org//wiki/Carmylessus",
-        "type":  "Greek",
-        "longitude":  29.0902786
-    },
-    {
-        "name":  "Carussa",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
-        "latitude":  41.81,
-        "description":  "Carussa or Karoussa (Ancient Greek: Κάρουσσα), also spelt as Carusa or Karousa (Καροῦσα), also known as Polichnion,[1] was a Greek trading place (emporium) on the Black Sea coast of ancient Paphlagonia, south of Sinope, and 150 stadia from it.[2][3] It is also mentioned in the Periplus of Pseudo-Scylax as a Greek city; and by Pliny the Elder.[4] It was a member of the Delian League as it appears in tribute lists of ancient Athens.[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Carussa",
-        "type":  "Greek",
-        "longitude":  35.15889
-    },
-    {
-        "name":  "Caryanda",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkey_relief_location_map.jpg/800px-Turkey_relief_location_map.jpg",
-        "latitude":  37.12639,
-        "description":  "Caryanda[pronunciation?] or Karyanda (Ancient Greek: Καρυάνδα) was a city on the coast of ancient Caria in southwestern Anatolia.  Stephanus of Byzantium describes it as a city and harbour (λίμην) near Myndus and Cos.[1] But λιμήν, in the text of Stephanus, is an emendation or alteration: the manuscripts have λίμνη (\u0027lake\u0027). Strabo places Caryanda between Myndus and Bargylia, and he describes it, according to the common text, as \"a lake, and island of the same name with it;\" and thus the texts of Stephanus, who has got his information from Strabo, agree with the texts of Strabo.[2] Pliny simply mentions the island Caryanda with a town; but he is in that passage only enumerating islands.[3] In another passage he mentions Caryanda as a place on the mainland,[4] and Pomponius Mela does also.[5] Scylax of Caryanda, one of the most famous mariners and explorers of ancient times, was a native of Caryanda. He lived in the late 6th and early 5th centuries BCE and served the Persian king Darius I.[6]\n",
-        "link":  "https://en.wikipedia.org//wiki/Caryanda",
-        "type":  "Greek",
-        "longitude":  27.3780556
-    },
-    {
-        "name":  "Castabala (city)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/HierapolisCastabalaBurgberg.jpg/800px-HierapolisCastabalaBurgberg.jpg",
-        "latitude":  37.1775,
-        "description":  "Castabala (Greek: Καστάβαλα), also known as Hieropolis and Hierapolis (Greek: Ίεράπολις) was a city in Cilicia (modern southern Turkey), near the Ceyhan River (ancient Pyramus).\n",
-        "link":  "https://en.wikipedia.org//wiki/Castabala_(city)",
-        "type":  "Greek",
-        "longitude":  36.1875
-    },
-    {
-        "name":  "Cebrene",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.7441673,
-        "description":  "Cebrene (Ancient Greek: Κεβρήνη), also spelled Cebren (Ancient Greek: Κεβρήν), was an ancient Greek city in the middle Skamander valley in the Troad region of Anatolia. According to some scholars, the city\u0027s name was changed to Antiocheia in the Troad (Ancient Greek: Ἀντιόχεια τῆς Τρωάδος) for a period during the 3rd century BCE (see below). Its archaeological remains have been located on Çal Dağ in the forested foothills of Mount Ida (modern Kaz Dağı), approximately 7 km to the south of the course of the Skamander.[1] The site was first identified by the English amateur archaeologist Frank Calvert in 1860.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Cebrene",
-        "type":  "Greek",
-        "longitude":  26.56639
-    },
-    {
-        "name":  "Ceramus",
-        "imageUrl":  "",
-        "latitude":  37.0425,
-        "description":  "Ceramus or Keramos (Ancient Greek: Κέραμος) is a city on the north coast of the Ceramic Gulf—named after this city—in ancient Caria, in southwest Asia Minor; its ruins can be found outside the modern village of Ören, Muğla Province, Turkey.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Ceramus",
-        "type":  "Greek",
-        "longitude":  27.95139
-    },
-    {
-        "name":  "Chalcetor",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
-        "latitude":  37.3491669,
-        "description":  "Chalcetor or Chalketor (Ancient Greek: Χαλκήτωρ) was a town of ancient Caria. Strabo says that the mountain range of Grion is parallel to Latmus, and extends east from the Milesia through Caria to Euromus and the Chalcetores, that is, the people of Chalcetor.[1] In another passage, Strabo names the town Chalcetor,[2] which some writers have erroneously altered to Chalcetora.[3] It was a member of the Delian League.[4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Chalcetor",
-        "type":  "Greek",
-        "longitude":  27.685833
-    },
-    {
-        "name":  "Cibyra Mikra",
-        "imageUrl":  "",
-        "latitude":  36.65972,
-        "description":  "Cibyra (Greek: Κιβύρα) also referred to as Cibyra Mikra to distinguish it from Cibyra Magna, was a town in ancient Pamphylia. Strabo, after mentioning Side, says, \"...and near it is the coast of the little Cibyratae, and then the river Melas, and a station for ships\".[1] The site of Side is well known. The Melas is the Manavgat River, 4 miles (6.4 km) east of Side. But there could have been no city between Side and the Melas, and it is conjectured that in Strabo\u0027s text, the coast (\"Paralia\") of the Cibyratae should come after the Melas. The vestiges of Cibyra are probably those observed by Captain Beaufort upon a height which rises from the right bank of a considerable river about 8 miles (13 km) to the eastward of the Melas, about 4 miles (6.4 km) to the west of Cape Karáburun, and nearly 2 miles (3.2 km) from the shore.[2] Ptolemy mentions this Cibyra among the inland towns of Cilicia Trachea; but Scylax places it on the coast. There is a place, Cyberna (Κυβέρνη), mentioned in the Stadiasmus, which is placed 59 stadia east of the Melas. If the conjecture as to Strabo\u0027s text is correct, we may identify Cyberna with this Cibyra of Pamphylia.\n",
-        "link":  "https://en.wikipedia.org//wiki/Cibyra_Mikra",
-        "type":  "Greek",
-        "longitude":  31.6597214
-    },
-    {
-        "name":  "Cilicia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Roman_Empire_-_Cilicia_%28125_AD%29.svg/721px-Roman_Empire_-_Cilicia_%28125_AD%29.svg.png",
-        "latitude":  36.8666649,
-        "description":  "Cilicia (/sɪˈlɪʃə/)[3][note 1] is a geo-cultural region in southern Anatolia (Turkey), extending inland from the northeastern coasts of the Mediterranean Sea. Cilicia has a population ranging over six million, concentrated mostly at the Cilicia plain. The region includes the provinces of Mersin, Adana, Osmaniye, and Hatay.\n",
-        "link":  "https://en.wikipedia.org//wiki/Cilicia",
-        "type":  "Greek",
-        "longitude":  35.4833336
-    },
-    {
-        "name":  "Cinolis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
-        "latitude":  41.9627762,
-        "description":  "Cinolis or Kinolis (Ancient Greek: Κίνωλις), also known as Cimolis or Kimolis (Κίμωλις), was a Greek[1] small port town on the coast of ancient Paphlagonia. According to Arrian it was situate 180 stadia west of Stephane,[2] but according to Marcian of Heraclea only 150.[3] The nearby town of Anticinolis was located 80 stadia from Cinolis.\n",
-        "link":  "https://en.wikipedia.org//wiki/Cinolis",
-        "type":  "Greek",
-        "longitude":  34.1544456
-    },
-    {
-        "name":  "Cius",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  40.4325,
-        "description":  "Cius (/ˈsaɪəs/; Greek: Kίος or Κῖος Kios), later renamed Prusias on the Sea (/ˈpruːʒəs/; Latin: Prusias ad Mare) after king Prusias I of Bithynia, was an ancient Greek city bordering the Propontis (now known as the Sea of Marmara), in Bithynia and in Mysia (in modern northwestern Turkey), and had a long history, being mentioned by Herodotus, Xenophon, Aristotle, Strabo and Apollonius Rhodius.\n",
-        "link":  "https://en.wikipedia.org//wiki/Cius",
-        "type":  "Greek",
-        "longitude":  29.15639
-    },
-    {
-        "name":  "Claros",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Klaros01.jpg/800px-Klaros01.jpg",
-        "latitude":  38.005,
-        "description":  "Claros (Greek: Κλάρος, Klaros; Latin: Clarus) was an ancient Greek sanctuary on the coast of Ionia. It contained a temple and oracle of Apollo, honored here as Apollo Clarius. It was located in the territory of Colophon, which lay twelve kilometers to the north, one of the twelve cities of the Ionian League. The coastal city Notion lay two kilometers to the south. The ruins of the sanctuary are now found north of the modern town Ahmetbeyli in the Menderes district of Izmir Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Claros",
-        "type":  "Greek",
-        "longitude":  27.1927776
-    },
-    {
-        "name":  "Claudiopolis (Cilicia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkey_relief_location_map.jpg/800px-Turkey_relief_location_map.jpg",
-        "latitude":  36.65167,
-        "description":  "Claudiopolis (Ancient Greek: Κλαυδιόπολις) also called Ninica and Ninica Claudiopolis,[1] was an ancient city of Cilicia.  Ammianus[2] mentions Seleucia and Claudiopolis as cities of Cilicia, or of the country drained by the Calycadnus; and Claudiopolis was a colony of Claudius Caesar. It is described by Theophanes of Byzantium as situated in a plain between the two Taurus Mountains, a description which exactly, corresponds to the position of the basin of the Calycadnus. Claudiopolis may therefore be represented by Mut, which is higher up the valley than Seleucia, and near the junction of the northern and western branches of the Calycadnus. It is also the place to which the pass over the northern Taurus leads from Laranda.[3] Pliny mentions a Claudiopolis of Cappadocia,[4] and Ptolemy has a Claudiopolis in Cataonia.[5] Both these passages and those of Ammianus and Theophanes are cited to prove that there is a Claudiopolis in Cataonia, though it is manifest that the passage in Ammianus at least can only apply to a town in the valley of the Calycadnus in Cilicia Trachea. The two Tauri of Theophanes might mean the Taurus and Antitaurus. But Hierocles places Claudiopolis in Isauria, a description which cannot apply to the places so named of Pliny and Ptolemy. The city apparently received the Roman colony name Colonia Iulia Felix Augusta Ninica, and minted coins in antiquity.[6]\n",
-        "link":  "https://en.wikipedia.org//wiki/Claudiopolis_(Cilicia)",
-        "type":  "Greek/Roman",
-        "longitude":  33.4416656
-    },
-    {
-        "name":  "Colophon (city)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ionia%2C_Asia_Minor_Map%2C_Classical_Atlas%2C_1886%2C_Keith_Johnston.jpg/493px-Ionia%2C_Asia_Minor_Map%2C_Classical_Atlas%2C_1886%2C_Keith_Johnston.jpg",
-        "latitude":  38.10889,
-        "description":  "Colophon (/ˈkɒləfɒn/;[1] Ancient Greek: Κολοφών) was an ancient city in Ionia. Founded around the turn of the first millennium BC, it was likely one of the oldest of the twelve cities of the Ionian League. It was located between Lebedos (120 stadia to the west) and Ephesus (70 stadia to its south). Its ruins are south of the town Değirmendere in the Menderes district of Izmir Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Colophon_(city)",
-        "type":  "Greek",
-        "longitude":  27.1416664
-    },
-    {
-        "name":  "Colussa",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
-        "latitude":  41.9475,
-        "description":  "Colussa or Koloussa (Ancient Greek: Κόλουσσα) was an ancient Greek city[1] on the Black Sea coast of ancient Paphlagonia.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Colussa",
-        "type":  "Greek",
-        "longitude":  34.27139
-    },
-    {
-        "name":  "Colybrassus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Colybrassus_ayasofya_3.jpg/800px-Colybrassus_ayasofya_3.jpg",
-        "latitude":  36.7316666,
-        "description":  "Coordinates: 36°43′54″N 31°58′31″E﻿ / ﻿36.731600°N 31.975400°E﻿ / 36.731600; 31.975400\n",
-        "link":  "https://en.wikipedia.org//wiki/Colybrassus",
-        "type":  "Greek",
-        "longitude":  31.9752769
-    },
-    {
-        "name":  "Comba (Lycia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
-        "latitude":  36.5513878,
-        "description":  "Comba or Komba (Ancient Greek: τὰ Κὀμβα) was a city in ancient Lycia.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Comba_(Lycia)",
-        "type":  "Greek",
-        "longitude":  29.669445
-    },
-    {
-        "name":  "Constantia (Osrhoene)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Justinian555AD.png/800px-Justinian555AD.png",
-        "latitude":  37.22889,
-        "description":  "Constantia  or Konstantia (Ancient Greek: Κωνσταντία) was a town of some importance in the province Osrhoene in Mesopotamia, on the road between Nisibis and Carrhae, at no great distance from Edessa. It was, after his departure from Nisibis, the residence of the dux Mesopotamiae until the foundation of Dara.[1] There is considerable variation in different authors in the way in which the name of this town is written and the names under which it is known, including: Constantia or Konstantia (Κωνσταντία),[2] Constantina or Konstantina (Κωνσταντίνα),[3] Antoninopolis,[4] Nicephorium or Nikephorion (Νικηφόριον),[5] Maximianopolis (Μαξιμιανούπολις),[4] Constantinopolis in Osrhoene,[6] Tella and Antiochia Arabis,[7] Antiochia in Mesopotamia (Ἀντιόχεια τῆς Μεσοποταμίας – Antiocheia tes Mesopotamias) and Antiochia in Arabia (Ἀντιόχεια ἡ Ἀραβική – Antiocheia e Arabike).[8][9]\n",
-        "link":  "https://en.wikipedia.org//wiki/Constantia_(Osrhoene)",
-        "type":  "Greek",
-        "longitude":  39.7558327
-    },
-    {
-        "name":  "Corycus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kizkalesi_M%C3%A4dchenburg_3.jpg/800px-Kizkalesi_M%C3%A4dchenburg_3.jpg",
-        "latitude":  36.46528,
-        "description":  "Corycus (Greek: Κώρυκος; also transliterated Corycos or Korykos; Armenian: Կոռիկոս, romanized: Koṙikos; Turkish: Kız Kalesi, lit. \"maiden castle\") was an ancient city in Cilicia Trachaea, Anatolia, located at the mouth of the valley called Şeytan deresi; the site is now occupied by the town of Kızkalesi (formerly Ghorgos), Mersin Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Corycus",
-        "type":  "Greek",
-        "longitude":  34.1541672
-    },
-    {
-        "name":  "Corydala",
-        "imageUrl":  "",
-        "latitude":  36.376667,
-        "description":  "Coordinates: 36°22′36″N 30°16′24″E﻿ / ﻿36.376674°N 30.273281°E﻿ / 36.376674; 30.273281\nCorydala or Corydalla or Korydalla or Korydala (Ancient Greek: Κορύδαλλα) was a city of ancient Lycia. Anciently, it belonged to the Rhodians, according to Hecataeus, quoted by Stephanus.[1] But it was not in Rhodes, nor was it one of the Rhodian possessions in the Peraea, Caria.[2] The Tabula Peutingeriana marks Corydala (spelt Coridallo) on the road from Phaselis to Patara, and makes the distance between these two places 29 Roman miles (43 km; 27 mi) Pliny places Corydalla in the interior of Lycia,[3] and Ptolemy mentions it with Sagalassus, Rhodia, Phellus, Myra, and other places, as about Mons Massicytus.\n",
-        "link":  "https://en.wikipedia.org//wiki/Corydala",
-        "type":  "Greek",
-        "longitude":  30.2733326
-    },
-    {
-        "name":  "Cotenna",
-        "imageUrl":  "",
-        "latitude":  37.0333328,
-        "description":  "Coordinates: 37°02′N 31°38′E﻿ / ﻿37.033°N 31.633°E﻿ / 37.033; 31.633\nCotenna or Kotenna (Ancient Greek: Κότεννα) was a city in the Roman province of Pamphylia I in Asia Minor. It corresponds to modern Gödene, near Konya, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Cotenna",
-        "type":  "Greek",
-        "longitude":  31.6333332
-    },
-    {
-        "name":  "Cremna",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kremna_ruins_vista_May_2013.jpg/800px-Kremna_ruins_vista_May_2013.jpg",
-        "latitude":  37.5001373,
-        "description":  "Cremna (Greek Κρῆμνα), or Kremna, was an ancient town in Pisidia. It is situated in the district of Bucak. It stands in a remote valley on a high plateau dominating the ancient Cestrus River (today Aksu), with limited access and good defensive features.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Cremna",
-        "type":  "Greek",
-        "longitude":  30.6911
-    },
-    {
-        "name":  "Cyaneae",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Kyaneai_Theater.JPG/800px-Kyaneai_Theater.JPG",
-        "latitude":  36.25083,
-        "description":  "Cyaneae[pronunciation?] (Ancient Greek: Κυανέαι, [ky.a.né.ai̯]), also spelled Kyaneai or Cyanae, was a town of ancient Lycia, or perhaps three towns known collectively by the name, on what is now the southern coast of Turkey.[1] William Martin Leake says that its remains were discovered west of Andriaca.[2] The place, which is at the head of Port Tristomo, was determined by an inscription. Leake observes that in some copies of Pliny it is written Cyane; in Hierocles and the Notitiae Episcopatuum it is Cyaneae. To Spratt and Forbes, Cyaneae appeared to be a city ranking in importance with Phellus and Candyba, but in a better state of preservation. No longer a residential bishopric, Cyanae is today listed by the Catholic Church as a titular see.\n",
-        "link":  "https://en.wikipedia.org//wiki/Cyaneae",
-        "type":  "Greek",
-        "longitude":  29.8055553
-    },
-    {
-        "name":  "Cyme (Aeolis)",
-        "imageUrl":  "",
-        "latitude":  38.86,
-        "description":  "Cyme (Greek: Κύμη or Κύμη Αιολίδας, Cyme of Aeolis) (modern Turkish Nemrut Limani) or Cumae was an Aeolian city in Aeolis (Asia Minor) close to the kingdom of Lydia.\n",
-        "link":  "https://en.wikipedia.org//wiki/Cyme_(Aeolis)",
-        "type":  "Greek",
-        "longitude":  27.0594444
-    },
-    {
-        "name":  "Cytorus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Gideros_Bay1.jpg/800px-Gideros_Bay1.jpg",
-        "latitude":  41.8594437,
-        "description":  "Cytorus (Greek Κύτωρος, Kytoros;[1] \nalso Cytorum, Κύτωρον, Kytoron and Κύτωρις[2]) was an ancient Greek city[3] on the northern coast of Asia Minor. Mentioned by Homer, Cytorus survives in the name of Gideros, which is both \n",
-        "link":  "https://en.wikipedia.org//wiki/Cytorus",
-        "type":  "Greek",
-        "longitude":  32.8580551
-    },
-    {
-        "name":  "Cyzicus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Istanbul_-_Museo_archeol._-_Auriga_greco_-_Arcaico%2C_sec._VI_aC%2C_da_Cizico_-_Foto_G._Dall%27Orto_28-5-2006.jpg/788px-Istanbul_-_Museo_archeol._-_Auriga_greco_-_Arcaico%2C_sec._VI_aC%2C_da_Cizico_-_Foto_G._Dall%27Orto_28-5-2006.jpg",
-        "latitude":  40.3833351,
-        "description":  "Cyzicus (/ˈsɪzɪkəs/; Ancient Greek: Κύζικος Kyzikos; Ottoman Turkish: آیدینجق‎, Aydıncıḳ) was an ancient Greek town in Mysia in Anatolia in the current Balıkesir Province of Turkey. It was located on the shoreward side of the present Kapıdağ Peninsula (the classical Arctonnesus), a tombolo which is said to have originally been an island in the Sea of Marmara only to be connected to the mainland in historic times either by artificial means or an earthquake.\n",
-        "link":  "https://en.wikipedia.org//wiki/Cyzicus",
-        "type":  "Greek",
-        "longitude":  27.8833332
-    },
-    {
-        "name":  "Daedala (city)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
-        "latitude":  36.7494431,
-        "description":  "Daedala or Daidala (Greek: τὰ Δαίδαλα) was a city of the Rhodian Peraea in ancient Caria, or a small place, as Stephanus of Byzantium says,[1] on the authority of Strabo.\n",
-        "link":  "https://en.wikipedia.org//wiki/Daedala_(city)",
-        "type":  "Greek",
-        "longitude":  28.9766674
-    },
-    {
-        "name":  "Dalisandus (Isauria)",
-        "imageUrl":  "",
-        "latitude":  36.6777763,
-        "description":  "Dalisandus or Dalisandos (Ancient Greek: Δαλισανδός) was a city of ancient Cappadocia and later of Isauria, near the river Cydnus.[1] It is considered to have been near Sınabiç, 6 km north of Claudiopolis (present-day Mut, Mersin), Turkey.[2][3][4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Dalisandus_(Isauria)",
-        "type":  "Greek",
-        "longitude":  33.48
-    },
-    {
-        "name":  "Didyma",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Didymaion_front_AvL.JPG/800px-Didymaion_front_AvL.JPG",
-        "latitude":  37.385,
-        "description":  "Didyma (/ˈdɪdɪmə/; Ancient Greek: Δίδυμα) was an ancient Greek sanctuary on the coast of Ionia in the domain of the famous city of Miletus. Apollo was the main deity of the sanctuary of Didyma, also called Didymaion. But it was home to both of the temples dedicated to the twins Apollo and Artemis. Other deities were also honoured within the sanctuary. The Didymaion was well renowned in antiquity because of its famed oracle. This oracle of Apollo was situated within what was, and is, the one of the world\u0027s greatest temples to Apollo. The remains of this Hellenistic temple belong to the best preserved temples of classical antiquity. Besides this temple other buildings existed within the sanctuary which have been rediscovered recently; a Greek theatre and the foundations of the above-mentioned Hellenistic temple of Artemis, to name but two.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Didyma",
-        "type":  "Greek",
-        "longitude":  27.25639
-    },
-    {
-        "name":  "Docimium",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Roman_-_Garland_Sarcophagus_-_Walters_2329.jpg/800px-Roman_-_Garland_Sarcophagus_-_Walters_2329.jpg",
-        "latitude":  38.8666649,
-        "description":  "Docimium, Docimia or Docimeium (Greek: Δοκίμια and Δοκίμειον) was an ancient city of Phrygia, Asia Minor where there were famous marble quarries.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Docimium",
-        "type":  "Greek",
-        "longitude":  30.75
-    },
-    {
-        "name":  "Dolichiste",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
-        "latitude":  36.1833344,
-        "description":  "Doliche or Dolichiste (see List of Lycian place names, Greek: Δολίχη or Δολιχίστη; Eth. Δολιχεύς or Δολιχίστης) was an island noted by ancient geographers in the Mediterranean Sea off the Lycian coast, in Asia Minor, now called Kekova (or Kakava in Modern Greek), which is located in present-day Antalya Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Dolichiste",
-        "type":  "Greek",
-        "longitude":  29.8833332
-    },
-    {
-        "name":  "Doric Hexapolis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  37,
-        "description":  "The Doric or Dorian Hexapolis (Greek: Δωρικὴ Ἑξάπολις or Δωριέων Ἑξάπολις) was a federation of six cities of Dorian foundation in southwest Asia Minor and adjacent islands, largely coextensive with the region known as Doris or Doris in Asia (Δωρίς ἡ ἐν Ἀσίᾳ),[citation needed] and included:\n",
-        "link":  "https://en.wikipedia.org//wiki/Doric_Hexapolis",
-        "type":  "Greek",
-        "longitude":  28
-    },
-    {
-        "name":  "Edessa",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/N-Mesopotamia_and_Syria.svg/800px-N-Mesopotamia_and_Syria.svg.png",
-        "latitude":  37.15,
-        "description":  "Edessa (/ɪˈdɛsə/; Ancient Greek: Ἔδεσσα, romanized: Édessa) was an ancient city (polis) in Upper Mesopotamia, founded during the Hellenistic period by King Seleucus I Nicator (r. 305–281 BC), founder of the Seleucid Empire. It later became capital of the Kingdom of Osroene, and continued as capital of the Roman province of Osroene. During the Late Antiquity, it became a prominent center of Christian learning and seat of the Catechetical School of Edessa. During the Crusades, it was the capital of the County of Edessa.\n",
-        "link":  "https://en.wikipedia.org//wiki/Edessa",
-        "type":  "Greek",
-        "longitude":  38.8
-    },
-    {
-        "name":  "Elaea (Aeolis)",
-        "imageUrl":  "",
-        "latitude":  38.95,
-        "description":  "Elaea (Ancient Greek: Ἐλαία and Ἐλέα) was an ancient city of Aeolis, Asia, the port of Pergamum. According to the Barrington Atlas of the Greek and Roman World, it was located near the modern town of Zeytindağ, İzmir Province, Turkey.[1] The ruins of the silted port\u0027s breakwater can be seen on satellite maps at  38°56\u002735.54\"N  27°2\u002716.34\"E.\n",
-        "link":  "https://en.wikipedia.org//wiki/Elaea_(Aeolis)",
-        "type":  "Greek/Roman",
-        "longitude":  27.0333328
-    },
-    {
-        "name":  "Elaeus",
-        "imageUrl":  "",
-        "latitude":  40.0597229,
-        "description":  "Elaeus (Ancient Greek: Ἐλαιοῦς Elaious, later Ἐλεοῦς Elaeus), the “Olive City”, was an ancient Greek city located in Thrace, on the Thracian Chersonese. Elaeus was located at the southern end of the Hellespont (now the Dardanelles) near the southernmost point of the Thracian Chersonese (now the Gallipoli peninsula) in modern-day Turkey. According to the geographer Scymnus, Elaeus was founded by settlers from Ionian Teos, while the Pseudo-Scymnus writes that it was a colony of Athens and was founded by Phorbas[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Elaeus",
-        "type":  "Greek",
-        "longitude":  26.2305565
-    },
-    {
-        "name":  "Elaiussa Sebaste",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/TheaterElaiussa2011.jpg/800px-TheaterElaiussa2011.jpg",
-        "latitude":  36.4836121,
-        "description":  "Elaiussa Sebaste or Elaeousa Sebaste (Greek: Ελαιούσα Σεβαστή) was an ancient Roman town located 55 km (34 mi) from Mersin in the direction of Silifke in Cilicia on the southern coast of Anatolia (in the modern-day town of Ayaş (there is a like-named town in Ankara province), Turkey).\n",
-        "link":  "https://en.wikipedia.org//wiki/Elaiussa_Sebaste",
-        "type":  "Greek",
-        "longitude":  34.17361
-    },
-    {
-        "name":  "Ephesus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ephesus_Celsus_Library_Fa%C3%A7ade.jpg/774px-Ephesus_Celsus_Library_Fa%C3%A7ade.jpg",
-        "latitude":  37.9411125,
-        "description":  "Ephesus (/ˈɛfɪsəs, ˈɛfəsəs/;[1][2] Greek: Ἔφεσος, romanized: Éphesos; Turkish: Efes; may ultimately derive from Hittite: 𒀀𒉺𒊭, romanized: Apaša) was a city in  ancient Greece[3][4] on the coast of Ionia, 3 kilometres (1.9 mi) southwest of present-day Selçuk in İzmir Province, Turkey. It was built in the 10th century BC on the site of the former Arzawan capital[5][6] by Attic and Ionian Greek colonists. During the Classical Greek era, it was one of twelve cities that were members of the Ionian League. The city came under the control of the Roman Republic in 129 BC.\n",
-        "link":  "https://en.wikipedia.org//wiki/Ephesus",
-        "type":  "Greek",
-        "longitude":  27.3419437
-    },
-    {
-        "name":  "Epibates",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Selimpa%C5%9Fa.JPG/800px-Selimpa%C5%9Fa.JPG",
-        "latitude":  41.05389,
-        "description":  "Selimpaşa, known in Byzantine times as Epibates (sometimes as Epivates or Epibatos) (Greek: Επιβάτες), is a small town in the European part of Turkey, near Silivri in Istanbul Province.\n",
-        "link":  "https://en.wikipedia.org//wiki/Epibates",
-        "type":  "Greek",
-        "longitude":  28.3669453
-    },
-    {
-        "name":  "Ermenek",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Ermenek_-_panoramio_%281%29.jpg/800px-Ermenek_-_panoramio_%281%29.jpg",
-        "latitude":  36.6333351,
-        "description":  "Ermenek is a town and district of Karaman Province in the Mediterranean region of Turkey. As ancient Germanicopolis (in Isauria; has namesakes), a former bishopric, it remains a Latin Catholic titular see.\n",
-        "link":  "https://en.wikipedia.org//wiki/Ermenek",
-        "type":  "Greek",
-        "longitude":  32.8833351
-    },
-    {
-        "name":  "Erymna",
-        "imageUrl":  "",
-        "latitude":  37.0733337,
-        "description":  "\nErymna (Ancient Greek: Ἐρυμνή) or Orymna (Ancient Greek: Ὄρυμνα) was a town in ancient Pamphylia or Lycia. The form \"Orymna\" is that given in the Synecdemus and the Notitiae Episcopatuum.[1][2][3] and in the ecumenical councils,[4] but inscriptions found on the site show that the inhabitants used the form with \"E\".[1][3] Stephanus of Byzantium stated that the form used in the Lyciaca of Alexander Polyhistor was Erymnae (Ancient Greek: Ἐρυμναί, plural of Ἐρυμνή).[5] The modern name of the site is Ormana, reflecting the ancient name.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Erymna",
-        "type":  "Greek/Roman",
-        "longitude":  31.5841675
-    },
-    {
-        "name":  "Erythrae",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  38.38278,
-        "description":  "Erythrae or Erythrai (Greek: Ἐρυθραί) later Litri, was one of the twelve Ionian cities of Asia Minor, situated 22 km north-east of the port of Cyssus (modern name: Çeşme), on a small peninsula stretching into the Bay of Erythrae, at an equal distance from the mountains Mimas and Corycus, and directly opposite the island of Chios. It is recorded that excellent wine was produced in the peninsula. Erythrae was notable for being the seat of the Erythraean Sibyl. The ruins of the city are found north of the town Ildırı in the Çeşme district of Izmir Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Erythrae",
-        "type":  "Greek",
-        "longitude":  26.4808331
-    },
-    {
-        "name":  "Eskişehir",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Sazova_Park%2C_Eski%C5%9Fehir%2C_Turkey_08.jpg/800px-Sazova_Park%2C_Eski%C5%9Fehir%2C_Turkey_08.jpg",
-        "latitude":  39.7833328,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Eski%C5%9Fehir",
-        "type":  "Greek",
-        "longitude":  30.5166664
-    },
-    {
-        "name":  "Etenna",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Antalya_by_Piri_Reis.jpg/800px-Antalya_by_Piri_Reis.jpg",
-        "latitude":  37.001667,
-        "description":  "Coordinates: 37°00′06″N 31°26′57″E﻿ / ﻿37.00167°N 31.44917°E﻿ / 37.00167; 31.44917\n",
-        "link":  "https://en.wikipedia.org//wiki/Etenna",
-        "type":  "Greek",
-        "longitude":  31.4491673
-    },
-    {
-        "name":  "Eudocias (Pamphylia)",
-        "imageUrl":  "",
-        "latitude":  36.9883347,
-        "description":  "Eudocias (Ancient Greek: Εὐδοκιάς) or Eudocia (Ancient Greek: Εὐδοκία) was an ancient town in the Roman province of Pamphylia Secunda, in the neighbourhood of Termessus.\n",
-        "link":  "https://en.wikipedia.org//wiki/Eudocias_(Pamphylia)",
-        "type":  "Greek",
-        "longitude":  30.58
-    },
-    {
-        "name":  "Eupatoria (Pontus)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Heinrich_Kiepert._Asia_citerior.Pontus.jpg/800px-Heinrich_Kiepert._Asia_citerior.Pontus.jpg",
-        "latitude":  40.75,
-        "description":  "Eupatoria (Ancient Greek: Εὐπατορία) and Magnopolis (Ancient Greek: Μαγνόπολις)[1] was a Hellenistic city in the Kingdom of Pontus.  The city was founded by Mithridates VI Eupator just south of where the Lycus flows into the Iris, the west end of the fertile valley of Phanaroea, probably in or near the village of Çevresu, Erbaa district, Tokat Province.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Eupatoria_(Pontus)",
-        "type":  "Greek",
-        "longitude":  36.5
-    },
-    {
-        "name":  "Euromus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/The_Temple_of_Zeus_Lepsinos_at_Euromus.jpg/800px-The_Temple_of_Zeus_Lepsinos_at_Euromus.jpg",
-        "latitude":  37.37417,
-        "description":  "Euromus or Euromos (Ancient Greek: Εὔρωμος and Εὔροωμος)[1] – also, Europus or Europos (Εὐρωπός), Eunomus or Eunomos (Εὔνωμος), Philippi or Philippoi (Φίλιπποι);[2] earlier Kyromus and Hyromus – was an ancient city in Caria, Anatolia; the ruins are approximately 4 km southeast of Selimiye and 12 km northwest of Milas (the ancient Mylasa), Muğla Province, Turkey. It was situated at the foot of Mount Grium, which runs parallel to Mount Latmus, and was built by one Euromus, a son of Idris, a Carian.[3][4][5][6]\n",
-        "link":  "https://en.wikipedia.org//wiki/Euromus",
-        "type":  "Greek",
-        "longitude":  27.6752777
-    },
-    {
-        "name":  "Faustinopolis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Heinrich_Kiepert._Asia_citerior.Cappadocia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cappadocia.jpg",
-        "latitude":  37.63994,
-        "description":  "Faustinopolis (Ancient Greek: Φαυστινόπολις), also Colonia Faustinopolis and Halala, was an ancient city in the south of Cappadocia, about 20 km south of Tyana. It was named after the empress Faustina, the wife of Marcus Aurelius, who died there in a village, which her husband, by establishing a colony in it, raised to the rank of a town under the name of Faustinopolis.[1] Hierocles assigns the place to Cappadocia Secunda,[2] and it is mentioned also in the Antonine and Jerusalem Itineraries. The town was close to the defiles of the Cilician Gates, and was likely situated at modern-day Toraman, Niğde Province, Turkey.[3] Following the Muslim conquests and the subsequent Arab raids, the site was abandoned for the nearby fortress of Loulon. \n",
-        "link":  "https://en.wikipedia.org//wiki/Faustinopolis",
-        "type":  "Greek",
-        "longitude":  34.68427
-    },
-    {
-        "name":  "Fethiye",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  36.65139,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Fethiye",
-        "type":  "Greek",
-        "longitude":  29.1230564
-    },
-    {
-        "name":  "Gagae",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
-        "latitude":  36.299,
-        "description":  "Coordinates: 36°17′56.4″N 30°21′17.3″E﻿ / ﻿36.299000°N 30.354806°E﻿ / 36.299000; 30.354806\nGagae or Gagai (Ancient Greek: Γάγαι) was a town on the southeast coast of ancient Lycia, in what is now the province of Antalya, from which the Gagates lapis derived its name.[1][2] The ruins are located in Kumluca district, Antalya Province, Turkey. Excavations in 2007 revealed an upper and lower acropolis and evidence of Rhodian colonization.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Gagae",
-        "type":  "Greek",
-        "longitude":  30.354805
-    },
-    {
-        "name":  "Gallipoli",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Gallipoli_peninsula_from_space.png/800px-Gallipoli_peninsula_from_space.png",
-        "latitude":  40.35,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Gallipoli",
-        "type":  "Greek",
-        "longitude":  26.4666672
-    },
-    {
-        "name":  "Gambrium",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Izmir_in_Turkey.svg/800px-Izmir_in_Turkey.svg.png",
-        "latitude":  39.0875,
-        "description":  "Gambrium or Gambrion (Ancient Greek: Γάμβριον and Γάμβρειον), also Gambreium or Gambreion (Γάμβρειον), was a town of ancient Aeolis and of Mysia, quite close to Pergamum. Its location is near Kınık and Bergama in İzmir province, in the Aegean Region of Turkey. \n",
-        "link":  "https://en.wikipedia.org//wiki/Gambrium",
-        "type":  "Greek",
-        "longitude":  27.35111
-    },
-    {
-        "name":  "Gaziantep",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/AntepKale2.jpg/800px-AntepKale2.jpg",
-        "latitude":  37.0666656,
-        "description":  "Gaziantep (Turkish pronunciation: [ɡaːˈziantep]), previously and still informally called Aintab or Antep (pronounced [anˈtep]), is the capital of Gaziantep Province, in the westernmost part of Turkey\u0027s Southeastern Anatolia Region, approximately 185 kilometres (115 mi) east of Adana and 97 kilometres (60 mi) north of Aleppo, Syria. It is probably located on the site of ancient Antiochia ad Taurum, and is near ancient Zeugma.\n",
-        "link":  "https://en.wikipedia.org//wiki/Gaziantep",
-        "type":  "Greek/Roman",
-        "longitude":  37.3833351
-    },
-    {
-        "name":  "Giresun Island",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Giresun_Ada.jpg/800px-Giresun_Ada.jpg",
-        "latitude":  40.92889,
-        "description":  "Giresun Island (Turkish: Giresun Adası) is a small island that has an area of 4 hectares and lies 1.2 km from the Turkish city of Giresun on the southeastern coast of Black Sea. It is the largest island on the Turkish Black Sea coast.\n",
-        "link":  "https://en.wikipedia.org//wiki/Giresun_Island",
-        "type":  "Greek",
-        "longitude":  38.43611
-    },
-    {
-        "name":  "Gördes",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/G%C3%B6rdes_Cadde_-_panoramio_-_adnan_akyol_%283%29.jpg/800px-G%C3%B6rdes_Cadde_-_panoramio_-_adnan_akyol_%283%29.jpg",
-        "latitude":  38.9333344,
-        "description":  "Gördes is a town and district of Manisa Province in the Aegean region of Turkey. According to the 2000 census, population of the district is 38,110 of which 10,809 live in the town of Gördes.[3][4] The district covers an area of 947 km2 (366 sq mi),[5] and the town lies at an elevation of 578 m (1,896 ft).\n",
-        "link":  "https://en.wikipedia.org//wiki/G%C3%B6rdes",
-        "type":  "Greek/Roman",
-        "longitude":  28.2833328
-    },
-    {
-        "name":  "Gryneium",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  38.8744431,
-        "description":  "Gryneium or Gryneion (Ancient Greek: Γρύνειον), also Grynium or Grynion (Γρύνιον), Grynia or Gryneia (Γρύνεια) and Grynoi (Γρῦνοι),[1] was a city of ancient Aeolis. It was located 40 stadia from Myrina and 70 from Elaea. In early times it was independent, one of the 12 important cities of Aeolis, but afterwards became subject to Myrina. It contained a sanctuary of Apollo with an ancient oracle and a splendid temple of white marble.[2][3][4][5][6] Pausanias wrote that at Gryneium, where there was an amazing grove of Apollo, with cultivated trees, and all those which, although they bear no fruit, are pleasing to smell or look upon.[7]\n",
-        "link":  "https://en.wikipedia.org//wiki/Gryneium",
-        "type":  "Greek",
-        "longitude":  27.0691662
-    },
-    {
-        "name":  "Hadrianopolis in Paphlagonia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  40.9258347,
-        "description":  "Hadrianopolis in Paphlagonia (Ancient Greek: Ἁδριανούπολις ἑν Παφλαγονία) was a city in southwestern Paphlagonia, Asia Minor (modern Turkey), about 3km west of modern Eskipazar. It was inhabited at least from the 1st century BC to the 8th century AD. It was named after the Roman emperor Hadrian in the 2nd century AD. The city also bore the names of Caesarea or Kaisareia (Καισάρεια) and Proseilemmene.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Hadrianopolis_in_Paphlagonia",
-        "type":  "Greek",
-        "longitude":  32.49139
-    },
-    {
-        "name":  "Halicarnassus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ruins_of_the_Mausoleum_at_Halicarnassus%2C_one_of_the_Seven_Wonders_of_the_Ancient_World.jpg/800px-Ruins_of_the_Mausoleum_at_Halicarnassus%2C_one_of_the_Seven_Wonders_of_the_Ancient_World.jpg",
-        "latitude":  37.0377769,
-        "description":  "Halicarnassus (/ˌhælɪkɑːrˈnæsəs/; Ancient Greek: Ἁλικαρνᾱσσός Halikarnāssós or Ἀλικαρνασσός Alikarnāssós; Turkish: Halikarnas; Carian: 𐊠𐊣𐊫𐊰 𐊴𐊠𐊥𐊵𐊫𐊰 alos k̂arnos) was an ancient Greek city at what is now Bodrum in Turkey. It was located in southwest Caria on an advantageous site on the Ceramic Gulf.[1] The city was famous for the Mausoleum of Halicarnassus, also known simply as the Tomb of Mausolus, whose name provided the origin of the word \"mausoleum\". The mausoleum, built from 353 to 350 BC, ranked as one of the seven wonders of the ancient world.\n",
-        "link":  "https://en.wikipedia.org//wiki/Halicarnassus",
-        "type":  "Greek",
-        "longitude":  27.4241657
-    },
-    {
-        "name":  "Hamaxia (town)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
-        "latitude":  36.57861,
-        "description":  "Hamaxia (Ancient Greek: Ἁμαξία) was a town in the east of ancient Pamphylia or in the west of Cilicia.[1] It had a good roadstead for ships, and excellent cedars for ship-building.[2] Hamaxia is likely the same place as Anaxion or Anaxium or Amaxian (Ἁμαξίαν) mentioned by the Stadiasmus Maris Magni as being west of Coracesium.[3][4] Strabo reports that the town was one of the gifts of Mark Antony to Cleopatra.[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Hamaxia_(town)",
-        "type":  "Greek",
-        "longitude":  31.9394436
-    },
-    {
-        "name":  "Hamaxitus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.5383339,
-        "description":  "Hamaxitus (Ancient Greek: Ἁμαξιτός, romanized: Hamaxitos) was an ancient Greek city in the south-west of the Troad region of Anatolia which was considered to mark the boundary between the Troad and Aeolis.[1] Its surrounding territory was known in Greek as Ἁμαξιτία (Hamaxitia),[2] and included the temple of Apollo Smintheus, the salt pans at Tragasai, and the Satnioeis river (modern Tuzla Çay).[3] It has been located on a rise called Beşiktepe near the village of Gülpınar (previously Külahlı) in the Ayvacık district of Çanakkale Province, Turkey.[4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Hamaxitus",
-        "type":  "Greek",
-        "longitude":  26.0930557
-    },
-    {
-        "name":  "Hasankeyf",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Hasankeyf.JPG/800px-Hasankeyf.JPG",
-        "latitude":  37.71472,
-        "description":  "Hasankeyf (Arabic: حصن كيفا‎ Ḥiṣn Kayfa‘, Kurdish: Heskîf‎,[3] Armenian: Հարսնքվ Harsnk’v, Greek: Κιφας, Kiphas, Latin: Cepha, Syriac: ܚܣܢܐ ܕܟܐܦܐ‎, romanized: Ḥesno d-Kifo[4]) is an ancient town and district located along the Tigris River in the Batman Province in southeastern Turkey. It was declared a natural conservation area by Turkey in 1981.[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Hasankeyf",
-        "type":  "Greek/Roman",
-        "longitude":  41.4130554
-    },
-    {
-        "name":  "Haydarpaşa railway station",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Rasimpa%C5%9Fa%2C_Haydarpa%C5%9Fa_%C4%B0skelesi%2C_Haydarpa%C5%9Fa_Gar_Binas%C4%B1_Yan%C4%B1%2C_34716_Kad%C4%B1k%C3%B6y-%C4%B0stanbul%2C_Turkey_-_panoramio.jpg/800px-Rasimpa%C5%9Fa%2C_Haydarpa%C5%9Fa_%C4%B0skelesi%2C_Haydarpa%C5%9Fa_Gar_Binas%C4%B1_Yan%C4%B1%2C_34716_Kad%C4%B1k%C3%B6y-%C4%B0stanbul%2C_Turkey_-_panoramio.jpg",
-        "latitude":  40.9961128,
-        "description":  "Haydarpaşa station (Turkish: Haydarpaşa Garı) is a railway station in Istanbul. Until 2012 the station was a major intercity, regional and commuter rail hub as well as the busiest railway station in Turkey. Haydarpaşa, along with Sirkeci station (on the other side of the Bosphorus), are Istanbul\u0027s two intercity and commuter railway terminals. From 19 June 2013 to 2018, all train service to the station was suspended due to the rehabilitation of the existing line for the new Marmaray commuter rail line.  The station building still houses the headquarters for District 1 of the State Railways.\n",
-        "link":  "https://en.wikipedia.org//wiki/Haydarpa%C5%9Fa_railway_station",
-        "type":  "Greek",
-        "longitude":  29.0186119
-    },
-    {
-        "name":  "Heraeum (Thrace)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
-        "latitude":  41.0238876,
-        "description":  "Heraeum  or Heraion (Ancient Greek: Ἥραιον), also known as Heraion Teichos (Ἡραῖον τεῖχος) was a Greek[1] city in ancient Thrace, located on the Propontis, a little to the east of Bisanthe.[2][3] The city was a Samian colony[4][5] and founded around 600 BC.[4] In some of the Itineraries, the place is called Hiereum or Ereon.\n",
-        "link":  "https://en.wikipedia.org//wiki/Heraeum_(Thrace)",
-        "type":  "Greek",
-        "longitude":  27.7419453
-    },
-    {
-        "name":  "Hermocapelia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lydia_circa_50_AD_-_English_legend.jpg/800px-Lydia_circa_50_AD_-_English_legend.jpg",
-        "latitude":  38.9216652,
-        "description":  "Hermocapelia or Hermokapeleia, also possibly known as Thyessos, was a town of ancient Lydia.[1] It was inhabited from Classical through Byzantine times.[1] It stood on the Hermus River,[2] \"to the west of Apollonis in its own little plain almost completely surrounded by mountains.\"[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Hermocapelia",
-        "type":  "Greek",
-        "longitude":  27.615
-    },
-    {
-        "name":  "Hierapolis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Hierapolis_01.jpg/800px-Hierapolis_01.jpg",
-        "latitude":  37.925,
-        "description":  "Hierapolis (/ˌhaɪəˈræpəlɪs/; Ancient Greek: Ἱεράπολις, lit. \"Holy City\") was an ancient Greek city located on hot springs in classical Phrygia in southwestern Anatolia. Its ruins are adjacent to modern Pamukkale in Turkey and currently comprise an archaeological museum. The site has the Tomb of Philip the Apostle.\n",
-        "link":  "https://en.wikipedia.org//wiki/Hierapolis",
-        "type":  "Greek",
-        "longitude":  29.1258335
-    },
-    {
-        "name":  "Hisarlik",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  39.9569435,
-        "description":  "Hisarlik (Turkish: Hisarlık, \"Place of Fortresses\"), often spelled Hissarlik, is the Turkish name for an ancient city located in what is known historically as Anatolia.[note 1] It is part of Çanakkale, Turkey.[1] The archaeological site lies approximately 6.5 kilometres (4.0 mi) from the Aegean Sea and about the same distance from the Dardanelles. The site is a partial tell, or artificial hill, elevated in layers over an original site. In this case the original site was already elevated, being the west end of a ridge projecting in an east–west direction from a mountain range.\n",
-        "link":  "https://en.wikipedia.org//wiki/Hisarlik",
-        "type":  "Greek",
-        "longitude":  26.23889
-    },
-    {
-        "name":  "Hydai",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
-        "latitude":  37.2825,
-        "description":  "Hydai or Kydai was a town of ancient Caria. Its name does not appear in ancient authors, but is inferred from epigraphic evidence; its demonym was Hydaieis (Ancient Greek: Ὑδαιεῖς) or Kydaieis (Κυδαιεῖς).[1] It was a polis (city-state) and a member of the Delian League.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Hydai",
-        "type":  "Greek",
-        "longitude":  27.686945
-    },
-    {
-        "name":  "Hyrcanis (Lydia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lydia_circa_50_AD_-_English_legend.jpg/800px-Lydia_circa_50_AD_-_English_legend.jpg",
-        "latitude":  38.6675,
-        "description":  "Hyrcanis or Hyrkaneis, also known as Hyrcania (Ancient Greek: Ὑρκανία), was a Roman and Byzantine-era city[1] and bishopric in ancient Lydia, now in western Turkey. It was situated in the Hyrcanian plain (τὸ Ὑρκάνιον πεδίον), which is said to have derived its name from a colony of Hyrcanians being settled here by the Persians.[2][3] They were afterwards mingled with some Macedonians, who also settled in this district, whence they are called by Pliny the Elder and Tacitus \"Macedones Hyrcani.\"[4][5][6][7] The city minted its own coins.[8][9]\n",
-        "link":  "https://en.wikipedia.org//wiki/Hyrcanis_(Lydia)",
-        "type":  "Greek",
-        "longitude":  27.667223
-    },
-    {
-        "name":  "Iasos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Hellenistic_tower_and_bouleuterion_of_Iasos_AvL.JPG/800px-Hellenistic_tower_and_bouleuterion_of_Iasos_AvL.JPG",
-        "latitude":  37.27778,
-        "description":  "Iasos or Iassos (/ˈaɪəˌsɒs/; Greek: Ἰασός Iasós or Ἰασσός Iassós), also in Latinized form Iasus or Iassus (/ˈaɪəsəs/), was a Greek city in ancient Caria located on the Gulf of Iasos (now called the Gulf of Güllük), opposite the modern town of Güllük, Turkey. It was originally on an island, but is now connected to the mainland. It is located in the Milas district of Muğla Province, Turkey, near the Alevi village of Kıyıkışlacık, about 31 km from the center of Milas.\n",
-        "link":  "https://en.wikipedia.org//wiki/Iasos",
-        "type":  "Greek",
-        "longitude":  27.58639
-    },
-    {
-        "name":  "Ibora",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Justinian555AD.png/800px-Justinian555AD.png",
-        "latitude":  40.6225,
-        "description":  "Ibora was a city in the late Roman province of Helenopontus, which became a Christian bishopric. It is now called İverönü, Erbaa[1] in present-day Tokat Province, Turkey. This is stated also by the Annuario Pontificio, which lists the bishopric as a titular see.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Ibora",
-        "type":  "Greek",
-        "longitude":  36.5708351
-    },
-    {
-        "name":  "Idebessos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Idebessos_-_Sarcophagi_with_shield_and_spear.jpg/800px-Idebessos_-_Sarcophagi_with_shield_and_spear.jpg",
-        "latitude":  36.55472,
-        "description":  "Idebessos or Idebessus, also known as Edebessus or Edebessos (Ancient Greek: Ἐδεβησσός)[1] or (Ancient Greek: Ἐδεβησός),[2] was an ancient city in Lycia. It was located at the foot of the Bey Mountains to the west of the Alakır river valley. Today its ruins are found a short distance to the west of the small village of Kozağacı in the Kumluca district of Antalya Province, Turkey. The site, 21 kilometres north-northwest of Kumluca, is overgrown with forest and hard to reach.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Idebessos",
-        "type":  "Greek/Roman",
-        "longitude":  30.2022228
-    },
-    {
-        "name":  "Idyma",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
-        "latitude":  37.0594444,
-        "description":  "Idyma (Ancient Greek: Ἴδυμα), or Idymus or Idymos (Ἴδυμος), was a coastal town of ancient Caria, strategically placed at the head of a gulf,[1] near the Idymos (Ἴδυμος) river.[2] It is located in the modern town of Gökova.\n",
-        "link":  "https://en.wikipedia.org//wiki/Idyma",
-        "type":  "Greek",
-        "longitude":  28.3672218
-    },
-    {
-        "name":  "Idyros",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
-        "latitude":  36.6025,
-        "description":  "Idyros (Ancient Greek: Ἴδυρης, Latin: Idyrus) was a Greek city in ancient Lycia. Its exact location is uncertain. According to Pseudo-Scylax it was located north of Phaselis.[citation needed]\n",
-        "link":  "https://en.wikipedia.org//wiki/Idyros",
-        "type":  "Greek",
-        "longitude":  30.5597229
-    },
-    {
-        "name":  "Ildır",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Ildiri_Erythrai.JPG/800px-Ildiri_Erythrai.JPG",
-        "latitude":  38.3838272,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Ild%C4%B1r",
-        "type":  "Greek/Roman",
-        "longitude":  26.47615
-    },
-    {
-        "name":  "Imbros",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Gokceada4.JPG/800px-Gokceada4.JPG",
-        "latitude":  40.16083,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Imbros",
-        "type":  "Greek",
-        "longitude":  25.8444443
-    },
-    {
-        "name":  "Irenopolis (Cilicia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Berke_Baraj%C4%B1_-_Berke_Dam_03.JPG/800px-Berke_Baraj%C4%B1_-_Berke_Dam_03.JPG",
-        "latitude":  37.2430573,
-        "description":  "Irenopolis or Eirenopolis or Eirenoupolis (Greek: Εἰρηνούπολις) was an ancient Roman, Byzantine and medieval city in northeastern Cilicia, not far from the Calycadnus river, also known briefly as Neronias (Greek: Νερωνιάς) in honour of the Roman emperor Nero. Irenopolis was also an episcopal see that is now included in the Catholic Church\u0027s list of titular sees.\n",
-        "link":  "https://en.wikipedia.org//wiki/Irenopolis_(Cilicia)",
-        "type":  "Greek",
-        "longitude":  36.456665
-    },
-    {
-        "name":  "Irenopolis (Isauria)",
-        "imageUrl":  "",
-        "latitude":  36.48111,
-        "description":  "Irenopolis or Eirenoupolis (Greek: Ειρηνούπολις) was an ancient and medieval city in Roman and Byzantine era Isauria.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Irenopolis_(Isauria)",
-        "type":  "Greek",
-        "longitude":  32.8994446
-    },
-    {
-        "name":  "Isaura Nea",
-        "imageUrl":  "",
-        "latitude":  37.19361,
-        "description":  "Isaura Nea (Ancient Greek: Ἴσαυρα Νέα), in Latin Isaura Nova, both meaning \u0027New Isaura\u0027, was a town of the Roman and Byzantine era,[1] so called in juxtaposition with the settlement of Isaura Palaea.[2] It also bore the name Leontopolis,[3] and in later days was included in the province of Lycaonia.[4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Isaura_Nea",
-        "type":  "Greek",
-        "longitude":  32.3425
-    },
-    {
-        "name":  "Isaura Palaea",
-        "imageUrl":  "",
-        "latitude":  37.19,
-        "description":  "Isaura Palaea (Ancient Greek: Ἴσαυρα Παλαιά, romanized: Isaura Palaia), in Latin Isaura Vetus, both meaning \u0027Old Isaura\u0027, and perhaps identical to Isauropolis,[1] was a Roman and Byzantine era town in southern Turkey.[2] The city has been identified with modern Zengibar Kalesi near Konya.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Isaura_Palaea",
-        "type":  "Greek",
-        "longitude":  32.245
-    },
-    {
-        "name":  "Isba",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Antalya_in_Turkey.svg/800px-Antalya_in_Turkey.svg.png",
-        "latitude":  36.38889,
-        "description":  "Isba was a city on the border of ancient Pamphylia.[1] It has been identified with the modern village of Çeşme.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Isba",
-        "type":  "Greek",
-        "longitude":  29.7372227
-    },
-    {
-        "name":  "İskenderun",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/%C4%B0skenderunSahil.JPG/800px-%C4%B0skenderunSahil.JPG",
-        "latitude":  36.581665,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/%C4%B0skenderun",
-        "type":  "Greek",
-        "longitude":  36.165
-    },
-    {
-        "name":  "Isparta",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Aksu_%28Isparta%2C_T%C3%BCrkei%29.jpg/800px-Aksu_%28Isparta%2C_T%C3%BCrkei%29.jpg",
-        "latitude":  37.76472,
-        "description":  "Isparta is a city in western Turkey and the capital of Isparta Province. The city\u0027s population was 222,556 in 2010 and its elevation is 1035 m. It is known as the \"City of Roses\".\n",
-        "link":  "https://en.wikipedia.org//wiki/Isparta",
-        "type":  "Greek",
-        "longitude":  30.5566673
-    },
-    {
-        "name":  "Issus (Cilicia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Hatay_in_Turkey.svg/800px-Hatay_in_Turkey.svg.png",
-        "latitude":  36.85361,
-        "description":  "Issus or Issos (Phoenician: Sissu, Ancient Greek: Ἱσσός or Ἱσσοί) is an ancient settlement on the strategic coastal plain straddling the small Pinarus river (a fast melt-water stream several metres wide) below the navigationally difficult inland mountains towering above to the east in the Turkish Province of Hatay, near the border with Syria. It can be identified with Kinet Höyük in the village of Yeṣilköy near Dörtyol in the Hatay province of Turkey. Excavations on the mound occurred between 1992 and 2012 by Bilkent University. It is most notable for being the place of no fewer than three decisive ancient or medieval battles each called in their own era the Battle of Issus:\n",
-        "link":  "https://en.wikipedia.org//wiki/Issus_(Cilicia)",
-        "type":  "Greek",
-        "longitude":  36.1569443
-    },
-    {
-        "name":  "Istanbul",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Bosphorus_Bridge_%28235499411%29.jpeg/800px-Bosphorus_Bridge_%28235499411%29.jpeg",
-        "latitude":  41.01361,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Istanbul",
-        "type":  "Greek/Roman",
-        "longitude":  28.955
-    },
-    {
-        "name":  "İzmit",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/%C4%B0zmit_saat_kulesi_%281%29_01.jpg/800px-%C4%B0zmit_saat_kulesi_%281%29_01.jpg",
-        "latitude":  40.7655563,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/%C4%B0zmit",
-        "type":  "Greek",
-        "longitude":  29.9405556
-    },
-    {
-        "name":  "Kaleköy",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  36.190834,
-        "description":  "Coordinates: 36°11′27″N 29°51′41″E﻿ / ﻿36.19083°N 29.86139°E﻿ / 36.19083; 29.86139\n",
-        "link":  "https://en.wikipedia.org//wiki/Kalek%C3%B6y",
-        "type":  "Greek",
-        "longitude":  29.86139
-    },
-    {
-        "name":  "Kandyba",
-        "imageUrl":  "",
-        "latitude":  36.3152771,
-        "description":  "Kandyba or Candyba (Hittite: Hinduwa, Lycian: Xākbi, Ancient Greek: Κάνδυβα, Latin: Candyba)[1] was a settlement in ancient Lycia, in modern-day Antalya province on the southwestern Mediterranean coast of Turkey. \n",
-        "link":  "https://en.wikipedia.org//wiki/Kandyba",
-        "type":  "Greek",
-        "longitude":  29.664444
-    },
-    {
-        "name":  "Kapilikaya Rock Tomb",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Wiki_letter_w.svg/44px-Wiki_letter_w.svg.png",
-        "latitude":  40.7566681,
-        "description":  "Coordinates: 40°45′24″N 34°54′38″E﻿ / ﻿40.7565548°N 34.9104274°E﻿ / 40.7565548; 34.9104274﻿ (Kapilikaya Rock Tomb)\n",
-        "link":  "https://en.wikipedia.org//wiki/Kapilikaya_Rock_Tomb",
-        "type":  "Greek",
-        "longitude":  34.9105568
-    },
-    {
-        "name":  "Karaburun",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Faik_Sarikaya_Karaburun_Bodrum_Koyu.jpg/800px-Faik_Sarikaya_Karaburun_Bodrum_Koyu.jpg",
-        "latitude":  38.6333351,
-        "description":  "Karaburun (Greek: Αχιρλί, Achirlí) is a district and the center town of the same district in Turkey\u0027s İzmir Province. The district area roughly corresponds to the peninsula of the same name (Karaburun Peninsula) which spears north of the tourism resorts of neighboring Çeşme and its dependencies and west of the city of İzmir. In fact, the district area is one of the westernmost points of Anatolia. Karaburun town is situated close to the northern tip of the peninsula and checks the entry of the Gulf of İzmir with the town of Foça, another important tourism resort, across the waters. The district\u0027s administrative zone is bordered by the districts of Çeşme and Urla in its south and faces the Greek island of Chios to its west.\n",
-        "link":  "https://en.wikipedia.org//wiki/Karaburun",
-        "type":  "Greek",
-        "longitude":  26.5166664
-    },
-    {
-        "name":  "Karakabaklı",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Karakabakl%C4%B1.jpg/784px-Karakabakl%C4%B1.jpg",
-        "latitude":  36.4333344,
-        "description":  "Karakabaklı is an archaeological site in Mersin Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Karakabakl%C4%B1",
-        "type":  "Greek",
-        "longitude":  34.0166664
-    },
-    {
-        "name":  "Kaunos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/DALYAN-KAUNOS_-_panoramio.jpg/800px-DALYAN-KAUNOS_-_panoramio.jpg",
-        "latitude":  36.82639,
-        "description":  "Kaunos (Carian: Kbid;[1]\nLycian: Khbide;[1] Ancient Greek: Καῦνος; Latin: Caunus) was a city of ancient Caria and in Anatolia, a few km west of the modern town of Dalyan, Muğla Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Kaunos",
-        "type":  "Greek/Roman",
-        "longitude":  28.62139
-    },
-    {
-        "name":  "Kayaköy",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Kayakoey_overview_from_west_2019.jpg/800px-Kayakoey_overview_from_west_2019.jpg",
-        "latitude":  36.57498,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Kayak%C3%B6y",
-        "type":  "Greek",
-        "longitude":  29.091095
-    },
-    {
-        "name":  "Kemalpaşa",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  38.4277763,
-        "description":  "Kemalpaşa is a large town and the center of the district of the same name in İzmir Province, Turkey. Its district area extends immediately to the east of İzmir\u0027s easternmost  metropolitan district, Bornova, and Kemalpaşa town being at a distance of only 29 km (18 mi) from the historical and traditional center of İzmir, (Konak), it pulsates along with the rhythm of the big city, with corresponding high levels of development in terms of industry and services. İzmir-Ankara highway crosses the district area 8 km (5.0 mi) to the north of the district center. Kemalpaşa district area borders on the administrative divisions of Manisa center in the north, Manisa\u0027s depending district of Turgutlu in the east and İzmir\u0027s depending districts of Torbalı and Bayındır in the south. The eastern and southern parts of Kemalpaşa district preserve their markedly rural characteristics, which results in an urbanization rate of only 25.7 for the district area as a whole, despite the presence of a strong industrial base in and to the west of Kemalpaşa town. Kemalpaşa\u0027s very large organized industrial zone (KOSBİ) brings together producers of construction materials, rubber and plastic goods, textiles and clothing, leather, paper, packaging materials, machinery and other equipment, including electrical tools and installations, dyes and other chemical substances, marble and car parts, as well as foundries and other metalworks.  Agriculture also occupies a portion with high added value in Kemalpaşa\u0027s economy, its cherries being of nationwide renown (known as Kemalpaşa kirazı in Turkish) and exported. Literacy is at a high level at 90%, and the neighboring Bornova, where Ege University is based, serves as a nearby pool in terms of trained personnel.\n",
-        "link":  "https://en.wikipedia.org//wiki/Kemalpa%C5%9Fa",
-        "type":  "Greek",
-        "longitude":  27.416111
-    },
-    {
-        "name":  "Kepez, Antalya",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  36.9166679,
-        "description":  "Kepez is a municipality and district governorate in Greater Antalya, Turkey. Antalya is one of the 30 metropolitan centers in Turkey with more than one municipality within city borders. In Antalya there are five second-level municipalities in addition to the Greater Antalya (büyükşehir) municipality.\n",
-        "link":  "https://en.wikipedia.org//wiki/Kepez,_Antalya",
-        "type":  "Greek",
-        "longitude":  30.6833324
-    },
-    {
-        "name":  "Kibyra",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Medusa_mosaic_of_Kibyra.jpg/800px-Medusa_mosaic_of_Kibyra.jpg",
-        "latitude":  37.16,
-        "description":  "Kibyra or Cibyra (Greek: Κιβύρα), also referred to as Cibyra Magna, is an Ancient Greek city and an archaeological site in south-west Turkey, near the modern town of Gölhisar, in Burdur Province. It was the chief city of a district Cibyratis.\n",
-        "link":  "https://en.wikipedia.org//wiki/Kibyra",
-        "type":  "Greek",
-        "longitude":  29.4891663
-    },
-    {
-        "name":  "Kitanaura",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  36.6475,
-        "description":  "Kitanaura (Ancient Greek: Κιτάναυρα)[1] was an ancient city in Lycia. Its ruins are located near Saraycık, a small village in the Kumluca district of Antalya Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Kitanaura",
-        "type":  "Greek/Roman",
-        "longitude":  30.3663883
-    },
-    {
-        "name":  "Klazomenai",
-        "imageUrl":  "",
-        "latitude":  38.3581657,
-        "description":  "Klazomenai (Ancient Greek: Κλαζομεναί) or Clazomenae  was an ancient Greek city on the coast of Ionia and a member of the Ionian League. It was one of the first cities to issue silver coinage. Its ruins are now located in the modern town Urla near Izmir in Izmir Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Klazomenai",
-        "type":  "Greek",
-        "longitude":  26.7675838
-    },
-    {
-        "name":  "Knidos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Knidos-H%C3%A4fen.jpg/800px-Knidos-H%C3%A4fen.jpg",
-        "latitude":  36.685833,
-        "description":  "Knidos or Cnidus[1][2] (/ˈnaɪdəs/; Greek: Κνίδος, Ancient: [knídos], Modern: [ˈkniðos]) was a Greek city of ancient Caria and part of the Dorian Hexapolis, in south-western Asia Minor, modern-day Turkey. It was situated on the Datça peninsula, which forms the southern side of the Sinus Ceramicus, now known as Gulf of Gökova. By the 4th century BC, Knidos was located at the site of modern Tekir, opposite Triopion Island. But earlier, it was probably at the site of modern Datça (at the half-way point of the peninsula).[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Knidos",
-        "type":  "Greek",
-        "longitude":  27.375
-    },
-    {
-        "name":  "Kolonai",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.689724,
-        "description":  "Kolonai (Ancient Greek: αἱ Κολωναί, romanized: hai Kolōnai; Latin: Colonae) was an ancient Greek city in the south-west of the Troad region of Anatolia. It has been located on a hill by the coast known as Beşiktepe (\u0027cradle hill\u0027), about equidistant between Larisa to the south and Alexandreia Troas to the north. It is 3.3 km east of the modern village of Alemşah in the Ezine district of Çanakkale Province, Turkey.[1] Its name in Ancient Greek is the plural form of κολώνη (kolōnē), \u0027hill, mound\u0027, a common name for promontories with hills on them in the Eastern Mediterranean.[2] It is not to be confused with Lampsacene Kolonai, a settlement situated in the hills above Lampsacus in the north-east of the Troad.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Kolonai",
-        "type":  "Greek",
-        "longitude":  26.1633339
-    },
-    {
-        "name":  "Labraunda",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/%D0%9B%D0%B0%D0%B1%D1%80%D0%B0%D0%BD%D0%B4%D0%B0._%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%B0.jpg/800px-%D0%9B%D0%B0%D0%B1%D1%80%D0%B0%D0%BD%D0%B4%D0%B0._%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%B0.jpg",
-        "latitude":  37.4188881,
-        "description":  "Labraunda (Ancient Greek: Λάβρανδα Labranda or Λάβραυνδα Labraunda) is an ancient archaeological site five kilometers west of Ortaköy, Muğla Province, Turkey, in the mountains near the coast of Caria. In ancient times, it was held sacred by Carians and Mysians alike. The site amid its sacred plane trees [1] was enriched in the Hellenistic style by the Hecatomnid dynasty of Mausolus, satrap (and virtual king) of Persian Caria (c. 377 – 352 BCE), and also later by his successor and brother Idrieus; Labranda was the dynasty\u0027s ancestral sacred shrine. The prosperity of a rapidly hellenised Caria occurred in the during the 4th century BCE.[2] Remains of Hellenistic houses and streets can still be traced, and there are numerous inscriptions. The cult icon here was a local Zeus Labrandeus (Ζεὺς Λαβρανδεύς), a standing Zeus with the tall lotus-tipped scepter upright in his left hand and the double-headed axe, the labrys, over his right shoulder. The cult statue was the gift of the founder of the dynasty, Hecatomnus himself, recorded in a surviving inscription.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Labraunda",
-        "type":  "Greek",
-        "longitude":  27.8202782
-    },
-    {
-        "name":  "Lâdik",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  41.5166664,
-        "description":  "Ladik is a city of Samsun Province, Turkey on the site of the ancient Laodicea Pontica.[3] The mayor is Selim Özbalci (AKP).\n",
-        "link":  "https://en.wikipedia.org//wiki/L%C3%A2dik",
-        "type":  "Greek",
-        "longitude":  35.5833321
-    },
-    {
-        "name":  "Laertes (Cilicia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
-        "latitude":  36.5105553,
-        "description":  "Laertes (Ancient Greek: Λαέρτης)[1] was a town of ancient Cilicia.[2] Some have supposed that the philosopher Diogenes Laërtius was from this town.[3] Strabo called it a stronghold.[4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Laertes_(Cilicia)",
-        "type":  "Greek",
-        "longitude":  32.1658325
-    },
-    {
-        "name":  "Lagina",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/The_Sanctuary_of_Hecate_in_Lagina%2C_Caria%2C_Turkey_%2817263493936%29.jpg/800px-The_Sanctuary_of_Hecate_in_Lagina%2C_Caria%2C_Turkey_%2817263493936%29.jpg",
-        "latitude":  37.378334,
-        "description":  "Lagina (Ancient Greek: Λάγινα) or Laginia (Λαγινία)[1] was a town in the territory of Stratonicea, in ancient Caria. It contained an important temple of Hecate, at which every year great festivals were celebrated.[2] Tacitus, when speaking of the worship of Trivia among the Stratoniceans, evidently means Hecate.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Lagina",
-        "type":  "Greek",
-        "longitude":  28.0391674
-    },
-    {
-        "name":  "Lamponeia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Troas_el.svg/520px-Troas_el.svg.png",
-        "latitude":  39.53583,
-        "description":  "Lamponeia (Ancient Greek: Λαμπώνεια) or Lamponia (Λαμπωνία), also known as Lamponium or Lamponion (Λαμπώνιον), was an Aetolian city on the southern coast of the Troad region of Anatolia. Its archaeological remains have been located above the village of Kozlu in the district of Ayvacık in Çanakkale Province in Turkey.[1] The site was first visited by Platon de Tchiatcheff in 1849, and later surveyed and identified as Lamponeia by Joseph Thacher Clarke, the excavator of nearby Assos, in 1882, and by Walther Judeich in 1896.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Lamponeia",
-        "type":  "Greek",
-        "longitude":  26.40889
-    },
-    {
-        "name":  "Lampsacus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Stater_Zeus_Lampsacus_CdM.jpg/600px-Stater_Zeus_Lampsacus_CdM.jpg",
-        "latitude":  40.34667,
-        "description":  "Lampsacus (/ˈlæmsəkəs/; Ancient Greek: Λάμψακος, romanized: Lampsakos) was an ancient Greek city strategically located on the eastern side of the Hellespont in the northern Troad.[1] An inhabitant of Lampsacus was called a Lampsacene. The name has been transmitted in the nearby modern town of Lapseki.\n",
-        "link":  "https://en.wikipedia.org//wiki/Lampsacus",
-        "type":  "Greek",
-        "longitude":  26.6991673
-    },
-    {
-        "name":  "Laodicea Combusta",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  38.191,
-        "description":  "Laodicea Combusta (Ancient Greek: Λαοδίκεια Κατακεκαυμένη, Laodikeia Katakekaumenê, \"Laodicea the Burned\") or Laodicea (Greek: Λαοδίκεια), and later known as Claudiolaodicea, was a Hellenistic city in central Anatolia, in the region of Pisidia; its site is currently occupied by Ladik, Konya Province, in Central Anatolia, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Laodicea_Combusta",
-        "type":  "Greek",
-        "longitude":  32.3745
-    },
-    {
-        "name":  "Laodicea on the Lycus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TR_Pamukkale_Laodicea_asv2020-02_img11.jpg/800px-TR_Pamukkale_Laodicea_asv2020-02_img11.jpg",
-        "latitude":  37.8358345,
-        "description":  "Laodicea on the Lycus (Greek: Λαοδίκεια πρὸς τοῦ Λύκου Laodikia pros tou Lykou; Latin: Laodicea ad Lycum, also transliterated as Laodiceia or Laodikeia) (modern Turkish: Laodikeia) was an ancient city built on the river Lycus (Çürüksu). It was located in the Hellenistic regions of Caria and Lydia, which later became the Roman Province of Phrygia Pacatiana. It is now situated near the modern city of Denizli, Turkey. In 2013 the archaeological site was inscribed in the Tentative List of World Heritage Sites in Turkey.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Laodicea_on_the_Lycus",
-        "type":  "Greek/Roman",
-        "longitude":  29.1075
-    },
-    {
-        "name":  "Larisa (Troad)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.6152763,
-        "description":  "Larisa (Ancient Greek: Λάρισα, romanized: Larisa), or Larissa, was an ancient Greek city in the south-west of the Troad region of Anatolia. Its surrounding territory was known in Greek as the Λαρισαῖα (Larisaia).[1] It has been located on a small rise by the coast now known as Limantepe, about 3.5 km from the village of Kösedere to the north-east and 3 km from the village of Babadere to the east, in the Ayvacık district of Çanakkale province, Turkey.[2] As with other Greek toponyms containing the consonantal string -ss-, spellings that drop one \u0027s\u0027 exist alongside those that retain both in the ancient literary sources. Larisa in the Troad should not be confused with \u0027Aeolian\u0027 Larisa, near Menemen, or with \u0027Ionian\u0027 Larisa in İzmir province.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Larisa_(Troad)",
-        "type":  "Greek",
-        "longitude":  26.145277
-    },
-    {
-        "name":  "Larissa Phrikonis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  38.6675,
-        "description":  "Larissa (Ancient Greek: Λάρισσα) or Larisa (Λάρισα) Phrikonis[4] was a Bronze Age city in the Aegean Region of Turkey. It is in the immediate vicinity of Menemen, in the district of İzmir province.[5] The ruins of the city are on a hill top next to today\u0027s Buruncuk village. The main road to Çanakkale from İzmir skirts the same hill, making a considerable curve to the northwest. It must also be emphasized that Larissa is very close to the Gediz River (called \u0027Hermus\u0027 in antiquity), which formed a fertile plain on its own delta, with the alluvial soil carried from the Anatolian inland.\n",
-        "link":  "https://en.wikipedia.org//wiki/Larissa_Phrikonis",
-        "type":  "Greek",
-        "longitude":  27.03139
-    },
-    {
-        "name":  "Lebedus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Kisik_or_Lebedos_Peninsula_Urkmez_Seferihisar_Izmir_Turkey.JPG/800px-Kisik_or_Lebedos_Peninsula_Urkmez_Seferihisar_Izmir_Turkey.JPG",
-        "latitude":  38.0780563,
-        "description":  "Lebedus or Lebedos (Ancient Greek: Λέβεδος) was one of the twelve cities of the Ionian League, located south of Smyrna, Klazomenai and neighboring Teos and before Ephesus, which is further south. It was on the coast, ninety stadia (16.65 km) to the east of Cape Myonnesus, and 120 (22.2 km) west of Colophon.\n",
-        "link":  "https://en.wikipedia.org//wiki/Lebedus",
-        "type":  "Greek",
-        "longitude":  26.9647217
-    },
-    {
-        "name":  "Letoon",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Letoon_Temple_Area_2019.jpg/800px-Letoon_Temple_Area_2019.jpg",
-        "latitude":  36.3319435,
-        "description":  "The Letoon (Ancient Greek: Λητῶον), sometimes Latinized as Letoum,[1] was a sanctuary of Leto near the ancient city Xanthos in Lycia. It was one of the most important religious centres in the region. The site is located south of the village Kumluova in the Fethiye district of Muğla Province, Turkey. It lies approximately four kilometres south of Xanthos along the Xanthos River.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Letoon",
-        "type":  "Greek",
-        "longitude":  29.2897224
-    },
-    {
-        "name":  "Leucae (Ionia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ionia%2C_Asia_Minor_Map%2C_Classical_Atlas%2C_1886%2C_Keith_Johnston.jpg/493px-Ionia%2C_Asia_Minor_Map%2C_Classical_Atlas%2C_1886%2C_Keith_Johnston.jpg",
-        "latitude":  38.5594444,
-        "description":  "Leucae (Greek: Λεῦκαι) or Leuce (Greek: Λεύκη) was a small town of ancient Ionia, in the neighbourhood of Phocaea. Leucae was situated, according to Pliny in promontorio quod insula fuit, or, \"on an island promontory.\"[1] From Scylax we learn that it was a place with harbours. According to Diodorus, the Persian admiral Tachos founded this town on an eminence on the sea coast, in 352 BCE; but shortly after, when Tachos had died, the Clazomenians and Cymaeans quarrelled about its possession, and the former succeeded by a stratagem in making themselves masters of it.[2] At a later time Leucae became remarkable for the battle fought in its neighbourhood between the consul Publius Licinius Crassus Dives Mucianus and Aristonicus in 131 BCE.[3] Some have supposed this place to be identical with the Leuconium mentioned by Thucydides;[4] but this is impossible, as this latter place must be looked for in Chios. The site of the ancient Leucae is at Üçtepeler, Izmir Province, Turkey, some distance from the coast.[5]  Coins were minted at Leucae in the 3rd century BCE.[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Leucae_(Ionia)",
-        "type":  "Greek",
-        "longitude":  26.855
-    },
-    {
-        "name":  "Limantepe",
-        "imageUrl":  "",
-        "latitude":  38.3633347,
-        "description":  "The town of Limantepe, sometimes spelled Liman Tepe, located on Turkey\u0027s western coast is the site of a prehistoric (Bronze Age) settlement that includes an ancient port dating from 2500 years located underwater offshore.[1] The area is situated in the urban zone of the coastal town of Urla near İzmir. In pre-classical antiquity and during the Hellenistic and Roman eras, it was a Greek town called Larisa.\n",
-        "link":  "https://en.wikipedia.org//wiki/Limantepe",
-        "type":  "Greek",
-        "longitude":  26.7758331
-    },
-    {
-        "name":  "Limnae (Thrace)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
-        "latitude":  40.2705574,
-        "description":  "Limnae or Limnai (Ancient Greek: Λίμναι),[1] was an ancient Greek city dating back to 7th century B.C. on the Gallipoli peninsula. The city was founded by migrants coming from Ionia. The city was one of the richest and most busy seaports of the Gallipoli region in its time and maintained its existence until the Roman era.\n",
-        "link":  "https://en.wikipedia.org//wiki/Limnae_(Thrace)",
-        "type":  "Greek",
-        "longitude":  26.2727776
-    },
-    {
-        "name":  "Limyra",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/LimyraTheater1.jpg/800px-LimyraTheater1.jpg",
-        "latitude":  36.3438873,
-        "description":  "Limyra (Ancient Greek: Λίμυρα)[1] (Lycian: 𐊈𐊚𐊎𐊒𐊕𐊁[2] was a small city in ancient Lycia on the southern coast of Asia Minor, on the Limyrus River (Ancient Greek: Λιμύρος).[3][4] Already flourishing in the second millennium BCE, the city was one of the oldest and most prosperous in Lycia; it gradually became one of the finest trade settlements in Greece. \n",
-        "link":  "https://en.wikipedia.org//wiki/Limyra",
-        "type":  "Greek",
-        "longitude":  30.1713886
-    },
-    {
-        "name":  "Lysimachia (Thrace)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Marmara_Region_location_map.svg/450px-Marmara_Region_location_map.svg.png",
-        "latitude":  40.5833321,
-        "description":  "Lysimachia (Greek: Λυσιμάχεια) was an important Hellenistic Greek town on the north-western extremity of the Thracian Chersonese (the modern Gallipoli peninsula) in the neck where the peninsula joins the mainland  in what is now the European part of Turkey, not far from the bay of Melas (the modern Gulf of Saros).\n",
-        "link":  "https://en.wikipedia.org//wiki/Lysimachia_(Thrace)",
-        "type":  "Greek",
-        "longitude":  26.8833332
-    },
-    {
-        "name":  "Madnasa",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  37.1286125,
-        "description":  "Madnasa (Ancient Greek: Μάδνασα), or Medmasa (Μέδμασα),[1] also known as Medmasus or Medmasos (Μέδμασος), was a town in ancient Caria, at the Myndos Peninsula, and is currently an archaeological site near upper Göl, about 13 km northeast of Myndos. In 5th century BCE the city was included in the Delian League and Athenian tribute lists.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Madnasa",
-        "type":  "Greek",
-        "longitude":  27.3891659
-    },
-    {
-        "name":  "Madytus",
-        "imageUrl":  "",
-        "latitude":  40.185276,
-        "description":  "Madytus or Madytos (Ancient Greek: Μάδυτος)[1] was a Greek[2] city and port of ancient Thrace, located in the region of the Thracian Chersonesos, nearly opposite to Abydos.[3][4][5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Madytus",
-        "type":  "Greek",
-        "longitude":  26.3563881
-    },
-    {
-        "name":  "Magnesia on the Maeander",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/%D0%9C%D0%B0%D0%B3%D0%BD%D0%B5%D1%81%D0%B8%D1%8F_%D0%BD%D0%B0_%D0%9C%D0%B5%D0%B0%D0%BD%D0%B4%D1%80%D0%B5._%D0%9F%D1%80%D0%BE%D0%BF%D0%B8%D0%BB%D0%B5%D0%B8.jpg/800px-%D0%9C%D0%B0%D0%B3%D0%BD%D0%B5%D1%81%D0%B8%D1%8F_%D0%BD%D0%B0_%D0%9C%D0%B5%D0%B0%D0%BD%D0%B4%D1%80%D0%B5._%D0%9F%D1%80%D0%BE%D0%BF%D0%B8%D0%BB%D0%B5%D0%B8.jpg",
-        "latitude":  37.85278,
-        "description":  "Magnesia or Magnesia on the Maeander (Ancient Greek: Μαγνησία ἡ πρὸς Μαιάνδρῳ or Μαγνησία ἡ ἐπὶ Μαιάνδρῳ; Latin: Magnḗsĭa ad Mæándrum) was an ancient Greek city in Ionia, considerable in size, at an important location commercially and strategically in the triangle of Priene, Ephesus and Tralles. The city was named Magnesia, after the Magnetes from Thessaly who settled the area along with some Cretans. It was later called \"on the Meander\" to distinguish it from the nearby Lydian city Magnesia ad Sipylum. It was earlier the site of Leucophrys mentioned by several ancient writers.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Magnesia_on_the_Maeander",
-        "type":  "Greek",
-        "longitude":  27.5272217
-    },
-    {
-        "name":  "Magydus",
-        "imageUrl":  "",
-        "latitude":  36.85278,
-        "description":  "Magydus (Ancient Greek: Μάγυδος, romanized: Magydos) was an settlement and bishopric of ancient Pamphylia on the Mediterranean coast of southwestern Asia Minor (Asian Turkey), which remains a Latin Catholic titular see. It is probably the same as Mygdale (Μυγδάλη) described in the Stadiasmus Maris Magni.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Magydus",
-        "type":  "Greek",
-        "longitude":  30.7936115
-    },
-    {
-        "name":  "Maionia in Lydia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lydia_circa_50_AD_-_English_legend.jpg/800px-Lydia_circa_50_AD_-_English_legend.jpg",
-        "latitude":  38.53528,
-        "description":  "Maionia or Maeonia (Greek: Μαιονία), was a city of the Hellenistic, Roman and Byzantine era located near the Hermos River,[1] in ancient Lydia. Both Ramsay and Talbert[2] tentatively identified the ancient polis with the modern village of Koula (Turkish for fortress) a village known for its carpet manufacture.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Maionia_in_Lydia",
-        "type":  "Greek",
-        "longitude":  28.4913883
-    },
-    {
-        "name":  "Manisa",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/MAN%C4%B0Sa.jpg/800px-MAN%C4%B0Sa.jpg",
-        "latitude":  38.6305542,
-        "description":  "Manisa (Turkish pronunciation: [maˈnisa]), historically known as Magnesia (Greek: Μαγνησία), is a large city in Turkey\u0027s Aegean Region and the administrative seat of Manisa Province.\n",
-        "link":  "https://en.wikipedia.org//wiki/Manisa",
-        "type":  "Greek/Roman",
-        "longitude":  27.4222221
-    },
-    {
-        "name":  "Marpessos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.88028,
-        "description":  "Marpessos (Ancient Greek: Μάρπησσος) was a settlement in the middle Skamander valley of the Troad region of Anatolia. The settlement\u0027s name is also spelled Μαρμησσός, Μαρμισσός, Μερμησσός in ancient sources. It was known in Classical antiquity primarily as the birthplace of the Hellespontine Sibyl Herophile. Its site has been located at Dam Dere approximately 2 km SE of the village of Zerdalilik in the Bayramiç district of Çanakkale Province in Turkey.[1] Despite the similarity of its name and its location on Mount Ida, the settlement is apparently unrelated to the mythological figure Marpessa and her husband Idas. It should likewise not be confused with the Mount Marpessa on Paros.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Marpessos",
-        "type":  "Greek",
-        "longitude":  26.520277
-    },
-    {
-        "name":  "Meloë (Isauria)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Brue%2C_Adrien_Hubert%2C_Asie-Mineure%2C_Armenie%2C_Syrie%2C_Mesopotamie%2C_Caucase._1839._%28EC%29.jpg/589px-Brue%2C_Adrien_Hubert%2C_Asie-Mineure%2C_Armenie%2C_Syrie%2C_Mesopotamie%2C_Caucase._1839._%28EC%29.jpg",
-        "latitude":  36.7591667,
-        "description":  "Meloë (Ancient Greek: Μελόη) was a town in ancient Isauria. Meloë is a titular see of the Roman Catholic Church.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Melo%C3%AB_(Isauria)",
-        "type":  "Greek",
-        "longitude":  33.3497238
-    },
-    {
-        "name":  "Mersin",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  36.8,
-        "description":  "Mersin (pronounced [ˈmæɾsin], Greek: Μυρσίνη) is a large city and a port on the Mediterranean coast of southern Turkey. \n",
-        "link":  "https://en.wikipedia.org//wiki/Mersin",
-        "type":  "Greek",
-        "longitude":  34.6333351
-    },
-    {
-        "name":  "Metropolis (Anatolia)",
-        "imageUrl":  "",
-        "latitude":  38.125,
-        "description":  "The classical city of Metropolis (Ancient Greek: Μητρόπολις) is situated in western Turkey near Yeniköy village in Torbali municipality - approximately 40 km SE of Izmir. Occupation at the site goes back to the Neolithic period. The Hittite period is also attested.[citation needed]\n",
-        "link":  "https://en.wikipedia.org//wiki/Metropolis_(Anatolia)",
-        "type":  "Greek",
-        "longitude":  27.3225
-    },
-    {
-        "name":  "Metropolis (northern Phrygia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Heinrich_Kiepert._Asia_citerior.Phrygia.jpg/541px-Heinrich_Kiepert._Asia_citerior.Phrygia.jpg",
-        "latitude":  39.17139,
-        "description":  "Metropolis (Ancient Greek: Μητρόπολις) was an ancient town in the north of Phrygia, and, as the name seems to indicate, a capital of the ancient kings of Phrygia, though Stephanus of Byzantium derives the name from the mother of the gods.[1] It was situated to the north of Synnada (Athen. 13.574.), and must not be confounded with another town of the same name in the south of Phrygia.[2] Its site is, in all probability, indicated by the ruins of Pismesh Kalasi, north of Doganlu, which show a very antique style of architecture, and mainly consist of tombs cut into the rocks; one of these tombs is that of king Midas. Although William Martin Leake is inclined to think that these ruins mark the site of Nicoleia;[3] William Smith credits other travelers who identify them with Metropolis.[4][5] From the extent of the ruins, it would seem that in the time of the Roman emperors Metropolis was an important town; but afterwards it declined, though it is still mentioned by Hierocles.[6]\n",
-        "link":  "https://en.wikipedia.org//wiki/Metropolis_(northern_Phrygia)",
-        "type":  "Greek",
-        "longitude":  30.6280556
-    },
-    {
-        "name":  "Milas",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/48220_Kultak-Milas-Mu%C4%9Fla%2C_Turkey_-_panoramio_%284%29.jpg/800px-48220_Kultak-Milas-Mu%C4%9Fla%2C_Turkey_-_panoramio_%284%29.jpg",
-        "latitude":  37.3166656,
-        "description":  "Milas (Ancient Greek: Μύλασα, Mylasa) is an ancient city and the seat of the district of the same name in Muğla Province in southwestern Turkey. The city commands a region with an active economy and very rich in history and ancient remains, the territory of Milas containing a remarkable twenty-seven archaeological sites of note.[3] The city was the first capital of ancient Caria and of the Anatolian beylik of Menteşe in mediaeval times. The nearby Mausoleum of Hecatomnus is classified as a tentative UNESCO World Heritage Site.[4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Milas",
-        "type":  "Greek/Roman",
-        "longitude":  27.7833328
-    },
-    {
-        "name":  "Miletus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Miletus_-_Ancient_Greek_theatre_02.jpg/800px-Miletus_-_Ancient_Greek_theatre_02.jpg",
-        "latitude":  37.5302773,
-        "description":  "Miletus (/maɪˈliːtəs/; Greek: Μῑ́λητος, romanized: Mīlētos; Hittite transcription Millawanda or Milawata (exonyms); Latin: Miletus; Turkish: Milet) was an ancient Greek city on the western coast of Anatolia, near the mouth of the Maeander River in ancient Caria.[3][4][5] Its ruins are located near the modern village of Balat in Aydın Province, Turkey. Before the Persian invasion in the middle of the 6th century BC, Miletus was considered among the greatest and wealthiest of Greek cities.[6][7]\n",
-        "link":  "https://en.wikipedia.org//wiki/Miletus",
-        "type":  "Greek/Roman",
-        "longitude":  27.2783337
-    },
-    {
-        "name":  "Mokissos",
-        "imageUrl":  "",
-        "latitude":  38.1855545,
-        "description":  "Mokissos or Mokisos (Ancient Greek: Μωκισσός or Μωκησός) or Mokison (Μωκισόν) was a town of ancient Cappadocia. The Romans called the city Mocisus or Mocissus, and Mocisum, and after the city was rebuilt by the Byzantine Emperor Justinian (527-565), it was renamed Justinianopolis (Ἰουστινιανούπολις). Justinian made Mocisus the capital of the province of Cappadocia Tertia, and elevated its bishopric to the rank of ecclesiastical metropolis, with an eparchia that stretched south of the Halys River (Turkish: Kızılırmak), the longest river of Asia Minor. The name Justinianopolis was retained until the end of Byzantine rule. Stephanus of Byzantium calls the town Moukissos (Μούκισσος). In the Synecdemus, the name appears as Rhegemoukisos (Ῥεγεμουκισός) and Rhegekoukisos (Ῥεγεκουκισός), the later evidently an error. \n",
-        "link":  "https://en.wikipedia.org//wiki/Mokissos",
-        "type":  "Greek",
-        "longitude":  34.207222
-    },
-    {
-        "name":  "Mostene",
-        "imageUrl":  "",
-        "latitude":  38.5102768,
-        "description":  "Mostene (Μοστήνη), also called Mosteni or Mostenoi (Μοστηνοί), or Mostina (Μόστινα), or Mustene or Moustene (Μουστήνη), is a Roman and Byzantine era city in the Hyrcanian plain of ancient Lydia.[1] The town minted its own coin of which many examples exist today.[2] In 17 CE the city was hit by an earthquake[3] and was assisted with relief from Tiberius.\n",
-        "link":  "https://en.wikipedia.org//wiki/Mostene",
-        "type":  "Greek",
-        "longitude":  27.5436115
-    },
-    {
-        "name":  "Muğla",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Panoramic_view_of_Bozyi%C4%9Fit_Burnu_Park_and_%C3%96l%C3%BCdeniz_Beach_in_Turkey_%2849070747646%29.jpg/800px-Panoramic_view_of_Bozyi%C4%9Fit_Burnu_Park_and_%C3%96l%C3%BCdeniz_Beach_in_Turkey_%2849070747646%29.jpg",
-        "latitude":  37.2166672,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Mu%C4%9Fla",
-        "type":  "Greek",
-        "longitude":  28.3666668
-    },
-    {
-        "name":  "Myndus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Myndos.jpg/800px-Myndos.jpg",
-        "latitude":  37.0530548,
-        "description":  "Myndus (/ˈmɪndəs/) or Myndos (Greek: Μύνδος) was an ancient Dorian colony of Troezen, on the coast of Caria in Asia Minor, (Turkey), sited on the Bodrum Peninsula, a few miles northwest of Halicarnassus. The site is now occupied by the modern village of Gümüslük.\n",
-        "link":  "https://en.wikipedia.org//wiki/Myndus",
-        "type":  "Greek",
-        "longitude":  27.2333336
-    },
-    {
-        "name":  "Myra",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Myra_theatre.jpg/799px-Myra_theatre.jpg",
-        "latitude":  36.2591667,
-        "description":  "Myra  (Ancient Greek: Μύρα, Mýra) was an ancient Greek, then Roman Greek, Byzantine Greek, then Ottoman Greek town in Lycia, which became the small Turkish town of Kale, renamed Demre in 2005, in the present-day Antalya Province of Turkey. In 1923, its Greek inhabitants had been required to leave by the Population exchange between Greece and Turkey, at which time its church was finally abandoned. It was founded on the river Myros (Ancient Greek: Μύρος; Turkish: Demre Çay), in the fertile alluvial plain between Alaca Dağ, the Massikytos range and the Aegean Sea.\n",
-        "link":  "https://en.wikipedia.org//wiki/Myra",
-        "type":  "Greek/Roman",
-        "longitude":  29.9852772
-    },
-    {
-        "name":  "Myriandus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  36.4941673,
-        "description":  "Myriandus (Greek: Μυρίανδος Mūríandos, from Hittite mūri-, \"grape cluster\", and -anda, a place name suffix; by folk etymology with Greek andr-, \"man\", also spelled Myriandrus: Μυρίανδρος Mūríandros)[1][2] was an ancient Phoenician port on the Mediterranean Sea\u0027s Gulf of Alexandretta. Its ruins are located near the modern city of İskenderun in southern Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Myriandus",
-        "type":  "Greek",
-        "longitude":  36.0241661
-    },
-    {
-        "name":  "Myrina (Aeolis)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Erkmen_se_MarchesAliagaTurkey.jpg/800px-Erkmen_se_MarchesAliagaTurkey.jpg",
-        "latitude":  38.8452759,
-        "description":  "Myrina (Ancient Greek: Μυρίνα) was one of the Aeolian cities on the western coast of Mysia, about 40 stadia to the southwest of Gryneion.[1] The former bishopric is now a Latin Catholic titular see.\n",
-        "link":  "https://en.wikipedia.org//wiki/Myrina_(Aeolis)",
-        "type":  "Greek",
-        "longitude":  26.9844437
-    },
-    {
-        "name":  "Myus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Bafa_lake3.JPG/800px-Bafa_lake3.JPG",
-        "latitude":  37.5955544,
-        "description":  "Myus (Ancient Greek: Μυοῦς), sometimes Myous or Myos, was an ancient Greek city in Caria. It was one of twelve major settlements of the Ionian League. The city was said to have been founded by Cyaretus (Ancient Greek: Κυάρητος) (sometimes called Cydrelus), a son of Codrus.[1][2] Myus was located on a small peninsula at the coast of the Aegean Sea, but it now lies inland due to the sediment deposited by the Maeander River over many centuries. The site of the city lies north of the modern village Avşar in the Söke district of Aydın Province, Turkey\n",
-        "link":  "https://en.wikipedia.org//wiki/Myus",
-        "type":  "Greek",
-        "longitude":  27.4294453
-    },
-    {
-        "name":  "Nagidos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mersin_Archaeological_Museum_3.jpg/459px-Mersin_Archaeological_Museum_3.jpg",
-        "latitude":  36.0997238,
-        "description":  "Nagidos (Ancient Greek: Νάγιδος; Latin: Nagidus) was an ancient city of Cilicia. In ancient times it was located between Anemurion to the west and Arsinoe to the east.[1] Today its ruins are found on the hill named Paşabeleni at the mouth of the Sini Cay (Bozyazı Dere) near Bozyazı in Mersin Province, Turkey. It lies at a distance of ca. 20 km to the east of Anamur. Like its eastern neighbor Kelenderis, it was a colony of Samos.[2] The small island of Nagidoussa is opposite Nagidos; on it are the ruins of an Ottoman fortress.\n",
-        "link":  "https://en.wikipedia.org//wiki/Nagidos",
-        "type":  "Greek",
-        "longitude":  32.978054
-    },
-    {
-        "name":  "Neandreia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.7175,
-        "description":  "Neandreia (Ancient Greek: Νεάνδρεια), Neandrium or Neandrion (Νεάνδριον), also known as Neandrus or Neandros (Νέανδρος),[1] was a Greek city in the south-west of the Troad region of Anatolia. Its site has been located on Çığrı Dağ, about 9 km east of the remains of the ancient city of Alexandria Troas in the Ezine district of Çanakkale province, Turkey (based on the work of John Manuel Cook).[2] The site was first identified as Neandreia by Frank Calvert in 1865 and Joseph Thacher Clarke in 1886 and was first excavated by the German architect Robert Koldewey when he excavated in 1889.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Neandreia",
-        "type":  "Greek",
-        "longitude":  26.2844448
-    },
-    {
-        "name":  "Nicaea",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Nicaea_theatre_990.jpg/800px-Nicaea_theatre_990.jpg",
-        "latitude":  40.429,
-        "description":  "Nicaea or Nicea (/naɪˈsiːə/; Greek: Νίκαια, Níkaia) was an ancient Greek city in northwestern Anatolia and is primarily known as the site of the First and Second Councils of Nicaea (the first and seventh Ecumenical councils in the early history of the Christian Church), the Nicene Creed (which comes from the First Council), and as the capital city of the Empire of Nicaea following the Fourth Crusade in 1204, until the recapture of Constantinople by the Byzantines in 1261.\n",
-        "link":  "https://en.wikipedia.org//wiki/Nicaea",
-        "type":  "Greek",
-        "longitude":  29.7195
-    },
-    {
-        "name":  "Nicomedia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Grande_rue_de_Nicom%C3%A9die_-_Texier_Charles_F%C3%A9lix_Marie_-_1882.jpg/800px-Grande_rue_de_Nicom%C3%A9die_-_Texier_Charles_F%C3%A9lix_Marie_-_1882.jpg",
-        "latitude":  40.7625,
-        "description":  "Nicomedia (/ˌnɪkəˈmiːdiə/;[1] Greek: Νικομήδεια, Nikomedeia; modern İzmit) was an ancient Greek city located in what is now Turkey. In 286 Nicomedia became the eastern and most senior capital city of the Roman Empire (chosen by the emperor Diocletian who ruled in the east), a status which the city maintained during the Tetrarchy system (293–324). \n",
-        "link":  "https://en.wikipedia.org//wiki/Nicomedia",
-        "type":  "Greek",
-        "longitude":  29.9175
-    },
-    {
-        "name":  "Niğde Province",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Ni%C4%9Fde_in_Turkey.svg/800px-Ni%C4%9Fde_in_Turkey.svg.png",
-        "latitude":  37.9158325,
-        "description":  "Niğde Province (Turkish: Niğde ili)  is a province in the southern part of Central Anatolia, Turkey. Population is 341,412 (2013 est) of which 141,360 live in the city of Niğde. The population was 348,081 in 2000 and 305,861 in 1990. It covers an area of 7,312 km2.  Neighbouring provinces are Kayseri, Adana, Mersin, Konya, Aksaray and Nevşehir.\n",
-        "link":  "https://en.wikipedia.org//wiki/Ni%C4%9Fde_Province",
-        "type":  "Greek",
-        "longitude":  34.69361
-    },
-    {
-        "name":  "Niksar",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  40.5833321,
-        "description":  "Niksar, historically known as Neocaesarea (Νεοκαισάρεια), is a city in Tokat Province, Turkey. It was settled by many empires, being once the capital city of the province. Niksar is known as \"Çukurova of the North-Anatolia\" due to its production of many kinds of fruits and vegetables except citrus fruits.[by whom?] On May 2, 2018, Niksar was included in the World Heritage tentative list.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Niksar",
-        "type":  "Greek/Roman",
-        "longitude":  36.9666672
-    },
-    {
-        "name":  "Nisa (Lycia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
-        "latitude":  36.4413872,
-        "description":  "Nisa (Ancient Greek: Νίσα or Νίσσα), also Nyssa (Νύσσα) or Nysa (Νύσα) or Neisa (Νείσα),[1]  was a town in ancient Lycia near the source of the River Xanthus.[2][3][4][5][6]\n",
-        "link":  "https://en.wikipedia.org//wiki/Nisa_(Lycia)",
-        "type":  "Greek",
-        "longitude":  29.6263885
-    },
-    {
-        "name":  "Notion (ancient city)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  37.99278,
-        "description":  "Notion or Notium (Ancient Greek Νότιον, \u0027southern\u0027) was a Greek city-state on the west coast of Anatolia; it is about 50 kilometers (31 mi) south of Izmir in modern Turkey, on the Gulf of Kuşadası. Notion was located on a hill from which the sea was visible; it served as a port for nearby Colophon and Claros, and pilgrims frequently passed through on their way to the oracle of Apollo at Claros. There are still remains of the defense walls, necropolis, temple, agora, and theater. The ruins of the city are now found east of the modern town Ahmetbeyli in the Menderes district of Izmir Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Notion_(ancient_city)",
-        "type":  "Greek",
-        "longitude":  27.1975
-    },
-    {
-        "name":  "Nusaybin",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Nusaybin364.jpg/489px-Nusaybin364.jpg",
-        "latitude":  37.0753326,
-        "description":  "Nusaybin (pronounced [nuˈsajbin]; Kurdish: Nisêbîn‎[5]; Arabic: نُصَيْبِيْن‎, romanized: Nuṣaybīn; Syriac: ܢܨܝܒܝܢ‎, romanized: Nṣībīn),[6] historically known as Nisibis (Greek: Νίσιβις, translit. Nísibis) or Nesbin,[7][8] is a city in Mardin Province, Turkey. The population of the city is 83,832[9] as of 2009 and is predominantly Kurdish. Nusaybin is separated from the larger Kurdish-majority city of Qamishli by the Syria–Turkey border.[10][11]\n",
-        "link":  "https://en.wikipedia.org//wiki/Nusaybin",
-        "type":  "Greek",
-        "longitude":  41.2156944
-    },
-    {
-        "name":  "Nysa on the Maeander",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Nysa%2C_Anatolia.JPG/800px-Nysa%2C_Anatolia.JPG",
-        "latitude":  37.90167,
-        "description":  "Nysa on the Maeander (Greek: Νύσα or Νύσσα) was an ancient city and bishopric of Asia Minor, whose remains are in the Sultanhisar district of Aydın Province of Turkey, 50 kilometres (31 mi) east of the Ionian city of Ephesus, and which remains a Latin Catholic titular see.\n",
-        "link":  "https://en.wikipedia.org//wiki/Nysa_on_the_Maeander",
-        "type":  "Greek",
-        "longitude":  28.1466675
-    },
-    {
-        "name":  "Oenoanda",
-        "imageUrl":  "",
-        "latitude":  36.809166,
-        "description":  "Oenoanda or Oinoanda (Greek: τὰ Οἰνόανδα) was an ancient Greek city in Lycia, in the upper valley of the River Xanthus. It is noted for the philosophical inscription by the Epicurean, Diogenes of Oenoanda. The ruins of the city lie west of the modern village İncealiler in the Fethiye district of Muğla Province, Turkey, which partly overlies the ancient site.\n",
-        "link":  "https://en.wikipedia.org//wiki/Oenoanda",
-        "type":  "Greek/Roman",
-        "longitude":  29.5497227
-    },
-    {
-        "name":  "Öküzlü",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/%C3%96k%C3%BCzl%C3%BC_basilica.JPG/800px-%C3%96k%C3%BCzl%C3%BC_basilica.JPG",
-        "latitude":  36.5666656,
-        "description":  "Öküzlü is an archaeological site in Mersin Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/%C3%96k%C3%BCzl%C3%BC",
-        "type":  "Greek",
-        "longitude":  34.1666679
-    },
-    {
-        "name":  "Olymos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
-        "latitude":  37.3786125,
-        "description":  "Olymos (Ancient Greek: Ὄλμος) or Olymon (Ὄλμον) or Hylimos was a town of ancient Caria. It was a polis (city-state) and a member of the Delian League.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Olymos",
-        "type":  "Greek",
-        "longitude":  27.7355556
-    },
-    {
-        "name":  "Olympus (Lycia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Beyda%C4%9Flar%C4%B1_Coastal_National_Park_and_Olympos_ancient_city_3.jpg/800px-Beyda%C4%9Flar%C4%B1_Coastal_National_Park_and_Olympos_ancient_city_3.jpg",
-        "latitude":  36.3966675,
-        "description":  "Olympus or Olympos (Ancient Greek: Ὄλυμπος, Ólympos; Latin: Olympus) was a city in ancient Lycia. It was situated in a river valley near the coast. Its ruins are located south of the modern town Çıralı in the Kumluca district of Antalya Province, southwestern Turkey. Together with the sites of the ancient cities Phaselis and Idyros it is part of the Olympos Beydaglari National Park. The perpetual gas fires at Yanartaş are found a few kilometers to the northwest of the site.\n",
-        "link":  "https://en.wikipedia.org//wiki/Olympus_(Lycia)",
-        "type":  "Greek",
-        "longitude":  30.4730549
-    },
-    {
-        "name":  "Pactya",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
-        "latitude":  40.48528,
-        "description":  "Pactya or Paktye (Ancient Greek: Πακτύη) was an ancient Greek[1] city located in ancient Thrace, on the Thracian Chersonesus. It is cited in the Periplus of Pseudo-Scylax, in its recitation of the towns of the Thracian Chersonesus, along with Aegospotami, Cressa, Crithote and then Pactya, situated 36 stadia from Cardia.[2][3][4] It is said that Miltiades founded it.[5]\nStrabo places it on the Propontis between Crithote and Macron Teichos.[6] According to Herodotus, Miltiades the Elder ordered a wall built between Cardia, which was on the coast of Gulf of Melas and Pactya, which was on the Propontis side, to prevent invasion of the Chersonesus by the Apsinthii.[7] Alcibiades retired here the Athenians had for the second time deprived him of the command.[8] It was a member of the Delian League.[9]\nPliny the Elder points out that both Cardia and Pactya later joined to form Lysimachia.[10]\n",
-        "link":  "https://en.wikipedia.org//wiki/Pactya",
-        "type":  "Greek",
-        "longitude":  26.7805557
-    },
-    {
-        "name":  "Padyandus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Heinrich_Kiepert._Asia_citerior.Cappadocia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cappadocia.jpg",
-        "latitude":  37.4277763,
-        "description":  "Padyandus or Podyandos (Ancient Greek: Παδυανδός), also Paduandus, Podandos or Podandus (Πόδανδος), and appearing corrupted in ancient sources as Opodanda, Opodandum, and Rhegepodandos (Ῥεγεποδανδός) was an ancient town in Cataonia, the southernmost part of Cappadocia, in what is today Turkey. The town was located about 40 km to the southeast of Faustinopolis, near the pass of Mount Taurus known by the name of the Cilician Gates (Ptol. v. 7. § 7.). Extended by the emperor Valens (364-378), the town is mentioned in the itineraria, but its name assumes different forms; as Paduandus (Tab. Peut.), Podandos (It. Ant. p. 145), Mansio Opodanda (It. Hieros. p. 578), and Rhegepodandos (Hierocl. p 699). The place is described by Basilius (Epist. 74) as one of the most wretched holes on earth. It is said to have derived its name from a small stream in the neighborhood. (Const. Porphyr. Vit. Basil. 36; comp. Cedren. p. 575; Jo. Scylitz. Hist. pp. 829, 844.)  Due to similarity of name, tradition assigns the location of Padyandus to that of Pozantı, a position that modern scholars only tentatively accept.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Padyandus",
-        "type":  "Greek",
-        "longitude":  34.8711128
-    },
-    {
-        "name":  "Pamphylia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Nympheaum_of_Hadrian_%28Perge%29_02.jpg/800px-Nympheaum_of_Hadrian_%28Perge%29_02.jpg",
-        "latitude":  37,
-        "description":  "Pamphylia (Ancient Greek: Παμφυλία, Pamphylía, modern pronunciation Pamfylía /pæmˈfɪliə/) was a region in the south of Asia Minor, between Lycia and Cilicia, extending from the Mediterranean to Mount Taurus (all in modern-day Antalya province, Turkey). It was bounded on the north by Pisidia and was therefore a country of small extent, having a coast-line of only about 120 km (75 miles) with a breadth of about 50 km (30 miles). Under the Roman administration the term Pamphylia was extended so as to include Pisidia and the whole tract up to the frontiers of Phrygia and Lycaonia, and in this wider sense it is employed by Ptolemy.[1]\n\n",
-        "link":  "https://en.wikipedia.org//wiki/Pamphylia",
-        "type":  "Greek",
-        "longitude":  31
-    },
-    {
-        "name":  "Parium",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Agean_Sea_map_geographical.jpg/800px-Agean_Sea_map_geographical.jpg",
-        "latitude":  40.41611,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Parium",
-        "type":  "Greek",
-        "longitude":  27.0702782
-    },
-    {
-        "name":  "Patara (Cappadocia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/G%C3%BCm%C3%BC%C5%9Fhane_in_Turkey.svg/800px-G%C3%BCm%C3%BC%C5%9Fhane_in_Turkey.svg.png",
-        "latitude":  40.5438881,
-        "description":  "Patara (Ancient Greek: Πάταρα) was a small ancient city in ancient Cappadocia or Lesser Armenia, (Tab. Peut.), later in Pontus. The city lay on the major trade road from Trapezus on the Black Sea to Satala, and thence to Lake Van.\n",
-        "link":  "https://en.wikipedia.org//wiki/Patara_(Cappadocia)",
-        "type":  "Greek",
-        "longitude":  39.6483345
-    },
-    {
-        "name":  "Patara (Lycia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Patara_City_Gate_2019.jpg/800px-Patara_City_Gate_2019.jpg",
-        "latitude":  36.2662163,
-        "description":  "Patara (Lycian: 𐊓𐊗𐊗𐊀𐊕𐊀, Pttara; Greek: Πάταρα), later renamed Arsinoe (Ἀρσινόη), was a flourishing maritime and commercial city on the south-west coast of Lycia on the Mediterranean coast of Turkey near the modern small town of Gelemiş,[1] in Antalya Province. It is the birthplace of St. Nicholas in 270 AD, who lived most of his life in the nearby town of Myra (Demre).\n",
-        "link":  "https://en.wikipedia.org//wiki/Patara_(Lycia)",
-        "type":  "Greek/Roman",
-        "longitude":  29.3172226
-    },
-    {
-        "name":  "Percote",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Troas_el.svg/520px-Troas_el.svg.png",
-        "latitude":  40.2738876,
-        "description":  "Percote or Perkote (Ancient Greek: Περκώτη) was a town or city of ancient Mysia on the southern (Asian) side of the Hellespont, to the northeast of Troy. Percote is mentioned a few times in Greek mythology, where it plays a very minor role each time.  It was said to be the home of a notable seer named Merops, also its ruler.  Merops was the father of Arisbe (the first wife of King Priam, and subsequently wife of King Hyrtacus), Cleite (wife of King Cyzicus), and two sons named Amphius and Adrastus who fought during the Trojan War. As an ally of Troy, Percote sent a contingent to help King Priam during the Trojan War - though this contingent was led not by Merops\u0027s sons, but by Asius, son of Hyrtacus, according to Homer\u0027s Iliad, one native from Percote was wounded in the Trojan War by Antilochus, two natives from Percote were killed in the Trojan War by Diomedes and Ullysses.[1][2]  The Meropidae (Amphius and Adrastus) instead lead a contingent from nearby Adrastea.  A nephew of Priam, named Melanippus, son of Hicetaon, herded cattle (oxen) at Percote, according to Homer.\n",
-        "link":  "https://en.wikipedia.org//wiki/Percote",
-        "type":  "Greek",
-        "longitude":  26.5888882
-    },
-    {
-        "name":  "Perga",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Perge_city_overview.jpg/800px-Perge_city_overview.jpg",
-        "latitude":  36.9613876,
-        "description":  "Perga or Perge (Greek: Πέργη Perge, Turkish: Perge) was an ancient Greek city in Anatolia,[1] once the capital of Pamphylia Secunda, now in Antalya Province on the southwestern Mediterranean coast of Turkey. Today, it is a large site of ancient ruins 15 kilometres (9.3 mi) east of Antalya on the coastal plain. An acropolis located there dates back to the Bronze Age.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Perga",
-        "type":  "Greek",
-        "longitude":  30.85389
-    },
-    {
-        "name":  "Pergamon",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Acropolis_-_Bergama_%28Pergamon%29_-_Turkey_-_10_%285747249729%29.jpg/800px-Acropolis_-_Bergama_%28Pergamon%29_-_Turkey_-_10_%285747249729%29.jpg",
-        "latitude":  39.1325,
-        "description":  "Pergamon or Pergamum (/ˈpɜːrɡəmən/ or /ˈpɜːrɡəmɒn/; Ancient Greek: Πέργαμον), also referred to by its modern Greek form Pergamos (Greek: Πέργαμος[a][1]), was a rich and powerful ancient Greek city in Mysia. It is located 26 kilometres (16 mi) from the modern coastline of the Aegean Sea on a promontory on the north side of the river Caicus (modern-day Bakırçay) and northwest of the modern city of Bergama, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Pergamon",
-        "type":  "Greek",
-        "longitude":  27.184166
-    },
-    {
-        "name":  "Perinthus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Agean_Sea_map_geographical.jpg/800px-Agean_Sea_map_geographical.jpg",
-        "latitude":  40.9708328,
-        "description":  "Perinthus or Perinthos (Ancient Greek: ἡ Πέρινθος)[1][2] was a great and flourishing town of ancient Thrace, situated on the Propontis. According to John Tzetzes, it bore at an early period the name of Mygdonia (Μυγδονία). It lay 22 miles west of Selymbria and 56 miles west of Byzantium, on a small peninsula[3] of the bay which bears its name, and was built like an amphitheatre, on the declivity of a hill.[4] Its site is near modern Marmara Ereğlisi, in Turkey.[5][6]\n",
-        "link":  "https://en.wikipedia.org//wiki/Perinthus",
-        "type":  "Greek",
-        "longitude":  27.9544449
-    },
-    {
-        "name":  "Perrhe",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Perrhe1.jpg/800px-Perrhe1.jpg",
-        "latitude":  37.7916679,
-        "description":  "Perrhe (Ancient Greek: Πέρρη, also Antiochia on the Taurus) was an ancient city in the kingdom of Commagene. The remains of the city are located in the modern suburb of Örenli (previously the village of Pirin or Pirun) in the northern section of the Turkish city of Adıyaman in the province of the same name.\n",
-        "link":  "https://en.wikipedia.org//wiki/Perrhe",
-        "type":  "Greek/Roman",
-        "longitude":  38.30111
-    },
-    {
-        "name":  "Pessinus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.33389,
-        "description":  "Pessinus (Greek: Πεσσινούς or Πισσινούς) was an Ancient city and archbishopric in Asia Minor, a geographical area roughly covering modern Anatolia (Asian Turkey). The site of the city is now the modern Turkish village of Ballıhisar, in a tributary valley of the Sakarya River on the high Anatolian plateau at ca. 950 m above sea level, 13 km from the small town of Sivrihisar. Pessinus remains a Catholic (formerly double) titular see. \n",
-        "link":  "https://en.wikipedia.org//wiki/Pessinus",
-        "type":  "Greek",
-        "longitude":  31.584444
-    },
-    {
-        "name":  "Phaselis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Phaselis_axb01.jpg/800px-Phaselis_axb01.jpg",
-        "latitude":  36.523613,
-        "description":  "Phaselis (Ancient Greek: Φασηλίς) was a Greek and Roman city on the coast of ancient Lycia. Its ruins are located north of the modern town Tekirova in the Kemer district of Antalya Province in Turkey. It lies between the Bey Mountains and the forests of Olympos National Park, 16 kilometres (9.9 mi) south of the tourist town of Kemer and on the 57th kilometre of the Antalya–Kumluca highway. Phaselis and other ancient towns around the shore can also be accessed from the sea by daily yacht tours.\n",
-        "link":  "https://en.wikipedia.org//wiki/Phaselis",
-        "type":  "Greek",
-        "longitude":  30.5522213
-    },
-    {
-        "name":  "Phellus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/LycianTombPhellos.jpg/800px-LycianTombPhellos.jpg",
-        "latitude":  36.2347221,
-        "description":  "Phellus (Lycian: Wehnti; Ancient Greek: Φέλλος, Turkish: Phellos) is a town of ancient Lycia, now situated on the mountainous outskirts of the small town of Kaş in the Antalya Province of Turkey. The city was first referenced as early as 7 BC by Greek geographer and philosopher Strabo in Book XII of his Geographica (which detailed settlements in the Anatolia region), alongside the port town of Antiphellus; which served as the settlement\u0027s main trade front.\n",
-        "link":  "https://en.wikipedia.org//wiki/Phellus",
-        "type":  "Greek",
-        "longitude":  29.6322231
-    },
-    {
-        "name":  "Phocaea",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ancient_theatre_Fo%C3%A7a525.jpg/800px-Ancient_theatre_Fo%C3%A7a525.jpg",
-        "latitude":  38.6675,
-        "description":  "Phocaea or Phokaia (Ancient Greek: Φώκαια, Phókaia; modern-day Foça in Turkey) was an ancient Ionian Greek city on the western coast of Anatolia. Greek colonists from Phocaea founded the colony of Massalia[1] (modern-day Marseille, in France) in 600 BC, Emporion (modern-day Empúries, in Catalonia, Spain) in 575 BC and Elea (modern-day Velia, in Campania, Italy) in 540 BC.\n",
-        "link":  "https://en.wikipedia.org//wiki/Phocaea",
-        "type":  "Greek",
-        "longitude":  26.7580547
-    },
-    {
-        "name":  "Pinara",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pinara_Amphitheatre_Fethiye_Mugla_Turkiye.JPG/800px-Pinara_Amphitheatre_Fethiye_Mugla_Turkiye.JPG",
-        "latitude":  36.48861,
-        "description":  "Pinara (Lycian: 𐊓𐊆𐊍𐊍𐊁𐊑𐊏𐊆 Pilleñni, presumably from the adjective \"round\"; Greek: τὰ Πίναρα, formerly Artymnesus or Artymnesos according to one account) was a large city of ancient Lycia at the foot of Mount Cragus (now Mount Babadağ), and not far from the western bank of the River Xanthos, homonymous with the ancient city of Xanthos (now Eşen Stream).\n",
-        "link":  "https://en.wikipedia.org//wiki/Pinara",
-        "type":  "Greek/Roman",
-        "longitude":  29.2519436
-    },
-    {
-        "name":  "Pisidia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  37.3,
-        "description":  "Pisidia (/pɪˈsɪdiə/; Greek: Πισιδία, Pisidía; Turkish: Pisidya) was a region of ancient Asia Minor located north of Lycia, bordering Caria, Lydia, Phrygia and Pamphylia, and corresponding roughly to the modern-day province of Antalya in Turkey. Among Pisidia\u0027s settlements were Antioch(ia) in Pisidia, Termessos, Cremna, Sagalassos, Etenna, Neapolis, Selge, Tyriacum, Laodiceia Katakekaumene and Philomelium.\n",
-        "link":  "https://en.wikipedia.org//wiki/Pisidia",
-        "type":  "Greek",
-        "longitude":  30.3
-    },
-    {
-        "name":  "Ploutonion at Hierapolis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Plutonium_%28Pluto%27s_Gate%29_in_Hierapolis_01.jpg/397px-Plutonium_%28Pluto%27s_Gate%29_in_Hierapolis_01.jpg",
-        "latitude":  37.9268,
-        "description":  "The Ploutonion at Hierapolis (Ancient Greek: Πλουτώνειον Ploutōneion,[1] lit \"Place of Pluto\"; Latin: Plutonium) or Pluto\u0027s Gate[2] was a ploutonion (a religious site dedicated to the god Pluto)  in the ancient city of Hierapolis near Pamukkale in modern Turkey\u0027s Denizli Province. The site was discovered in 1965 by Italian archaeologists, who published reports on their excavations throughout the decade.[3] In 2013, it was further explored by Italian archaeologists led by Francesco D\u0027Andria, a professor of archaeology at the University of Salento.[4] As part of a restoration project, a replica of the marble statue of Hades and Cerberus has been restored to its original place. The statue is known to have been there in ancient times.[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Ploutonion_at_Hierapolis",
-        "type":  "Greek/Roman",
-        "longitude":  29.1268139
-    },
-    {
-        "name":  "Podalia (Lycia)",
-        "imageUrl":  "",
-        "latitude":  36.6741676,
-        "description":  "Podalia (Ancient Greek: Ποδαλία), also spelled Podalaea or Podalaia (Ποδαλαία), Podallia (Ποδαλλία), and Podaleia (Ποδάλεια), was a town of ancient Lycia, mentioned by several ancient authors.\n",
-        "link":  "https://en.wikipedia.org//wiki/Podalia_(Lycia)",
-        "type":  "Greek",
-        "longitude":  30.0363884
-    },
-    {
-        "name":  "Pompeiopolis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  41.5169449,
-        "description":  "Pompeiopolis (Greek: Πομπηιούπολις, city of Pompeius) was a Roman city in ancient Paphlagonia, identified in the early 19th century with the ruins of Zımbıllı Tepe, located near Taşköprü, Kastamonu Province in the Black Sea Region of Turkey. The exact location is 40 km north-east of Kastamonu and a short distance across the river from modern Taşköprü, in the valley of the Gökırmak or Gök River (Greek: Αμνίας, Amnías). The borders of Pompeiopolis reached the Küre mountains to the north, Ilgaz mountains to the south, Halys river to the east and Pınarbaşı valley to the west.\n",
-        "link":  "https://en.wikipedia.org//wiki/Pompeiopolis",
-        "type":  "Greek/Roman",
-        "longitude":  34.2130547
-    },
-    {
-        "name":  "Priene",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Temple_of_Athena_at_Priene.jpg/800px-Temple_of_Athena_at_Priene.jpg",
-        "latitude":  37.65972,
-        "description":  "Priene (Ancient Greek: Πριήνη, romanized: Priēnē; Turkish: Prien) was an ancient Greek city of Ionia (and member of the Ionian League) located at the base of an escarpment of Mycale, about 6 kilometres (3.7 mi) north of what was then the course of the Maeander River (now called the Büyük Menderes or \"Big Maeander\"). It was 67 kilometres (42 mi) from ancient Anthea, 15 kilometres (9.3 mi) from ancient Aneon and 25 kilometres (16 mi) from ancient Miletus. The city was built on the sea coast, overlooking the former Latmian Gulf of the Aegean. It was developed on steep slopes and terraces extending from sea level to a height of 380 metres (1,250 ft) above sea level at the top of the escarpment.[1] Because of siltation from the river filling the bay over several centuries, the city is now an inland site. It is located at a short distance west of the modern village Güllübahçe Turun in the Söke district of Aydın Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Priene",
-        "type":  "Greek",
-        "longitude":  27.2977772
-    },
-    {
-        "name":  "Prusias ad Hypium",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Prusias_ad_Hypium_10.jpg/800px-Prusias_ad_Hypium_10.jpg",
-        "latitude":  40.9061127,
-        "description":  "see also the city \"Cius\" or \"Kios\"\n",
-        "link":  "https://en.wikipedia.org//wiki/Prusias_ad_Hypium",
-        "type":  "Greek/Roman",
-        "longitude":  31.148056
-    },
-    {
-        "name":  "Rhodiapolis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Rhodiapolis.JPG/800px-Rhodiapolis.JPG",
-        "latitude":  36.3869438,
-        "description":  "Rhodiapolis (Ancient Greek: Ῥοδιάπολις), also known as Rhodia (Ῥοδία) and Rhodiopolis (Ῥοδιόπολις), was a city in ancient Lycia. Today it is located on a hill northwest of the modern town Kumluca in Antalya Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Rhodiapolis",
-        "type":  "Greek/Roman",
-        "longitude":  30.2655563
-    },
-    {
-        "name":  "Sagalassos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Sagalassos_26.jpg/800px-Sagalassos_26.jpg",
-        "latitude":  37.6780548,
-        "description":  "Sagalassos (Greek: Σαγαλασσός), also known as Selgessos (Greek: Σελγησσός)[1] and Sagallesos (Greek: Σαγαλλησός),[2] is an archaeological site in southwestern Turkey, about 100 km north of Antalya (ancient Attaleia), and 30 km from Burdur and Isparta. The ancient ruins of Sagalassos are 7 km from Ağlasun (as well as being its namesake) in the province of Burdur, on Mount Akdağ, in the Western Taurus mountains range, at an altitude of 1450–1700 metres.\nIn Roman Imperial times, the town was known as the \"first city of Pisidia\", a region in the western Taurus mountains, currently known as the Turkish Lakes Region. During the Hellenistic period it was already one of the major Pisidian towns.\n",
-        "link":  "https://en.wikipedia.org//wiki/Sagalassos",
-        "type":  "Greek",
-        "longitude":  30.5194435
-    },
-    {
-        "name":  "Samsun",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Samsun_sea.jpg/800px-Samsun_sea.jpg",
-        "latitude":  41.29028,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Samsun",
-        "type":  "Greek",
-        "longitude":  36.33361
-    },
-    {
-        "name":  "Sardis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  38.4883347,
-        "description":  "Sardis (/ˈsɑːrdɪs/) or Sardes (/ˈsɑːrdiːz/; Lydian: Sfard; Ancient Greek: Σάρδεις Sardeis; Old Persian: Sparda; Biblical Hebrew: ספרד‎ Sfarad) was an ancient city at the location of modern Sart (Sartmahmut before 19 October 2005), near Salihli, in Turkey\u0027s Manisa Province. Sardis was the capital of the ancient kingdom of Lydia,[1] one of the important cities of the Persian Empire, the seat of a Seleucid Satrap, the seat of a proconsul under the Roman Empire, and the metropolis of the province Lydia in later Roman and Byzantine times. As one of the seven churches of Asia, it was addressed by the author of the Book of Revelation in the New Testament,[2] in terms which seem to imply that its church members did not finish what they started, that they were about image and not substance.[3] Its importance was due first to its military strength, secondly to its situation on an important highway leading from the interior to the Aegean coast, and thirdly to its commanding the wide and fertile plain of the Hermus.\n",
-        "link":  "https://en.wikipedia.org//wiki/Sardis",
-        "type":  "Greek",
-        "longitude":  28.0402775
-    },
-    {
-        "name":  "Satala",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Head_and_left_hand_from_a_bronze_cult_statue_of_Anahita%2C_a_local_goddess_shown_here_in_the_guide_of_Aphrodite%2C_200-100_BC%2C_British_Museum_%288167370318%29.jpg/423px-Head_and_left_hand_from_a_bronze_cult_statue_of_Anahita%2C_a_local_goddess_shown_here_in_the_guide_of_Aphrodite%2C_200-100_BC%2C_British_Museum_%288167370318%29.jpg",
-        "latitude":  40.05,
-        "description":  "Located in Turkey, the settlement of Satala (Old Armenian: Սատաղ Satał, Ancient Greek: Σάταλα[1]), according to the ancient geographers, was situated in a valley surrounded by mountains, a little north of the Euphrates, where the road from Trapezus to Samosata crossed the boundary of the Roman Empire, when it was a bishopric, which remains a Latin Catholic titular see. Later it was connected with Nicopolis by two highways. Satala is now Sadak, a village of 500 inhabitants, in the Kelkit district of Gümüşhane Province in Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Satala",
-        "type":  "Greek",
-        "longitude":  39.6
-    },
-    {
-        "name":  "Satala in Lydia",
-        "imageUrl":  "",
-        "latitude":  38.57861,
-        "description":  "Satala (Ancient Greek: Σάταλα) or Satala  in Lydia was a Roman era city[1][2] and Bishopric[3] in ancient Lydia.\n",
-        "link":  "https://en.wikipedia.org//wiki/Satala_in_Lydia",
-        "type":  "Greek",
-        "longitude":  28.2691669
-    },
-    {
-        "name":  "Scepsis",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Scepsis_2009.jpg/800px-Scepsis_2009.jpg",
-        "latitude":  39.81111,
-        "description":  "Scepsis or Skepsis (Ancient Greek: Σκῆψις or Σκέψις) was an ancient settlement in the Troad, Asia Minor that is at the present site of the village of Kurşunlutepe, near the town of Bayramiç in Turkey. The settlement is notable for being the location where the famous library of Aristotle was kept before being moved to Pergamum and Alexandria.[1] It was also home to Metrodorus of Scepsis and Demetrius of Scepsis.\n",
-        "link":  "https://en.wikipedia.org//wiki/Scepsis",
-        "type":  "Greek",
-        "longitude":  26.7063885
-    },
-    {
-        "name":  "Sebastopolis (Caria)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
-        "latitude":  37.4858322,
-        "description":  "Sebastopolis (Ancient Greek: Σεβαστόπολις),[1] also known as Saleia, was a town of ancient Caria, inhabited during Hellenistic, Roman, and Byzantine times.[2] It minted coins in antiquity.[3][4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Sebastopolis_(Caria)",
-        "type":  "Greek",
-        "longitude":  29.1375
-    },
-    {
-        "name":  "Seleucia (Pamphylia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Seleukia%28Turkey%292012.jpg/800px-Seleukia%28Turkey%292012.jpg",
-        "latitude":  36.8283348,
-        "description":  "Seleucia (Greek: Σελεύκεια – also transliterated as Seleukeia) was an ancient Greek city on the Mediterranean coast of Pamphylia, in Anatolia, approximately 15 km northeast of Side; the site is currently about 1k north of the village of Bucakşeyhler (also Bucakşıhler), approximately 12 km northeast of Manavgat, Antalya Province, Turkey. It is situated on a hilltop with steep escarpments on several sides making a strong defensive position. The track from the village has recently been clear felled but the main site is still within a mature pine forest. The German researcher Johannes Nollé has suggested, however, that the remains at this location are not those of Seleucia but rather those of Lyrba.[1] Another name for the city in the Middle Ages was Scandalor,[2] which was documented on portolan maps.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Seleucia_(Pamphylia)",
-        "type":  "Greek",
-        "longitude":  31.2433338
-    },
-    {
-        "name":  "Seleucia at the Zeugma",
-        "imageUrl":  "",
-        "latitude":  37.4333344,
-        "description":  "Seleucia at the Zeugma (Greek: Σελεύκεια ἐπὶ τοῦ Ζεύγματος, transliterated Seleucia epi tou Zeugmatos or Seleukeia epi tou Zeugmatos) was a Hellenistic city or fortified town in the present Republic of Turkey, on the left, or south, bank of the Euphrates, across from ancient Samosata and not far from it. \n",
-        "link":  "https://en.wikipedia.org//wiki/Seleucia_at_the_Zeugma",
-        "type":  "Greek",
-        "longitude":  38.2333336
-    },
-    {
-        "name":  "Seleucia Sidera",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  37.9,
-        "description":  "Seleucia Sidera (Greek: Σελεύκεια η Σιδηρᾶ, Seleukeia hê Sidêra; Latin: Seleucia Ferrea), also transliterated as Seleuceia, Seleukeia, and later known as Claudioseleucia, Greek Klaudioseleukeia, was an ancient city in the northern part of Pisidia, Anatolia, near the village of Bayat (old name Selef), near Atabey, about 15 km north-northeast of Isparta, Isparta Province, in the Mediterranean Region of Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Seleucia_Sidera",
-        "type":  "Greek",
-        "longitude":  30.6177769
-    },
-    {
-        "name":  "Selge",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Selgetheater.jpg/800px-Selgetheater.jpg",
-        "latitude":  37.2294426,
-        "description":  "Selge (Greek: Σέλγη) was an important city in ancient Pisidia and later in Pamphylia, on the southern slope of Mount Taurus, modern Antalya Province, Turkey, at the part where the river Eurymedon River (Turkish: Köprüçay) forces its way through the mountains towards the south.\n",
-        "link":  "https://en.wikipedia.org//wiki/Selge",
-        "type":  "Greek",
-        "longitude":  31.1272221
-    },
-    {
-        "name":  "Selymbria",
-        "imageUrl":  "",
-        "latitude":  41.0802765,
-        "description":  "Selymbria (Greek: Σηλυμβρία),[1] or Selybria (Σηλυβρία),[2][3][4] or Selybrie (Σηλυβρίη),[5] was a town of ancient Thrace on the Propontis, 22 Roman miles east from Perinthus, and 44 Roman miles west from Constantinople,[6] near the southern end of the wall built by Anastasius I Dicorus for the protection of his capital.[7]\n",
-        "link":  "https://en.wikipedia.org//wiki/Selymbria",
-        "type":  "Greek",
-        "longitude":  28.2683334
-    },
-    {
-        "name":  "Serrion Teichos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
-        "latitude":  40.7505569,
-        "description":  "Serrion Teichos (Ancient Greek: Σέρριον τείχος) or Serreion Teichos (Σέρρειον τεῖχος) was a Greek[1] city in ancient Thrace, located in the region of the Propontis. It was a member of the Delian League and appears in tribute lists of Athens between 428/7 and 418/7 BCE.[1] It later bore the name of Ganus or Ganos (Γάνος or Γᾶνος).[2] It is under this name that the town is mentioned by geographers and historians, as a noted mountain fortress of Thrace.[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Serrion_Teichos",
-        "type":  "Greek",
-        "longitude":  27.3244438
-    },
-    {
-        "name":  "Sestos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Marmara_Region_location_map.svg/450px-Marmara_Region_location_map.svg.png",
-        "latitude":  40.2166672,
-        "description":  "Sestos (Greek: Σηστός, Latin: Sestus) was an ancient city in Thrace. It was located at the Thracian Chersonese peninsula on the European coast of the Hellespont, opposite the ancient city of Abydos, and near the town of Eceabat in Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Sestos",
-        "type":  "Greek",
-        "longitude":  26.3833332
-    },
-    {
-        "name":  "Setae (Lydia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lydia_circa_50_AD_-_English_legend.jpg/800px-Lydia_circa_50_AD_-_English_legend.jpg",
-        "latitude":  38.7794456,
-        "description":  "Setae or Setai (Ancient Greek: Σέται), or Settae or Settai (Σέτται), or Saettae or Saittai or Saittae (Σαίτται) was a town of ancient Lydia,[1] located at Sidas Kaleh[2][3] in Modern Turkey.[4][5] The ruins of that town consist of a stadium,[6] tombs and ruins of several temples.[7][8] The town is not mentioned by any of the earlier writers, but appears in Ptolemy[9] and Hierocles.[10]\n",
-        "link":  "https://en.wikipedia.org//wiki/Setae_(Lydia)",
-        "type":  "Greek",
-        "longitude":  28.63139
-    },
-    {
-        "name":  "Side, Turkey",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sunrise_apollo_side.jpg/480px-Sunrise_apollo_side.jpg",
-        "latitude":  36.7666664,
-        "description":  "Side is a city on the southern Mediterranean coast of Turkey. It includes the modern resort town and the ruins of the ancient city of Side, one of the best-known classical sites in the country. It lies near Manavgat and the village of Selimiye, 78 km from Antalya in the province of Antalya.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Side,_Turkey",
-        "type":  "Greek",
-        "longitude":  31.38889
-    },
-    {
-        "name":  "Sidyma",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pierre-Flavien_Turgeon.png/437px-Pierre-Flavien_Turgeon.png",
-        "latitude":  36.41025,
-        "description":  "Coordinates: 36°24′36.9″N 29°11′30.1″E﻿ / ﻿36.410250°N 29.191694°E﻿ / 36.410250; 29.191694\nSidyma  (Ancient Greek: Σίδυμα), was a town of ancient Lycia, at what is now the small village of Dudurga Asari in Muğla Province, Turkey. It lies on the southern slope of Mount Cragus, to the north-west of the mouth of the Xanthus.\n",
-        "link":  "https://en.wikipedia.org//wiki/Sidyma",
-        "type":  "Greek",
-        "longitude":  29.1916943
-    },
-    {
-        "name":  "Sigeion",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.97333,
-        "description":  "Sigeion[pronunciation?] (Ancient Greek: Σίγειον, Sigeion; Latin: Sigeum) was an ancient Greek city in the north-west of the Troad region of Anatolia located at the mouth of the Scamander (the modern Karamenderes River).[1] Sigeion commanded a ridge between the Aegean Sea and the Scamander which is now known as Yenişehir and is a part of the Çanakkale district in Çanakkale province, Turkey.[2] The surrounding region was referred to as the Sigean Promonotory, which was frequently used as a point of reference by ancient geographers since it marked the mouth of the Hellespont.[3] The outline of this promontory is no longer visible due to the alluvial activity of the Karamenderes which has filled in the embayment east of Yenişehir.[4] The name \u0027Sigeion\u0027 means \u0027silent place\u0027 and is derived from Ancient Greek σιγή (sigē), \u0027silence\u0027; in Classical Antiquity, the name was assumed to be antiphrastic, i.e. indicating a characteristic of the place contrary to reality, since the seas in this region are known for their fierce storms.[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Sigeion",
-        "type":  "Greek",
-        "longitude":  26.1780548
-    },
-    {
-        "name":  "Sillyon",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/SillyonStadttor.jpg/736px-SillyonStadttor.jpg",
-        "latitude":  36.9925,
-        "description":  "Sillyon (Greek: Σίλλυον), also Sylleion (Σύλλειον), in Byzantine times Syllaeum or Syllaion (Συλλαῖον), was an important fortress and city near Attaleia in Pamphylia, on the southern coast of modern Turkey. The native Greco-Pamphylian form was Selywiys, possibly deriving from the original Hittite Sallawassi. Its modern Turkish names are Yanköy Hisarı or Asar Köy.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Sillyon",
-        "type":  "Greek",
-        "longitude":  30.9897213
-    },
-    {
-        "name":  "Simena",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Graven1kl.jpg/800px-Graven1kl.jpg",
-        "latitude":  36.1902771,
-        "description":  "Simena (Ancient Greek: Σίμηνα) was a town on the coast of ancient Lycia,[1] 60 stadia from Aperlae.[2] The Stadiasmus Maris Magni calls the town Somena (Σόμηνα).[3]\n",
-        "link":  "https://en.wikipedia.org//wiki/Simena",
-        "type":  "Greek",
-        "longitude":  29.8597221
-    },
-    {
-        "name":  "Sinda (Pisidia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Heinrich_Kiepert._Asia_citerior.Pisidia.jpg/648px-Heinrich_Kiepert._Asia_citerior.Pisidia.jpg",
-        "latitude":  37.1205559,
-        "description":  "Sinda (Ancient Greek: Σίνδα) was an ancient town mentioned to have been situated on the western frontier of ancient Pisidia, in the neighbourhood of Cibyra and the river Caularis.[1] Stephanus of Byzantium,[2] who spoke of a Sindia as a town of Lycia, was thought to have alluded to the same place.[3] Some writers have confounded Sinda with Isionda, which is the more surprising, as Livy mentions the two as different towns in the same chapter;[4] modern scholars treat them as separate places.[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Sinda_(Pisidia)",
-        "type":  "Greek",
-        "longitude":  29.6044445
-    },
-    {
-        "name":  "Sinop, Turkey",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sinop_Overview_2009.JPG/800px-Sinop_Overview_2009.JPG",
-        "latitude":  42.02667,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Sinop,_Turkey",
-        "type":  "Greek",
-        "longitude":  35.15111
-    },
-    {
-        "name":  "Smyrna",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Agora_of_Smyrna%2C_built_during_the_Hellenistic_era_at_the_base_of_Pagos_Hill_and_totally_rebuilt_under_Marcus_Aurelius_after_the_destructive_178_AD_earthquake%2C_Izmir%2C_Turkey_%2818702047681%29.jpg/800px-thumbnail.jpg",
-        "latitude":  38.41861,
-        "description":  "Smyrna (/ˈsmɜːrnə/ SMUR-nə; Ancient Greek: Σμύρνη, romanized: Smýrnē, or Ancient Greek: Σμύρνα, romanized: Smýrna) was a Greek city located at a strategic point on the Aegean coast of Anatolia. Due to its advantageous port conditions, its ease of defence and its good inland connections, Smyrna rose to prominence. The name of the city since about 1930 is İzmir.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Smyrna",
-        "type":  "Greek",
-        "longitude":  27.1391659
-    },
-    {
-        "name":  "Soli (Cilicia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Soli_Pompeiopolis_20141116_07.jpg/800px-Soli_Pompeiopolis_20141116_07.jpg",
-        "latitude":  36.7419434,
-        "description":  "Soli (Ancient Greek: Σόλοι, Sóloi), often rendered Soli/Pompeiopolis (Ancient Greek: Πομπηϊούπολις), was an ancient city and port in Cilicia, 11 km west of Mersin in present-day Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Soli_(Cilicia)",
-        "type":  "Greek",
-        "longitude":  34.54
-    },
-    {
-        "name":  "Stadia (Caria)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
-        "latitude":  36.74222,
-        "description":  "Stadia (Ancient Greek: Στάδια) was a town of ancient Caria.[1] It became a bishopric; no longer the seat of a residential bishop, it remains a titular see of the Roman Catholic Church.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Stadia_(Caria)",
-        "type":  "Greek",
-        "longitude":  27.6483326
-    },
-    {
-        "name":  "Stratonicea (Caria)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_theatre%2C_erected_in_the_Hellenistic_period_in_the_north_slope_of_the_south_hill%2C_its_capacity_was_approximately_10%2C000_spectators%2C_Caria%2C_Turkey_%2820688140081%29.jpg/800px-thumbnail.jpg",
-        "latitude":  37.314724,
-        "description":  "Stratonicea (Ancient Greek: Στρατoνικεια or Στρατoνικη; or per Stephanus of Byzantium: Στρατονίκεια) – also transliterated as Stratonikeia, Stratoniceia , Stratoniki, and Stratonike and Stratonice; a successor settlement to Chrysaoris;[1] and for a time named Hadrianopolis – was one of the most important towns in the interior of ancient Caria, Anatolia, situated on the east-southeast of Mylasa, and on the south of the river Marsyas; its site is now located at the present village of Eskihisar, Muğla Province, Turkey. It is situated at a distance of 1 km (0.62 mi) from the intercity road  D.330 that connects the district center of Yatağan with Bodrum and Milas, shortly before Yatağan Power Plant if one has taken departure from the latter towns.\n",
-        "link":  "https://en.wikipedia.org//wiki/Stratonicea_(Caria)",
-        "type":  "Greek/Roman",
-        "longitude":  28.065834
-    },
-    {
-        "name":  "Sulusaray",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  40,
-        "description":  "Sulusaray or Çiftlik, in Antiquity and the early Middle Ages known as Sebastopolis (Greek: Σεβαστούπολις) or Heracleopolis (Ἡρακλειούπολις), is a town and a district of Tokat Province in the Black Sea region of Turkey. Sulusaray is about 68 km from the center of Tokat, and about 30 km from Artova town. The site is situated on a plain surrounded by mountains and the Çekerek river runs near it. The mayor is Şahin Hasgül (MHP).\n",
-        "link":  "https://en.wikipedia.org//wiki/Sulusaray",
-        "type":  "Greek",
-        "longitude":  36.1
-    },
-    {
-        "name":  "Syedra",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Syedra_-_panoramio_-_matzi01.jpg/800px-Syedra_-_panoramio_-_matzi01.jpg",
-        "latitude":  36.4411125,
-        "description":  "Syedra (Greek: Σύεδρα)[1] was an ancient port city in region of ancient Cilicia, Pamphylia, or Isauria, on the southern coast of modern-day Turkey between the towns of Alanya and Gazipaşa. Syedra was settled in the 7th century BCE, and abandoned in the 13th century CE. The town had a port at sea level and an upper town 400m above.[2] Ptolemy places it in Cilicia.[3] Stephanus of Byzantium assigns it to Isauria.[4] Hierocles places it in Pamphylia.[5]\n",
-        "link":  "https://en.wikipedia.org//wiki/Syedra",
-        "type":  "Greek",
-        "longitude":  32.1525
-    },
-    {
-        "name":  "Tabala (Lydia)",
-        "imageUrl":  "",
-        "latitude":  38.61972,
-        "description":  "Tabala (Ancient Greek: Τάβαλα), is the name of a Roman and Byzantine town and a Bishopric in ancient Lydia. Tabala was on the Hermus River, and minted its own coins.[1][2] It is no doubt the same as the one mentioned by Hierocles under the name of Gabala,[3] which is perhaps only miswritten for Tabala. It is even possible that it may be the town of Tabae or Tabai (Τάβαι), which Stephanus of Byzantium assigns to Lydia.[4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Tabala_(Lydia)",
-        "type":  "Greek",
-        "longitude":  28.810833
-    },
-    {
-        "name":  "Tapureli ruins",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tapureli.jpg/800px-Tapureli.jpg",
-        "latitude":  36.65,
-        "description":  "Tapureli ruins are in Mersin Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Tapureli_ruins",
-        "type":  "Greek",
-        "longitude":  34.0333328
-    },
-    {
-        "name":  "Telmessos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkey_relief_location_map.jpg/800px-Turkey_relief_location_map.jpg",
-        "latitude":  36.6183319,
-        "description":  "Telmessos or Telmessus (Ancient Greek: Τελμησσός), also Telmissus (Ancient Greek: Τελμισσός),[1] later Anastasiopolis (Ancient Greek: Αναστασιούπολις), then Makri or Macre (Greek: Μάκρη), was the largest city in Lycia, near the Carian border, and is sometimes confused with Telmessos in Caria. It was called Telebehi in the Lycian language. The well-protected harbor of Telmessos is separated from the Gulf of Telmessos by an island.\n",
-        "link":  "https://en.wikipedia.org//wiki/Telmessos",
-        "type":  "Greek",
-        "longitude":  29.1177769
-    },
-    {
-        "name":  "Telmessos (Caria)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
-        "latitude":  37.0397224,
-        "description":  "Telmessos or Telmessus, also Telmissos (Ancient Greek: Τελμησσός or Τελμισσός), was a town in ancient Caria.\n",
-        "link":  "https://en.wikipedia.org//wiki/Telmessos_(Caria)",
-        "type":  "Greek",
-        "longitude":  27.3177776
-    },
-    {
-        "name":  "Temnos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/MapaTopogr%C3%A1ficoDeAsiaMenor-E%C3%B3lida.svg/432px-MapaTopogr%C3%A1ficoDeAsiaMenor-E%C3%B3lida.svg.png",
-        "latitude":  38.6719437,
-        "description":  "Temnos or Temnus (Ancient Greek: Τῆμνος; Aeolic Greek: Τᾶμνος[1]) was a small Greek polis (city-state) of ancient Aeolis, later incorporated in the Roman province of Asia, on the western coast of Anatolia. Its bishopric was a suffragan of Ephesus, the capital and metropolitan see of the province, and is included in the Catholic Church\u0027s list of titular sees.[2]\n",
-        "link":  "https://en.wikipedia.org//wiki/Temnos",
-        "type":  "Greek",
-        "longitude":  27.1969452
-    },
-    {
-        "name":  "Tenedos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Bozcaada%2C_%C3%87anakkale%2C_2019_14.jpg/800px-Bozcaada%2C_%C3%87anakkale%2C_2019_14.jpg",
-        "latitude":  39.8219452,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Tenedos",
-        "type":  "Greek",
-        "longitude":  26.0288887
-    },
-    {
-        "name":  "Teos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/%C4%B0zmir%2C_Turkey_%28Unsplash_fxXoSky-LU4%29.jpg/800px-%C4%B0zmir%2C_Turkey_%28Unsplash_fxXoSky-LU4%29.jpg",
-        "latitude":  38.1772232,
-        "description":  "Teos (Ancient Greek: Τέως) or Teo was an ancient Greek city on the coast of Ionia, on a peninsula between Chytrium and Myonnesus. It was founded by Minyans from Orchomenus, Ionians and Boeotians, but the date of its foundation is unknown. Teos was one of the twelve cities which formed the Ionian League. The city was situated on a low hilly isthmus. Its ruins are located to the south of the modern town Sığacık in the Seferihisar district of Izmir Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Teos",
-        "type":  "Greek",
-        "longitude":  26.785
-    },
-    {
-        "name":  "Themiscyra (Pontus)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Themiscyra_%28Pontus%29_Turkey.jpg/800px-Themiscyra_%28Pontus%29_Turkey.jpg",
-        "latitude":  41.2,
-        "description":  "Themiscyra (/ˌθɛmɪˈskɪrə/; Greek: Θεμίσκυρα Themiskyra) was an ancient Greek town in northeastern Anatolia; it was situated on the southern coast of the Black Sea, near the mouth of the Thermodon. \n",
-        "link":  "https://en.wikipedia.org//wiki/Themiscyra_(Pontus)",
-        "type":  "Greek",
-        "longitude":  36.7166672
-    },
-    {
-        "name":  "Thyatira",
-        "imageUrl":  "",
-        "latitude":  38.9208336,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Thyatira",
-        "type":  "Greek/Roman",
-        "longitude":  27.8361111
-    },
-    {
-        "name":  "Tium",
-        "imageUrl":  "",
-        "latitude":  41.56139,
-        "description":  "Tium (Greek: Τῖον) was an ancient settlement, also known as Filyos (Greek: Φίλειος), on the south coast of the Black Sea at the mouth of the river Billaeus[1] in present-day Turkey. Ancient writers variously assigned it to ancient Paphlagonia or Bithynia.\n",
-        "link":  "https://en.wikipedia.org//wiki/Tium",
-        "type":  "Greek",
-        "longitude":  32.023056
-    },
-    {
-        "name":  "Tlos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Tlos_ruins_Turkey.jpg/800px-Tlos_ruins_Turkey.jpg",
-        "latitude":  36.552536,
-        "description":  "Tlos (Ancient Greek: Τλώς or Τλῶς) is an ancient ruined Lycian hilltop citadel near the resort town of Seydikemer in the Mugla Province of southern Turkey, some 4 kilometres northwest of Saklikent Gorge. Tlos is believed to be one of the most important religious Lycian sites and settlement on the site is said to have begun more than 4,000 years ago.\n",
-        "link":  "https://en.wikipedia.org//wiki/Tlos",
-        "type":  "Greek/Roman",
-        "longitude":  29.4207935
-    },
-    {
-        "name":  "Trabzon",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Sumela_From_Across_Valley.JPG/800px-Sumela_From_Across_Valley.JPG",
-        "latitude":  41.005,
-        "description":  "Trabzon (Turkish pronunciation: [ˈtɾabzon]; Ophitic Pontic Greek: Τραπεζούντα, (Trapezounta), Armenian: Տրապիզոն, romanized: Trapizon), historically known as Trebizond in English, is a city on the Black Sea coast of northeastern Turkey and the capital of Trabzon Province. Trabzon, located on the historical Silk Road, became a melting pot of religions, languages and culture for centuries and a trade gateway to Persia in the southeast and the Caucasus to the northeast.[3] The Venetian and Genoese merchants paid visits to Trabzon during the medieval period and sold silk, linen and woolen fabric.\nBoth republics had merchant colonies within the city – Leonkastron and the former \"Venetian castle\" – that played a role to Trabzon similar to the one Galata played to Constantinople (modern Istanbul).[4] Trabzon formed the basis of several states in its long history and was the capital city of the Empire of Trebizond between 1204 and 1461. During the early modern period, Trabzon, because of the importance of its port, again became a focal point of trade to Persia and the Caucasus.\n",
-        "link":  "https://en.wikipedia.org//wiki/Trabzon",
-        "type":  "Greek",
-        "longitude":  39.7225
-    },
-    {
-        "name":  "Trebenna",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Trebenna_-_Acropolis.jpg/800px-Trebenna_-_Acropolis.jpg",
-        "latitude":  36.8658333,
-        "description":  "Trebenna (Τρεβέννα) or Trabenna (Τραβέννα)[1] was a city in ancient Lycia, at the border with Pamphylia, and at times ascribed to that latter region.[2] Its ruins are located east of the modern town Çağlarca in the Konyaaltı district of Antalya Province, Turkey. The site lies 22 kilometers to the west of Antalya.\n",
-        "link":  "https://en.wikipedia.org//wiki/Trebenna",
-        "type":  "Greek/Roman",
-        "longitude":  30.4763889
-    },
-    {
-        "name":  "Tripolis on the Meander",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Tripolis_on_the_Meander%2C_Lydia%2C_Turkey_%2819499394805%29.jpg/800px-Tripolis_on_the_Meander%2C_Lydia%2C_Turkey_%2819499394805%29.jpg",
-        "latitude":  38.05,
-        "description":  "Tripolis on the Meander (Greek: Τρίπολις, Eth. Greek: Τριπολίτης, Latin: Tripolis ad Maeandrum) – also Neapolis (Greek: Νεάπολις), Apollonia (Greek: Απολλωνία), and Antoniopolis – was an ancient city on the borders of Phrygia, Caria and Lydia, on the northern bank of the upper course of the Maeander, and on the road leading from Sardes by Philadelphia to Laodicea ad Lycum. (It. Ant. p. 336; Tab. Peut.) It was situated 20 km to the northwest of Hierapolis.\n",
-        "link":  "https://en.wikipedia.org//wiki/Tripolis_on_the_Meander",
-        "type":  "Greek/Roman",
-        "longitude":  28.95
-    },
-    {
-        "name":  "Troad",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  39.8,
-        "description":  "The Troada or Troad (Anglicized; /ˈtroʊˌæd/ or /ˈtroʊəd/; Greek: Τρωάδα, Troáda), or Troas (/ˈtroʊəs/; Ancient Greek: Τρῳάς, Trōiás or Τρωϊάς, Trōïás), is the historical name of the Biga Peninsula (modern Turkish: Biga Yarımadası) in the northwestern part of Anatolia, Turkey. This region now is part of the Çanakkale province of Turkey. Bounded by the Dardanelles to the northwest, by the Aegean Sea to the west and separated from the rest of Anatolia by the massif that forms Mount Ida, the Troad is drained by two main rivers, the Scamander (Karamenderes) and the Simois, which join at the area containing the ruins of Troy.\n",
-        "link":  "https://en.wikipedia.org//wiki/Troad",
-        "type":  "Greek",
-        "longitude":  26.5
-    },
-    {
-        "name":  "Troy",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Walls_of_Troy_%282%29.jpg/800px-Walls_of_Troy_%282%29.jpg",
-        "latitude":  39.9575,
-        "description":  "Troy (Greek: Τροία) or Ilion (Greek: Ίλιον) was an ancient city, known as the setting for the Greek myth of the Trojan War. It was located at Hisarlik in present-day Turkey, 30 kilometres (19 mi) south-west of Çanakkale.\n",
-        "link":  "https://en.wikipedia.org//wiki/Troy",
-        "type":  "Greek",
-        "longitude":  26.23889
-    },
-    {
-        "name":  "Urla, İzmir",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/%C4%B0zmir_Urla_%C4%B0skele.jpg/800px-%C4%B0zmir_Urla_%C4%B0skele.jpg",
-        "latitude":  38.3222237,
-        "description":  "Urla (Greek: Βουρλά, Vourlá) is a town and the center of the district of the same name in İzmir Province, in Turkey. The district center is located in the middle of the isthmus of a small peninsula which protrudes northwards in the Gulf of İzmir and which carries the same name as the town (Urla Peninsula), but its urban tissue is comparatively loose and extends eastwards to touch the coast and to cover a wide area which also includes a large portion of the peninsula. Sizable parts in the municipal area, owned by absentee landlords, remain uninhabited or are very rural in aspect. The peninsular coastline present a number of compounds constituted by seasonal residences along the beaches and the coves and which are administratively divided between Urla center\u0027s municipal area or its depending villages.\n",
-        "link":  "https://en.wikipedia.org//wiki/Urla,_%C4%B0zmir",
-        "type":  "Greek",
-        "longitude":  26.7647228
-    },
-    {
-        "name":  "Uzuncaburç (Diokaisareia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/57608567_-_panoramio.jpg/800px-57608567_-_panoramio.jpg",
-        "latitude":  36.5833321,
-        "description":  "Uzuncaburç is an archaeological site in Mersin Province, Turkey, containing the remnants of the ancient city of Diokaisareia or Diocaesarea (Greek: Διοκαισάρεια).\n",
-        "link":  "https://en.wikipedia.org//wiki/Uzuncabur%C3%A7_(Diokaisareia)",
-        "type":  "Greek/Roman",
-        "longitude":  33.9333344
-    },
-    {
-        "name":  "Xanthos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Reconstruction_Nereid_Monument_BM.jpg/660px-Reconstruction_Nereid_Monument_BM.jpg",
-        "latitude":  36.35611,
-        "description":  "Xanthos (Lycian: 𐊀𐊕𐊑𐊏𐊀 Arñna, Greek: Ξάνθος, Latin: Xanthus, Turkish: Ksantos) was a city in ancient Lycia, the site of present-day Kınık, Antalya Province, Turkey, and of the river on which the city is situated. The ruins of Xanthus are on the south slopes of a hill, the ancient acropolis, located on the northern outskirts of the modern city, on the left bank of the Xanthus, which flows beneath the hill. A single road, Xantos yolu, encircles the hill and runs through the ruins. Xanthos is a designated UNESCO World Heritage Site together with Letoon, the centre of the Lycian civilization, exerted significant architectural influences upon other cities of the region, with the Nereid Monument directly inspiring the Mausoleum at Halicarnassus in Caria.\n",
-        "link":  "https://en.wikipedia.org//wiki/Xanthos",
-        "type":  "Greek",
-        "longitude":  29.3186111
-    },
-    {
-        "name":  "Yumurtalık",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  36.7677765,
-        "description":  "Yumurtalık (meaning \"egg nest\") is a resort town and a district in the Adana Province of Turkey. It was formerly called Aegeae, Ayas or Laiazzo.[3] It is a Mediterranean port at a distance of about 40 km (25 mi) from Adana city. Yumurtalık\u0027s population does not exceed 5,000 in winter, but in summer, it rises to 30 to 40,000 people since many inhabitants of Adana have holiday homes here. There are also many daily visitors during the holiday season.\n",
-        "link":  "https://en.wikipedia.org//wiki/Yumurtal%C4%B1k",
-        "type":  "Greek",
-        "longitude":  35.79222
-    },
-    {
-        "name":  "Zaliche",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  41.61,
-        "description":  "Zaliche (Greek: Ζαλίχη) or Zaliches (Greek: Ζαλίχης) was an ancient town in the late Roman province of Helenopontus.\n",
-        "link":  "https://en.wikipedia.org//wiki/Zaliche",
-        "type":  "Greek",
-        "longitude":  35.595
-    },
-    {
-        "name":  "Zeugma (Commagene)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Zeugma.jpg/800px-Zeugma.jpg",
-        "latitude":  37.0586128,
-        "description":  "Zeugma (Greek: Ζεῦγμα) is an ancient Hellenistic era Greek and then Roman city of Commagene; located in modern Gaziantep Province, Turkey. It was named for the bridge of boats, or zeugma,[1] that crossed the Euphrates river at that location.[2] Zeugma Mosaic Museum contains mosaics from the site, and is one of the largest mosaic museums in the world.\n",
-        "link":  "https://en.wikipedia.org//wiki/Zeugma_(Commagene)",
-        "type":  "Greek",
-        "longitude":  37.8658333
-    },
-    {
-        "name":  "Zile",
-        "imageUrl":  "",
-        "latitude":  40.3,
-        "description":  "Zile, anciently known as Zela (Greek: Ζῆλα) (still as Latin Catholic titular see), is a city and a district of Tokat Province, Turkey. Zile lies to the south of Amasya and the west of Tokat in north-central Turkey. The city has a long history, including as former bishopric and the site of the Battle of Zela, which prompted the phrase \"Veni, vidi, vici.\"[3] Today the city is a center for agricultural marketing and tourism.\n",
-        "link":  "https://en.wikipedia.org//wiki/Zile",
-        "type":  "Greek/Roman",
-        "longitude":  35.8833351
-    },
-    {
-        "name":  "Adamkayalar",
-        "imageUrl":  "",
-        "latitude":  36.525,
-        "description":  "Adamkayalar (literally \"man-rocks\") is a location in Mersin Province, Turkey famous for rock carved figures.\n",
-        "link":  "https://en.wikipedia.org//wiki/Adamkayalar",
-        "type":  "Roman",
-        "longitude":  34.0541649
-    },
-    {
-        "name":  "Adana",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Adana_Sabanc%C4%B1_Merkez_Camii_-_panoramio.jpg/800px-Adana_Sabanc%C4%B1_Merkez_Camii_-_panoramio.jpg",
-        "latitude":  37,
-        "description":  "\n",
-        "link":  "https://en.wikipedia.org//wiki/Adana",
-        "type":  "Roman",
-        "longitude":  35.3213348
-    },
-    {
-        "name":  "Akkale",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Akkale_spiral_staircase_Mersin_Province.JPG/800px-Akkale_spiral_staircase_Mersin_Province.JPG",
-        "latitude":  36.3666649,
-        "description":  "Akkale (literally \"white castle\") is the popular name given to ruins of a building complex in Kumkuyu town of Erdemli district, Mersin Province, Turkey\n",
-        "link":  "https://en.wikipedia.org//wiki/Akkale",
-        "type":  "Roman",
-        "longitude":  34.2166672
-    },
-    {
-        "name":  "Amorium",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Amorion%2C_Unterstadt.jpg/800px-Amorion%2C_Unterstadt.jpg",
-        "latitude":  39.0205574,
-        "description":  "Amorium was a city in Phrygia, Asia Minor[1] which was founded in the Hellenistic period, flourished under the Byzantine Empire, and declined after the Arab sack of 838.  It was situated on the Byzantine military road from Constantinople to Cilicia.[2] Its ruins and höyük (\u0027mound, tumulus\u0027) are located under and around the modern village of Hisarköy, 13 kilometers east of the district center, Emirdağ, Afyonkarahisar Province, Turkey.[3][4]\n",
-        "link":  "https://en.wikipedia.org//wiki/Amorium",
-        "type":  "Roman",
-        "longitude":  31.2891674
-    },
-    {
-        "name":  "Ancient road in Tarsus",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  36.917778,
-        "description":  "Ancient road ( Turkish: Antik yol) at (36°55′04″N 34°53′33″E﻿ / ﻿36.91778°N 34.89250°E﻿ / 36.91778; 34.89250 extending to 36°55′02″N 34°53′35″E﻿ / ﻿36.91722°N 34.89306°E﻿ / 36.91722; 34.89306) is the unearthed section of an ancient road in the historical city of Tarsus, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Ancient_road_in_Tarsus",
-        "type":  "Roman",
-        "longitude":  34.8925
-    },
-    {
-        "name":  "Antioch of Pisidia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
-        "latitude":  38.30611,
-        "description":  "Antioch in Pisidia – alternatively Antiochia in Pisidia or Pisidian Antioch (Greek: Ἀντιόχεια τῆς Πισιδίας) and in Roman Empire, Latin: Antiochia Caesareia or Antiochia Colonia Caesarea – is a city in the Turkish Lakes Region, which is at the crossroads of the Mediterranean, Aegean and Central Anatolian regions, and formerly on the border of Pisidia and Phrygia, hence also known as Antiochia in Phrygia. The site lies approximately 1 km northeast of Yalvaç, the modern town of Isparta Province. The city is on a hill with its highest point of 1236 m in the north.\n",
-        "link":  "https://en.wikipedia.org//wiki/Antioch_of_Pisidia",
-        "type":  "Roman",
-        "longitude":  31.189167
-    },
-    {
-        "name":  "Antiochia ad Pyramum",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
-        "latitude":  36.5441666,
-        "description":  "Antiochia ad Pyramum (Greek: Ἀντιόχεια πρὸς τὸν Πύραμον) was an ancient coastal city of Cilicia, on the Pyramus (also Pyramos, now the Ceyhan Nehri) river, in Anatolia. It was the successor settlement to Magarsa.[1] The location of the city is on the Karataş Peninsula, Adana Province, Turkey, a few km from the city of Karataş. The course of the Pyramus has changed markedly since ancient times and the location of the ruins is no longer adjacent to the river, but decidedly west of its present course. The formerly important ancient site of Mallus lies a few km inland from Antiochia ad Pyranum along the former course of the Pyramus.\n",
-        "link":  "https://en.wikipedia.org//wiki/Antiochia_ad_Pyramum",
-        "type":  "Roman",
-        "longitude":  35.34611
-    },
-    {
-        "name":  "Aprus (Thrace)",
-        "imageUrl":  "",
-        "latitude":  40.9269447,
-        "description":  "Aprus or Apros (Ancient Greek: Ἄπρος), also Apri or Aproi (Ἄπροι), was a town of ancient Thrace and, later, a Roman city established in the Roman province of Europa.\n",
-        "link":  "https://en.wikipedia.org//wiki/Aprus_(Thrace)",
-        "type":  "Roman",
-        "longitude":  27.1072216
-    },
-    {
-        "name":  "Çanakçı rock tombs",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/%C3%87anak%C3%A7%C4%B1.jpg/800px-%C3%87anak%C3%A7%C4%B1.jpg",
-        "latitude":  36.5233345,
-        "description":  "Çanakçı rock tombs are a group of rock-carved tombs in Mersin Province, Turkey\n",
-        "link":  "https://en.wikipedia.org//wiki/%C3%87anak%C3%A7%C4%B1_rock_tombs",
-        "type":  "Roman",
-        "longitude":  34.1741676
-    },
-    {
-        "name":  "Corycus (Lycia)",
-        "imageUrl":  "",
-        "latitude":  36.43614,
-        "description":  "Corycus (Ancient Greek: Κώρυκος, romanized: Korykos) was a Greek port city in ancient Lycia. The location of the city has not been determined with certainty. The Barrington Atlas of the Greek and Roman World places the city at 36°26′10.1″N 30°28′42.8″E﻿ / ﻿36.436139°N 30.478556°E﻿ / 36.436139; 30.478556.[1][2] This is a short distance north of the modern town Çıralı in the Kumluca district of Antalya Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Corycus_(Lycia)",
-        "type":  "Roman",
-        "longitude":  30.4785557
-    },
-    {
-        "name":  "Dörtayak",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/D%C3%B6rtayak.jpg/449px-D%C3%B6rtayak.jpg",
-        "latitude":  36.148613,
-        "description":  "Dörtayak is an ancient cenotaph in Aydıncık of Mersin Province, Turkey\n",
-        "link":  "https://en.wikipedia.org//wiki/D%C3%B6rtayak",
-        "type":  "Roman",
-        "longitude":  33.32722
-    },
-    {
-        "name":  "Edirne",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Edirne_at_sunrise_21_51_28_981000.jpeg/800px-Edirne_at_sunrise_21_51_28_981000.jpeg",
-        "latitude":  41.6769447,
-        "description":  "Edirne (US: /eɪˈdɪərnə, ɛˈ-/,[2][3] Turkish: [eˈdiɾne]), historically known as Adrianople (/ˌeɪdriəˈnoʊpəl/; Latin: Hadrianopolis; founded by the Roman emperor Hadrian on the site of a previous Thracian settlement named Uskudama)[4] is a city in Turkey, in the northwestern province of Edirne and East Thrace, close to Turkey\u0027s borders with Greece and Bulgaria (3.24 miles or 5.22 kilometers from the Greek border at the closest point).[5] Edirne was the capital city of the Ottoman Empire from 1369 to 1453,[6] before Constantinople became the empire\u0027s capital. The estimated population in 2019 was 185,408.\n",
-        "link":  "https://en.wikipedia.org//wiki/Edirne",
-        "type":  "Roman",
-        "longitude":  26.5555553
-    },
-    {
-        "name":  "Emirzeli",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Emirzeli%2C_Church%2C_Mersin_Province%2C_Turkey.JPG/800px-Emirzeli%2C_Church%2C_Mersin_Province%2C_Turkey.JPG",
-        "latitude":  36.5333328,
-        "description":  "Emirzeli (İmirzeli) is a group of ruins in Mersin Province, Turkey\n",
-        "link":  "https://en.wikipedia.org//wiki/Emirzeli",
-        "type":  "Roman",
-        "longitude":  34.1
-    },
-    {
-        "name":  "Eukarpia",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Heinrich_Kiepert._Asia_citerior.Phrygia.jpg/541px-Heinrich_Kiepert._Asia_citerior.Phrygia.jpg",
-        "latitude":  38.47222,
-        "description":  "Coordinates: 38°28′20″N 30°07′11″E﻿ / ﻿38.4722714°N 30.1196556°E﻿ / 38.4722714; 30.1196556\nEucarpia or Eukarpia (Ancient Greek: Εὐκαρπία) was a city in Phrygia and a bishopric in the late Roman province of Phrygia Salutaris, in Asia Minor.\n",
-        "link":  "https://en.wikipedia.org//wiki/Eukarpia",
-        "type":  "Roman",
-        "longitude":  30.1197224
-    },
-    {
-        "name":  "Helenopolis (Bithynia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Heinrich_Kiepert._Asia_citerior.Bithynia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Bithynia.jpg",
-        "latitude":  40.72333,
-        "description":  "Coordinates: 40°43′24″N 29°30′08″E﻿ / ﻿40.72339°N 29.50224°E﻿ / 40.72339; 29.50224\nHelenopolis (Greek: Ἑλενόπολις) or Drepana (Δρέπανα) or Drepanon (Δρέπανον) was an ancient Greco-Roman and Byzantine town and bishopric in Bithynia, Asia Minor, on the southern side of the Gulf of Astacus. It has been identified with the modern village of Hersek, in the district of Altınova, Yalova Province. It is traditionally considered as the birthplace of Saint Helena.\n",
-        "link":  "https://en.wikipedia.org//wiki/Helenopolis_(Bithynia)",
-        "type":  "Roman",
-        "longitude":  29.5022221
-    },
-    {
-        "name":  "İzmir",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/A_panoramic_view_of_the_Alsancak_quarter_in_Izmir.jpg/800px-A_panoramic_view_of_the_Alsancak_quarter_in_Izmir.jpg",
-        "latitude":  38.4166679,
-        "description":  "İzmir (UK: /ˈɪzmɪər/ IZ-meer, US: /ɪzˈmɪər/ iz-MEER; Turkish: [ˈizmiɾ]), often spelled Izmir in English, is a metropolitan city in the western extremity of Anatolia, capital of the province of the same name. It is the third most populous city in Turkey, after Istanbul and Ankara; and the second largest urban agglomeration on the Aegean Sea after Athens.\n",
-        "link":  "https://en.wikipedia.org//wiki/%C4%B0zmir",
-        "type":  "Roman",
-        "longitude":  27.1333332
-    },
-    {
-        "name":  "Kabaçam",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kaba%C3%A7am.jpg/791px-Kaba%C3%A7am.jpg",
-        "latitude":  36.5144463,
-        "description":  "Kabaçam, a.k.a. Kabaşam, is an archaeological site of a historic settlement in Mersin Province, southern Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Kaba%C3%A7am",
-        "type":  "Roman",
-        "longitude":  34.15333
-    },
-    {
-        "name":  "Kadirli",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  37.36972,
-        "description":  "Kadirli (formerly called Kars, and possibly the ancient Flavias\nor Flaviopolis, Φλαβιόπολη in Ancient Greek), is a town and district of Osmaniye Province in the Mediterranean region of Turkey. It is located in the Çukurova plain, 41 kilometres (25 miles) from the large city of Osmaniye. Population is 84,618 (urban) and 120,950 (including rural areas) (2013 census).\n",
-        "link":  "https://en.wikipedia.org//wiki/Kadirli",
-        "type":  "Roman",
-        "longitude":  36.1
-    },
-    {
-        "name":  "Kayseri",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kayseri_fine_house_4077.jpg/800px-Kayseri_fine_house_4077.jpg",
-        "latitude":  38.7225,
-        "description":  "Kayseri (Turkish pronunciation: [ˈkajseɾi]; Greek: Καισάρεια) is a large industrialised city in Central Anatolia, Turkey. It is the seat of Kayseri Province. The city of Kayseri, as defined by the boundaries of Kayseri Metropolitan Municipality, is structurally composed of five metropolitan districts, the two core districts of Kocasinan and Melikgazi, and since 2004, also Hacılar, İncesu and Talas.\n",
-        "link":  "https://en.wikipedia.org//wiki/Kayseri",
-        "type":  "Roman",
-        "longitude":  35.4875
-    },
-    {
-        "name":  "Kelbessos",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
-        "latitude":  36.89528,
-        "description":  "Kelbessos was a fortified settlement of ancient Lycia, in the territory of Termessos.[1] It was continually inhabited by a military garrison from Hellenistic to Roman times.[1]\n",
-        "link":  "https://en.wikipedia.org//wiki/Kelbessos",
-        "type":  "Roman",
-        "longitude":  30.4388885
-    },
-    {
-        "name":  "Kırşehir",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  39.1455574,
-        "description":  "Kırşehir, formerly Mocissus[3] (Ancient Greek: Μωκισσός) and Justinianopolis[3] (Ἰουστινιανούπολις), is a city in Turkey. It is the capital district of the Kırşehir Province. According to the 2000 census, the population of the district is 121,947 of which 105,826 live in the city of Kırşehir.[4][5]\n",
-        "link":  "https://en.wikipedia.org//wiki/K%C4%B1r%C5%9Fehir",
-        "type":  "Roman",
-        "longitude":  34.16083
-    },
-    {
-        "name":  "Kuşkayası Monument",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Amasra_Ku%C5%9Fkayas%C4%B1.jpg/450px-Amasra_Ku%C5%9Fkayas%C4%B1.jpg",
-        "latitude":  41.7183342,
-        "description":  "Kuşkayası (Turkish for Bird\u0027s rock) is a roadside monument just outside the town of Amasra, in Bartın Province, in the Black Sea Region of Turkey. It was erected in the Roman Imperial age.\n",
-        "link":  "https://en.wikipedia.org//wiki/Ku%C5%9Fkayas%C4%B1_Monument",
-        "type":  "Roman",
-        "longitude":  32.36361
-    },
-    {
-        "name":  "Mastaura (Caria)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
-        "latitude":  37.95639,
-        "description":  "Mastaura (Ancient Greek: Μάσταυρα), was an ancient Greek town near Dereağzı, Nazilli in northern Caria, not to be confused with ancient Mastaura (Lycia).\n",
-        "link":  "https://en.wikipedia.org//wiki/Mastaura_(Caria)",
-        "type":  "Roman",
-        "longitude":  28.3416672
-    },
-    {
-        "name":  "Nevşehir",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Ortahisar_Castle_-_Ortahisar_Kalesi.jpg/800px-Ortahisar_Castle_-_Ortahisar_Kalesi.jpg",
-        "latitude":  38.62639,
-        "description":  "Nevşehir (from the Persian compound نو شهر Naw-shahr meaning \"new city\"), formerly Neapolis and Muşkara, is a city and the capital district of Nevşehir Province in the Central Anatolia Region of Turkey. According to the 2010 census, the population of the district is 117,890 of which 85,634 live in the city of Nevşehir.[3][4] The district covers an area of 535 km2 (207 sq mi),[5] and the town lies at an elevation of 1,224 m (4,016 ft). In recent years, Nevşehir \u0026 the surrounding area of Cappadocia have become a huge tourist destination.\n",
-        "link":  "https://en.wikipedia.org//wiki/Nev%C5%9Fehir",
-        "type":  "Roman",
-        "longitude":  34.71389
-    },
-    {
-        "name":  "Pepuza",
-        "imageUrl":  "",
-        "latitude":  38.4080544,
-        "description":  "Pepuza (also spelled Pepouza) was an ancient town in Phrygia, Asia Minor (in today\u0027s Turkish district of Karahallı, Uşak Province, Aegean Region). Coordinates of the central terrasse of the settlement: UTM 35 S 0714926/4253954 (WGS-84), 38.408˚ N, 29.4615˚ E.  \n",
-        "link":  "https://en.wikipedia.org//wiki/Pepuza",
-        "type":  "Roman",
-        "longitude":  29.46139
-    },
-    {
-        "name":  "Selçuk",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sel%C3%A7uk_fortress.jpg/800px-Sel%C3%A7uk_fortress.jpg",
-        "latitude":  37.95,
-        "description":  "Selçuk is the central town of Selçuk district, İzmir Province in Turkey, 2 kilometres (1 mile) northeast of the ancient city of Ephesus.\n",
-        "link":  "https://en.wikipedia.org//wiki/Sel%C3%A7uk",
-        "type":  "Roman",
-        "longitude":  27.3666668
-    },
-    {
-        "name":  "Seleucia Pieria",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Roman_Sarcophagus%2C_Seleucia_Pieria.jpg/800px-Roman_Sarcophagus%2C_Seleucia_Pieria.jpg",
-        "latitude":  36.12389,
-        "description":  "Seleucia in Pieria (Greek Σελεύκεια ἐν Πιερίᾳ), also known in English as Seleucia by the Sea, and later named Suedia, was a Hellenistic town, the seaport of Antioch ad Orontes (Syria Prima), the Seleucid capital, modern Antakya (Turkey). The city was built slightly to the north of the estuary of the river Orontes, between small rivers on the western slopes of the Coryphaeus, one of the southern summits of the Amanus Mountains.\n",
-        "link":  "https://en.wikipedia.org//wiki/Seleucia_Pieria",
-        "type":  "Roman",
-        "longitude":  35.9219437
-    },
-    {
-        "name":  "Softa Castle",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Softa_Castle_1.jpg/800px-Softa_Castle_1.jpg",
-        "latitude":  36.1044426,
-        "description":  "Softa Castle (Turkish: Softa Kalesi) is a ruined castle in Bozyazı ilçe (district) of Mersin Province, Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Softa_Castle",
-        "type":  "Roman",
-        "longitude":  33.0172234
-    },
-    {
-        "name":  "Sozopolis (Pisidia)",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Isparta_location_Uluborlu.png/654px-Isparta_location_Uluborlu.png",
-        "latitude":  38.0725,
-        "description":  "Sozopolis in Pisidia (Ancient Greek: Σωζόπολη της Πισιδίας), which had been called Apollonia (Ἀπολλωνία) and Apollonias (Ἀπολλωνίας)[1] during Seleucid times, was a town in the former Roman province of Pisidia, and is not to be confused with the Thracian Sozopolis in Haemimonto in present-day Bulgaria.\n",
-        "link":  "https://en.wikipedia.org//wiki/Sozopolis_(Pisidia)",
-        "type":  "Roman",
-        "longitude":  30.4705563
-    },
-    {
-        "name":  "Tymion",
-        "imageUrl":  "",
-        "latitude":  38.4869461,
-        "description":  "Tymion was an ancient town in Phrygia, Asia Minor (in today\u0027s Uşak Central District, Uşak Province, Aegean Region). Its site is located at the Turkish village of Şükraniye. From the middle of the 2nd century CE to the middle of the 6th century CE, Tymion was an important town for the ancient Christian church of Montanism. The Montanists, whose church spread all over the Roman Empire, expected the New Jerusalem to descend to earth at Tymion and the nearby town of Pepuza; Pepuza was the headquarters of Montanism and the seat of the Montanist patriarch. One of the founders of Montanism, Montanus, called both towns \"Jerusalem.\" In late antiquity, both places attracted crowds of pilgrims from all over the Roman Empire. Women played an emancipated role in Montanism. They could become priests and also bishops. In the 6th century CE, this church became extinct.\n",
-        "link":  "https://en.wikipedia.org//wiki/Tymion",
-        "type":  "Roman",
-        "longitude":  29.4327774
-    },
-    {
-        "name":  "Warrior relief of Efrenk",
-        "imageUrl":  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Efrenk_Krieger_gesamt.jpg/800px-Efrenk_Krieger_gesamt.jpg",
-        "latitude":  36.6077766,
-        "description":  "The Warrior relief of Efrenk is a rock relief from the Greco-Roman period, probably the 2nd century AD, located by the Lamos river (modern day Limonlu) in Cilicia, southern Turkey.\n",
-        "link":  "https://en.wikipedia.org//wiki/Warrior_relief_of_Efrenk",
-        "type":  "Roman",
-        "longitude":  34.07539
-    }
-]
-;
+const ANCIENT_SITES = [
+  {
+    "name": "Abydos (Hellespont)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Gold_stater_reverse_Philippos_CdM_Paris_FG1973-1-71.jpg/600px-Gold_stater_reverse_Philippos_CdM_Paris_FG1973-1-71.jpg",
+    "latitude": 40.19528,
+    "description": "Abydos (Ancient Greek: Ἄβυδος, Latin: Abydus) was an ancient city and bishopric in Mysia.[nb 1] It was located at the Nara Burnu promontory on the Asian coast of the Hellespont (the straits of Dardanelles), opposite the ancient city of Sestos, and near the city of Çanakkale in Turkey. Abydos was founded in c. 670 BC at the most narrow point in the straits,[1] and thus was one of the main crossing points between Europe and Asia, until its replacement by the crossing between Lampsacus and Kallipolis in the 13th century,[5] and the abandonment of Abydos in the early 14th century.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Abydos_(Hellespont)",
+    "type": "Greek",
+    "longitude": 26.405
+  },
+  {
+    "name": "Acharaca",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 37.9,
+    "description": "Acharaca (Ancient Greek: Ἀχάρακα) was a village of ancient Lydia, Anatolia on the road from Tralles (modern Aydın, Turkey) to Nysa on the Maeander, with a Ploutonion or a temple of Pluto, and a cave, named Charonium (Ancient Greek: Χαρώνειον άντρον), where the sick were healed under the direction of the priests.[1] There is some indication that it once bore the name Charax (Χάραξ), but that name may have belonged to Tralles.[2][3] Its location is now the site of the modern town of Salavatlı. Recoveries from archaeological excavations are housed at the Aydın Archaeological Museum.\n",
+    "link": "https://en.wikipedia.org//wiki/Acharaca",
+    "type": "Greek",
+    "longitude": 28.1
+  },
+  {
+    "name": "Achilleion (Troad)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.915,
+    "description": "Achilleion (Ancient Greek: Ἀχίλλειον, romanized: Achilleion; Latin: Achilleum or Achilleium) was an ancient Greek city in the south-west of the Troad region of Anatolia.[1] It has been located on a promontory known as Beşika Burnu ('cradle promontory') about 8 km south of Sigeion.[2] Beşika Burnu is 2 km south of the modern village of Yeniköy in the Ezine district of Çanakkale Province, Turkey.[3] The site considered in classical antiquity to be the tomb of Achilles is a short distance inland at a tumulus known as Beşiktepe.[4] Achilleion in the Troad is not to be confused with Achilleion near Smyrna and Achilleion in the territory of Tanagra.[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Achilleion_(Troad)",
+    "type": "Greek",
+    "longitude": 26.1525
+  },
+  {
+    "name": "Adada (Pisidia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 37.57528,
+    "description": "Adada is an ancient city and archaeological site in ancient Pisidia, north of Selge and east of Kestros River, near the village of Sağrak, in Isparta Province’s Sütçüler township. The location was identified as Karabavullu or Karabavli, about 35 km south of Lake Egridir.\n",
+    "link": "https://en.wikipedia.org//wiki/Adada_(Pisidia)",
+    "type": "Greek",
+    "longitude": 30.9830551
+  },
+  {
+    "name": "Adıyaman",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/AdiyamanUhrturm.jpg/800px-AdiyamanUhrturm.jpg",
+    "latitude": 37.76389,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Ad%C4%B1yaman",
+    "type": "Greek/Roman",
+    "longitude": 38.27778
+  },
+  {
+    "name": "Adramyttium",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.497776,
+    "description": "Adramyttium[nb 1] (Greek: Άδραμύττιον Adramyttion, Άδραμύττειον Adramytteion, or Άτραμύττιον Atramyttion) was an ancient city and bishopric in Aeolis, in modern-day Turkey. It was originally located at the head of the Gulf of Adramyttium, at Ören in the Plain of Thebe, 4 kilometres west of the modern town of Burhaniye, but later moved 13 kilometres northeast to its current location and became known as Edremit.\n",
+    "link": "https://en.wikipedia.org//wiki/Adramyttium",
+    "type": "Greek",
+    "longitude": 26.9375
+  },
+  {
+    "name": "Aegospotami",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
+    "latitude": 40.36407,
+    "description": "Aegospotami (Ancient Greek: Αἰγὸς Ποταμοί, Aigos Potamoi) or Aegospotamos[1] (i.e. Goat Streams) is the ancient Greek name for a small river issuing into the Hellespont (Modern Turkish Çanakkale Boğazı), northeast of Sestos.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Aegospotami",
+    "type": "Greek",
+    "longitude": 26.6308327
+  },
+  {
+    "name": "Ağlasun",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blick_auf_A%C4%9Flasun.jpg/800px-Blick_auf_A%C4%9Flasun.jpg",
+    "latitude": 37.6494446,
+    "description": "Ağlasun (from Greek Αγαλασσός Agalassos, in turn from Koine Greek Σαγαλασσός Sagalassos, in turn from Hittite Salawassa) is a town and district of Burdur Province in the Mediterranean region of Turkey. The mayor is Aydın Kaplan (MHP).\n",
+    "link": "https://en.wikipedia.org//wiki/A%C4%9Flasun",
+    "type": "Greek",
+    "longitude": 30.53389
+  },
+  {
+    "name": "Aigai (Aeolis)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/AigaiMarkthalle1.jpg/800px-AigaiMarkthalle1.jpg",
+    "latitude": 38.8311119,
+    "description": "Aigai, also Aigaiai (Ancient Greek: Αἰγαί or Αἰγαῖαι; Latin: Aegae or Aegaeae; Turkish: Nemrutkale or Nemrut Kalesi), was an ancient Greek, later Roman (Ægæ, Aegae), city and bishopric in Aeolis. Aegae is mentioned by both Herodotus[1] and Strabo[2] as being a member of the Aeolian dodecapolis. It was also an important sanctuary of Apollo. Aigai had its brightest period under the Attalid dynasty, which ruled from nearby Pergamon in the 3rd and 2nd century BC.\n",
+    "link": "https://en.wikipedia.org//wiki/Aigai_(Aeolis)",
+    "type": "Greek",
+    "longitude": 27.188612
+  },
+  {
+    "name": "Aizanoi",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Aizanoi.ZeusTemple.jpg/800px-Aizanoi.ZeusTemple.jpg",
+    "latitude": 39.2,
+    "description": "Aizanoi (Ancient Greek: Αἰζανοί), Latinized as Aezani, was an Ancient Greek city in western Anatolia. Located in what is now Çavdarhisar, near Kütahya, its ruins are situated astride the River Penkalas, some 1,000 m (3,300 ft) above sea level. The city was an important political and economic centre in Roman times; surviving remains from the period include a well-preserved Temple of Zeus, unusual combined theatre-stadium complex, and macellum inscribed with the Price Edict of Diocletian. The city fell into decline in Late Antiquity. Later serving as a citadel, in 2012 the site was submitted for inscription on the UNESCO World Heritage List.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Aizanoi",
+    "type": "Greek/Roman",
+    "longitude": 29.6166668
+  },
+  {
+    "name": "Alaşehir",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Manisa_districts.png/776px-Manisa_districts.png",
+    "latitude": 38.35,
+    "description": "Alaşehir (Turkish pronunciation: [aˈɫaʃehiɾ]), in Antiquity and the Middle Ages known as Philadelphia (Greek: Φιλαδέλφεια, i.e., \"the city of him who loves his brother\"), is a town and district of Manisa Province in the Aegean region of Turkey. It is situated in the valley of the Kuzuçay (Cogamus in antiquity), at the foot of the Bozdağ Mountain (Mount Tmolus in antiquity). The town is connected to İzmir by a 105 km (65 mi) railway. The longtime mayor is Gökhan Karaçoban.\n",
+    "link": "https://en.wikipedia.org//wiki/Ala%C5%9Fehir",
+    "type": "Greek",
+    "longitude": 28.5166664
+  },
+  {
+    "name": "Alexandria Troas",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Troas_Therme_2.JPG/800px-Troas_Therme_2.JPG",
+    "latitude": 39.751667,
+    "description": "Alexandria Troas (\"Alexandria of the Troad\"; Greek: Αλεξάνδρεια Τρωάς; Turkish: Eski Stambul) is the site of an ancient Greek city situated on the Aegean Sea near the northern tip of Turkey's western coast, the area known historically as Troad. a little south of Tenedos (modern Bozcaada). It is located southeast of modern Dalyan, a village in the Ezine district of Çanakkale Province. The site sprawls over an estimated 400 hectares (990 acres); among the few structures remaining today are a ruined bath, an odeon, a theatre, gymnasium complex[1] and a recently uncovered stadion.[2]  The circuit of the old walls can still be traced.\n",
+    "link": "https://en.wikipedia.org//wiki/Alexandria_Troas",
+    "type": "Greek/Roman",
+    "longitude": 26.1586113
+  },
+  {
+    "name": "Alinda",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Alinda_Agora.JPG/800px-Alinda_Agora.JPG",
+    "latitude": 37.5583344,
+    "description": "Alinda (Ancient Greek: Ἄλινδα) was an inland city and bishopric in ancient Caria, in Asia Minor (Anatolia). Modern scholars identify Alinda with the Hellenistic foundation of Alexandria ad Latmum (Ἀλεξάνδρεια πρὸς τῷ Λάτμῳ) noted by Stephanus of Byzantium.[1][2][3]\n",
+    "link": "https://en.wikipedia.org//wiki/Alinda",
+    "type": "Greek/Roman",
+    "longitude": 27.82361
+  },
+  {
+    "name": "Allianoi",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 39.2347221,
+    "description": "Allianoi (Greek: Αλλιανοί), is an ancient spa settlement, with remains dating predominantly from the Roman Empire period (2nd century AD) located near the city of Bergama (ancient Pergamon) in Turkey's İzmir Province. The site is at a distance of 18 kilometers to the northeast of Bergama, on the road to the neighboring town of İvrindi. Allianoi is directly inside the reservoir of the Yortanlı Dam, built by the Turkish State Hydraulic Works. After ongoing discussion in Turkey with regards to preserving Allianoi's ruins, the site was covered with sand and the dam was activated, resulting in Allianoi's complete inundation and destruction in February 2011.[citation needed]\n",
+    "link": "https://en.wikipedia.org//wiki/Allianoi",
+    "type": "Greek/Roman",
+    "longitude": 27.3055553
+  },
+  {
+    "name": "Amasra",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Amasra%2C_Turkey%2C_Castle%2C_view_from_the_island.jpg/800px-Amasra%2C_Turkey%2C_Castle%2C_view_from_the_island.jpg",
+    "latitude": 41.7494431,
+    "description": "Amasra (from Greek Amastris Ἄμαστρις, gen. Ἀμάστριδος) is a small Black Sea port town in the Bartın Province, Turkey, formerly known as Amastris.\n",
+    "link": "https://en.wikipedia.org//wiki/Amasra",
+    "type": "Greek",
+    "longitude": 32.38639
+  },
+  {
+    "name": "Amasya",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Amasya_evleri_ve_Ye%C5%9Fil%C4%B1rmak.jpg/800px-Amasya_evleri_ve_Ye%C5%9Fil%C4%B1rmak.jpg",
+    "latitude": 40.65,
+    "description": "Amasya (Turkish pronunciation: [aˈmasja]; Greek: Ἀμάσεια) is a city in northern Turkey and is the capital of Amasya Province, in the Black Sea Region. It used to be called Amaseia or Amasia in antiquity.[3] Amasya stands in the mountains above the Black Sea coast, set apart from the rest of Anatolia in a narrow valley along the banks of the Yeşilırmak River. Although near the Black Sea, this area is high above the coast and has an inland climate, well-suited to growing apples, for which Amasya province, one of the provinces in north-central Anatolia Turkey, is famed. It was the home of the geographer Strabo and the birthplace of the 15th century scholar and physician Amirdovlat Amasiatsi. Located in a narrow cleft of the Yeşilırmak (Iris) river, it has a history of 7,500 years which has left many traces still evident today.\n",
+    "link": "https://en.wikipedia.org//wiki/Amasya",
+    "type": "Greek",
+    "longitude": 35.8330574
+  },
+  {
+    "name": "Amos (ancient city)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Amos_theatre.jpg/450px-Amos_theatre.jpg",
+    "latitude": 36.7575569,
+    "description": "Amos (Ancient Greek: Ἄμος, possibly from ἄμμος \"sandy\") was a settlement (dēmē) of ancient Caria, located near the modern town of Turunç, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Amos_(ancient_city)",
+    "type": "Greek",
+    "longitude": 28.2688942
+  },
+  {
+    "name": "Anazarbus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Anavarza_Triumphal_arch_in_Anazarbus_2754.jpg/800px-Anavarza_Triumphal_arch_in_Anazarbus_2754.jpg",
+    "latitude": 37.26389,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Anazarbus",
+    "type": "Greek/Roman",
+    "longitude": 35.9055557
+  },
+  {
+    "name": "Anchiale",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Karaduvar_aqueduct.jpg/800px-Karaduvar_aqueduct.jpg",
+    "latitude": 36.8097229,
+    "description": "Anchiale (Ancient Greek: Ἀγχιάλη) or Anchialeia was a historic city of ancient Cilicia now a part of modern Mersin, Turkey. It was inhabited during the Hellenistic, Roman, and Byzantine eras.\n",
+    "link": "https://en.wikipedia.org//wiki/Anchiale",
+    "type": "Greek",
+    "longitude": 34.6994438
+  },
+  {
+    "name": "Andriake",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 36.2472229,
+    "description": "Andriake or Andriaca (Ancient Greek: Ἀνδριάκη) was an ancient city and the port of the ancient town of Myra in Lycia. Appian (B.C. iv. 82) says that Lentulus broke through the chain which crossed the entrance of the port, and went up the river to Myra. Beaufort (Karamania, p. 26) gives the name Andráki to the river of Myra. On the north side of the entrance are the remains of large Roman horrea, with a perfect inscription, which states that the horrea were Hadrian's: the date is Hadrian's third consulate, which is 119 CE.\n",
+    "link": "https://en.wikipedia.org//wiki/Andriake",
+    "type": "Greek",
+    "longitude": 29.9827785
+  },
+  {
+    "name": "Anemurium",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Anemurium_path.jpg/800px-Anemurium_path.jpg",
+    "latitude": 36.02427,
+    "description": "Anemurium (Ancient Greek: Ἀνεμούριον, romanized: Anemourion), also called Animurium,[1] is an ancient city whose ruins, now called Eski Anamur or Anemuryum, are close to the modern Turkish city of Anamur.  It was in the Roman province of Cilicia, later Isauria, and was situated near a high promontory (Cape Anamur) that marks the southernmost point of Asia Minor, only 64 km from Cyprus. In the Middle Ages, it was called Stallimur.[2][3]\n",
+    "link": "https://en.wikipedia.org//wiki/Anemurium",
+    "type": "Greek",
+    "longitude": 32.8026
+  },
+  {
+    "name": "Antakya",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Antakya_-_panoramio_%281%29.jpg/800px-Antakya_-_panoramio_%281%29.jpg",
+    "latitude": 36.2025,
+    "description": "Antakya (Turkish pronunciation: [ɑnˈtɑkjɑ]), historically known as Antioch (Greek: Ἀντιόχεια, Armenian: Andiok - Անտիոք), is the capital of Hatay Province, the southernmost province of Turkey. The city is located in a well-watered and fertile valley on the Orontes River, about 20 kilometers (12 mi) from the Levantine Sea.\n",
+    "link": "https://en.wikipedia.org//wiki/Antakya",
+    "type": "Greek/Roman",
+    "longitude": 36.1605568
+  },
+  {
+    "name": "Antalya",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg/800px-Falezlerden_Antalya_Konyaalt%C4%B1_Plaj%C4%B1na_do%C4%9Fru_bir_g%C3%B6r%C3%BCn%C3%BCm.jpg",
+    "latitude": 36.8875,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Antalya",
+    "type": "Greek",
+    "longitude": 30.7075
+  },
+  {
+    "name": "Antandrus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.5758324,
+    "description": "Antandrus or Antandros (Ancient Greek: Ἄντανδρος) was an ancient Greek city on the north side of the Gulf of Adramyttium in the Troad region of Anatolia. Its surrounding territory was known in Greek as Ἀντανδρία (Antandria),[1] and included the towns of Aspaneus on the coast and Astyra to the east.[2] It has been located on Devren hill between the modern village of Avcılar and the town of Altınoluk in the Edremit district of Balıkesir Province, Turkey.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Antandrus",
+    "type": "Greek",
+    "longitude": 26.790556
+  },
+  {
+    "name": "Antigonia (Syria)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 36.2539177,
+    "description": "Antigonia (Greek: Αντιγόνεια) also transliterated as Antigonea and Antigoneia was a Hellenistic city in Seleucid Empire, Syria (in modern Turkey), on the Orontes, founded by Antigonus I Monophthalmus in 307 BC, and intended to be the capital of his empire; the site is approximately 7 km northeast of Antakya, Hatay Province, Turkey. After the Battle of Ipsus, 301 BC, in which Antigonus perished, the inhabitants of Antigonia were removed by his successful rival Seleucus I Nicator to the city of Antioch, which Seleucus founded a little lower down the river. (Strabo xvi. p. 750; Diod. xx. 47; Liban. Antioch. p. 349; Malalas, p. 256.) Diodorus erroneously says that the inhabitants were removed to Seleucia Pieria. Antigonia continued, however, to exist, and is mentioned in the war with the Parthians after the defeat of Crassus. (Dion Cass. xl. 29.)\n",
+    "link": "https://en.wikipedia.org//wiki/Antigonia_(Syria)",
+    "type": "Greek",
+    "longitude": 36.2051659
+  },
+  {
+    "name": "Antioch",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Antiochia_su_Oronte.PNG/494px-Antiochia_su_Oronte.PNG",
+    "latitude": 36.2047234,
+    "description": "Antioch on the Orontes (/ˈænti.ɒk/; Ancient Greek: Ἀντιόχεια ἡ ἐπὶ Ὀρόντου, Antiókheia hē epì Oróntou; also Syrian Antioch)[note 1] was an ancient Greek city[1] on the eastern side of the Orontes River. Its ruins lie near the current city of Antakya, Turkey, to which the ancient city lends its name.\n",
+    "link": "https://en.wikipedia.org//wiki/Antioch",
+    "type": "Greek/Roman",
+    "longitude": 36.1816673
+  },
+  {
+    "name": "Antiochia ad Cragum",
+    "imageUrl": "",
+    "latitude": 36.1572227,
+    "description": "Antiochia ad Cragum (Greek: Αντιόχεια του Κράγου) also known as Antiochetta or Latin: Antiochia Parva (meaning \"Little Antiochia\") is an ancient Hellenistic city on Mount Cragus overlooking the Mediterranean coast, in the region of Cilicia, in Anatolia. In modern-day Turkey the site is encompassed in the village of Güneyköy, District of Gazipaşa, Antalya Province.\n",
+    "link": "https://en.wikipedia.org//wiki/Antiochia_ad_Cragum",
+    "type": "Greek/Roman",
+    "longitude": 32.415554
+  },
+  {
+    "name": "Antiochia Lamotis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 36.55722,
+    "description": "Antiochia Lamotis (Greek: Αντιόχεια η Λαμωτίς), Antiochia in Isauria (Αντιόχεια της Ισαυρίας), or Antiochia super Cragum[1] is a Hellenistic city in ancient Cilicia, Anatolia at the mouth of Lamos (or Lamus) river. The site is on the coast a few km southwest of Erdemli, Mersin Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Antiochia_Lamotis",
+    "type": "Greek/Roman",
+    "longitude": 34.24111
+  },
+  {
+    "name": "Antiphellus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Antiphellus_Ancient_Theatre_-_2014.10_-_panoramio.jpg/800px-Antiphellus_Ancient_Theatre_-_2014.10_-_panoramio.jpg",
+    "latitude": 36.2,
+    "description": "Antiphellus or Antiphellos (Ancient Greek: Ἀντίφελλος) was city that acted as the port of Phellus (Phellos) in Lycia. It was at the head of a bay on the south coast.[1] Sir Francis Beaufort, the discoverer of this ancient site, gave the contemporary name of Vathy to the bay at the head of which Antiphellus stands.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Antiphellus",
+    "type": "Greek",
+    "longitude": 29.635
+  },
+  {
+    "name": "Apamea (Euphrates)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Zeugma.jpg/800px-Zeugma.jpg",
+    "latitude": 37.0666656,
+    "description": "Apamea or Apameia (Greek: Απάμεια) was a Hellenistic city on the left (viz., the eastern) bank of the Euphrates, opposite the famous city of Zeugma, at the end of a bridge of boats (Greek: Ζεῦγμα zeugma) connecting the two, founded by Seleucus I Nicator (Pliny, v. 21). The city was rebuilt by Seleucus I. The site, once partially covered by the village of Tilmusa [tr] (formerly Rumkale), Şanlıurfa Province, Turkey, is now flooded by the lake formed by the Birecik Dam (Birejik Dam).[1][2]\n",
+    "link": "https://en.wikipedia.org//wiki/Apamea_(Euphrates)",
+    "type": "Greek",
+    "longitude": 37.88361
+  },
+  {
+    "name": "Apamea (Phrygia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkey_relief_location_map.jpg/800px-Turkey_relief_location_map.jpg",
+    "latitude": 38.0716667,
+    "description": "Apamea Cibotus, Apamea ad Maeandrum (on the Maeander), Apamea or Apameia (Ancient Greek: Ἀπάμεια, Ancient Greek: κιβωτός) was an ancient city in Anatolia founded in the 3rd century BC by Antiochus I Soter, who named it after his mother Apama. It was in Hellenistic Phrygia,[1] but became part of the Roman province of Pisidia.[2][3] It was near, but on lower ground than, Celaenae (Kelainai).\n",
+    "link": "https://en.wikipedia.org//wiki/Apamea_(Phrygia)",
+    "type": "Greek",
+    "longitude": 30.165556
+  },
+  {
+    "name": "Apamea Myrlea",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 40.37639,
+    "description": "Apamea Myrlea (/ˌæpəˈmiːə mərˈliːə/; Ancient Greek: Απάμεια Μύρλεια) was an ancient city and bishopric (Apamea in Bithynia) on the Sea of Marmara, in Bithynia, Anatolia; its ruins are a few kilometers south of Mudanya, Bursa Province in the Marmara Region of Asian Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Apamea_Myrlea",
+    "type": "Greek",
+    "longitude": 28.8833332
+  },
+  {
+    "name": "Aphrodisias",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Temple_of_Aphrodite%2C_built_in_the_Ionic_order_in_stages_during_the_Roman_period_%28from_1st_century_BC_to_2nd_century_AD%29_and_later_converted_into_a_Christian_basilica%2C_Aphrodisias%2C_Caria%2C_Turkey_%2820300922019%29.jpg/800px-thumbnail.jpg",
+    "latitude": 37.7083321,
+    "description": "Aphrodisias (/æfrəˈdɪsiəs/;[1] Ancient Greek: Ἀφροδισιάς, romanized: Aphrodisiás) was a small ancient Greek Hellenistic city in the historic Caria cultural region of western Anatolia, Turkey. It is located near the modern village of Geyre, about 100 km (62 mi) east/inland from the coast of the Aegean Sea, and 230 km (140 mi) southeast of İzmir.\n",
+    "link": "https://en.wikipedia.org//wiki/Aphrodisias",
+    "type": "Greek",
+    "longitude": 28.7236118
+  },
+  {
+    "name": "Aphrodisias (Cilicia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tisan_mosaic.jpg/800px-Tisan_mosaic.jpg",
+    "latitude": 36.1580544,
+    "description": "Aphrodisias (Ancient Greek: Ἀφροδισιάς), sometimes called Aphrodisias of Cilicia to distinguish it from the town of the same name in Caria, was a port city of ancient Cilicia whose ruins now lie near Cape Tisan in Mersin Province, Turkey.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Aphrodisias_(Cilicia)",
+    "type": "Greek",
+    "longitude": 33.6916656
+  },
+  {
+    "name": "Apollonia (Lycia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 36.18667,
+    "description": "Apollonia (Ancient Greek: Ἀπολλωνία) was a city in ancient Lycia. Its ruins are located near Kiliçli (Sıçak), a small village in the Kaş district of Antalya Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Apollonia_(Lycia)",
+    "type": "Greek/Roman",
+    "longitude": 29.76389
+  },
+  {
+    "name": "Apollonia (Mysia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.2025,
+    "description": "Apollonia (Ancient Greek: Ἀπολλωνία) was a town of ancient Mysia, Anatolia, situated on an eminence east of Pergamum, on the way to Sardis.[1] It seems to have been near the borders of Mysia and Lydia. \n",
+    "link": "https://en.wikipedia.org//wiki/Apollonia_(Mysia)",
+    "type": "Greek",
+    "longitude": 27.4944439
+  },
+  {
+    "name": "Apollonia ad Rhyndacum",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 40.169445,
+    "description": "Apollonia or Apollonia-on-the-Rhyndacus (Ancient Greek: Ἀπολλωνία ἐπὶ Ῥυνδακῷ, Apollōnía épì Ryndakō; Latin: Apollonia ad Rhyndacum) was an ancient town near the Rhyndacus river in northwestern Anatolia. Strabo placed it in Mysia, causing some to misidentify the site as Uluabat on the western shore of Lake Uluabat. However, the site is actually the promontory tombolo on the northeastern shore, near modern Gölyazı. The remains of Apollonia are inconsiderable. The Rhyndacus flows into the lake and issues from it a deep and muddy river. The lake extends from east to west and is studded with several islands in the northeast part, on one of which is Gölyazı, but the dimensions vary greatly through the seasons.\n",
+    "link": "https://en.wikipedia.org//wiki/Apollonia_ad_Rhyndacum",
+    "type": "Greek",
+    "longitude": 28.6825
+  },
+  {
+    "name": "Apollonia Salbaces",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
+    "latitude": 37.50639,
+    "description": "Apollonia Salbaces or Apollonia Salbakes (Ancient Greek: Ἀπολλωνία Σαλβάκη) was a town in ancient Caria, Anatolia.\n",
+    "link": "https://en.wikipedia.org//wiki/Apollonia_Salbaces",
+    "type": "Greek/Roman",
+    "longitude": 29.023056
+  },
+  {
+    "name": "Apollonos Hieron",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 38.045,
+    "description": "Apollonos Hieron (Greek: Ἀπόλλωνος ἱερόν, \"Temple of Apollo\")[1] was an ancient city of Lydia.\n",
+    "link": "https://en.wikipedia.org//wiki/Apollonos_Hieron",
+    "type": "Greek",
+    "longitude": 28.830555
+  },
+  {
+    "name": "Araxa",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
+    "latitude": 36.7455559,
+    "description": "Araxa (Ancient Greek: Ἄραξα) was a city of ancient Lycia, according to Alexander Polyhistor, in the second book of his Lyciaca.[1] Ptolemy places it near Sidyma.  It is located at place called Ören, near Fethiye, on the upper portion of the Xanthus River.  An inscription in honour of a local citizen, Orthagoras, provides some details of its history in the 2nd century B.C.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Araxa",
+    "type": "Greek",
+    "longitude": 29.3694439
+  },
+  {
+    "name": "Ariassus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Ariassos_6.jpg/800px-Ariassos_6.jpg",
+    "latitude": 37.18111,
+    "description": "Ariassus or Ariassos (Ancient Greek: Άριασσός) was a town in Pisidia, Asia Minor built on a steep hillside about 50 kilometres inland from Attaleia (modern Antalya).  \n",
+    "link": "https://en.wikipedia.org//wiki/Ariassus",
+    "type": "Greek",
+    "longitude": 30.4725
+  },
+  {
+    "name": "Arisba",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Troas_el.svg/520px-Troas_el.svg.png",
+    "latitude": 40.1997223,
+    "description": "Arisba or Arisbe (Ancient Greek: Ἀρίσβη; Eth. Ἀρισβαἰος), was a town of Mysia, mentioned by Homer in the same line with Sestos and Abydus.[1] It was between Percote and Abydus,[2] a colony of Mytilene, founded by Scamandrius and Ascanius, son of Aeneas. It was a member of the Delian League.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Arisba",
+    "type": "Greek",
+    "longitude": 26.542223
+  },
+  {
+    "name": "Armene",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
+    "latitude": 42.0491676,
+    "description": "Armene (Ancient Greek: Ἀρμένη[1] or Ἁρμένη or Ἀρμήνη[2]) was an ancient Greek city[3] on the Black Sea coast of ancient Paphlagonia.[4][1] Xenophon in his Anabasis writes that the Ten Thousand on their return anchored their ships here, and stayed five days.[2] The place belonged to the Sinopians. It was 50 stadia west of Sinope, and had a port.[5] A small river, named Ochosbanes by Marcian of Heraclea,[6] and named also Ochthomanes in the Anonymous Periplus, and Ocheraenus in the Periplus of Pseudo-Scylax, falls into the harbour.\n",
+    "link": "https://en.wikipedia.org//wiki/Armene",
+    "type": "Greek",
+    "longitude": 35.0419426
+  },
+  {
+    "name": "Arneae",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
+    "latitude": 36.4419441,
+    "description": "Arneae or Arneai (Ancient Greek: Ἀρνεαί) was a small city of ancient Lycia mentioned by Capito in his Isaurica.[1] It is located near Ernes,[2] in the interior of Lycia where archaeological remains have been found.\n",
+    "link": "https://en.wikipedia.org//wiki/Arneae",
+    "type": "Greek",
+    "longitude": 29.87139
+  },
+  {
+    "name": "Arsuz",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 36.4127769,
+    "description": "Arsuz (Arabic: أرسوز‎, Greek: Αρσούς), also known as Uluçınar, is a municipality in Hatay Province, southern Anatolia (Asian Turkey). In the ancient times, it was known as Rhosus (Ancient Greek: Ῥῶσός and Ῥωσός[1]) and was a former bishopric and titular see.\n",
+    "link": "https://en.wikipedia.org//wiki/Arsuz",
+    "type": "Greek",
+    "longitude": 35.8866653
+  },
+  {
+    "name": "Aspendos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Aspendos_Amphitheatre.jpg/800px-Aspendos_Amphitheatre.jpg",
+    "latitude": 36.93889,
+    "description": "Aspendos or Aspendus (Pamphylian: ΕΣΤϜΕΔΥΣ; Attic: Ἄσπενδος) was an ancient Greco-Roman city in Antalya province of Turkey. The site is located 7 kilometres (4.3 mi) northeast of central Serik.\n",
+    "link": "https://en.wikipedia.org//wiki/Aspendos",
+    "type": "Greek",
+    "longitude": 31.1722221
+  },
+  {
+    "name": "Assos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Tuerkei-7460-PS87-PS88.jpg/800px-Tuerkei-7460-PS87-PS88.jpg",
+    "latitude": 39.4877777,
+    "description": "Assos (/ˈæsɒs/; Greek: Ἄσσος, Latin: Assus), also known as Behramkale or for short Behram, is a small historically rich town in the Ayvacık district of the Çanakkale Province, Turkey. During Pliny the Elder's time (1st century CE), the city also bore the name Apollonia (Ἀπολλωνία).[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Assos",
+    "type": "Greek",
+    "longitude": 26.3369446
+  },
+  {
+    "name": "Astacus (Bithynia)",
+    "imageUrl": "",
+    "latitude": 40.7144432,
+    "description": "Astacus /ˈæstəkəs/ (Greek Ἀστακός Βιθυνίας) is an ancient city in Bithynia; it was also called Olbia /ˈɒlbiə/. Stephanus of Byzantium records  an aetiological myth that it was founded by Astacus, son of Poseidon and the nymph Olbia. \n",
+    "link": "https://en.wikipedia.org//wiki/Astacus_(Bithynia)",
+    "type": "Greek",
+    "longitude": 29.9288883
+  },
+  {
+    "name": "Atarneus",
+    "imageUrl": "",
+    "latitude": 39.09139,
+    "description": "Atarneus (/əˈtɑːrniəs/; Ancient Greek: Ἀταρνεύς), also known as Atarna (Ἄταρνα)[1] and Atarneites (Ἀταρνείτης),[2] was an ancient Greek city in the region of Aeolis, Asia Minor. It lies on the mainland opposite the island of Lesbos. It was on the road from Adramyttium to the plain of the Caicus.[3] Its territory was called the Atarneitis.\n",
+    "link": "https://en.wikipedia.org//wiki/Atarneus",
+    "type": "Greek",
+    "longitude": 26.9208336
+  },
+  {
+    "name": "Athena relief of Sömek",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/AthenaS%C3%B6mek1.jpg/400px-AthenaS%C3%B6mek1.jpg",
+    "latitude": 36.6044426,
+    "description": "The Athena relief of Sömek is a Greco-Roman rock relief, located some two kilometres north of the village of Sömek in Silifke district of Mersin province in Turkey, near the valley of the Limonlu river, the ancient Lamos. In antiquity, the river formed the border between \"Rugged Cilicia\" (Kilikia Tracheia) in the west and \"Flat Cilicia\" (Kilikia Pedias) in the east.\n",
+    "link": "https://en.wikipedia.org//wiki/Athena_relief_of_S%C3%B6mek",
+    "type": "Greek",
+    "longitude": 34.0808334
+  },
+  {
+    "name": "Athenae (Pontus)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Heinrich_Kiepert._Asia_citerior.Pontus.jpg/800px-Heinrich_Kiepert._Asia_citerior.Pontus.jpg",
+    "latitude": 41.18111,
+    "description": "Athenae or Athenai (Ancient Greek: Ἀθῆναι) was a city and port of ancient Pontus,[1] with a Greek temple of Athena.[2] According to Arrian, it was 180 stadia east of the river Adienus, and 280 stadia west of Apsarus.[3] Procopius writes that the name of the village came from a certain woman named Athenaea (Ancient Greek: Ἀθηναία) in early times who ruled over the land and not because, as some believe, of colonists from Athens settled there. He also adds that the tomb of the woman was still there.[4]\nArrian speaks of the place as a deserted fort, but Procopius describes it as a populous place in his time.[5] Konrad Mannert assumes it to be the same place as the Odeinius of the Periplus of Pseudo-Scylax.[6]\n",
+    "link": "https://en.wikipedia.org//wiki/Athenae_(Pontus)",
+    "type": "Greek",
+    "longitude": 40.88889
+  },
+  {
+    "name": "Attuda",
+    "imageUrl": "",
+    "latitude": 37.8422241,
+    "description": "Attuda or Attouda (Ancient Greek: Ἄττουδα) was a Hellenistic city in ancient Caria and later in the Roman province of Phrygia Pacatiana. There are coins of the place with the Greek epigraph Ἱερὰ Βουλὴ Ἀττουδέων, of the time of Augustus and later. The coins show that the Men Carus was worshipped there.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Attuda",
+    "type": "Greek",
+    "longitude": 28.8058338
+  },
+  {
+    "name": "Augusta (Cilicia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
+    "latitude": 37.2452774,
+    "description": "Augusta (Ancient Greek: Αὔγουστα[1] or Αὐγοῦστα[2]) was a town in the interior of ancient Cilicia, inhabited during Roman and Byzantine times.[3] It was founded in 20 AD and named after Livia, the widow of the Emperor Augustus.[4]\nPtolemy places this town in a district named Bryelice. The town also bore the name Augustopolis, and possibly Thebae.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Augusta_(Cilicia)",
+    "type": "Greek",
+    "longitude": 35.3441658
+  },
+  {
+    "name": "Aulae (Cilicia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
+    "latitude": 36.81111,
+    "description": "Aulae or Aulai (Ancient Greek: Αὐλαί) was a town in ancient Cilicia, and now is an archaeological site close to Mersin, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Aulae_(Cilicia)",
+    "type": "Greek",
+    "longitude": 34.7019463
+  },
+  {
+    "name": "Aydın",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Tetrapylon_-_Aphrodisias_%287471662848%29.jpg/800px-Tetrapylon_-_Aphrodisias_%287471662848%29.jpg",
+    "latitude": 37.8480568,
+    "description": "Aydın (// EYE-din; Turkish: [ˈajdɯn]; formerly named Güzelhisar, Ancient and Modern Greek: Τράλλεις /Tralleis/) is a city in and the seat of Aydın Province in Turkey's Aegean Region. The city is located at the heart of the lower valley of Büyük Menderes River (ancient Meander River) at a commanding position for the region extending from the uplands of the valley down to the seacoast. Its population was 207,554 in 2014.[3] \nAydın city is located along a region which was famous for its fertility and productivity since ancient times. Figs remain the province's best-known crop, although other agricultural products are also grown intensively and the city has some light industry.\n",
+    "link": "https://en.wikipedia.org//wiki/Ayd%C4%B1n",
+    "type": "Greek/Roman",
+    "longitude": 27.8452778
+  },
+  {
+    "name": "Balbura (Lycia)",
+    "imageUrl": "",
+    "latitude": 36.9552765,
+    "description": "Balbura or Balboura (Ancient Greek: Βάλβουρα) was a town of ancient Lycia, the site of which is at Çölkayiği. The acropolis hill is about 90 metres above the plain of Katara, and the plain is 1,500 feet (460 m) above the level of the sea. The ruins occupy a considerable space on both sides of the stream. There are two theatres at Balbura; one is on the south side of the acropolis hill, and the other is in a hollow in the front of the mountain on the south side of the stream: the hollow in the mountain formed the cavea. There are also remains of several temples at Katara; and of Christian churches. The ethnic name Βαλβουρεύς occurs on two inscriptions at least at Katara. The site was discovered by Hoskyn and Forbes. Balbura was part of a district called Cabalia,[1] named Cabalis by Strabo with two other cities, Bubon and Oenoanda.\n",
+    "link": "https://en.wikipedia.org//wiki/Balbura_(Lycia)",
+    "type": "Greek",
+    "longitude": 29.5811119
+  },
+  {
+    "name": "Bargylia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 37.2,
+    "description": "Bargylia (/ˌbɑːrˈdʒɪliə/; Ancient Greek: Βαργυλία), was a city on the coast of ancient Caria in southwestern Anatolia (modern-day Turkey) between Iasos and Myndus. Bargylia's location corresponds to the modern Turkish town of Boğaziçi in Muğla Province.\n",
+    "link": "https://en.wikipedia.org//wiki/Bargylia",
+    "type": "Greek",
+    "longitude": 27.5755558
+  },
+  {
+    "name": "Bathonea",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
+    "latitude": 41.03361,
+    "description": "Bathonea (Ancient Greek: Βαθονεία) is a long-lost ancient Greek city that was located on the European shore of the sea of Marmara, 20 km west from Istanbul in Turkey.[1][2]\n",
+    "link": "https://en.wikipedia.org//wiki/Bathonea",
+    "type": "Greek",
+    "longitude": 28.7338886
+  },
+  {
+    "name": "Beçin",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Becin_5237.jpg/800px-Becin_5237.jpg",
+    "latitude": 37.275,
+    "description": "Beçin (also known as Berçin or Peçin) was a historical fort in Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Be%C3%A7in",
+    "type": "Greek",
+    "longitude": 27.7891674
+  },
+  {
+    "name": "Bergama",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bergama%2C_Turkey.jpg/800px-Bergama%2C_Turkey.jpg",
+    "latitude": 39.1166649,
+    "description": "Bergama is a populous district, as well as the center city of the same district, in İzmir Province in western Turkey. By excluding İzmir's metropolitan area, it is one of the prominent districts of the province in terms of population and is largely urbanized at the rate of 53.6%. Bergama center is situated at a distance of 118 km (73 mi) to the north from the point of departure of the traditional center of İzmir (Konak Square in Konak, İzmir) and lies at a distance of 27 km (17 mi) inland from the nearest seacoast at the town of Dikili to its west. Bergama district area neighbors the areas of three districts of Balıkesir Province to its north, namely Ayvalık, Burhaniye and İvrindi, İzmir Province district of Kınık and Manisa Province district of Soma, Manisa to its east, while to the south it is bordered by the central provincial of Manisa and two other İzmir Province districts along the coast that are Aliağa and Dikili from its south towards its west. The district area's physical features are determined by the alluvial plain of Bakırçay River.\n",
+    "link": "https://en.wikipedia.org//wiki/Bergama",
+    "type": "Greek/Roman",
+    "longitude": 27.1833324
+  },
+  {
+    "name": "Beşparmak Mountains",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Bafa_Lake_Kapikiri.JPG/800px-Bafa_Lake_Kapikiri.JPG",
+    "latitude": 37.4981079,
+    "description": "Beşparmak Mountains (Latin: Latmus; Ancient Greek: Λάτμος, romanized: Latmos) are a ridge of many spurs located in the Muğla and Aydın provinces of Turkey, running in an east-west direction along the north shore of the former Latmian Gulf[3] on the coast of Caria, which became part of Hellenised Ionia. The city of Latmus, located on the south slopes of Mount Latmus 25 kilometres (16 mi) east of Miletus,[4] was originally a port on the narrow gulf, as reported by Strabo.[5] He also states that Latmus is the same as Mount Phthires in the Catalogue of Trojans.[6]\n",
+    "link": "https://en.wikipedia.org//wiki/Be%C5%9Fparmak_Mountains",
+    "type": "Greek",
+    "longitude": 27.5268078
+  },
+  {
+    "name": "Beyşehir",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tas_Kopru2.JPG/800px-Tas_Kopru2.JPG",
+    "latitude": 37.6833344,
+    "description": "Beyşehir (pronounced [ˈbejʃeˌhiɾ]) is a large town and district of Konya Province in the Akdeniz region of Turkey. The town is located on the southeastern shore of Lake Beyşehir and is marked to the west and the southwest by the steep lines and forests of the Taurus Mountains, while a fertile plain, an extension of the lake area, extends in the southeastern direction. According to 2000 census, the population of the district is 118,144 of which 41,312 live in the town of Beyşehir.[3][4]\n",
+    "link": "https://en.wikipedia.org//wiki/Bey%C5%9Fehir",
+    "type": "Greek/Roman",
+    "longitude": 31.7333336
+  },
+  {
+    "name": "Birecik",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Birecik%2C_Turkey_2009-10-26.jpg/800px-Birecik%2C_Turkey_2009-10-26.jpg",
+    "latitude": 37.025,
+    "description": "Birecik (Greek and Latin: Birtha, Βίρθα; Arabic: البيرة‎, romanized: al-Bīrah; Kurdish: Bêrecûk‎,[3] Ottoman Turkish: بيره جك‎), also formerly known as Bir, Biré, Biradjik  and during the Crusades as Bile, is a town and district of Şanlıurfa Province of Turkey, on the River Euphrates.\n",
+    "link": "https://en.wikipedia.org//wiki/Birecik",
+    "type": "Greek",
+    "longitude": 37.976944
+  },
+  {
+    "name": "Bisanthe",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
+    "latitude": 40.9833336,
+    "description": "Bisanthe (Ancient Greek: Βισάνθη) was a great city in ancient Thrace, on the coast of the Propontis, which had been founded by the Samians.[1][2][3][4] About 400 BCE, Bisanthe belonged to the kingdom of the Thracian prince Seuthes II.[5] At a later period its name was changed into Raedestum, Rhaedestum or Rhaideston (Ῥαίδεστον), or Raedestus, Rhaedestus or Rhaidestos (Ῥαίδεστος); but when this change took place is unknown. In the 6th century CE, the emperor Justinian did much to restore the city, which seems to have fallen into decay;[6] but after that time it was twice destroyed by the Bulgarians, first in 813,[7] and a second time in 1206.[8] The further history of this city, which was of great importance to Byzantium, was covered by Byzantine historians George Pachymeres and Cantacuzenus. It is generally believed that the town of Resistos or Resisto, mentioned by Pliny the Elder,[9] and in the Antonine Itinerary, is the same as Bisanthe; but Pliny mentions Bisanthe and Resistos as distinct towns.[9] Coins minted by Bisanthe survive.[10] Under the name Rhaedestus, it remains a titular see of the Roman Catholic Church.[11]\n",
+    "link": "https://en.wikipedia.org//wiki/Bisanthe",
+    "type": "Greek",
+    "longitude": 27.5166664
+  },
+  {
+    "name": "Bodrum",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Bodrum_castle_3.JPG/800px-Bodrum_castle_3.JPG",
+    "latitude": 37.0333328,
+    "description": "Bodrum (Turkish pronunciation: [ˈbodɾum]) is a district and a port city in Muğla Province, in the southwestern Aegean Region of Turkey. It is located on the southern coast of Bodrum Peninsula, at a point that checks the entry into the Gulf of Gökova, and is also the center of the eponymous district. The city was called Halicarnassus of Caria (Ancient Greek: Ἁλικαρνᾱσσός) in ancient times and was famous for housing the Mausoleum of Mausolus, one of the Seven Wonders of the Ancient World. Built by the Knights Hospitaller in the 15th century, Bodrum Castle overlooks the harbour and the marina. The castle includes a museum of underwater archaeology and hosts several cultural festivals throughout the year. The city had a population of 35,795 in 2012. It takes 50 minutes via boat to reach Kos from Bodrum, with services running multiple times a day by at least three operators.\n",
+    "link": "https://en.wikipedia.org//wiki/Bodrum",
+    "type": "Greek",
+    "longitude": 27.4333324
+  },
+  {
+    "name": "Bolu",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Bolu_Ta%C5%9Fhan.jpg/800px-Bolu_Ta%C5%9Fhan.jpg",
+    "latitude": 40.7347221,
+    "description": "Bolu is a city in Turkey, and administrative center of the Bolu Province. The population is 131,264 (2012 census).[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Bolu",
+    "type": "Greek/Roman",
+    "longitude": 31.6075
+  },
+  {
+    "name": "Bubon (Lycia)",
+    "imageUrl": "",
+    "latitude": 36.9691658,
+    "description": "Bubon or Boubon (Ancient Greek: Βούβων) was a city of ancient Lycia noted by Stephanus of Byzantium; the ethnic name, he adds, ought to be Βουβώνιος, but it is Βουβωνεύς, for the Lycians rejoice in this form.[1] The truth of this observation of Stephanus is proved by the inscription found on the spot: Βουβωνέων ἡ Βουλὴ καὶ ὁ Δῆμος. Bubon is placed in the map in Spratt's Lycia, near 37° N. lat. west of Balbura, near a place named Ibecik, which location is confirmed by modern scholars.[2][3] Bubon is mentioned by Pliny, Ptolemy, and Hierocles. Pliny mentions a kind of chalk (creta) that was found about Bubon. [4] The city stood on a hill side. The ruins are not striking. There is a small theatre built of sandstone, and on the summit of the hill was the acropolis. Bubon is in a mountainous tract and it commands the entrance to the pass over the mountains. Bubon, along with Balbura and Oenoanda formed the district Cabalia. [5]\n",
+    "link": "https://en.wikipedia.org//wiki/Bubon_(Lycia)",
+    "type": "Greek",
+    "longitude": 29.4069443
+  },
+  {
+    "name": "Bursa",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Hudavendigar_Park_in_Bursa_Turkey.jpg/800px-Hudavendigar_Park_in_Bursa_Turkey.jpg",
+    "latitude": 40.1833344,
+    "description": "Bursa (Turkish pronunciation: [buɾsa]; Ancient Greek: Προύσσα, Latin: Prusa) is a city in northwestern Turkey and the administrative center of Bursa Province. The fourth-most populous city in Turkey and second-most populous in the Marmara Region, Bursa is one of the industrial centers of the country. Most of Turkey's automotive production takes place in Bursa.\n",
+    "link": "https://en.wikipedia.org//wiki/Bursa",
+    "type": "Greek",
+    "longitude": 29.05
+  },
+  {
+    "name": "Byzantium",
+    "imageUrl": "",
+    "latitude": 41.0152779,
+    "description": "Coordinates: 41°00′55″N 28°59′05″E﻿ / ﻿41.01528°N 28.98472°E﻿ / 41.01528; 28.98472\n",
+    "link": "https://en.wikipedia.org//wiki/Byzantium",
+    "type": "Greek",
+    "longitude": 28.9847221
+  },
+  {
+    "name": "Cabira",
+    "imageUrl": "",
+    "latitude": 40.5894432,
+    "description": "Cabira or Kabeira (/kəˈbaɪrə/; Greek: τὰ Κάβειρα) was a town of ancient Pontus in Asia minor, at the base of the range of Paryadres, about 150 stadia south of Eupatoria or Magnopolis, which was at the junction of the Iris and the Lycus. Eupatoria was in the midst of the plain called Phanaroea, whereas Cabira, as Strabo says was at the base of the Paryadres.[1] Mithridates the Great built a palace at Cabira; and there was a water-mill there (Greek: ὑδραλέτης), and places for keeping wild animals, hunting grounds, and mines. Less than 200 stadia from Cabira was the remarkable rock or fortress called Caenon (Greek: Καινόν [χωρίον]), where Mithridates kept his most valuable things. Cn. Pompeius took the place and its treasures, which, when Strabo wrote, were in the Roman Capitol. In Strabo's time a woman, Pythodoris, the widow of King Polemon, had Cabira with the Zelitis and Magnopolitis. Pompeius made Cabira a city, and gave it the name Diospolis (Διόσπολις). Pythodoris enlarged it, gave it the name Sebaste (Σεβαστή), which is the Greek equivalent to Augusta, and used it as her royal residence. Near Cabira probably at a village named Ameria, there was a temple with a great number of slaves belonging to it, and the high priest enjoyed this benefice.[2] The god Men of Pharnaces (Μήν Φαρνάκου) was worshipped at Cabira. Mithridates was at Cabira during the winter that L. Lucullus was besieging Amisus and Eupatoria.[3] Lucullus afterwards took Cabira.[4] There are some autonomous coins of Cabira with the epigraph \"Καβηρων\".[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Cabira",
+    "type": "Greek",
+    "longitude": 36.955
+  },
+  {
+    "name": "Calynda",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
+    "latitude": 36.7505569,
+    "description": "Calynda (also Calinda, Calydna, or Karynda; Ancient Greek: Κάλυνδα) was a city in ancient Caria.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Calynda",
+    "type": "Greek",
+    "longitude": 28.8358326
+  },
+  {
+    "name": "Çankırı",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/General_view_of_%C3%87ank%C4%B1r%C4%B1.jpeg/800px-General_view_of_%C3%87ank%C4%B1r%C4%B1.jpeg",
+    "latitude": 40.6,
+    "description": "Çankırı is the capital city of Çankırı Province, in Turkey, about 140 km (87 mi) northeast of Ankara. It is situated about 800 m (2500 ft) above sea level.\n",
+    "link": "https://en.wikipedia.org//wiki/%C3%87ank%C4%B1r%C4%B1",
+    "type": "Greek",
+    "longitude": 33.6166649
+  },
+  {
+    "name": "Carallia (Pamphylia)",
+    "imageUrl": "",
+    "latitude": 36.6836128,
+    "description": "Carallia (Ancient Greek: Καραλλία) was a city of the Roman province of Pamphylia Prima and is mentioned in the acts of the Council of Ephesus (431).[1] The same form of the name is given in the acts of the Council of Chalcedon (451).[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Carallia_(Pamphylia)",
+    "type": "Greek/Roman",
+    "longitude": 31.8858337
+  },
+  {
+    "name": "Carambis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
+    "latitude": 42.01361,
+    "description": "Carambis or Karambis (Ancient Greek: Κάραμβις) was an ancient Greek city[1] of ancient Paphlagonia, on a promontory of the same name.[2] The town is mentioned in the Periplus of Pseudo-Scylax (under the name Caramus or Karamos) and by Pliny the Elder.[3] The name occurs as Carambas in the Peutinger Table.[4]\n",
+    "link": "https://en.wikipedia.org//wiki/Carambis",
+    "type": "Greek",
+    "longitude": 33.36972
+  },
+  {
+    "name": "Cardia (Thrace)",
+    "imageUrl": "",
+    "latitude": 40.5472221,
+    "description": "Cardia or Kardia (Ancient Greek: Kαρδία), anciently the chief town of the Thracian Chersonese (today Gallipoli peninsula), was situated at the head of the Gulf of Melas (today the Gulf of Saros). It was originally a colony of the Milesians and Clazomenians; but subsequently, in the time of Miltiades (late 6th century BC), the place also received Athenian colonists,[1] as proved by Miltiades tyranny (515–493 BC). But this didn't make Cardia necessarily always pro-Athenian: when in 357 BC Athens took control of the Chersonese, the latter, under the rule of a Thracian prince, was the only city to remain neutral; but the decisive year was 352 BC when the city concluded a treaty of amity with king Philip II of Macedonia. A great crisis exploded when Diopeithes, an Athenian mercenary captain, had in 343 BC brought Attic settlers to the town; and since Cardia was unwilling to receive them, Philip immediately sent help to the town. The king proposed to settle the dispute between the two cities by arbitration, but Athens refused.[2]  Demosthenes, the famous Greek patriot and orator, spoke on this very matter to the Athenian Senate in 341 BC his \"Oration On The State Of The Chersonesus\":[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Cardia_(Thrace)",
+    "type": "Greek",
+    "longitude": 26.7408333
+  },
+  {
+    "name": "Caria",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/DALYAN-KAUNOS_-_panoramio.jpg/800px-DALYAN-KAUNOS_-_panoramio.jpg",
+    "latitude": 37.5,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Caria",
+    "type": "Greek",
+    "longitude": 28
+  },
+  {
+    "name": "Carissa (Galatia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Brue%2C_Adrien_Hubert%2C_Asie-Mineure%2C_Armenie%2C_Syrie%2C_Mesopotamie%2C_Caucase._1839._%28EC%29.jpg/589px-Brue%2C_Adrien_Hubert%2C_Asie-Mineure%2C_Armenie%2C_Syrie%2C_Mesopotamie%2C_Caucase._1839._%28EC%29.jpg",
+    "latitude": 40.52778,
+    "description": "Carissa, also called Garsi, was a town of the Trocmi in ancient Galatia, Anatolia, located between Etonea and Amasya.[1][2] It was inhabited during Roman and Byzantine times.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Carissa_(Galatia)",
+    "type": "Greek",
+    "longitude": 35.1405563
+  },
+  {
+    "name": "Carmylessus",
+    "imageUrl": "",
+    "latitude": 36.5744438,
+    "description": "Carmylessus or Karmylessos (Ancient Greek: Καρμυλησσός) was a town of ancient Lycia, described by Strabo between Telmissus and the mouth of the Xanthus.[1] After Telmissus, he says, then Anticragus (Ancient Greek: Ἀντίκραγος), an abrupt mountain on which is the small place Carmylessus, lying in a ravine.\n",
+    "link": "https://en.wikipedia.org//wiki/Carmylessus",
+    "type": "Greek",
+    "longitude": 29.0902786
+  },
+  {
+    "name": "Carussa",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
+    "latitude": 41.81,
+    "description": "Carussa or Karoussa (Ancient Greek: Κάρουσσα), also spelt as Carusa or Karousa (Καροῦσα), also known as Polichnion,[1] was a Greek trading place (emporium) on the Black Sea coast of ancient Paphlagonia, south of Sinope, and 150 stadia from it.[2][3] It is also mentioned in the Periplus of Pseudo-Scylax as a Greek city; and by Pliny the Elder.[4] It was a member of the Delian League as it appears in tribute lists of ancient Athens.[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Carussa",
+    "type": "Greek",
+    "longitude": 35.15889
+  },
+  {
+    "name": "Caryanda",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkey_relief_location_map.jpg/800px-Turkey_relief_location_map.jpg",
+    "latitude": 37.12639,
+    "description": "Caryanda[pronunciation?] or Karyanda (Ancient Greek: Καρυάνδα) was a city on the coast of ancient Caria in southwestern Anatolia.  Stephanus of Byzantium describes it as a city and harbour (λίμην) near Myndus and Cos.[1] But λιμήν, in the text of Stephanus, is an emendation or alteration: the manuscripts have λίμνη ('lake'). Strabo places Caryanda between Myndus and Bargylia, and he describes it, according to the common text, as \"a lake, and island of the same name with it;\" and thus the texts of Stephanus, who has got his information from Strabo, agree with the texts of Strabo.[2] Pliny simply mentions the island Caryanda with a town; but he is in that passage only enumerating islands.[3] In another passage he mentions Caryanda as a place on the mainland,[4] and Pomponius Mela does also.[5] Scylax of Caryanda, one of the most famous mariners and explorers of ancient times, was a native of Caryanda. He lived in the late 6th and early 5th centuries BCE and served the Persian king Darius I.[6]\n",
+    "link": "https://en.wikipedia.org//wiki/Caryanda",
+    "type": "Greek",
+    "longitude": 27.3780556
+  },
+  {
+    "name": "Castabala (city)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/HierapolisCastabalaBurgberg.jpg/800px-HierapolisCastabalaBurgberg.jpg",
+    "latitude": 37.1775,
+    "description": "Castabala (Greek: Καστάβαλα), also known as Hieropolis and Hierapolis (Greek: Ίεράπολις) was a city in Cilicia (modern southern Turkey), near the Ceyhan River (ancient Pyramus).\n",
+    "link": "https://en.wikipedia.org//wiki/Castabala_(city)",
+    "type": "Greek",
+    "longitude": 36.1875
+  },
+  {
+    "name": "Cebrene",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.7441673,
+    "description": "Cebrene (Ancient Greek: Κεβρήνη), also spelled Cebren (Ancient Greek: Κεβρήν), was an ancient Greek city in the middle Skamander valley in the Troad region of Anatolia. According to some scholars, the city's name was changed to Antiocheia in the Troad (Ancient Greek: Ἀντιόχεια τῆς Τρωάδος) for a period during the 3rd century BCE (see below). Its archaeological remains have been located on Çal Dağ in the forested foothills of Mount Ida (modern Kaz Dağı), approximately 7 km to the south of the course of the Skamander.[1] The site was first identified by the English amateur archaeologist Frank Calvert in 1860.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Cebrene",
+    "type": "Greek",
+    "longitude": 26.56639
+  },
+  {
+    "name": "Ceramus",
+    "imageUrl": "",
+    "latitude": 37.0425,
+    "description": "Ceramus or Keramos (Ancient Greek: Κέραμος) is a city on the north coast of the Ceramic Gulf—named after this city—in ancient Caria, in southwest Asia Minor; its ruins can be found outside the modern village of Ören, Muğla Province, Turkey.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Ceramus",
+    "type": "Greek",
+    "longitude": 27.95139
+  },
+  {
+    "name": "Chalcetor",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
+    "latitude": 37.3491669,
+    "description": "Chalcetor or Chalketor (Ancient Greek: Χαλκήτωρ) was a town of ancient Caria. Strabo says that the mountain range of Grion is parallel to Latmus, and extends east from the Milesia through Caria to Euromus and the Chalcetores, that is, the people of Chalcetor.[1] In another passage, Strabo names the town Chalcetor,[2] which some writers have erroneously altered to Chalcetora.[3] It was a member of the Delian League.[4]\n",
+    "link": "https://en.wikipedia.org//wiki/Chalcetor",
+    "type": "Greek",
+    "longitude": 27.685833
+  },
+  {
+    "name": "Cibyra Mikra",
+    "imageUrl": "",
+    "latitude": 36.65972,
+    "description": "Cibyra (Greek: Κιβύρα) also referred to as Cibyra Mikra to distinguish it from Cibyra Magna, was a town in ancient Pamphylia. Strabo, after mentioning Side, says, \"...and near it is the coast of the little Cibyratae, and then the river Melas, and a station for ships\".[1] The site of Side is well known. The Melas is the Manavgat River, 4 miles (6.4 km) east of Side. But there could have been no city between Side and the Melas, and it is conjectured that in Strabo's text, the coast (\"Paralia\") of the Cibyratae should come after the Melas. The vestiges of Cibyra are probably those observed by Captain Beaufort upon a height which rises from the right bank of a considerable river about 8 miles (13 km) to the eastward of the Melas, about 4 miles (6.4 km) to the west of Cape Karáburun, and nearly 2 miles (3.2 km) from the shore.[2] Ptolemy mentions this Cibyra among the inland towns of Cilicia Trachea; but Scylax places it on the coast. There is a place, Cyberna (Κυβέρνη), mentioned in the Stadiasmus, which is placed 59 stadia east of the Melas. If the conjecture as to Strabo's text is correct, we may identify Cyberna with this Cibyra of Pamphylia.\n",
+    "link": "https://en.wikipedia.org//wiki/Cibyra_Mikra",
+    "type": "Greek",
+    "longitude": 31.6597214
+  },
+  {
+    "name": "Cilicia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Roman_Empire_-_Cilicia_%28125_AD%29.svg/721px-Roman_Empire_-_Cilicia_%28125_AD%29.svg.png",
+    "latitude": 36.8666649,
+    "description": "Cilicia (/sɪˈlɪʃə/)[3][note 1] is a geo-cultural region in southern Anatolia (Turkey), extending inland from the northeastern coasts of the Mediterranean Sea. Cilicia has a population ranging over six million, concentrated mostly at the Cilicia plain. The region includes the provinces of Mersin, Adana, Osmaniye, and Hatay.\n",
+    "link": "https://en.wikipedia.org//wiki/Cilicia",
+    "type": "Greek",
+    "longitude": 35.4833336
+  },
+  {
+    "name": "Cinolis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
+    "latitude": 41.9627762,
+    "description": "Cinolis or Kinolis (Ancient Greek: Κίνωλις), also known as Cimolis or Kimolis (Κίμωλις), was a Greek[1] small port town on the coast of ancient Paphlagonia. According to Arrian it was situate 180 stadia west of Stephane,[2] but according to Marcian of Heraclea only 150.[3] The nearby town of Anticinolis was located 80 stadia from Cinolis.\n",
+    "link": "https://en.wikipedia.org//wiki/Cinolis",
+    "type": "Greek",
+    "longitude": 34.1544456
+  },
+  {
+    "name": "Cius",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 40.4325,
+    "description": "Cius (/ˈsaɪəs/; Greek: Kίος or Κῖος Kios), later renamed Prusias on the Sea (/ˈpruːʒəs/; Latin: Prusias ad Mare) after king Prusias I of Bithynia, was an ancient Greek city bordering the Propontis (now known as the Sea of Marmara), in Bithynia and in Mysia (in modern northwestern Turkey), and had a long history, being mentioned by Herodotus, Xenophon, Aristotle, Strabo and Apollonius Rhodius.\n",
+    "link": "https://en.wikipedia.org//wiki/Cius",
+    "type": "Greek",
+    "longitude": 29.15639
+  },
+  {
+    "name": "Claros",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Klaros01.jpg/800px-Klaros01.jpg",
+    "latitude": 38.005,
+    "description": "Claros (Greek: Κλάρος, Klaros; Latin: Clarus) was an ancient Greek sanctuary on the coast of Ionia. It contained a temple and oracle of Apollo, honored here as Apollo Clarius. It was located in the territory of Colophon, which lay twelve kilometers to the north, one of the twelve cities of the Ionian League. The coastal city Notion lay two kilometers to the south. The ruins of the sanctuary are now found north of the modern town Ahmetbeyli in the Menderes district of Izmir Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Claros",
+    "type": "Greek",
+    "longitude": 27.1927776
+  },
+  {
+    "name": "Claudiopolis (Cilicia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkey_relief_location_map.jpg/800px-Turkey_relief_location_map.jpg",
+    "latitude": 36.65167,
+    "description": "Claudiopolis (Ancient Greek: Κλαυδιόπολις) also called Ninica and Ninica Claudiopolis,[1] was an ancient city of Cilicia.  Ammianus[2] mentions Seleucia and Claudiopolis as cities of Cilicia, or of the country drained by the Calycadnus; and Claudiopolis was a colony of Claudius Caesar. It is described by Theophanes of Byzantium as situated in a plain between the two Taurus Mountains, a description which exactly, corresponds to the position of the basin of the Calycadnus. Claudiopolis may therefore be represented by Mut, which is higher up the valley than Seleucia, and near the junction of the northern and western branches of the Calycadnus. It is also the place to which the pass over the northern Taurus leads from Laranda.[3] Pliny mentions a Claudiopolis of Cappadocia,[4] and Ptolemy has a Claudiopolis in Cataonia.[5] Both these passages and those of Ammianus and Theophanes are cited to prove that there is a Claudiopolis in Cataonia, though it is manifest that the passage in Ammianus at least can only apply to a town in the valley of the Calycadnus in Cilicia Trachea. The two Tauri of Theophanes might mean the Taurus and Antitaurus. But Hierocles places Claudiopolis in Isauria, a description which cannot apply to the places so named of Pliny and Ptolemy. The city apparently received the Roman colony name Colonia Iulia Felix Augusta Ninica, and minted coins in antiquity.[6]\n",
+    "link": "https://en.wikipedia.org//wiki/Claudiopolis_(Cilicia)",
+    "type": "Greek/Roman",
+    "longitude": 33.4416656
+  },
+  {
+    "name": "Colophon (city)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ionia%2C_Asia_Minor_Map%2C_Classical_Atlas%2C_1886%2C_Keith_Johnston.jpg/493px-Ionia%2C_Asia_Minor_Map%2C_Classical_Atlas%2C_1886%2C_Keith_Johnston.jpg",
+    "latitude": 38.10889,
+    "description": "Colophon (/ˈkɒləfɒn/;[1] Ancient Greek: Κολοφών) was an ancient city in Ionia. Founded around the turn of the first millennium BC, it was likely one of the oldest of the twelve cities of the Ionian League. It was located between Lebedos (120 stadia to the west) and Ephesus (70 stadia to its south). Its ruins are south of the town Değirmendere in the Menderes district of Izmir Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Colophon_(city)",
+    "type": "Greek",
+    "longitude": 27.1416664
+  },
+  {
+    "name": "Colussa",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Paphlagonia.jpg",
+    "latitude": 41.9475,
+    "description": "Colussa or Koloussa (Ancient Greek: Κόλουσσα) was an ancient Greek city[1] on the Black Sea coast of ancient Paphlagonia.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Colussa",
+    "type": "Greek",
+    "longitude": 34.27139
+  },
+  {
+    "name": "Colybrassus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Colybrassus_ayasofya_3.jpg/800px-Colybrassus_ayasofya_3.jpg",
+    "latitude": 36.7316666,
+    "description": "Coordinates: 36°43′54″N 31°58′31″E﻿ / ﻿36.731600°N 31.975400°E﻿ / 36.731600; 31.975400\n",
+    "link": "https://en.wikipedia.org//wiki/Colybrassus",
+    "type": "Greek",
+    "longitude": 31.9752769
+  },
+  {
+    "name": "Comba (Lycia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
+    "latitude": 36.5513878,
+    "description": "Comba or Komba (Ancient Greek: τὰ Κὀμβα) was a city in ancient Lycia.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Comba_(Lycia)",
+    "type": "Greek",
+    "longitude": 29.669445
+  },
+  {
+    "name": "Constantia (Osrhoene)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Justinian555AD.png/800px-Justinian555AD.png",
+    "latitude": 37.22889,
+    "description": "Constantia  or Konstantia (Ancient Greek: Κωνσταντία) was a town of some importance in the province Osrhoene in Mesopotamia, on the road between Nisibis and Carrhae, at no great distance from Edessa. It was, after his departure from Nisibis, the residence of the dux Mesopotamiae until the foundation of Dara.[1] There is considerable variation in different authors in the way in which the name of this town is written and the names under which it is known, including: Constantia or Konstantia (Κωνσταντία),[2] Constantina or Konstantina (Κωνσταντίνα),[3] Antoninopolis,[4] Nicephorium or Nikephorion (Νικηφόριον),[5] Maximianopolis (Μαξιμιανούπολις),[4] Constantinopolis in Osrhoene,[6] Tella and Antiochia Arabis,[7] Antiochia in Mesopotamia (Ἀντιόχεια τῆς Μεσοποταμίας – Antiocheia tes Mesopotamias) and Antiochia in Arabia (Ἀντιόχεια ἡ Ἀραβική – Antiocheia e Arabike).[8][9]\n",
+    "link": "https://en.wikipedia.org//wiki/Constantia_(Osrhoene)",
+    "type": "Greek",
+    "longitude": 39.7558327
+  },
+  {
+    "name": "Corycus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kizkalesi_M%C3%A4dchenburg_3.jpg/800px-Kizkalesi_M%C3%A4dchenburg_3.jpg",
+    "latitude": 36.46528,
+    "description": "Corycus (Greek: Κώρυκος; also transliterated Corycos or Korykos; Armenian: Կոռիկոս, romanized: Koṙikos; Turkish: Kız Kalesi, lit. \"maiden castle\") was an ancient city in Cilicia Trachaea, Anatolia, located at the mouth of the valley called Şeytan deresi; the site is now occupied by the town of Kızkalesi (formerly Ghorgos), Mersin Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Corycus",
+    "type": "Greek",
+    "longitude": 34.1541672
+  },
+  {
+    "name": "Corydala",
+    "imageUrl": "",
+    "latitude": 36.376667,
+    "description": "Coordinates: 36°22′36″N 30°16′24″E﻿ / ﻿36.376674°N 30.273281°E﻿ / 36.376674; 30.273281\nCorydala or Corydalla or Korydalla or Korydala (Ancient Greek: Κορύδαλλα) was a city of ancient Lycia. Anciently, it belonged to the Rhodians, according to Hecataeus, quoted by Stephanus.[1] But it was not in Rhodes, nor was it one of the Rhodian possessions in the Peraea, Caria.[2] The Tabula Peutingeriana marks Corydala (spelt Coridallo) on the road from Phaselis to Patara, and makes the distance between these two places 29 Roman miles (43 km; 27 mi) Pliny places Corydalla in the interior of Lycia,[3] and Ptolemy mentions it with Sagalassus, Rhodia, Phellus, Myra, and other places, as about Mons Massicytus.\n",
+    "link": "https://en.wikipedia.org//wiki/Corydala",
+    "type": "Greek",
+    "longitude": 30.2733326
+  },
+  {
+    "name": "Cotenna",
+    "imageUrl": "",
+    "latitude": 37.0333328,
+    "description": "Coordinates: 37°02′N 31°38′E﻿ / ﻿37.033°N 31.633°E﻿ / 37.033; 31.633\nCotenna or Kotenna (Ancient Greek: Κότεννα) was a city in the Roman province of Pamphylia I in Asia Minor. It corresponds to modern Gödene, near Konya, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Cotenna",
+    "type": "Greek",
+    "longitude": 31.6333332
+  },
+  {
+    "name": "Cremna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kremna_ruins_vista_May_2013.jpg/800px-Kremna_ruins_vista_May_2013.jpg",
+    "latitude": 37.5001373,
+    "description": "Cremna (Greek Κρῆμνα), or Kremna, was an ancient town in Pisidia. It is situated in the district of Bucak. It stands in a remote valley on a high plateau dominating the ancient Cestrus River (today Aksu), with limited access and good defensive features.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Cremna",
+    "type": "Greek",
+    "longitude": 30.6911
+  },
+  {
+    "name": "Cyaneae",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Kyaneai_Theater.JPG/800px-Kyaneai_Theater.JPG",
+    "latitude": 36.25083,
+    "description": "Cyaneae[pronunciation?] (Ancient Greek: Κυανέαι, [ky.a.né.ai̯]), also spelled Kyaneai or Cyanae, was a town of ancient Lycia, or perhaps three towns known collectively by the name, on what is now the southern coast of Turkey.[1] William Martin Leake says that its remains were discovered west of Andriaca.[2] The place, which is at the head of Port Tristomo, was determined by an inscription. Leake observes that in some copies of Pliny it is written Cyane; in Hierocles and the Notitiae Episcopatuum it is Cyaneae. To Spratt and Forbes, Cyaneae appeared to be a city ranking in importance with Phellus and Candyba, but in a better state of preservation. No longer a residential bishopric, Cyanae is today listed by the Catholic Church as a titular see.\n",
+    "link": "https://en.wikipedia.org//wiki/Cyaneae",
+    "type": "Greek",
+    "longitude": 29.8055553
+  },
+  {
+    "name": "Cyme (Aeolis)",
+    "imageUrl": "",
+    "latitude": 38.86,
+    "description": "Cyme (Greek: Κύμη or Κύμη Αιολίδας, Cyme of Aeolis) (modern Turkish Nemrut Limani) or Cumae was an Aeolian city in Aeolis (Asia Minor) close to the kingdom of Lydia.\n",
+    "link": "https://en.wikipedia.org//wiki/Cyme_(Aeolis)",
+    "type": "Greek",
+    "longitude": 27.0594444
+  },
+  {
+    "name": "Cytorus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Gideros_Bay1.jpg/800px-Gideros_Bay1.jpg",
+    "latitude": 41.8594437,
+    "description": "Cytorus (Greek Κύτωρος, Kytoros;[1] \nalso Cytorum, Κύτωρον, Kytoron and Κύτωρις[2]) was an ancient Greek city[3] on the northern coast of Asia Minor. Mentioned by Homer, Cytorus survives in the name of Gideros, which is both \n",
+    "link": "https://en.wikipedia.org//wiki/Cytorus",
+    "type": "Greek",
+    "longitude": 32.8580551
+  },
+  {
+    "name": "Cyzicus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Istanbul_-_Museo_archeol._-_Auriga_greco_-_Arcaico%2C_sec._VI_aC%2C_da_Cizico_-_Foto_G._Dall%27Orto_28-5-2006.jpg/788px-Istanbul_-_Museo_archeol._-_Auriga_greco_-_Arcaico%2C_sec._VI_aC%2C_da_Cizico_-_Foto_G._Dall%27Orto_28-5-2006.jpg",
+    "latitude": 40.3833351,
+    "description": "Cyzicus (/ˈsɪzɪkəs/; Ancient Greek: Κύζικος Kyzikos; Ottoman Turkish: آیدینجق‎, Aydıncıḳ) was an ancient Greek town in Mysia in Anatolia in the current Balıkesir Province of Turkey. It was located on the shoreward side of the present Kapıdağ Peninsula (the classical Arctonnesus), a tombolo which is said to have originally been an island in the Sea of Marmara only to be connected to the mainland in historic times either by artificial means or an earthquake.\n",
+    "link": "https://en.wikipedia.org//wiki/Cyzicus",
+    "type": "Greek",
+    "longitude": 27.8833332
+  },
+  {
+    "name": "Daedala (city)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
+    "latitude": 36.7494431,
+    "description": "Daedala or Daidala (Greek: τὰ Δαίδαλα) was a city of the Rhodian Peraea in ancient Caria, or a small place, as Stephanus of Byzantium says,[1] on the authority of Strabo.\n",
+    "link": "https://en.wikipedia.org//wiki/Daedala_(city)",
+    "type": "Greek",
+    "longitude": 28.9766674
+  },
+  {
+    "name": "Dalisandus (Isauria)",
+    "imageUrl": "",
+    "latitude": 36.6777763,
+    "description": "Dalisandus or Dalisandos (Ancient Greek: Δαλισανδός) was a city of ancient Cappadocia and later of Isauria, near the river Cydnus.[1] It is considered to have been near Sınabiç, 6 km north of Claudiopolis (present-day Mut, Mersin), Turkey.[2][3][4]\n",
+    "link": "https://en.wikipedia.org//wiki/Dalisandus_(Isauria)",
+    "type": "Greek",
+    "longitude": 33.48
+  },
+  {
+    "name": "Didyma",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Didymaion_front_AvL.JPG/800px-Didymaion_front_AvL.JPG",
+    "latitude": 37.385,
+    "description": "Didyma (/ˈdɪdɪmə/; Ancient Greek: Δίδυμα) was an ancient Greek sanctuary on the coast of Ionia in the domain of the famous city of Miletus. Apollo was the main deity of the sanctuary of Didyma, also called Didymaion. But it was home to both of the temples dedicated to the twins Apollo and Artemis. Other deities were also honoured within the sanctuary. The Didymaion was well renowned in antiquity because of its famed oracle. This oracle of Apollo was situated within what was, and is, the one of the world's greatest temples to Apollo. The remains of this Hellenistic temple belong to the best preserved temples of classical antiquity. Besides this temple other buildings existed within the sanctuary which have been rediscovered recently; a Greek theatre and the foundations of the above-mentioned Hellenistic temple of Artemis, to name but two.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Didyma",
+    "type": "Greek",
+    "longitude": 27.25639
+  },
+  {
+    "name": "Docimium",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Roman_-_Garland_Sarcophagus_-_Walters_2329.jpg/800px-Roman_-_Garland_Sarcophagus_-_Walters_2329.jpg",
+    "latitude": 38.8666649,
+    "description": "Docimium, Docimia or Docimeium (Greek: Δοκίμια and Δοκίμειον) was an ancient city of Phrygia, Asia Minor where there were famous marble quarries.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Docimium",
+    "type": "Greek",
+    "longitude": 30.75
+  },
+  {
+    "name": "Dolichiste",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
+    "latitude": 36.1833344,
+    "description": "Doliche or Dolichiste (see List of Lycian place names, Greek: Δολίχη or Δολιχίστη; Eth. Δολιχεύς or Δολιχίστης) was an island noted by ancient geographers in the Mediterranean Sea off the Lycian coast, in Asia Minor, now called Kekova (or Kakava in Modern Greek), which is located in present-day Antalya Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Dolichiste",
+    "type": "Greek",
+    "longitude": 29.8833332
+  },
+  {
+    "name": "Doric Hexapolis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 37,
+    "description": "The Doric or Dorian Hexapolis (Greek: Δωρικὴ Ἑξάπολις or Δωριέων Ἑξάπολις) was a federation of six cities of Dorian foundation in southwest Asia Minor and adjacent islands, largely coextensive with the region known as Doris or Doris in Asia (Δωρίς ἡ ἐν Ἀσίᾳ),[citation needed] and included:\n",
+    "link": "https://en.wikipedia.org//wiki/Doric_Hexapolis",
+    "type": "Greek",
+    "longitude": 28
+  },
+  {
+    "name": "Edessa",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/N-Mesopotamia_and_Syria.svg/800px-N-Mesopotamia_and_Syria.svg.png",
+    "latitude": 37.15,
+    "description": "Edessa (/ɪˈdɛsə/; Ancient Greek: Ἔδεσσα, romanized: Édessa) was an ancient city (polis) in Upper Mesopotamia, founded during the Hellenistic period by King Seleucus I Nicator (r. 305–281 BC), founder of the Seleucid Empire. It later became capital of the Kingdom of Osroene, and continued as capital of the Roman province of Osroene. During the Late Antiquity, it became a prominent center of Christian learning and seat of the Catechetical School of Edessa. During the Crusades, it was the capital of the County of Edessa.\n",
+    "link": "https://en.wikipedia.org//wiki/Edessa",
+    "type": "Greek",
+    "longitude": 38.8
+  },
+  {
+    "name": "Elaea (Aeolis)",
+    "imageUrl": "",
+    "latitude": 38.95,
+    "description": "Elaea (Ancient Greek: Ἐλαία and Ἐλέα) was an ancient city of Aeolis, Asia, the port of Pergamum. According to the Barrington Atlas of the Greek and Roman World, it was located near the modern town of Zeytindağ, İzmir Province, Turkey.[1] The ruins of the silted port's breakwater can be seen on satellite maps at  38°56'35.54\"N  27°2'16.34\"E.\n",
+    "link": "https://en.wikipedia.org//wiki/Elaea_(Aeolis)",
+    "type": "Greek/Roman",
+    "longitude": 27.0333328
+  },
+  {
+    "name": "Elaeus",
+    "imageUrl": "",
+    "latitude": 40.0597229,
+    "description": "Elaeus (Ancient Greek: Ἐλαιοῦς Elaious, later Ἐλεοῦς Elaeus), the “Olive City”, was an ancient Greek city located in Thrace, on the Thracian Chersonese. Elaeus was located at the southern end of the Hellespont (now the Dardanelles) near the southernmost point of the Thracian Chersonese (now the Gallipoli peninsula) in modern-day Turkey. According to the geographer Scymnus, Elaeus was founded by settlers from Ionian Teos, while the Pseudo-Scymnus writes that it was a colony of Athens and was founded by Phorbas[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Elaeus",
+    "type": "Greek",
+    "longitude": 26.2305565
+  },
+  {
+    "name": "Elaiussa Sebaste",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/TheaterElaiussa2011.jpg/800px-TheaterElaiussa2011.jpg",
+    "latitude": 36.4836121,
+    "description": "Elaiussa Sebaste or Elaeousa Sebaste (Greek: Ελαιούσα Σεβαστή) was an ancient Roman town located 55 km (34 mi) from Mersin in the direction of Silifke in Cilicia on the southern coast of Anatolia (in the modern-day town of Ayaş (there is a like-named town in Ankara province), Turkey).\n",
+    "link": "https://en.wikipedia.org//wiki/Elaiussa_Sebaste",
+    "type": "Greek",
+    "longitude": 34.17361
+  },
+  {
+    "name": "Ephesus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ephesus_Celsus_Library_Fa%C3%A7ade.jpg/774px-Ephesus_Celsus_Library_Fa%C3%A7ade.jpg",
+    "latitude": 37.9411125,
+    "description": "Ephesus (/ˈɛfɪsəs, ˈɛfəsəs/;[1][2] Greek: Ἔφεσος, romanized: Éphesos; Turkish: Efes; may ultimately derive from Hittite: 𒀀𒉺𒊭, romanized: Apaša) was a city in  ancient Greece[3][4] on the coast of Ionia, 3 kilometres (1.9 mi) southwest of present-day Selçuk in İzmir Province, Turkey. It was built in the 10th century BC on the site of the former Arzawan capital[5][6] by Attic and Ionian Greek colonists. During the Classical Greek era, it was one of twelve cities that were members of the Ionian League. The city came under the control of the Roman Republic in 129 BC.\n",
+    "link": "https://en.wikipedia.org//wiki/Ephesus",
+    "type": "Greek",
+    "longitude": 27.3419437
+  },
+  {
+    "name": "Epibates",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Selimpa%C5%9Fa.JPG/800px-Selimpa%C5%9Fa.JPG",
+    "latitude": 41.05389,
+    "description": "Selimpaşa, known in Byzantine times as Epibates (sometimes as Epivates or Epibatos) (Greek: Επιβάτες), is a small town in the European part of Turkey, near Silivri in Istanbul Province.\n",
+    "link": "https://en.wikipedia.org//wiki/Epibates",
+    "type": "Greek",
+    "longitude": 28.3669453
+  },
+  {
+    "name": "Ermenek",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Ermenek_-_panoramio_%281%29.jpg/800px-Ermenek_-_panoramio_%281%29.jpg",
+    "latitude": 36.6333351,
+    "description": "Ermenek is a town and district of Karaman Province in the Mediterranean region of Turkey. As ancient Germanicopolis (in Isauria; has namesakes), a former bishopric, it remains a Latin Catholic titular see.\n",
+    "link": "https://en.wikipedia.org//wiki/Ermenek",
+    "type": "Greek",
+    "longitude": 32.8833351
+  },
+  {
+    "name": "Erymna",
+    "imageUrl": "",
+    "latitude": 37.0733337,
+    "description": "\nErymna (Ancient Greek: Ἐρυμνή) or Orymna (Ancient Greek: Ὄρυμνα) was a town in ancient Pamphylia or Lycia. The form \"Orymna\" is that given in the Synecdemus and the Notitiae Episcopatuum.[1][2][3] and in the ecumenical councils,[4] but inscriptions found on the site show that the inhabitants used the form with \"E\".[1][3] Stephanus of Byzantium stated that the form used in the Lyciaca of Alexander Polyhistor was Erymnae (Ancient Greek: Ἐρυμναί, plural of Ἐρυμνή).[5] The modern name of the site is Ormana, reflecting the ancient name.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Erymna",
+    "type": "Greek/Roman",
+    "longitude": 31.5841675
+  },
+  {
+    "name": "Erythrae",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 38.38278,
+    "description": "Erythrae or Erythrai (Greek: Ἐρυθραί) later Litri, was one of the twelve Ionian cities of Asia Minor, situated 22 km north-east of the port of Cyssus (modern name: Çeşme), on a small peninsula stretching into the Bay of Erythrae, at an equal distance from the mountains Mimas and Corycus, and directly opposite the island of Chios. It is recorded that excellent wine was produced in the peninsula. Erythrae was notable for being the seat of the Erythraean Sibyl. The ruins of the city are found north of the town Ildırı in the Çeşme district of Izmir Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Erythrae",
+    "type": "Greek",
+    "longitude": 26.4808331
+  },
+  {
+    "name": "Eskişehir",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Sazova_Park%2C_Eski%C5%9Fehir%2C_Turkey_08.jpg/800px-Sazova_Park%2C_Eski%C5%9Fehir%2C_Turkey_08.jpg",
+    "latitude": 39.7833328,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Eski%C5%9Fehir",
+    "type": "Greek",
+    "longitude": 30.5166664
+  },
+  {
+    "name": "Etenna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Antalya_by_Piri_Reis.jpg/800px-Antalya_by_Piri_Reis.jpg",
+    "latitude": 37.001667,
+    "description": "Coordinates: 37°00′06″N 31°26′57″E﻿ / ﻿37.00167°N 31.44917°E﻿ / 37.00167; 31.44917\n",
+    "link": "https://en.wikipedia.org//wiki/Etenna",
+    "type": "Greek",
+    "longitude": 31.4491673
+  },
+  {
+    "name": "Eudocias (Pamphylia)",
+    "imageUrl": "",
+    "latitude": 36.9883347,
+    "description": "Eudocias (Ancient Greek: Εὐδοκιάς) or Eudocia (Ancient Greek: Εὐδοκία) was an ancient town in the Roman province of Pamphylia Secunda, in the neighbourhood of Termessus.\n",
+    "link": "https://en.wikipedia.org//wiki/Eudocias_(Pamphylia)",
+    "type": "Greek",
+    "longitude": 30.58
+  },
+  {
+    "name": "Eupatoria (Pontus)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Heinrich_Kiepert._Asia_citerior.Pontus.jpg/800px-Heinrich_Kiepert._Asia_citerior.Pontus.jpg",
+    "latitude": 40.75,
+    "description": "Eupatoria (Ancient Greek: Εὐπατορία) and Magnopolis (Ancient Greek: Μαγνόπολις)[1] was a Hellenistic city in the Kingdom of Pontus.  The city was founded by Mithridates VI Eupator just south of where the Lycus flows into the Iris, the west end of the fertile valley of Phanaroea, probably in or near the village of Çevresu, Erbaa district, Tokat Province.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Eupatoria_(Pontus)",
+    "type": "Greek",
+    "longitude": 36.5
+  },
+  {
+    "name": "Euromus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/The_Temple_of_Zeus_Lepsinos_at_Euromus.jpg/800px-The_Temple_of_Zeus_Lepsinos_at_Euromus.jpg",
+    "latitude": 37.37417,
+    "description": "Euromus or Euromos (Ancient Greek: Εὔρωμος and Εὔροωμος)[1] – also, Europus or Europos (Εὐρωπός), Eunomus or Eunomos (Εὔνωμος), Philippi or Philippoi (Φίλιπποι);[2] earlier Kyromus and Hyromus – was an ancient city in Caria, Anatolia; the ruins are approximately 4 km southeast of Selimiye and 12 km northwest of Milas (the ancient Mylasa), Muğla Province, Turkey. It was situated at the foot of Mount Grium, which runs parallel to Mount Latmus, and was built by one Euromus, a son of Idris, a Carian.[3][4][5][6]\n",
+    "link": "https://en.wikipedia.org//wiki/Euromus",
+    "type": "Greek",
+    "longitude": 27.6752777
+  },
+  {
+    "name": "Faustinopolis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Heinrich_Kiepert._Asia_citerior.Cappadocia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cappadocia.jpg",
+    "latitude": 37.63994,
+    "description": "Faustinopolis (Ancient Greek: Φαυστινόπολις), also Colonia Faustinopolis and Halala, was an ancient city in the south of Cappadocia, about 20 km south of Tyana. It was named after the empress Faustina, the wife of Marcus Aurelius, who died there in a village, which her husband, by establishing a colony in it, raised to the rank of a town under the name of Faustinopolis.[1] Hierocles assigns the place to Cappadocia Secunda,[2] and it is mentioned also in the Antonine and Jerusalem Itineraries. The town was close to the defiles of the Cilician Gates, and was likely situated at modern-day Toraman, Niğde Province, Turkey.[3] Following the Muslim conquests and the subsequent Arab raids, the site was abandoned for the nearby fortress of Loulon. \n",
+    "link": "https://en.wikipedia.org//wiki/Faustinopolis",
+    "type": "Greek",
+    "longitude": 34.68427
+  },
+  {
+    "name": "Fethiye",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 36.65139,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Fethiye",
+    "type": "Greek",
+    "longitude": 29.1230564
+  },
+  {
+    "name": "Gagae",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
+    "latitude": 36.299,
+    "description": "Coordinates: 36°17′56.4″N 30°21′17.3″E﻿ / ﻿36.299000°N 30.354806°E﻿ / 36.299000; 30.354806\nGagae or Gagai (Ancient Greek: Γάγαι) was a town on the southeast coast of ancient Lycia, in what is now the province of Antalya, from which the Gagates lapis derived its name.[1][2] The ruins are located in Kumluca district, Antalya Province, Turkey. Excavations in 2007 revealed an upper and lower acropolis and evidence of Rhodian colonization.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Gagae",
+    "type": "Greek",
+    "longitude": 30.354805
+  },
+  {
+    "name": "Gallipoli",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Gallipoli_peninsula_from_space.png/800px-Gallipoli_peninsula_from_space.png",
+    "latitude": 40.35,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Gallipoli",
+    "type": "Greek",
+    "longitude": 26.4666672
+  },
+  {
+    "name": "Gambrium",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Izmir_in_Turkey.svg/800px-Izmir_in_Turkey.svg.png",
+    "latitude": 39.0875,
+    "description": "Gambrium or Gambrion (Ancient Greek: Γάμβριον and Γάμβρειον), also Gambreium or Gambreion (Γάμβρειον), was a town of ancient Aeolis and of Mysia, quite close to Pergamum. Its location is near Kınık and Bergama in İzmir province, in the Aegean Region of Turkey. \n",
+    "link": "https://en.wikipedia.org//wiki/Gambrium",
+    "type": "Greek",
+    "longitude": 27.35111
+  },
+  {
+    "name": "Gaziantep",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/AntepKale2.jpg/800px-AntepKale2.jpg",
+    "latitude": 37.0666656,
+    "description": "Gaziantep (Turkish pronunciation: [ɡaːˈziantep]), previously and still informally called Aintab or Antep (pronounced [anˈtep]), is the capital of Gaziantep Province, in the westernmost part of Turkey's Southeastern Anatolia Region, approximately 185 kilometres (115 mi) east of Adana and 97 kilometres (60 mi) north of Aleppo, Syria. It is probably located on the site of ancient Antiochia ad Taurum, and is near ancient Zeugma.\n",
+    "link": "https://en.wikipedia.org//wiki/Gaziantep",
+    "type": "Greek/Roman",
+    "longitude": 37.3833351
+  },
+  {
+    "name": "Giresun Island",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Giresun_Ada.jpg/800px-Giresun_Ada.jpg",
+    "latitude": 40.92889,
+    "description": "Giresun Island (Turkish: Giresun Adası) is a small island that has an area of 4 hectares and lies 1.2 km from the Turkish city of Giresun on the southeastern coast of Black Sea. It is the largest island on the Turkish Black Sea coast.\n",
+    "link": "https://en.wikipedia.org//wiki/Giresun_Island",
+    "type": "Greek",
+    "longitude": 38.43611
+  },
+  {
+    "name": "Gördes",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/G%C3%B6rdes_Cadde_-_panoramio_-_adnan_akyol_%283%29.jpg/800px-G%C3%B6rdes_Cadde_-_panoramio_-_adnan_akyol_%283%29.jpg",
+    "latitude": 38.9333344,
+    "description": "Gördes is a town and district of Manisa Province in the Aegean region of Turkey. According to the 2000 census, population of the district is 38,110 of which 10,809 live in the town of Gördes.[3][4] The district covers an area of 947 km2 (366 sq mi),[5] and the town lies at an elevation of 578 m (1,896 ft).\n",
+    "link": "https://en.wikipedia.org//wiki/G%C3%B6rdes",
+    "type": "Greek/Roman",
+    "longitude": 28.2833328
+  },
+  {
+    "name": "Gryneium",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 38.8744431,
+    "description": "Gryneium or Gryneion (Ancient Greek: Γρύνειον), also Grynium or Grynion (Γρύνιον), Grynia or Gryneia (Γρύνεια) and Grynoi (Γρῦνοι),[1] was a city of ancient Aeolis. It was located 40 stadia from Myrina and 70 from Elaea. In early times it was independent, one of the 12 important cities of Aeolis, but afterwards became subject to Myrina. It contained a sanctuary of Apollo with an ancient oracle and a splendid temple of white marble.[2][3][4][5][6] Pausanias wrote that at Gryneium, where there was an amazing grove of Apollo, with cultivated trees, and all those which, although they bear no fruit, are pleasing to smell or look upon.[7]\n",
+    "link": "https://en.wikipedia.org//wiki/Gryneium",
+    "type": "Greek",
+    "longitude": 27.0691662
+  },
+  {
+    "name": "Hadrianopolis in Paphlagonia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 40.9258347,
+    "description": "Hadrianopolis in Paphlagonia (Ancient Greek: Ἁδριανούπολις ἑν Παφλαγονία) was a city in southwestern Paphlagonia, Asia Minor (modern Turkey), about 3km west of modern Eskipazar. It was inhabited at least from the 1st century BC to the 8th century AD. It was named after the Roman emperor Hadrian in the 2nd century AD. The city also bore the names of Caesarea or Kaisareia (Καισάρεια) and Proseilemmene.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Hadrianopolis_in_Paphlagonia",
+    "type": "Greek",
+    "longitude": 32.49139
+  },
+  {
+    "name": "Halicarnassus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ruins_of_the_Mausoleum_at_Halicarnassus%2C_one_of_the_Seven_Wonders_of_the_Ancient_World.jpg/800px-Ruins_of_the_Mausoleum_at_Halicarnassus%2C_one_of_the_Seven_Wonders_of_the_Ancient_World.jpg",
+    "latitude": 37.0377769,
+    "description": "Halicarnassus (/ˌhælɪkɑːrˈnæsəs/; Ancient Greek: Ἁλικαρνᾱσσός Halikarnāssós or Ἀλικαρνασσός Alikarnāssós; Turkish: Halikarnas; Carian: 𐊠𐊣𐊫𐊰 𐊴𐊠𐊥𐊵𐊫𐊰 alos k̂arnos) was an ancient Greek city at what is now Bodrum in Turkey. It was located in southwest Caria on an advantageous site on the Ceramic Gulf.[1] The city was famous for the Mausoleum of Halicarnassus, also known simply as the Tomb of Mausolus, whose name provided the origin of the word \"mausoleum\". The mausoleum, built from 353 to 350 BC, ranked as one of the seven wonders of the ancient world.\n",
+    "link": "https://en.wikipedia.org//wiki/Halicarnassus",
+    "type": "Greek",
+    "longitude": 27.4241657
+  },
+  {
+    "name": "Hamaxia (town)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
+    "latitude": 36.57861,
+    "description": "Hamaxia (Ancient Greek: Ἁμαξία) was a town in the east of ancient Pamphylia or in the west of Cilicia.[1] It had a good roadstead for ships, and excellent cedars for ship-building.[2] Hamaxia is likely the same place as Anaxion or Anaxium or Amaxian (Ἁμαξίαν) mentioned by the Stadiasmus Maris Magni as being west of Coracesium.[3][4] Strabo reports that the town was one of the gifts of Mark Antony to Cleopatra.[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Hamaxia_(town)",
+    "type": "Greek",
+    "longitude": 31.9394436
+  },
+  {
+    "name": "Hamaxitus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.5383339,
+    "description": "Hamaxitus (Ancient Greek: Ἁμαξιτός, romanized: Hamaxitos) was an ancient Greek city in the south-west of the Troad region of Anatolia which was considered to mark the boundary between the Troad and Aeolis.[1] Its surrounding territory was known in Greek as Ἁμαξιτία (Hamaxitia),[2] and included the temple of Apollo Smintheus, the salt pans at Tragasai, and the Satnioeis river (modern Tuzla Çay).[3] It has been located on a rise called Beşiktepe near the village of Gülpınar (previously Külahlı) in the Ayvacık district of Çanakkale Province, Turkey.[4]\n",
+    "link": "https://en.wikipedia.org//wiki/Hamaxitus",
+    "type": "Greek",
+    "longitude": 26.0930557
+  },
+  {
+    "name": "Hasankeyf",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Hasankeyf.JPG/800px-Hasankeyf.JPG",
+    "latitude": 37.71472,
+    "description": "Hasankeyf (Arabic: حصن كيفا‎ Ḥiṣn Kayfa‘, Kurdish: Heskîf‎,[3] Armenian: Հարսնքվ Harsnk’v, Greek: Κιφας, Kiphas, Latin: Cepha, Syriac: ܚܣܢܐ ܕܟܐܦܐ‎, romanized: Ḥesno d-Kifo[4]) is an ancient town and district located along the Tigris River in the Batman Province in southeastern Turkey. It was declared a natural conservation area by Turkey in 1981.[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Hasankeyf",
+    "type": "Greek/Roman",
+    "longitude": 41.4130554
+  },
+  {
+    "name": "Haydarpaşa railway station",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Rasimpa%C5%9Fa%2C_Haydarpa%C5%9Fa_%C4%B0skelesi%2C_Haydarpa%C5%9Fa_Gar_Binas%C4%B1_Yan%C4%B1%2C_34716_Kad%C4%B1k%C3%B6y-%C4%B0stanbul%2C_Turkey_-_panoramio.jpg/800px-Rasimpa%C5%9Fa%2C_Haydarpa%C5%9Fa_%C4%B0skelesi%2C_Haydarpa%C5%9Fa_Gar_Binas%C4%B1_Yan%C4%B1%2C_34716_Kad%C4%B1k%C3%B6y-%C4%B0stanbul%2C_Turkey_-_panoramio.jpg",
+    "latitude": 40.9961128,
+    "description": "Haydarpaşa station (Turkish: Haydarpaşa Garı) is a railway station in Istanbul. Until 2012 the station was a major intercity, regional and commuter rail hub as well as the busiest railway station in Turkey. Haydarpaşa, along with Sirkeci station (on the other side of the Bosphorus), are Istanbul's two intercity and commuter railway terminals. From 19 June 2013 to 2018, all train service to the station was suspended due to the rehabilitation of the existing line for the new Marmaray commuter rail line.  The station building still houses the headquarters for District 1 of the State Railways.\n",
+    "link": "https://en.wikipedia.org//wiki/Haydarpa%C5%9Fa_railway_station",
+    "type": "Greek",
+    "longitude": 29.0186119
+  },
+  {
+    "name": "Heraeum (Thrace)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
+    "latitude": 41.0238876,
+    "description": "Heraeum  or Heraion (Ancient Greek: Ἥραιον), also known as Heraion Teichos (Ἡραῖον τεῖχος) was a Greek[1] city in ancient Thrace, located on the Propontis, a little to the east of Bisanthe.[2][3] The city was a Samian colony[4][5] and founded around 600 BC.[4] In some of the Itineraries, the place is called Hiereum or Ereon.\n",
+    "link": "https://en.wikipedia.org//wiki/Heraeum_(Thrace)",
+    "type": "Greek",
+    "longitude": 27.7419453
+  },
+  {
+    "name": "Hermocapelia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lydia_circa_50_AD_-_English_legend.jpg/800px-Lydia_circa_50_AD_-_English_legend.jpg",
+    "latitude": 38.9216652,
+    "description": "Hermocapelia or Hermokapeleia, also possibly known as Thyessos, was a town of ancient Lydia.[1] It was inhabited from Classical through Byzantine times.[1] It stood on the Hermus River,[2] \"to the west of Apollonis in its own little plain almost completely surrounded by mountains.\"[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Hermocapelia",
+    "type": "Greek",
+    "longitude": 27.615
+  },
+  {
+    "name": "Hierapolis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Hierapolis_01.jpg/800px-Hierapolis_01.jpg",
+    "latitude": 37.925,
+    "description": "Hierapolis (/ˌhaɪəˈræpəlɪs/; Ancient Greek: Ἱεράπολις, lit. \"Holy City\") was an ancient Greek city located on hot springs in classical Phrygia in southwestern Anatolia. Its ruins are adjacent to modern Pamukkale in Turkey and currently comprise an archaeological museum. The site has the Tomb of Philip the Apostle.\n",
+    "link": "https://en.wikipedia.org//wiki/Hierapolis",
+    "type": "Greek",
+    "longitude": 29.1258335
+  },
+  {
+    "name": "Hisarlik",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 39.9569435,
+    "description": "Hisarlik (Turkish: Hisarlık, \"Place of Fortresses\"), often spelled Hissarlik, is the Turkish name for an ancient city located in what is known historically as Anatolia.[note 1] It is part of Çanakkale, Turkey.[1] The archaeological site lies approximately 6.5 kilometres (4.0 mi) from the Aegean Sea and about the same distance from the Dardanelles. The site is a partial tell, or artificial hill, elevated in layers over an original site. In this case the original site was already elevated, being the west end of a ridge projecting in an east–west direction from a mountain range.\n",
+    "link": "https://en.wikipedia.org//wiki/Hisarlik",
+    "type": "Greek",
+    "longitude": 26.23889
+  },
+  {
+    "name": "Hydai",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
+    "latitude": 37.2825,
+    "description": "Hydai or Kydai was a town of ancient Caria. Its name does not appear in ancient authors, but is inferred from epigraphic evidence; its demonym was Hydaieis (Ancient Greek: Ὑδαιεῖς) or Kydaieis (Κυδαιεῖς).[1] It was a polis (city-state) and a member of the Delian League.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Hydai",
+    "type": "Greek",
+    "longitude": 27.686945
+  },
+  {
+    "name": "Hyrcanis (Lydia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lydia_circa_50_AD_-_English_legend.jpg/800px-Lydia_circa_50_AD_-_English_legend.jpg",
+    "latitude": 38.6675,
+    "description": "Hyrcanis or Hyrkaneis, also known as Hyrcania (Ancient Greek: Ὑρκανία), was a Roman and Byzantine-era city[1] and bishopric in ancient Lydia, now in western Turkey. It was situated in the Hyrcanian plain (τὸ Ὑρκάνιον πεδίον), which is said to have derived its name from a colony of Hyrcanians being settled here by the Persians.[2][3] They were afterwards mingled with some Macedonians, who also settled in this district, whence they are called by Pliny the Elder and Tacitus \"Macedones Hyrcani.\"[4][5][6][7] The city minted its own coins.[8][9]\n",
+    "link": "https://en.wikipedia.org//wiki/Hyrcanis_(Lydia)",
+    "type": "Greek",
+    "longitude": 27.667223
+  },
+  {
+    "name": "Iasos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Hellenistic_tower_and_bouleuterion_of_Iasos_AvL.JPG/800px-Hellenistic_tower_and_bouleuterion_of_Iasos_AvL.JPG",
+    "latitude": 37.27778,
+    "description": "Iasos or Iassos (/ˈaɪəˌsɒs/; Greek: Ἰασός Iasós or Ἰασσός Iassós), also in Latinized form Iasus or Iassus (/ˈaɪəsəs/), was a Greek city in ancient Caria located on the Gulf of Iasos (now called the Gulf of Güllük), opposite the modern town of Güllük, Turkey. It was originally on an island, but is now connected to the mainland. It is located in the Milas district of Muğla Province, Turkey, near the Alevi village of Kıyıkışlacık, about 31 km from the center of Milas.\n",
+    "link": "https://en.wikipedia.org//wiki/Iasos",
+    "type": "Greek",
+    "longitude": 27.58639
+  },
+  {
+    "name": "Ibora",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Justinian555AD.png/800px-Justinian555AD.png",
+    "latitude": 40.6225,
+    "description": "Ibora was a city in the late Roman province of Helenopontus, which became a Christian bishopric. It is now called İverönü, Erbaa[1] in present-day Tokat Province, Turkey. This is stated also by the Annuario Pontificio, which lists the bishopric as a titular see.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Ibora",
+    "type": "Greek",
+    "longitude": 36.5708351
+  },
+  {
+    "name": "Idebessos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Idebessos_-_Sarcophagi_with_shield_and_spear.jpg/800px-Idebessos_-_Sarcophagi_with_shield_and_spear.jpg",
+    "latitude": 36.55472,
+    "description": "Idebessos or Idebessus, also known as Edebessus or Edebessos (Ancient Greek: Ἐδεβησσός)[1] or (Ancient Greek: Ἐδεβησός),[2] was an ancient city in Lycia. It was located at the foot of the Bey Mountains to the west of the Alakır river valley. Today its ruins are found a short distance to the west of the small village of Kozağacı in the Kumluca district of Antalya Province, Turkey. The site, 21 kilometres north-northwest of Kumluca, is overgrown with forest and hard to reach.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Idebessos",
+    "type": "Greek/Roman",
+    "longitude": 30.2022228
+  },
+  {
+    "name": "Idyma",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
+    "latitude": 37.0594444,
+    "description": "Idyma (Ancient Greek: Ἴδυμα), or Idymus or Idymos (Ἴδυμος), was a coastal town of ancient Caria, strategically placed at the head of a gulf,[1] near the Idymos (Ἴδυμος) river.[2] It is located in the modern town of Gökova.\n",
+    "link": "https://en.wikipedia.org//wiki/Idyma",
+    "type": "Greek",
+    "longitude": 28.3672218
+  },
+  {
+    "name": "Idyros",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
+    "latitude": 36.6025,
+    "description": "Idyros (Ancient Greek: Ἴδυρης, Latin: Idyrus) was a Greek city in ancient Lycia. Its exact location is uncertain. According to Pseudo-Scylax it was located north of Phaselis.[citation needed]\n",
+    "link": "https://en.wikipedia.org//wiki/Idyros",
+    "type": "Greek",
+    "longitude": 30.5597229
+  },
+  {
+    "name": "Ildır",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Ildiri_Erythrai.JPG/800px-Ildiri_Erythrai.JPG",
+    "latitude": 38.3838272,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Ild%C4%B1r",
+    "type": "Greek/Roman",
+    "longitude": 26.47615
+  },
+  {
+    "name": "Imbros",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Gokceada4.JPG/800px-Gokceada4.JPG",
+    "latitude": 40.16083,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Imbros",
+    "type": "Greek",
+    "longitude": 25.8444443
+  },
+  {
+    "name": "Irenopolis (Cilicia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Berke_Baraj%C4%B1_-_Berke_Dam_03.JPG/800px-Berke_Baraj%C4%B1_-_Berke_Dam_03.JPG",
+    "latitude": 37.2430573,
+    "description": "Irenopolis or Eirenopolis or Eirenoupolis (Greek: Εἰρηνούπολις) was an ancient Roman, Byzantine and medieval city in northeastern Cilicia, not far from the Calycadnus river, also known briefly as Neronias (Greek: Νερωνιάς) in honour of the Roman emperor Nero. Irenopolis was also an episcopal see that is now included in the Catholic Church's list of titular sees.\n",
+    "link": "https://en.wikipedia.org//wiki/Irenopolis_(Cilicia)",
+    "type": "Greek",
+    "longitude": 36.456665
+  },
+  {
+    "name": "Irenopolis (Isauria)",
+    "imageUrl": "",
+    "latitude": 36.48111,
+    "description": "Irenopolis or Eirenoupolis (Greek: Ειρηνούπολις) was an ancient and medieval city in Roman and Byzantine era Isauria.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Irenopolis_(Isauria)",
+    "type": "Greek",
+    "longitude": 32.8994446
+  },
+  {
+    "name": "Isaura Nea",
+    "imageUrl": "",
+    "latitude": 37.19361,
+    "description": "Isaura Nea (Ancient Greek: Ἴσαυρα Νέα), in Latin Isaura Nova, both meaning 'New Isaura', was a town of the Roman and Byzantine era,[1] so called in juxtaposition with the settlement of Isaura Palaea.[2] It also bore the name Leontopolis,[3] and in later days was included in the province of Lycaonia.[4]\n",
+    "link": "https://en.wikipedia.org//wiki/Isaura_Nea",
+    "type": "Greek",
+    "longitude": 32.3425
+  },
+  {
+    "name": "Isaura Palaea",
+    "imageUrl": "",
+    "latitude": 37.19,
+    "description": "Isaura Palaea (Ancient Greek: Ἴσαυρα Παλαιά, romanized: Isaura Palaia), in Latin Isaura Vetus, both meaning 'Old Isaura', and perhaps identical to Isauropolis,[1] was a Roman and Byzantine era town in southern Turkey.[2] The city has been identified with modern Zengibar Kalesi near Konya.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Isaura_Palaea",
+    "type": "Greek",
+    "longitude": 32.245
+  },
+  {
+    "name": "Isba",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Antalya_in_Turkey.svg/800px-Antalya_in_Turkey.svg.png",
+    "latitude": 36.38889,
+    "description": "Isba was a city on the border of ancient Pamphylia.[1] It has been identified with the modern village of Çeşme.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Isba",
+    "type": "Greek",
+    "longitude": 29.7372227
+  },
+  {
+    "name": "İskenderun",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/%C4%B0skenderunSahil.JPG/800px-%C4%B0skenderunSahil.JPG",
+    "latitude": 36.581665,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/%C4%B0skenderun",
+    "type": "Greek",
+    "longitude": 36.165
+  },
+  {
+    "name": "Isparta",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Aksu_%28Isparta%2C_T%C3%BCrkei%29.jpg/800px-Aksu_%28Isparta%2C_T%C3%BCrkei%29.jpg",
+    "latitude": 37.76472,
+    "description": "Isparta is a city in western Turkey and the capital of Isparta Province. The city's population was 222,556 in 2010 and its elevation is 1035 m. It is known as the \"City of Roses\".\n",
+    "link": "https://en.wikipedia.org//wiki/Isparta",
+    "type": "Greek",
+    "longitude": 30.5566673
+  },
+  {
+    "name": "Issus (Cilicia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Hatay_in_Turkey.svg/800px-Hatay_in_Turkey.svg.png",
+    "latitude": 36.85361,
+    "description": "Issus or Issos (Phoenician: Sissu, Ancient Greek: Ἱσσός or Ἱσσοί) is an ancient settlement on the strategic coastal plain straddling the small Pinarus river (a fast melt-water stream several metres wide) below the navigationally difficult inland mountains towering above to the east in the Turkish Province of Hatay, near the border with Syria. It can be identified with Kinet Höyük in the village of Yeṣilköy near Dörtyol in the Hatay province of Turkey. Excavations on the mound occurred between 1992 and 2012 by Bilkent University. It is most notable for being the place of no fewer than three decisive ancient or medieval battles each called in their own era the Battle of Issus:\n",
+    "link": "https://en.wikipedia.org//wiki/Issus_(Cilicia)",
+    "type": "Greek",
+    "longitude": 36.1569443
+  },
+  {
+    "name": "Istanbul",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Bosphorus_Bridge_%28235499411%29.jpeg/800px-Bosphorus_Bridge_%28235499411%29.jpeg",
+    "latitude": 41.01361,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Istanbul",
+    "type": "Greek/Roman",
+    "longitude": 28.955
+  },
+  {
+    "name": "İzmit",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/%C4%B0zmit_saat_kulesi_%281%29_01.jpg/800px-%C4%B0zmit_saat_kulesi_%281%29_01.jpg",
+    "latitude": 40.7655563,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/%C4%B0zmit",
+    "type": "Greek",
+    "longitude": 29.9405556
+  },
+  {
+    "name": "Kaleköy",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 36.190834,
+    "description": "Coordinates: 36°11′27″N 29°51′41″E﻿ / ﻿36.19083°N 29.86139°E﻿ / 36.19083; 29.86139\n",
+    "link": "https://en.wikipedia.org//wiki/Kalek%C3%B6y",
+    "type": "Greek",
+    "longitude": 29.86139
+  },
+  {
+    "name": "Kandyba",
+    "imageUrl": "",
+    "latitude": 36.3152771,
+    "description": "Kandyba or Candyba (Hittite: Hinduwa, Lycian: Xākbi, Ancient Greek: Κάνδυβα, Latin: Candyba)[1] was a settlement in ancient Lycia, in modern-day Antalya province on the southwestern Mediterranean coast of Turkey. \n",
+    "link": "https://en.wikipedia.org//wiki/Kandyba",
+    "type": "Greek",
+    "longitude": 29.664444
+  },
+  {
+    "name": "Kapilikaya Rock Tomb",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Wiki_letter_w.svg/44px-Wiki_letter_w.svg.png",
+    "latitude": 40.7566681,
+    "description": "Coordinates: 40°45′24″N 34°54′38″E﻿ / ﻿40.7565548°N 34.9104274°E﻿ / 40.7565548; 34.9104274﻿ (Kapilikaya Rock Tomb)\n",
+    "link": "https://en.wikipedia.org//wiki/Kapilikaya_Rock_Tomb",
+    "type": "Greek",
+    "longitude": 34.9105568
+  },
+  {
+    "name": "Karaburun",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Faik_Sarikaya_Karaburun_Bodrum_Koyu.jpg/800px-Faik_Sarikaya_Karaburun_Bodrum_Koyu.jpg",
+    "latitude": 38.6333351,
+    "description": "Karaburun (Greek: Αχιρλί, Achirlí) is a district and the center town of the same district in Turkey's İzmir Province. The district area roughly corresponds to the peninsula of the same name (Karaburun Peninsula) which spears north of the tourism resorts of neighboring Çeşme and its dependencies and west of the city of İzmir. In fact, the district area is one of the westernmost points of Anatolia. Karaburun town is situated close to the northern tip of the peninsula and checks the entry of the Gulf of İzmir with the town of Foça, another important tourism resort, across the waters. The district's administrative zone is bordered by the districts of Çeşme and Urla in its south and faces the Greek island of Chios to its west.\n",
+    "link": "https://en.wikipedia.org//wiki/Karaburun",
+    "type": "Greek",
+    "longitude": 26.5166664
+  },
+  {
+    "name": "Karakabaklı",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Karakabakl%C4%B1.jpg/784px-Karakabakl%C4%B1.jpg",
+    "latitude": 36.4333344,
+    "description": "Karakabaklı is an archaeological site in Mersin Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Karakabakl%C4%B1",
+    "type": "Greek",
+    "longitude": 34.0166664
+  },
+  {
+    "name": "Kaunos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/DALYAN-KAUNOS_-_panoramio.jpg/800px-DALYAN-KAUNOS_-_panoramio.jpg",
+    "latitude": 36.82639,
+    "description": "Kaunos (Carian: Kbid;[1]\nLycian: Khbide;[1] Ancient Greek: Καῦνος; Latin: Caunus) was a city of ancient Caria and in Anatolia, a few km west of the modern town of Dalyan, Muğla Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Kaunos",
+    "type": "Greek/Roman",
+    "longitude": 28.62139
+  },
+  {
+    "name": "Kayaköy",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Kayakoey_overview_from_west_2019.jpg/800px-Kayakoey_overview_from_west_2019.jpg",
+    "latitude": 36.57498,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Kayak%C3%B6y",
+    "type": "Greek",
+    "longitude": 29.091095
+  },
+  {
+    "name": "Kemalpaşa",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 38.4277763,
+    "description": "Kemalpaşa is a large town and the center of the district of the same name in İzmir Province, Turkey. Its district area extends immediately to the east of İzmir's easternmost  metropolitan district, Bornova, and Kemalpaşa town being at a distance of only 29 km (18 mi) from the historical and traditional center of İzmir, (Konak), it pulsates along with the rhythm of the big city, with corresponding high levels of development in terms of industry and services. İzmir-Ankara highway crosses the district area 8 km (5.0 mi) to the north of the district center. Kemalpaşa district area borders on the administrative divisions of Manisa center in the north, Manisa's depending district of Turgutlu in the east and İzmir's depending districts of Torbalı and Bayındır in the south. The eastern and southern parts of Kemalpaşa district preserve their markedly rural characteristics, which results in an urbanization rate of only 25.7 for the district area as a whole, despite the presence of a strong industrial base in and to the west of Kemalpaşa town. Kemalpaşa's very large organized industrial zone (KOSBİ) brings together producers of construction materials, rubber and plastic goods, textiles and clothing, leather, paper, packaging materials, machinery and other equipment, including electrical tools and installations, dyes and other chemical substances, marble and car parts, as well as foundries and other metalworks.  Agriculture also occupies a portion with high added value in Kemalpaşa's economy, its cherries being of nationwide renown (known as Kemalpaşa kirazı in Turkish) and exported. Literacy is at a high level at 90%, and the neighboring Bornova, where Ege University is based, serves as a nearby pool in terms of trained personnel.\n",
+    "link": "https://en.wikipedia.org//wiki/Kemalpa%C5%9Fa",
+    "type": "Greek",
+    "longitude": 27.416111
+  },
+  {
+    "name": "Kepez, Antalya",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 36.9166679,
+    "description": "Kepez is a municipality and district governorate in Greater Antalya, Turkey. Antalya is one of the 30 metropolitan centers in Turkey with more than one municipality within city borders. In Antalya there are five second-level municipalities in addition to the Greater Antalya (büyükşehir) municipality.\n",
+    "link": "https://en.wikipedia.org//wiki/Kepez,_Antalya",
+    "type": "Greek",
+    "longitude": 30.6833324
+  },
+  {
+    "name": "Kibyra",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Medusa_mosaic_of_Kibyra.jpg/800px-Medusa_mosaic_of_Kibyra.jpg",
+    "latitude": 37.16,
+    "description": "Kibyra or Cibyra (Greek: Κιβύρα), also referred to as Cibyra Magna, is an Ancient Greek city and an archaeological site in south-west Turkey, near the modern town of Gölhisar, in Burdur Province. It was the chief city of a district Cibyratis.\n",
+    "link": "https://en.wikipedia.org//wiki/Kibyra",
+    "type": "Greek",
+    "longitude": 29.4891663
+  },
+  {
+    "name": "Kitanaura",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 36.6475,
+    "description": "Kitanaura (Ancient Greek: Κιτάναυρα)[1] was an ancient city in Lycia. Its ruins are located near Saraycık, a small village in the Kumluca district of Antalya Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Kitanaura",
+    "type": "Greek/Roman",
+    "longitude": 30.3663883
+  },
+  {
+    "name": "Klazomenai",
+    "imageUrl": "",
+    "latitude": 38.3581657,
+    "description": "Klazomenai (Ancient Greek: Κλαζομεναί) or Clazomenae  was an ancient Greek city on the coast of Ionia and a member of the Ionian League. It was one of the first cities to issue silver coinage. Its ruins are now located in the modern town Urla near Izmir in Izmir Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Klazomenai",
+    "type": "Greek",
+    "longitude": 26.7675838
+  },
+  {
+    "name": "Knidos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Knidos-H%C3%A4fen.jpg/800px-Knidos-H%C3%A4fen.jpg",
+    "latitude": 36.685833,
+    "description": "Knidos or Cnidus[1][2] (/ˈnaɪdəs/; Greek: Κνίδος, Ancient: [knídos], Modern: [ˈkniðos]) was a Greek city of ancient Caria and part of the Dorian Hexapolis, in south-western Asia Minor, modern-day Turkey. It was situated on the Datça peninsula, which forms the southern side of the Sinus Ceramicus, now known as Gulf of Gökova. By the 4th century BC, Knidos was located at the site of modern Tekir, opposite Triopion Island. But earlier, it was probably at the site of modern Datça (at the half-way point of the peninsula).[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Knidos",
+    "type": "Greek",
+    "longitude": 27.375
+  },
+  {
+    "name": "Kolonai",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.689724,
+    "description": "Kolonai (Ancient Greek: αἱ Κολωναί, romanized: hai Kolōnai; Latin: Colonae) was an ancient Greek city in the south-west of the Troad region of Anatolia. It has been located on a hill by the coast known as Beşiktepe ('cradle hill'), about equidistant between Larisa to the south and Alexandreia Troas to the north. It is 3.3 km east of the modern village of Alemşah in the Ezine district of Çanakkale Province, Turkey.[1] Its name in Ancient Greek is the plural form of κολώνη (kolōnē), 'hill, mound', a common name for promontories with hills on them in the Eastern Mediterranean.[2] It is not to be confused with Lampsacene Kolonai, a settlement situated in the hills above Lampsacus in the north-east of the Troad.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Kolonai",
+    "type": "Greek",
+    "longitude": 26.1633339
+  },
+  {
+    "name": "Labraunda",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/%D0%9B%D0%B0%D0%B1%D1%80%D0%B0%D0%BD%D0%B4%D0%B0._%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%B0.jpg/800px-%D0%9B%D0%B0%D0%B1%D1%80%D0%B0%D0%BD%D0%B4%D0%B0._%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%B0.jpg",
+    "latitude": 37.4188881,
+    "description": "Labraunda (Ancient Greek: Λάβρανδα Labranda or Λάβραυνδα Labraunda) is an ancient archaeological site five kilometers west of Ortaköy, Muğla Province, Turkey, in the mountains near the coast of Caria. In ancient times, it was held sacred by Carians and Mysians alike. The site amid its sacred plane trees [1] was enriched in the Hellenistic style by the Hecatomnid dynasty of Mausolus, satrap (and virtual king) of Persian Caria (c. 377 – 352 BCE), and also later by his successor and brother Idrieus; Labranda was the dynasty's ancestral sacred shrine. The prosperity of a rapidly hellenised Caria occurred in the during the 4th century BCE.[2] Remains of Hellenistic houses and streets can still be traced, and there are numerous inscriptions. The cult icon here was a local Zeus Labrandeus (Ζεὺς Λαβρανδεύς), a standing Zeus with the tall lotus-tipped scepter upright in his left hand and the double-headed axe, the labrys, over his right shoulder. The cult statue was the gift of the founder of the dynasty, Hecatomnus himself, recorded in a surviving inscription.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Labraunda",
+    "type": "Greek",
+    "longitude": 27.8202782
+  },
+  {
+    "name": "Lâdik",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 41.5166664,
+    "description": "Ladik is a city of Samsun Province, Turkey on the site of the ancient Laodicea Pontica.[3] The mayor is Selim Özbalci (AKP).\n",
+    "link": "https://en.wikipedia.org//wiki/L%C3%A2dik",
+    "type": "Greek",
+    "longitude": 35.5833321
+  },
+  {
+    "name": "Laertes (Cilicia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
+    "latitude": 36.5105553,
+    "description": "Laertes (Ancient Greek: Λαέρτης)[1] was a town of ancient Cilicia.[2] Some have supposed that the philosopher Diogenes Laërtius was from this town.[3] Strabo called it a stronghold.[4]\n",
+    "link": "https://en.wikipedia.org//wiki/Laertes_(Cilicia)",
+    "type": "Greek",
+    "longitude": 32.1658325
+  },
+  {
+    "name": "Lagina",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/The_Sanctuary_of_Hecate_in_Lagina%2C_Caria%2C_Turkey_%2817263493936%29.jpg/800px-The_Sanctuary_of_Hecate_in_Lagina%2C_Caria%2C_Turkey_%2817263493936%29.jpg",
+    "latitude": 37.378334,
+    "description": "Lagina (Ancient Greek: Λάγινα) or Laginia (Λαγινία)[1] was a town in the territory of Stratonicea, in ancient Caria. It contained an important temple of Hecate, at which every year great festivals were celebrated.[2] Tacitus, when speaking of the worship of Trivia among the Stratoniceans, evidently means Hecate.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Lagina",
+    "type": "Greek",
+    "longitude": 28.0391674
+  },
+  {
+    "name": "Lamponeia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Troas_el.svg/520px-Troas_el.svg.png",
+    "latitude": 39.53583,
+    "description": "Lamponeia (Ancient Greek: Λαμπώνεια) or Lamponia (Λαμπωνία), also known as Lamponium or Lamponion (Λαμπώνιον), was an Aetolian city on the southern coast of the Troad region of Anatolia. Its archaeological remains have been located above the village of Kozlu in the district of Ayvacık in Çanakkale Province in Turkey.[1] The site was first visited by Platon de Tchiatcheff in 1849, and later surveyed and identified as Lamponeia by Joseph Thacher Clarke, the excavator of nearby Assos, in 1882, and by Walther Judeich in 1896.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Lamponeia",
+    "type": "Greek",
+    "longitude": 26.40889
+  },
+  {
+    "name": "Lampsacus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Stater_Zeus_Lampsacus_CdM.jpg/600px-Stater_Zeus_Lampsacus_CdM.jpg",
+    "latitude": 40.34667,
+    "description": "Lampsacus (/ˈlæmsəkəs/; Ancient Greek: Λάμψακος, romanized: Lampsakos) was an ancient Greek city strategically located on the eastern side of the Hellespont in the northern Troad.[1] An inhabitant of Lampsacus was called a Lampsacene. The name has been transmitted in the nearby modern town of Lapseki.\n",
+    "link": "https://en.wikipedia.org//wiki/Lampsacus",
+    "type": "Greek",
+    "longitude": 26.6991673
+  },
+  {
+    "name": "Laodicea Combusta",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 38.191,
+    "description": "Laodicea Combusta (Ancient Greek: Λαοδίκεια Κατακεκαυμένη, Laodikeia Katakekaumenê, \"Laodicea the Burned\") or Laodicea (Greek: Λαοδίκεια), and later known as Claudiolaodicea, was a Hellenistic city in central Anatolia, in the region of Pisidia; its site is currently occupied by Ladik, Konya Province, in Central Anatolia, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Laodicea_Combusta",
+    "type": "Greek",
+    "longitude": 32.3745
+  },
+  {
+    "name": "Laodicea on the Lycus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/TR_Pamukkale_Laodicea_asv2020-02_img11.jpg/800px-TR_Pamukkale_Laodicea_asv2020-02_img11.jpg",
+    "latitude": 37.8358345,
+    "description": "Laodicea on the Lycus (Greek: Λαοδίκεια πρὸς τοῦ Λύκου Laodikia pros tou Lykou; Latin: Laodicea ad Lycum, also transliterated as Laodiceia or Laodikeia) (modern Turkish: Laodikeia) was an ancient city built on the river Lycus (Çürüksu). It was located in the Hellenistic regions of Caria and Lydia, which later became the Roman Province of Phrygia Pacatiana. It is now situated near the modern city of Denizli, Turkey. In 2013 the archaeological site was inscribed in the Tentative List of World Heritage Sites in Turkey.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Laodicea_on_the_Lycus",
+    "type": "Greek/Roman",
+    "longitude": 29.1075
+  },
+  {
+    "name": "Larisa (Troad)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.6152763,
+    "description": "Larisa (Ancient Greek: Λάρισα, romanized: Larisa), or Larissa, was an ancient Greek city in the south-west of the Troad region of Anatolia. Its surrounding territory was known in Greek as the Λαρισαῖα (Larisaia).[1] It has been located on a small rise by the coast now known as Limantepe, about 3.5 km from the village of Kösedere to the north-east and 3 km from the village of Babadere to the east, in the Ayvacık district of Çanakkale province, Turkey.[2] As with other Greek toponyms containing the consonantal string -ss-, spellings that drop one 's' exist alongside those that retain both in the ancient literary sources. Larisa in the Troad should not be confused with 'Aeolian' Larisa, near Menemen, or with 'Ionian' Larisa in İzmir province.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Larisa_(Troad)",
+    "type": "Greek",
+    "longitude": 26.145277
+  },
+  {
+    "name": "Larissa Phrikonis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 38.6675,
+    "description": "Larissa (Ancient Greek: Λάρισσα) or Larisa (Λάρισα) Phrikonis[4] was a Bronze Age city in the Aegean Region of Turkey. It is in the immediate vicinity of Menemen, in the district of İzmir province.[5] The ruins of the city are on a hill top next to today's Buruncuk village. The main road to Çanakkale from İzmir skirts the same hill, making a considerable curve to the northwest. It must also be emphasized that Larissa is very close to the Gediz River (called 'Hermus' in antiquity), which formed a fertile plain on its own delta, with the alluvial soil carried from the Anatolian inland.\n",
+    "link": "https://en.wikipedia.org//wiki/Larissa_Phrikonis",
+    "type": "Greek",
+    "longitude": 27.03139
+  },
+  {
+    "name": "Lebedus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Kisik_or_Lebedos_Peninsula_Urkmez_Seferihisar_Izmir_Turkey.JPG/800px-Kisik_or_Lebedos_Peninsula_Urkmez_Seferihisar_Izmir_Turkey.JPG",
+    "latitude": 38.0780563,
+    "description": "Lebedus or Lebedos (Ancient Greek: Λέβεδος) was one of the twelve cities of the Ionian League, located south of Smyrna, Klazomenai and neighboring Teos and before Ephesus, which is further south. It was on the coast, ninety stadia (16.65 km) to the east of Cape Myonnesus, and 120 (22.2 km) west of Colophon.\n",
+    "link": "https://en.wikipedia.org//wiki/Lebedus",
+    "type": "Greek",
+    "longitude": 26.9647217
+  },
+  {
+    "name": "Letoon",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Letoon_Temple_Area_2019.jpg/800px-Letoon_Temple_Area_2019.jpg",
+    "latitude": 36.3319435,
+    "description": "The Letoon (Ancient Greek: Λητῶον), sometimes Latinized as Letoum,[1] was a sanctuary of Leto near the ancient city Xanthos in Lycia. It was one of the most important religious centres in the region. The site is located south of the village Kumluova in the Fethiye district of Muğla Province, Turkey. It lies approximately four kilometres south of Xanthos along the Xanthos River.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Letoon",
+    "type": "Greek",
+    "longitude": 29.2897224
+  },
+  {
+    "name": "Leucae (Ionia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ionia%2C_Asia_Minor_Map%2C_Classical_Atlas%2C_1886%2C_Keith_Johnston.jpg/493px-Ionia%2C_Asia_Minor_Map%2C_Classical_Atlas%2C_1886%2C_Keith_Johnston.jpg",
+    "latitude": 38.5594444,
+    "description": "Leucae (Greek: Λεῦκαι) or Leuce (Greek: Λεύκη) was a small town of ancient Ionia, in the neighbourhood of Phocaea. Leucae was situated, according to Pliny in promontorio quod insula fuit, or, \"on an island promontory.\"[1] From Scylax we learn that it was a place with harbours. According to Diodorus, the Persian admiral Tachos founded this town on an eminence on the sea coast, in 352 BCE; but shortly after, when Tachos had died, the Clazomenians and Cymaeans quarrelled about its possession, and the former succeeded by a stratagem in making themselves masters of it.[2] At a later time Leucae became remarkable for the battle fought in its neighbourhood between the consul Publius Licinius Crassus Dives Mucianus and Aristonicus in 131 BCE.[3] Some have supposed this place to be identical with the Leuconium mentioned by Thucydides;[4] but this is impossible, as this latter place must be looked for in Chios. The site of the ancient Leucae is at Üçtepeler, Izmir Province, Turkey, some distance from the coast.[5]  Coins were minted at Leucae in the 3rd century BCE.[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Leucae_(Ionia)",
+    "type": "Greek",
+    "longitude": 26.855
+  },
+  {
+    "name": "Limantepe",
+    "imageUrl": "",
+    "latitude": 38.3633347,
+    "description": "The town of Limantepe, sometimes spelled Liman Tepe, located on Turkey's western coast is the site of a prehistoric (Bronze Age) settlement that includes an ancient port dating from 2500 years located underwater offshore.[1] The area is situated in the urban zone of the coastal town of Urla near İzmir. In pre-classical antiquity and during the Hellenistic and Roman eras, it was a Greek town called Larisa.\n",
+    "link": "https://en.wikipedia.org//wiki/Limantepe",
+    "type": "Greek",
+    "longitude": 26.7758331
+  },
+  {
+    "name": "Limnae (Thrace)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
+    "latitude": 40.2705574,
+    "description": "Limnae or Limnai (Ancient Greek: Λίμναι),[1] was an ancient Greek city dating back to 7th century B.C. on the Gallipoli peninsula. The city was founded by migrants coming from Ionia. The city was one of the richest and most busy seaports of the Gallipoli region in its time and maintained its existence until the Roman era.\n",
+    "link": "https://en.wikipedia.org//wiki/Limnae_(Thrace)",
+    "type": "Greek",
+    "longitude": 26.2727776
+  },
+  {
+    "name": "Limyra",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/LimyraTheater1.jpg/800px-LimyraTheater1.jpg",
+    "latitude": 36.3438873,
+    "description": "Limyra (Ancient Greek: Λίμυρα)[1] (Lycian: 𐊈𐊚𐊎𐊒𐊕𐊁[2] was a small city in ancient Lycia on the southern coast of Asia Minor, on the Limyrus River (Ancient Greek: Λιμύρος).[3][4] Already flourishing in the second millennium BCE, the city was one of the oldest and most prosperous in Lycia; it gradually became one of the finest trade settlements in Greece. \n",
+    "link": "https://en.wikipedia.org//wiki/Limyra",
+    "type": "Greek",
+    "longitude": 30.1713886
+  },
+  {
+    "name": "Lysimachia (Thrace)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Marmara_Region_location_map.svg/450px-Marmara_Region_location_map.svg.png",
+    "latitude": 40.5833321,
+    "description": "Lysimachia (Greek: Λυσιμάχεια) was an important Hellenistic Greek town on the north-western extremity of the Thracian Chersonese (the modern Gallipoli peninsula) in the neck where the peninsula joins the mainland  in what is now the European part of Turkey, not far from the bay of Melas (the modern Gulf of Saros).\n",
+    "link": "https://en.wikipedia.org//wiki/Lysimachia_(Thrace)",
+    "type": "Greek",
+    "longitude": 26.8833332
+  },
+  {
+    "name": "Madnasa",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 37.1286125,
+    "description": "Madnasa (Ancient Greek: Μάδνασα), or Medmasa (Μέδμασα),[1] also known as Medmasus or Medmasos (Μέδμασος), was a town in ancient Caria, at the Myndos Peninsula, and is currently an archaeological site near upper Göl, about 13 km northeast of Myndos. In 5th century BCE the city was included in the Delian League and Athenian tribute lists.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Madnasa",
+    "type": "Greek",
+    "longitude": 27.3891659
+  },
+  {
+    "name": "Madytus",
+    "imageUrl": "",
+    "latitude": 40.185276,
+    "description": "Madytus or Madytos (Ancient Greek: Μάδυτος)[1] was a Greek[2] city and port of ancient Thrace, located in the region of the Thracian Chersonesos, nearly opposite to Abydos.[3][4][5]\n",
+    "link": "https://en.wikipedia.org//wiki/Madytus",
+    "type": "Greek",
+    "longitude": 26.3563881
+  },
+  {
+    "name": "Magnesia on the Maeander",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/%D0%9C%D0%B0%D0%B3%D0%BD%D0%B5%D1%81%D0%B8%D1%8F_%D0%BD%D0%B0_%D0%9C%D0%B5%D0%B0%D0%BD%D0%B4%D1%80%D0%B5._%D0%9F%D1%80%D0%BE%D0%BF%D0%B8%D0%BB%D0%B5%D0%B8.jpg/800px-%D0%9C%D0%B0%D0%B3%D0%BD%D0%B5%D1%81%D0%B8%D1%8F_%D0%BD%D0%B0_%D0%9C%D0%B5%D0%B0%D0%BD%D0%B4%D1%80%D0%B5._%D0%9F%D1%80%D0%BE%D0%BF%D0%B8%D0%BB%D0%B5%D0%B8.jpg",
+    "latitude": 37.85278,
+    "description": "Magnesia or Magnesia on the Maeander (Ancient Greek: Μαγνησία ἡ πρὸς Μαιάνδρῳ or Μαγνησία ἡ ἐπὶ Μαιάνδρῳ; Latin: Magnḗsĭa ad Mæándrum) was an ancient Greek city in Ionia, considerable in size, at an important location commercially and strategically in the triangle of Priene, Ephesus and Tralles. The city was named Magnesia, after the Magnetes from Thessaly who settled the area along with some Cretans. It was later called \"on the Meander\" to distinguish it from the nearby Lydian city Magnesia ad Sipylum. It was earlier the site of Leucophrys mentioned by several ancient writers.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Magnesia_on_the_Maeander",
+    "type": "Greek",
+    "longitude": 27.5272217
+  },
+  {
+    "name": "Magydus",
+    "imageUrl": "",
+    "latitude": 36.85278,
+    "description": "Magydus (Ancient Greek: Μάγυδος, romanized: Magydos) was an settlement and bishopric of ancient Pamphylia on the Mediterranean coast of southwestern Asia Minor (Asian Turkey), which remains a Latin Catholic titular see. It is probably the same as Mygdale (Μυγδάλη) described in the Stadiasmus Maris Magni.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Magydus",
+    "type": "Greek",
+    "longitude": 30.7936115
+  },
+  {
+    "name": "Maionia in Lydia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lydia_circa_50_AD_-_English_legend.jpg/800px-Lydia_circa_50_AD_-_English_legend.jpg",
+    "latitude": 38.53528,
+    "description": "Maionia or Maeonia (Greek: Μαιονία), was a city of the Hellenistic, Roman and Byzantine era located near the Hermos River,[1] in ancient Lydia. Both Ramsay and Talbert[2] tentatively identified the ancient polis with the modern village of Koula (Turkish for fortress) a village known for its carpet manufacture.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Maionia_in_Lydia",
+    "type": "Greek",
+    "longitude": 28.4913883
+  },
+  {
+    "name": "Manisa",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/MAN%C4%B0Sa.jpg/800px-MAN%C4%B0Sa.jpg",
+    "latitude": 38.6305542,
+    "description": "Manisa (Turkish pronunciation: [maˈnisa]), historically known as Magnesia (Greek: Μαγνησία), is a large city in Turkey's Aegean Region and the administrative seat of Manisa Province.\n",
+    "link": "https://en.wikipedia.org//wiki/Manisa",
+    "type": "Greek/Roman",
+    "longitude": 27.4222221
+  },
+  {
+    "name": "Marpessos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.88028,
+    "description": "Marpessos (Ancient Greek: Μάρπησσος) was a settlement in the middle Skamander valley of the Troad region of Anatolia. The settlement's name is also spelled Μαρμησσός, Μαρμισσός, Μερμησσός in ancient sources. It was known in Classical antiquity primarily as the birthplace of the Hellespontine Sibyl Herophile. Its site has been located at Dam Dere approximately 2 km SE of the village of Zerdalilik in the Bayramiç district of Çanakkale Province in Turkey.[1] Despite the similarity of its name and its location on Mount Ida, the settlement is apparently unrelated to the mythological figure Marpessa and her husband Idas. It should likewise not be confused with the Mount Marpessa on Paros.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Marpessos",
+    "type": "Greek",
+    "longitude": 26.520277
+  },
+  {
+    "name": "Meloë (Isauria)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Brue%2C_Adrien_Hubert%2C_Asie-Mineure%2C_Armenie%2C_Syrie%2C_Mesopotamie%2C_Caucase._1839._%28EC%29.jpg/589px-Brue%2C_Adrien_Hubert%2C_Asie-Mineure%2C_Armenie%2C_Syrie%2C_Mesopotamie%2C_Caucase._1839._%28EC%29.jpg",
+    "latitude": 36.7591667,
+    "description": "Meloë (Ancient Greek: Μελόη) was a town in ancient Isauria. Meloë is a titular see of the Roman Catholic Church.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Melo%C3%AB_(Isauria)",
+    "type": "Greek",
+    "longitude": 33.3497238
+  },
+  {
+    "name": "Mersin",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 36.8,
+    "description": "Mersin (pronounced [ˈmæɾsin], Greek: Μυρσίνη) is a large city and a port on the Mediterranean coast of southern Turkey. \n",
+    "link": "https://en.wikipedia.org//wiki/Mersin",
+    "type": "Greek",
+    "longitude": 34.6333351
+  },
+  {
+    "name": "Metropolis (Anatolia)",
+    "imageUrl": "",
+    "latitude": 38.125,
+    "description": "The classical city of Metropolis (Ancient Greek: Μητρόπολις) is situated in western Turkey near Yeniköy village in Torbali municipality - approximately 40 km SE of Izmir. Occupation at the site goes back to the Neolithic period. The Hittite period is also attested.[citation needed]\n",
+    "link": "https://en.wikipedia.org//wiki/Metropolis_(Anatolia)",
+    "type": "Greek",
+    "longitude": 27.3225
+  },
+  {
+    "name": "Metropolis (northern Phrygia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Heinrich_Kiepert._Asia_citerior.Phrygia.jpg/541px-Heinrich_Kiepert._Asia_citerior.Phrygia.jpg",
+    "latitude": 39.17139,
+    "description": "Metropolis (Ancient Greek: Μητρόπολις) was an ancient town in the north of Phrygia, and, as the name seems to indicate, a capital of the ancient kings of Phrygia, though Stephanus of Byzantium derives the name from the mother of the gods.[1] It was situated to the north of Synnada (Athen. 13.574.), and must not be confounded with another town of the same name in the south of Phrygia.[2] Its site is, in all probability, indicated by the ruins of Pismesh Kalasi, north of Doganlu, which show a very antique style of architecture, and mainly consist of tombs cut into the rocks; one of these tombs is that of king Midas. Although William Martin Leake is inclined to think that these ruins mark the site of Nicoleia;[3] William Smith credits other travelers who identify them with Metropolis.[4][5] From the extent of the ruins, it would seem that in the time of the Roman emperors Metropolis was an important town; but afterwards it declined, though it is still mentioned by Hierocles.[6]\n",
+    "link": "https://en.wikipedia.org//wiki/Metropolis_(northern_Phrygia)",
+    "type": "Greek",
+    "longitude": 30.6280556
+  },
+  {
+    "name": "Milas",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/48220_Kultak-Milas-Mu%C4%9Fla%2C_Turkey_-_panoramio_%284%29.jpg/800px-48220_Kultak-Milas-Mu%C4%9Fla%2C_Turkey_-_panoramio_%284%29.jpg",
+    "latitude": 37.3166656,
+    "description": "Milas (Ancient Greek: Μύλασα, Mylasa) is an ancient city and the seat of the district of the same name in Muğla Province in southwestern Turkey. The city commands a region with an active economy and very rich in history and ancient remains, the territory of Milas containing a remarkable twenty-seven archaeological sites of note.[3] The city was the first capital of ancient Caria and of the Anatolian beylik of Menteşe in mediaeval times. The nearby Mausoleum of Hecatomnus is classified as a tentative UNESCO World Heritage Site.[4]\n",
+    "link": "https://en.wikipedia.org//wiki/Milas",
+    "type": "Greek/Roman",
+    "longitude": 27.7833328
+  },
+  {
+    "name": "Miletus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Miletus_-_Ancient_Greek_theatre_02.jpg/800px-Miletus_-_Ancient_Greek_theatre_02.jpg",
+    "latitude": 37.5302773,
+    "description": "Miletus (/maɪˈliːtəs/; Greek: Μῑ́λητος, romanized: Mīlētos; Hittite transcription Millawanda or Milawata (exonyms); Latin: Miletus; Turkish: Milet) was an ancient Greek city on the western coast of Anatolia, near the mouth of the Maeander River in ancient Caria.[3][4][5] Its ruins are located near the modern village of Balat in Aydın Province, Turkey. Before the Persian invasion in the middle of the 6th century BC, Miletus was considered among the greatest and wealthiest of Greek cities.[6][7]\n",
+    "link": "https://en.wikipedia.org//wiki/Miletus",
+    "type": "Greek/Roman",
+    "longitude": 27.2783337
+  },
+  {
+    "name": "Mokissos",
+    "imageUrl": "",
+    "latitude": 38.1855545,
+    "description": "Mokissos or Mokisos (Ancient Greek: Μωκισσός or Μωκησός) or Mokison (Μωκισόν) was a town of ancient Cappadocia. The Romans called the city Mocisus or Mocissus, and Mocisum, and after the city was rebuilt by the Byzantine Emperor Justinian (527-565), it was renamed Justinianopolis (Ἰουστινιανούπολις). Justinian made Mocisus the capital of the province of Cappadocia Tertia, and elevated its bishopric to the rank of ecclesiastical metropolis, with an eparchia that stretched south of the Halys River (Turkish: Kızılırmak), the longest river of Asia Minor. The name Justinianopolis was retained until the end of Byzantine rule. Stephanus of Byzantium calls the town Moukissos (Μούκισσος). In the Synecdemus, the name appears as Rhegemoukisos (Ῥεγεμουκισός) and Rhegekoukisos (Ῥεγεκουκισός), the later evidently an error. \n",
+    "link": "https://en.wikipedia.org//wiki/Mokissos",
+    "type": "Greek",
+    "longitude": 34.207222
+  },
+  {
+    "name": "Mostene",
+    "imageUrl": "",
+    "latitude": 38.5102768,
+    "description": "Mostene (Μοστήνη), also called Mosteni or Mostenoi (Μοστηνοί), or Mostina (Μόστινα), or Mustene or Moustene (Μουστήνη), is a Roman and Byzantine era city in the Hyrcanian plain of ancient Lydia.[1] The town minted its own coin of which many examples exist today.[2] In 17 CE the city was hit by an earthquake[3] and was assisted with relief from Tiberius.\n",
+    "link": "https://en.wikipedia.org//wiki/Mostene",
+    "type": "Greek",
+    "longitude": 27.5436115
+  },
+  {
+    "name": "Muğla",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Panoramic_view_of_Bozyi%C4%9Fit_Burnu_Park_and_%C3%96l%C3%BCdeniz_Beach_in_Turkey_%2849070747646%29.jpg/800px-Panoramic_view_of_Bozyi%C4%9Fit_Burnu_Park_and_%C3%96l%C3%BCdeniz_Beach_in_Turkey_%2849070747646%29.jpg",
+    "latitude": 37.2166672,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Mu%C4%9Fla",
+    "type": "Greek",
+    "longitude": 28.3666668
+  },
+  {
+    "name": "Myndus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Myndos.jpg/800px-Myndos.jpg",
+    "latitude": 37.0530548,
+    "description": "Myndus (/ˈmɪndəs/) or Myndos (Greek: Μύνδος) was an ancient Dorian colony of Troezen, on the coast of Caria in Asia Minor, (Turkey), sited on the Bodrum Peninsula, a few miles northwest of Halicarnassus. The site is now occupied by the modern village of Gümüslük.\n",
+    "link": "https://en.wikipedia.org//wiki/Myndus",
+    "type": "Greek",
+    "longitude": 27.2333336
+  },
+  {
+    "name": "Myra",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Myra_theatre.jpg/799px-Myra_theatre.jpg",
+    "latitude": 36.2591667,
+    "description": "Myra  (Ancient Greek: Μύρα, Mýra) was an ancient Greek, then Roman Greek, Byzantine Greek, then Ottoman Greek town in Lycia, which became the small Turkish town of Kale, renamed Demre in 2005, in the present-day Antalya Province of Turkey. In 1923, its Greek inhabitants had been required to leave by the Population exchange between Greece and Turkey, at which time its church was finally abandoned. It was founded on the river Myros (Ancient Greek: Μύρος; Turkish: Demre Çay), in the fertile alluvial plain between Alaca Dağ, the Massikytos range and the Aegean Sea.\n",
+    "link": "https://en.wikipedia.org//wiki/Myra",
+    "type": "Greek/Roman",
+    "longitude": 29.9852772
+  },
+  {
+    "name": "Myriandus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 36.4941673,
+    "description": "Myriandus (Greek: Μυρίανδος Mūríandos, from Hittite mūri-, \"grape cluster\", and -anda, a place name suffix; by folk etymology with Greek andr-, \"man\", also spelled Myriandrus: Μυρίανδρος Mūríandros)[1][2] was an ancient Phoenician port on the Mediterranean Sea's Gulf of Alexandretta. Its ruins are located near the modern city of İskenderun in southern Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Myriandus",
+    "type": "Greek",
+    "longitude": 36.0241661
+  },
+  {
+    "name": "Myrina (Aeolis)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Erkmen_se_MarchesAliagaTurkey.jpg/800px-Erkmen_se_MarchesAliagaTurkey.jpg",
+    "latitude": 38.8452759,
+    "description": "Myrina (Ancient Greek: Μυρίνα) was one of the Aeolian cities on the western coast of Mysia, about 40 stadia to the southwest of Gryneion.[1] The former bishopric is now a Latin Catholic titular see.\n",
+    "link": "https://en.wikipedia.org//wiki/Myrina_(Aeolis)",
+    "type": "Greek",
+    "longitude": 26.9844437
+  },
+  {
+    "name": "Myus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Bafa_lake3.JPG/800px-Bafa_lake3.JPG",
+    "latitude": 37.5955544,
+    "description": "Myus (Ancient Greek: Μυοῦς), sometimes Myous or Myos, was an ancient Greek city in Caria. It was one of twelve major settlements of the Ionian League. The city was said to have been founded by Cyaretus (Ancient Greek: Κυάρητος) (sometimes called Cydrelus), a son of Codrus.[1][2] Myus was located on a small peninsula at the coast of the Aegean Sea, but it now lies inland due to the sediment deposited by the Maeander River over many centuries. The site of the city lies north of the modern village Avşar in the Söke district of Aydın Province, Turkey\n",
+    "link": "https://en.wikipedia.org//wiki/Myus",
+    "type": "Greek",
+    "longitude": 27.4294453
+  },
+  {
+    "name": "Nagidos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mersin_Archaeological_Museum_3.jpg/459px-Mersin_Archaeological_Museum_3.jpg",
+    "latitude": 36.0997238,
+    "description": "Nagidos (Ancient Greek: Νάγιδος; Latin: Nagidus) was an ancient city of Cilicia. In ancient times it was located between Anemurion to the west and Arsinoe to the east.[1] Today its ruins are found on the hill named Paşabeleni at the mouth of the Sini Cay (Bozyazı Dere) near Bozyazı in Mersin Province, Turkey. It lies at a distance of ca. 20 km to the east of Anamur. Like its eastern neighbor Kelenderis, it was a colony of Samos.[2] The small island of Nagidoussa is opposite Nagidos; on it are the ruins of an Ottoman fortress.\n",
+    "link": "https://en.wikipedia.org//wiki/Nagidos",
+    "type": "Greek",
+    "longitude": 32.978054
+  },
+  {
+    "name": "Neandreia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.7175,
+    "description": "Neandreia (Ancient Greek: Νεάνδρεια), Neandrium or Neandrion (Νεάνδριον), also known as Neandrus or Neandros (Νέανδρος),[1] was a Greek city in the south-west of the Troad region of Anatolia. Its site has been located on Çığrı Dağ, about 9 km east of the remains of the ancient city of Alexandria Troas in the Ezine district of Çanakkale province, Turkey (based on the work of John Manuel Cook).[2] The site was first identified as Neandreia by Frank Calvert in 1865 and Joseph Thacher Clarke in 1886 and was first excavated by the German architect Robert Koldewey when he excavated in 1889.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Neandreia",
+    "type": "Greek",
+    "longitude": 26.2844448
+  },
+  {
+    "name": "Nicaea",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Nicaea_theatre_990.jpg/800px-Nicaea_theatre_990.jpg",
+    "latitude": 40.429,
+    "description": "Nicaea or Nicea (/naɪˈsiːə/; Greek: Νίκαια, Níkaia) was an ancient Greek city in northwestern Anatolia and is primarily known as the site of the First and Second Councils of Nicaea (the first and seventh Ecumenical councils in the early history of the Christian Church), the Nicene Creed (which comes from the First Council), and as the capital city of the Empire of Nicaea following the Fourth Crusade in 1204, until the recapture of Constantinople by the Byzantines in 1261.\n",
+    "link": "https://en.wikipedia.org//wiki/Nicaea",
+    "type": "Greek",
+    "longitude": 29.7195
+  },
+  {
+    "name": "Nicomedia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Grande_rue_de_Nicom%C3%A9die_-_Texier_Charles_F%C3%A9lix_Marie_-_1882.jpg/800px-Grande_rue_de_Nicom%C3%A9die_-_Texier_Charles_F%C3%A9lix_Marie_-_1882.jpg",
+    "latitude": 40.7625,
+    "description": "Nicomedia (/ˌnɪkəˈmiːdiə/;[1] Greek: Νικομήδεια, Nikomedeia; modern İzmit) was an ancient Greek city located in what is now Turkey. In 286 Nicomedia became the eastern and most senior capital city of the Roman Empire (chosen by the emperor Diocletian who ruled in the east), a status which the city maintained during the Tetrarchy system (293–324). \n",
+    "link": "https://en.wikipedia.org//wiki/Nicomedia",
+    "type": "Greek",
+    "longitude": 29.9175
+  },
+  {
+    "name": "Niğde Province",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Ni%C4%9Fde_in_Turkey.svg/800px-Ni%C4%9Fde_in_Turkey.svg.png",
+    "latitude": 37.9158325,
+    "description": "Niğde Province (Turkish: Niğde ili)  is a province in the southern part of Central Anatolia, Turkey. Population is 341,412 (2013 est) of which 141,360 live in the city of Niğde. The population was 348,081 in 2000 and 305,861 in 1990. It covers an area of 7,312 km2.  Neighbouring provinces are Kayseri, Adana, Mersin, Konya, Aksaray and Nevşehir.\n",
+    "link": "https://en.wikipedia.org//wiki/Ni%C4%9Fde_Province",
+    "type": "Greek",
+    "longitude": 34.69361
+  },
+  {
+    "name": "Niksar",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 40.5833321,
+    "description": "Niksar, historically known as Neocaesarea (Νεοκαισάρεια), is a city in Tokat Province, Turkey. It was settled by many empires, being once the capital city of the province. Niksar is known as \"Çukurova of the North-Anatolia\" due to its production of many kinds of fruits and vegetables except citrus fruits.[by whom?] On May 2, 2018, Niksar was included in the World Heritage tentative list.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Niksar",
+    "type": "Greek/Roman",
+    "longitude": 36.9666672
+  },
+  {
+    "name": "Nisa (Lycia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
+    "latitude": 36.4413872,
+    "description": "Nisa (Ancient Greek: Νίσα or Νίσσα), also Nyssa (Νύσσα) or Nysa (Νύσα) or Neisa (Νείσα),[1]  was a town in ancient Lycia near the source of the River Xanthus.[2][3][4][5][6]\n",
+    "link": "https://en.wikipedia.org//wiki/Nisa_(Lycia)",
+    "type": "Greek",
+    "longitude": 29.6263885
+  },
+  {
+    "name": "Notion (ancient city)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 37.99278,
+    "description": "Notion or Notium (Ancient Greek Νότιον, 'southern') was a Greek city-state on the west coast of Anatolia; it is about 50 kilometers (31 mi) south of Izmir in modern Turkey, on the Gulf of Kuşadası. Notion was located on a hill from which the sea was visible; it served as a port for nearby Colophon and Claros, and pilgrims frequently passed through on their way to the oracle of Apollo at Claros. There are still remains of the defense walls, necropolis, temple, agora, and theater. The ruins of the city are now found east of the modern town Ahmetbeyli in the Menderes district of Izmir Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Notion_(ancient_city)",
+    "type": "Greek",
+    "longitude": 27.1975
+  },
+  {
+    "name": "Nusaybin",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Nusaybin364.jpg/489px-Nusaybin364.jpg",
+    "latitude": 37.0753326,
+    "description": "Nusaybin (pronounced [nuˈsajbin]; Kurdish: Nisêbîn‎[5]; Arabic: نُصَيْبِيْن‎, romanized: Nuṣaybīn; Syriac: ܢܨܝܒܝܢ‎, romanized: Nṣībīn),[6] historically known as Nisibis (Greek: Νίσιβις, translit. Nísibis) or Nesbin,[7][8] is a city in Mardin Province, Turkey. The population of the city is 83,832[9] as of 2009 and is predominantly Kurdish. Nusaybin is separated from the larger Kurdish-majority city of Qamishli by the Syria–Turkey border.[10][11]\n",
+    "link": "https://en.wikipedia.org//wiki/Nusaybin",
+    "type": "Greek",
+    "longitude": 41.2156944
+  },
+  {
+    "name": "Nysa on the Maeander",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Nysa%2C_Anatolia.JPG/800px-Nysa%2C_Anatolia.JPG",
+    "latitude": 37.90167,
+    "description": "Nysa on the Maeander (Greek: Νύσα or Νύσσα) was an ancient city and bishopric of Asia Minor, whose remains are in the Sultanhisar district of Aydın Province of Turkey, 50 kilometres (31 mi) east of the Ionian city of Ephesus, and which remains a Latin Catholic titular see.\n",
+    "link": "https://en.wikipedia.org//wiki/Nysa_on_the_Maeander",
+    "type": "Greek",
+    "longitude": 28.1466675
+  },
+  {
+    "name": "Oenoanda",
+    "imageUrl": "",
+    "latitude": 36.809166,
+    "description": "Oenoanda or Oinoanda (Greek: τὰ Οἰνόανδα) was an ancient Greek city in Lycia, in the upper valley of the River Xanthus. It is noted for the philosophical inscription by the Epicurean, Diogenes of Oenoanda. The ruins of the city lie west of the modern village İncealiler in the Fethiye district of Muğla Province, Turkey, which partly overlies the ancient site.\n",
+    "link": "https://en.wikipedia.org//wiki/Oenoanda",
+    "type": "Greek/Roman",
+    "longitude": 29.5497227
+  },
+  {
+    "name": "Öküzlü",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/%C3%96k%C3%BCzl%C3%BC_basilica.JPG/800px-%C3%96k%C3%BCzl%C3%BC_basilica.JPG",
+    "latitude": 36.5666656,
+    "description": "Öküzlü is an archaeological site in Mersin Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/%C3%96k%C3%BCzl%C3%BC",
+    "type": "Greek",
+    "longitude": 34.1666679
+  },
+  {
+    "name": "Olymos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
+    "latitude": 37.3786125,
+    "description": "Olymos (Ancient Greek: Ὄλμος) or Olymon (Ὄλμον) or Hylimos was a town of ancient Caria. It was a polis (city-state) and a member of the Delian League.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Olymos",
+    "type": "Greek",
+    "longitude": 27.7355556
+  },
+  {
+    "name": "Olympus (Lycia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Beyda%C4%9Flar%C4%B1_Coastal_National_Park_and_Olympos_ancient_city_3.jpg/800px-Beyda%C4%9Flar%C4%B1_Coastal_National_Park_and_Olympos_ancient_city_3.jpg",
+    "latitude": 36.3966675,
+    "description": "Olympus or Olympos (Ancient Greek: Ὄλυμπος, Ólympos; Latin: Olympus) was a city in ancient Lycia. It was situated in a river valley near the coast. Its ruins are located south of the modern town Çıralı in the Kumluca district of Antalya Province, southwestern Turkey. Together with the sites of the ancient cities Phaselis and Idyros it is part of the Olympos Beydaglari National Park. The perpetual gas fires at Yanartaş are found a few kilometers to the northwest of the site.\n",
+    "link": "https://en.wikipedia.org//wiki/Olympus_(Lycia)",
+    "type": "Greek",
+    "longitude": 30.4730549
+  },
+  {
+    "name": "Pactya",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
+    "latitude": 40.48528,
+    "description": "Pactya or Paktye (Ancient Greek: Πακτύη) was an ancient Greek[1] city located in ancient Thrace, on the Thracian Chersonesus. It is cited in the Periplus of Pseudo-Scylax, in its recitation of the towns of the Thracian Chersonesus, along with Aegospotami, Cressa, Crithote and then Pactya, situated 36 stadia from Cardia.[2][3][4] It is said that Miltiades founded it.[5]\nStrabo places it on the Propontis between Crithote and Macron Teichos.[6] According to Herodotus, Miltiades the Elder ordered a wall built between Cardia, which was on the coast of Gulf of Melas and Pactya, which was on the Propontis side, to prevent invasion of the Chersonesus by the Apsinthii.[7] Alcibiades retired here the Athenians had for the second time deprived him of the command.[8] It was a member of the Delian League.[9]\nPliny the Elder points out that both Cardia and Pactya later joined to form Lysimachia.[10]\n",
+    "link": "https://en.wikipedia.org//wiki/Pactya",
+    "type": "Greek",
+    "longitude": 26.7805557
+  },
+  {
+    "name": "Padyandus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Heinrich_Kiepert._Asia_citerior.Cappadocia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cappadocia.jpg",
+    "latitude": 37.4277763,
+    "description": "Padyandus or Podyandos (Ancient Greek: Παδυανδός), also Paduandus, Podandos or Podandus (Πόδανδος), and appearing corrupted in ancient sources as Opodanda, Opodandum, and Rhegepodandos (Ῥεγεποδανδός) was an ancient town in Cataonia, the southernmost part of Cappadocia, in what is today Turkey. The town was located about 40 km to the southeast of Faustinopolis, near the pass of Mount Taurus known by the name of the Cilician Gates (Ptol. v. 7. § 7.). Extended by the emperor Valens (364-378), the town is mentioned in the itineraria, but its name assumes different forms; as Paduandus (Tab. Peut.), Podandos (It. Ant. p. 145), Mansio Opodanda (It. Hieros. p. 578), and Rhegepodandos (Hierocl. p 699). The place is described by Basilius (Epist. 74) as one of the most wretched holes on earth. It is said to have derived its name from a small stream in the neighborhood. (Const. Porphyr. Vit. Basil. 36; comp. Cedren. p. 575; Jo. Scylitz. Hist. pp. 829, 844.)  Due to similarity of name, tradition assigns the location of Padyandus to that of Pozantı, a position that modern scholars only tentatively accept.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Padyandus",
+    "type": "Greek",
+    "longitude": 34.8711128
+  },
+  {
+    "name": "Pamphylia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Nympheaum_of_Hadrian_%28Perge%29_02.jpg/800px-Nympheaum_of_Hadrian_%28Perge%29_02.jpg",
+    "latitude": 37,
+    "description": "Pamphylia (Ancient Greek: Παμφυλία, Pamphylía, modern pronunciation Pamfylía /pæmˈfɪliə/) was a region in the south of Asia Minor, between Lycia and Cilicia, extending from the Mediterranean to Mount Taurus (all in modern-day Antalya province, Turkey). It was bounded on the north by Pisidia and was therefore a country of small extent, having a coast-line of only about 120 km (75 miles) with a breadth of about 50 km (30 miles). Under the Roman administration the term Pamphylia was extended so as to include Pisidia and the whole tract up to the frontiers of Phrygia and Lycaonia, and in this wider sense it is employed by Ptolemy.[1]\n\n",
+    "link": "https://en.wikipedia.org//wiki/Pamphylia",
+    "type": "Greek",
+    "longitude": 31
+  },
+  {
+    "name": "Parium",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Agean_Sea_map_geographical.jpg/800px-Agean_Sea_map_geographical.jpg",
+    "latitude": 40.41611,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Parium",
+    "type": "Greek",
+    "longitude": 27.0702782
+  },
+  {
+    "name": "Patara (Cappadocia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/G%C3%BCm%C3%BC%C5%9Fhane_in_Turkey.svg/800px-G%C3%BCm%C3%BC%C5%9Fhane_in_Turkey.svg.png",
+    "latitude": 40.5438881,
+    "description": "Patara (Ancient Greek: Πάταρα) was a small ancient city in ancient Cappadocia or Lesser Armenia, (Tab. Peut.), later in Pontus. The city lay on the major trade road from Trapezus on the Black Sea to Satala, and thence to Lake Van.\n",
+    "link": "https://en.wikipedia.org//wiki/Patara_(Cappadocia)",
+    "type": "Greek",
+    "longitude": 39.6483345
+  },
+  {
+    "name": "Patara (Lycia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Patara_City_Gate_2019.jpg/800px-Patara_City_Gate_2019.jpg",
+    "latitude": 36.2662163,
+    "description": "Patara (Lycian: 𐊓𐊗𐊗𐊀𐊕𐊀, Pttara; Greek: Πάταρα), later renamed Arsinoe (Ἀρσινόη), was a flourishing maritime and commercial city on the south-west coast of Lycia on the Mediterranean coast of Turkey near the modern small town of Gelemiş,[1] in Antalya Province. It is the birthplace of St. Nicholas in 270 AD, who lived most of his life in the nearby town of Myra (Demre).\n",
+    "link": "https://en.wikipedia.org//wiki/Patara_(Lycia)",
+    "type": "Greek/Roman",
+    "longitude": 29.3172226
+  },
+  {
+    "name": "Percote",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Troas_el.svg/520px-Troas_el.svg.png",
+    "latitude": 40.2738876,
+    "description": "Percote or Perkote (Ancient Greek: Περκώτη) was a town or city of ancient Mysia on the southern (Asian) side of the Hellespont, to the northeast of Troy. Percote is mentioned a few times in Greek mythology, where it plays a very minor role each time.  It was said to be the home of a notable seer named Merops, also its ruler.  Merops was the father of Arisbe (the first wife of King Priam, and subsequently wife of King Hyrtacus), Cleite (wife of King Cyzicus), and two sons named Amphius and Adrastus who fought during the Trojan War. As an ally of Troy, Percote sent a contingent to help King Priam during the Trojan War - though this contingent was led not by Merops's sons, but by Asius, son of Hyrtacus, according to Homer's Iliad, one native from Percote was wounded in the Trojan War by Antilochus, two natives from Percote were killed in the Trojan War by Diomedes and Ullysses.[1][2]  The Meropidae (Amphius and Adrastus) instead lead a contingent from nearby Adrastea.  A nephew of Priam, named Melanippus, son of Hicetaon, herded cattle (oxen) at Percote, according to Homer.\n",
+    "link": "https://en.wikipedia.org//wiki/Percote",
+    "type": "Greek",
+    "longitude": 26.5888882
+  },
+  {
+    "name": "Perga",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Perge_city_overview.jpg/800px-Perge_city_overview.jpg",
+    "latitude": 36.9613876,
+    "description": "Perga or Perge (Greek: Πέργη Perge, Turkish: Perge) was an ancient Greek city in Anatolia,[1] once the capital of Pamphylia Secunda, now in Antalya Province on the southwestern Mediterranean coast of Turkey. Today, it is a large site of ancient ruins 15 kilometres (9.3 mi) east of Antalya on the coastal plain. An acropolis located there dates back to the Bronze Age.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Perga",
+    "type": "Greek",
+    "longitude": 30.85389
+  },
+  {
+    "name": "Pergamon",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Acropolis_-_Bergama_%28Pergamon%29_-_Turkey_-_10_%285747249729%29.jpg/800px-Acropolis_-_Bergama_%28Pergamon%29_-_Turkey_-_10_%285747249729%29.jpg",
+    "latitude": 39.1325,
+    "description": "Pergamon or Pergamum (/ˈpɜːrɡəmən/ or /ˈpɜːrɡəmɒn/; Ancient Greek: Πέργαμον), also referred to by its modern Greek form Pergamos (Greek: Πέργαμος[a][1]), was a rich and powerful ancient Greek city in Mysia. It is located 26 kilometres (16 mi) from the modern coastline of the Aegean Sea on a promontory on the north side of the river Caicus (modern-day Bakırçay) and northwest of the modern city of Bergama, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Pergamon",
+    "type": "Greek",
+    "longitude": 27.184166
+  },
+  {
+    "name": "Perinthus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Agean_Sea_map_geographical.jpg/800px-Agean_Sea_map_geographical.jpg",
+    "latitude": 40.9708328,
+    "description": "Perinthus or Perinthos (Ancient Greek: ἡ Πέρινθος)[1][2] was a great and flourishing town of ancient Thrace, situated on the Propontis. According to John Tzetzes, it bore at an early period the name of Mygdonia (Μυγδονία). It lay 22 miles west of Selymbria and 56 miles west of Byzantium, on a small peninsula[3] of the bay which bears its name, and was built like an amphitheatre, on the declivity of a hill.[4] Its site is near modern Marmara Ereğlisi, in Turkey.[5][6]\n",
+    "link": "https://en.wikipedia.org//wiki/Perinthus",
+    "type": "Greek",
+    "longitude": 27.9544449
+  },
+  {
+    "name": "Perrhe",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Perrhe1.jpg/800px-Perrhe1.jpg",
+    "latitude": 37.7916679,
+    "description": "Perrhe (Ancient Greek: Πέρρη, also Antiochia on the Taurus) was an ancient city in the kingdom of Commagene. The remains of the city are located in the modern suburb of Örenli (previously the village of Pirin or Pirun) in the northern section of the Turkish city of Adıyaman in the province of the same name.\n",
+    "link": "https://en.wikipedia.org//wiki/Perrhe",
+    "type": "Greek/Roman",
+    "longitude": 38.30111
+  },
+  {
+    "name": "Pessinus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.33389,
+    "description": "Pessinus (Greek: Πεσσινούς or Πισσινούς) was an Ancient city and archbishopric in Asia Minor, a geographical area roughly covering modern Anatolia (Asian Turkey). The site of the city is now the modern Turkish village of Ballıhisar, in a tributary valley of the Sakarya River on the high Anatolian plateau at ca. 950 m above sea level, 13 km from the small town of Sivrihisar. Pessinus remains a Catholic (formerly double) titular see. \n",
+    "link": "https://en.wikipedia.org//wiki/Pessinus",
+    "type": "Greek",
+    "longitude": 31.584444
+  },
+  {
+    "name": "Phaselis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Phaselis_axb01.jpg/800px-Phaselis_axb01.jpg",
+    "latitude": 36.523613,
+    "description": "Phaselis (Ancient Greek: Φασηλίς) was a Greek and Roman city on the coast of ancient Lycia. Its ruins are located north of the modern town Tekirova in the Kemer district of Antalya Province in Turkey. It lies between the Bey Mountains and the forests of Olympos National Park, 16 kilometres (9.9 mi) south of the tourist town of Kemer and on the 57th kilometre of the Antalya–Kumluca highway. Phaselis and other ancient towns around the shore can also be accessed from the sea by daily yacht tours.\n",
+    "link": "https://en.wikipedia.org//wiki/Phaselis",
+    "type": "Greek",
+    "longitude": 30.5522213
+  },
+  {
+    "name": "Phellus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/LycianTombPhellos.jpg/800px-LycianTombPhellos.jpg",
+    "latitude": 36.2347221,
+    "description": "Phellus (Lycian: Wehnti; Ancient Greek: Φέλλος, Turkish: Phellos) is a town of ancient Lycia, now situated on the mountainous outskirts of the small town of Kaş in the Antalya Province of Turkey. The city was first referenced as early as 7 BC by Greek geographer and philosopher Strabo in Book XII of his Geographica (which detailed settlements in the Anatolia region), alongside the port town of Antiphellus; which served as the settlement's main trade front.\n",
+    "link": "https://en.wikipedia.org//wiki/Phellus",
+    "type": "Greek",
+    "longitude": 29.6322231
+  },
+  {
+    "name": "Phocaea",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Ancient_theatre_Fo%C3%A7a525.jpg/800px-Ancient_theatre_Fo%C3%A7a525.jpg",
+    "latitude": 38.6675,
+    "description": "Phocaea or Phokaia (Ancient Greek: Φώκαια, Phókaia; modern-day Foça in Turkey) was an ancient Ionian Greek city on the western coast of Anatolia. Greek colonists from Phocaea founded the colony of Massalia[1] (modern-day Marseille, in France) in 600 BC, Emporion (modern-day Empúries, in Catalonia, Spain) in 575 BC and Elea (modern-day Velia, in Campania, Italy) in 540 BC.\n",
+    "link": "https://en.wikipedia.org//wiki/Phocaea",
+    "type": "Greek",
+    "longitude": 26.7580547
+  },
+  {
+    "name": "Pinara",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pinara_Amphitheatre_Fethiye_Mugla_Turkiye.JPG/800px-Pinara_Amphitheatre_Fethiye_Mugla_Turkiye.JPG",
+    "latitude": 36.48861,
+    "description": "Pinara (Lycian: 𐊓𐊆𐊍𐊍𐊁𐊑𐊏𐊆 Pilleñni, presumably from the adjective \"round\"; Greek: τὰ Πίναρα, formerly Artymnesus or Artymnesos according to one account) was a large city of ancient Lycia at the foot of Mount Cragus (now Mount Babadağ), and not far from the western bank of the River Xanthos, homonymous with the ancient city of Xanthos (now Eşen Stream).\n",
+    "link": "https://en.wikipedia.org//wiki/Pinara",
+    "type": "Greek/Roman",
+    "longitude": 29.2519436
+  },
+  {
+    "name": "Pisidia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 37.3,
+    "description": "Pisidia (/pɪˈsɪdiə/; Greek: Πισιδία, Pisidía; Turkish: Pisidya) was a region of ancient Asia Minor located north of Lycia, bordering Caria, Lydia, Phrygia and Pamphylia, and corresponding roughly to the modern-day province of Antalya in Turkey. Among Pisidia's settlements were Antioch(ia) in Pisidia, Termessos, Cremna, Sagalassos, Etenna, Neapolis, Selge, Tyriacum, Laodiceia Katakekaumene and Philomelium.\n",
+    "link": "https://en.wikipedia.org//wiki/Pisidia",
+    "type": "Greek",
+    "longitude": 30.3
+  },
+  {
+    "name": "Ploutonion at Hierapolis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Plutonium_%28Pluto%27s_Gate%29_in_Hierapolis_01.jpg/397px-Plutonium_%28Pluto%27s_Gate%29_in_Hierapolis_01.jpg",
+    "latitude": 37.9268,
+    "description": "The Ploutonion at Hierapolis (Ancient Greek: Πλουτώνειον Ploutōneion,[1] lit \"Place of Pluto\"; Latin: Plutonium) or Pluto's Gate[2] was a ploutonion (a religious site dedicated to the god Pluto)  in the ancient city of Hierapolis near Pamukkale in modern Turkey's Denizli Province. The site was discovered in 1965 by Italian archaeologists, who published reports on their excavations throughout the decade.[3] In 2013, it was further explored by Italian archaeologists led by Francesco D'Andria, a professor of archaeology at the University of Salento.[4] As part of a restoration project, a replica of the marble statue of Hades and Cerberus has been restored to its original place. The statue is known to have been there in ancient times.[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Ploutonion_at_Hierapolis",
+    "type": "Greek/Roman",
+    "longitude": 29.1268139
+  },
+  {
+    "name": "Podalia (Lycia)",
+    "imageUrl": "",
+    "latitude": 36.6741676,
+    "description": "Podalia (Ancient Greek: Ποδαλία), also spelled Podalaea or Podalaia (Ποδαλαία), Podallia (Ποδαλλία), and Podaleia (Ποδάλεια), was a town of ancient Lycia, mentioned by several ancient authors.\n",
+    "link": "https://en.wikipedia.org//wiki/Podalia_(Lycia)",
+    "type": "Greek",
+    "longitude": 30.0363884
+  },
+  {
+    "name": "Pompeiopolis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 41.5169449,
+    "description": "Pompeiopolis (Greek: Πομπηιούπολις, city of Pompeius) was a Roman city in ancient Paphlagonia, identified in the early 19th century with the ruins of Zımbıllı Tepe, located near Taşköprü, Kastamonu Province in the Black Sea Region of Turkey. The exact location is 40 km north-east of Kastamonu and a short distance across the river from modern Taşköprü, in the valley of the Gökırmak or Gök River (Greek: Αμνίας, Amnías). The borders of Pompeiopolis reached the Küre mountains to the north, Ilgaz mountains to the south, Halys river to the east and Pınarbaşı valley to the west.\n",
+    "link": "https://en.wikipedia.org//wiki/Pompeiopolis",
+    "type": "Greek/Roman",
+    "longitude": 34.2130547
+  },
+  {
+    "name": "Priene",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Temple_of_Athena_at_Priene.jpg/800px-Temple_of_Athena_at_Priene.jpg",
+    "latitude": 37.65972,
+    "description": "Priene (Ancient Greek: Πριήνη, romanized: Priēnē; Turkish: Prien) was an ancient Greek city of Ionia (and member of the Ionian League) located at the base of an escarpment of Mycale, about 6 kilometres (3.7 mi) north of what was then the course of the Maeander River (now called the Büyük Menderes or \"Big Maeander\"). It was 67 kilometres (42 mi) from ancient Anthea, 15 kilometres (9.3 mi) from ancient Aneon and 25 kilometres (16 mi) from ancient Miletus. The city was built on the sea coast, overlooking the former Latmian Gulf of the Aegean. It was developed on steep slopes and terraces extending from sea level to a height of 380 metres (1,250 ft) above sea level at the top of the escarpment.[1] Because of siltation from the river filling the bay over several centuries, the city is now an inland site. It is located at a short distance west of the modern village Güllübahçe Turun in the Söke district of Aydın Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Priene",
+    "type": "Greek",
+    "longitude": 27.2977772
+  },
+  {
+    "name": "Prusias ad Hypium",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Prusias_ad_Hypium_10.jpg/800px-Prusias_ad_Hypium_10.jpg",
+    "latitude": 40.9061127,
+    "description": "see also the city \"Cius\" or \"Kios\"\n",
+    "link": "https://en.wikipedia.org//wiki/Prusias_ad_Hypium",
+    "type": "Greek/Roman",
+    "longitude": 31.148056
+  },
+  {
+    "name": "Rhodiapolis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Rhodiapolis.JPG/800px-Rhodiapolis.JPG",
+    "latitude": 36.3869438,
+    "description": "Rhodiapolis (Ancient Greek: Ῥοδιάπολις), also known as Rhodia (Ῥοδία) and Rhodiopolis (Ῥοδιόπολις), was a city in ancient Lycia. Today it is located on a hill northwest of the modern town Kumluca in Antalya Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Rhodiapolis",
+    "type": "Greek/Roman",
+    "longitude": 30.2655563
+  },
+  {
+    "name": "Sagalassos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Sagalassos_26.jpg/800px-Sagalassos_26.jpg",
+    "latitude": 37.6780548,
+    "description": "Sagalassos (Greek: Σαγαλασσός), also known as Selgessos (Greek: Σελγησσός)[1] and Sagallesos (Greek: Σαγαλλησός),[2] is an archaeological site in southwestern Turkey, about 100 km north of Antalya (ancient Attaleia), and 30 km from Burdur and Isparta. The ancient ruins of Sagalassos are 7 km from Ağlasun (as well as being its namesake) in the province of Burdur, on Mount Akdağ, in the Western Taurus mountains range, at an altitude of 1450–1700 metres.\nIn Roman Imperial times, the town was known as the \"first city of Pisidia\", a region in the western Taurus mountains, currently known as the Turkish Lakes Region. During the Hellenistic period it was already one of the major Pisidian towns.\n",
+    "link": "https://en.wikipedia.org//wiki/Sagalassos",
+    "type": "Greek",
+    "longitude": 30.5194435
+  },
+  {
+    "name": "Samsun",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Samsun_sea.jpg/800px-Samsun_sea.jpg",
+    "latitude": 41.29028,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Samsun",
+    "type": "Greek",
+    "longitude": 36.33361
+  },
+  {
+    "name": "Sardis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 38.4883347,
+    "description": "Sardis (/ˈsɑːrdɪs/) or Sardes (/ˈsɑːrdiːz/; Lydian: Sfard; Ancient Greek: Σάρδεις Sardeis; Old Persian: Sparda; Biblical Hebrew: ספרד‎ Sfarad) was an ancient city at the location of modern Sart (Sartmahmut before 19 October 2005), near Salihli, in Turkey's Manisa Province. Sardis was the capital of the ancient kingdom of Lydia,[1] one of the important cities of the Persian Empire, the seat of a Seleucid Satrap, the seat of a proconsul under the Roman Empire, and the metropolis of the province Lydia in later Roman and Byzantine times. As one of the seven churches of Asia, it was addressed by the author of the Book of Revelation in the New Testament,[2] in terms which seem to imply that its church members did not finish what they started, that they were about image and not substance.[3] Its importance was due first to its military strength, secondly to its situation on an important highway leading from the interior to the Aegean coast, and thirdly to its commanding the wide and fertile plain of the Hermus.\n",
+    "link": "https://en.wikipedia.org//wiki/Sardis",
+    "type": "Greek",
+    "longitude": 28.0402775
+  },
+  {
+    "name": "Satala",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Head_and_left_hand_from_a_bronze_cult_statue_of_Anahita%2C_a_local_goddess_shown_here_in_the_guide_of_Aphrodite%2C_200-100_BC%2C_British_Museum_%288167370318%29.jpg/423px-Head_and_left_hand_from_a_bronze_cult_statue_of_Anahita%2C_a_local_goddess_shown_here_in_the_guide_of_Aphrodite%2C_200-100_BC%2C_British_Museum_%288167370318%29.jpg",
+    "latitude": 40.05,
+    "description": "Located in Turkey, the settlement of Satala (Old Armenian: Սատաղ Satał, Ancient Greek: Σάταλα[1]), according to the ancient geographers, was situated in a valley surrounded by mountains, a little north of the Euphrates, where the road from Trapezus to Samosata crossed the boundary of the Roman Empire, when it was a bishopric, which remains a Latin Catholic titular see. Later it was connected with Nicopolis by two highways. Satala is now Sadak, a village of 500 inhabitants, in the Kelkit district of Gümüşhane Province in Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Satala",
+    "type": "Greek",
+    "longitude": 39.6
+  },
+  {
+    "name": "Satala in Lydia",
+    "imageUrl": "",
+    "latitude": 38.57861,
+    "description": "Satala (Ancient Greek: Σάταλα) or Satala  in Lydia was a Roman era city[1][2] and Bishopric[3] in ancient Lydia.\n",
+    "link": "https://en.wikipedia.org//wiki/Satala_in_Lydia",
+    "type": "Greek",
+    "longitude": 28.2691669
+  },
+  {
+    "name": "Scepsis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Scepsis_2009.jpg/800px-Scepsis_2009.jpg",
+    "latitude": 39.81111,
+    "description": "Scepsis or Skepsis (Ancient Greek: Σκῆψις or Σκέψις) was an ancient settlement in the Troad, Asia Minor that is at the present site of the village of Kurşunlutepe, near the town of Bayramiç in Turkey. The settlement is notable for being the location where the famous library of Aristotle was kept before being moved to Pergamum and Alexandria.[1] It was also home to Metrodorus of Scepsis and Demetrius of Scepsis.\n",
+    "link": "https://en.wikipedia.org//wiki/Scepsis",
+    "type": "Greek",
+    "longitude": 26.7063885
+  },
+  {
+    "name": "Sebastopolis (Caria)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
+    "latitude": 37.4858322,
+    "description": "Sebastopolis (Ancient Greek: Σεβαστόπολις),[1] also known as Saleia, was a town of ancient Caria, inhabited during Hellenistic, Roman, and Byzantine times.[2] It minted coins in antiquity.[3][4]\n",
+    "link": "https://en.wikipedia.org//wiki/Sebastopolis_(Caria)",
+    "type": "Greek",
+    "longitude": 29.1375
+  },
+  {
+    "name": "Seleucia (Pamphylia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Seleukia%28Turkey%292012.jpg/800px-Seleukia%28Turkey%292012.jpg",
+    "latitude": 36.8283348,
+    "description": "Seleucia (Greek: Σελεύκεια – also transliterated as Seleukeia) was an ancient Greek city on the Mediterranean coast of Pamphylia, in Anatolia, approximately 15 km northeast of Side; the site is currently about 1k north of the village of Bucakşeyhler (also Bucakşıhler), approximately 12 km northeast of Manavgat, Antalya Province, Turkey. It is situated on a hilltop with steep escarpments on several sides making a strong defensive position. The track from the village has recently been clear felled but the main site is still within a mature pine forest. The German researcher Johannes Nollé has suggested, however, that the remains at this location are not those of Seleucia but rather those of Lyrba.[1] Another name for the city in the Middle Ages was Scandalor,[2] which was documented on portolan maps.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Seleucia_(Pamphylia)",
+    "type": "Greek",
+    "longitude": 31.2433338
+  },
+  {
+    "name": "Seleucia at the Zeugma",
+    "imageUrl": "",
+    "latitude": 37.4333344,
+    "description": "Seleucia at the Zeugma (Greek: Σελεύκεια ἐπὶ τοῦ Ζεύγματος, transliterated Seleucia epi tou Zeugmatos or Seleukeia epi tou Zeugmatos) was a Hellenistic city or fortified town in the present Republic of Turkey, on the left, or south, bank of the Euphrates, across from ancient Samosata and not far from it. \n",
+    "link": "https://en.wikipedia.org//wiki/Seleucia_at_the_Zeugma",
+    "type": "Greek",
+    "longitude": 38.2333336
+  },
+  {
+    "name": "Seleucia Sidera",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 37.9,
+    "description": "Seleucia Sidera (Greek: Σελεύκεια η Σιδηρᾶ, Seleukeia hê Sidêra; Latin: Seleucia Ferrea), also transliterated as Seleuceia, Seleukeia, and later known as Claudioseleucia, Greek Klaudioseleukeia, was an ancient city in the northern part of Pisidia, Anatolia, near the village of Bayat (old name Selef), near Atabey, about 15 km north-northeast of Isparta, Isparta Province, in the Mediterranean Region of Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Seleucia_Sidera",
+    "type": "Greek",
+    "longitude": 30.6177769
+  },
+  {
+    "name": "Selge",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Selgetheater.jpg/800px-Selgetheater.jpg",
+    "latitude": 37.2294426,
+    "description": "Selge (Greek: Σέλγη) was an important city in ancient Pisidia and later in Pamphylia, on the southern slope of Mount Taurus, modern Antalya Province, Turkey, at the part where the river Eurymedon River (Turkish: Köprüçay) forces its way through the mountains towards the south.\n",
+    "link": "https://en.wikipedia.org//wiki/Selge",
+    "type": "Greek",
+    "longitude": 31.1272221
+  },
+  {
+    "name": "Selymbria",
+    "imageUrl": "",
+    "latitude": 41.0802765,
+    "description": "Selymbria (Greek: Σηλυμβρία),[1] or Selybria (Σηλυβρία),[2][3][4] or Selybrie (Σηλυβρίη),[5] was a town of ancient Thrace on the Propontis, 22 Roman miles east from Perinthus, and 44 Roman miles west from Constantinople,[6] near the southern end of the wall built by Anastasius I Dicorus for the protection of his capital.[7]\n",
+    "link": "https://en.wikipedia.org//wiki/Selymbria",
+    "type": "Greek",
+    "longitude": 28.2683334
+  },
+  {
+    "name": "Serrion Teichos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Thraciae-veteris-typvs.jpg/780px-Thraciae-veteris-typvs.jpg",
+    "latitude": 40.7505569,
+    "description": "Serrion Teichos (Ancient Greek: Σέρριον τείχος) or Serreion Teichos (Σέρρειον τεῖχος) was a Greek[1] city in ancient Thrace, located in the region of the Propontis. It was a member of the Delian League and appears in tribute lists of Athens between 428/7 and 418/7 BCE.[1] It later bore the name of Ganus or Ganos (Γάνος or Γᾶνος).[2] It is under this name that the town is mentioned by geographers and historians, as a noted mountain fortress of Thrace.[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Serrion_Teichos",
+    "type": "Greek",
+    "longitude": 27.3244438
+  },
+  {
+    "name": "Sestos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Marmara_Region_location_map.svg/450px-Marmara_Region_location_map.svg.png",
+    "latitude": 40.2166672,
+    "description": "Sestos (Greek: Σηστός, Latin: Sestus) was an ancient city in Thrace. It was located at the Thracian Chersonese peninsula on the European coast of the Hellespont, opposite the ancient city of Abydos, and near the town of Eceabat in Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Sestos",
+    "type": "Greek",
+    "longitude": 26.3833332
+  },
+  {
+    "name": "Setae (Lydia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lydia_circa_50_AD_-_English_legend.jpg/800px-Lydia_circa_50_AD_-_English_legend.jpg",
+    "latitude": 38.7794456,
+    "description": "Setae or Setai (Ancient Greek: Σέται), or Settae or Settai (Σέτται), or Saettae or Saittai or Saittae (Σαίτται) was a town of ancient Lydia,[1] located at Sidas Kaleh[2][3] in Modern Turkey.[4][5] The ruins of that town consist of a stadium,[6] tombs and ruins of several temples.[7][8] The town is not mentioned by any of the earlier writers, but appears in Ptolemy[9] and Hierocles.[10]\n",
+    "link": "https://en.wikipedia.org//wiki/Setae_(Lydia)",
+    "type": "Greek",
+    "longitude": 28.63139
+  },
+  {
+    "name": "Side, Turkey",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Sunrise_apollo_side.jpg/480px-Sunrise_apollo_side.jpg",
+    "latitude": 36.7666664,
+    "description": "Side is a city on the southern Mediterranean coast of Turkey. It includes the modern resort town and the ruins of the ancient city of Side, one of the best-known classical sites in the country. It lies near Manavgat and the village of Selimiye, 78 km from Antalya in the province of Antalya.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Side,_Turkey",
+    "type": "Greek",
+    "longitude": 31.38889
+  },
+  {
+    "name": "Sidyma",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pierre-Flavien_Turgeon.png/437px-Pierre-Flavien_Turgeon.png",
+    "latitude": 36.41025,
+    "description": "Coordinates: 36°24′36.9″N 29°11′30.1″E﻿ / ﻿36.410250°N 29.191694°E﻿ / 36.410250; 29.191694\nSidyma  (Ancient Greek: Σίδυμα), was a town of ancient Lycia, at what is now the small village of Dudurga Asari in Muğla Province, Turkey. It lies on the southern slope of Mount Cragus, to the north-west of the mouth of the Xanthus.\n",
+    "link": "https://en.wikipedia.org//wiki/Sidyma",
+    "type": "Greek",
+    "longitude": 29.1916943
+  },
+  {
+    "name": "Sigeion",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.97333,
+    "description": "Sigeion[pronunciation?] (Ancient Greek: Σίγειον, Sigeion; Latin: Sigeum) was an ancient Greek city in the north-west of the Troad region of Anatolia located at the mouth of the Scamander (the modern Karamenderes River).[1] Sigeion commanded a ridge between the Aegean Sea and the Scamander which is now known as Yenişehir and is a part of the Çanakkale district in Çanakkale province, Turkey.[2] The surrounding region was referred to as the Sigean Promonotory, which was frequently used as a point of reference by ancient geographers since it marked the mouth of the Hellespont.[3] The outline of this promontory is no longer visible due to the alluvial activity of the Karamenderes which has filled in the embayment east of Yenişehir.[4] The name 'Sigeion' means 'silent place' and is derived from Ancient Greek σιγή (sigē), 'silence'; in Classical Antiquity, the name was assumed to be antiphrastic, i.e. indicating a characteristic of the place contrary to reality, since the seas in this region are known for their fierce storms.[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Sigeion",
+    "type": "Greek",
+    "longitude": 26.1780548
+  },
+  {
+    "name": "Sillyon",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/SillyonStadttor.jpg/736px-SillyonStadttor.jpg",
+    "latitude": 36.9925,
+    "description": "Sillyon (Greek: Σίλλυον), also Sylleion (Σύλλειον), in Byzantine times Syllaeum or Syllaion (Συλλαῖον), was an important fortress and city near Attaleia in Pamphylia, on the southern coast of modern Turkey. The native Greco-Pamphylian form was Selywiys, possibly deriving from the original Hittite Sallawassi. Its modern Turkish names are Yanköy Hisarı or Asar Köy.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Sillyon",
+    "type": "Greek",
+    "longitude": 30.9897213
+  },
+  {
+    "name": "Simena",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Graven1kl.jpg/800px-Graven1kl.jpg",
+    "latitude": 36.1902771,
+    "description": "Simena (Ancient Greek: Σίμηνα) was a town on the coast of ancient Lycia,[1] 60 stadia from Aperlae.[2] The Stadiasmus Maris Magni calls the town Somena (Σόμηνα).[3]\n",
+    "link": "https://en.wikipedia.org//wiki/Simena",
+    "type": "Greek",
+    "longitude": 29.8597221
+  },
+  {
+    "name": "Sinda (Pisidia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Heinrich_Kiepert._Asia_citerior.Pisidia.jpg/648px-Heinrich_Kiepert._Asia_citerior.Pisidia.jpg",
+    "latitude": 37.1205559,
+    "description": "Sinda (Ancient Greek: Σίνδα) was an ancient town mentioned to have been situated on the western frontier of ancient Pisidia, in the neighbourhood of Cibyra and the river Caularis.[1] Stephanus of Byzantium,[2] who spoke of a Sindia as a town of Lycia, was thought to have alluded to the same place.[3] Some writers have confounded Sinda with Isionda, which is the more surprising, as Livy mentions the two as different towns in the same chapter;[4] modern scholars treat them as separate places.[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Sinda_(Pisidia)",
+    "type": "Greek",
+    "longitude": 29.6044445
+  },
+  {
+    "name": "Sinop, Turkey",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sinop_Overview_2009.JPG/800px-Sinop_Overview_2009.JPG",
+    "latitude": 42.02667,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Sinop,_Turkey",
+    "type": "Greek",
+    "longitude": 35.15111
+  },
+  {
+    "name": "Smyrna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Agora_of_Smyrna%2C_built_during_the_Hellenistic_era_at_the_base_of_Pagos_Hill_and_totally_rebuilt_under_Marcus_Aurelius_after_the_destructive_178_AD_earthquake%2C_Izmir%2C_Turkey_%2818702047681%29.jpg/800px-thumbnail.jpg",
+    "latitude": 38.41861,
+    "description": "Smyrna (/ˈsmɜːrnə/ SMUR-nə; Ancient Greek: Σμύρνη, romanized: Smýrnē, or Ancient Greek: Σμύρνα, romanized: Smýrna) was a Greek city located at a strategic point on the Aegean coast of Anatolia. Due to its advantageous port conditions, its ease of defence and its good inland connections, Smyrna rose to prominence. The name of the city since about 1930 is İzmir.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Smyrna",
+    "type": "Greek",
+    "longitude": 27.1391659
+  },
+  {
+    "name": "Soli (Cilicia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Soli_Pompeiopolis_20141116_07.jpg/800px-Soli_Pompeiopolis_20141116_07.jpg",
+    "latitude": 36.7419434,
+    "description": "Soli (Ancient Greek: Σόλοι, Sóloi), often rendered Soli/Pompeiopolis (Ancient Greek: Πομπηϊούπολις), was an ancient city and port in Cilicia, 11 km west of Mersin in present-day Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Soli_(Cilicia)",
+    "type": "Greek",
+    "longitude": 34.54
+  },
+  {
+    "name": "Stadia (Caria)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
+    "latitude": 36.74222,
+    "description": "Stadia (Ancient Greek: Στάδια) was a town of ancient Caria.[1] It became a bishopric; no longer the seat of a residential bishop, it remains a titular see of the Roman Catholic Church.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Stadia_(Caria)",
+    "type": "Greek",
+    "longitude": 27.6483326
+  },
+  {
+    "name": "Stratonicea (Caria)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_theatre%2C_erected_in_the_Hellenistic_period_in_the_north_slope_of_the_south_hill%2C_its_capacity_was_approximately_10%2C000_spectators%2C_Caria%2C_Turkey_%2820688140081%29.jpg/800px-thumbnail.jpg",
+    "latitude": 37.314724,
+    "description": "Stratonicea (Ancient Greek: Στρατoνικεια or Στρατoνικη; or per Stephanus of Byzantium: Στρατονίκεια) – also transliterated as Stratonikeia, Stratoniceia , Stratoniki, and Stratonike and Stratonice; a successor settlement to Chrysaoris;[1] and for a time named Hadrianopolis – was one of the most important towns in the interior of ancient Caria, Anatolia, situated on the east-southeast of Mylasa, and on the south of the river Marsyas; its site is now located at the present village of Eskihisar, Muğla Province, Turkey. It is situated at a distance of 1 km (0.62 mi) from the intercity road  D.330 that connects the district center of Yatağan with Bodrum and Milas, shortly before Yatağan Power Plant if one has taken departure from the latter towns.\n",
+    "link": "https://en.wikipedia.org//wiki/Stratonicea_(Caria)",
+    "type": "Greek/Roman",
+    "longitude": 28.065834
+  },
+  {
+    "name": "Sulusaray",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 40,
+    "description": "Sulusaray or Çiftlik, in Antiquity and the early Middle Ages known as Sebastopolis (Greek: Σεβαστούπολις) or Heracleopolis (Ἡρακλειούπολις), is a town and a district of Tokat Province in the Black Sea region of Turkey. Sulusaray is about 68 km from the center of Tokat, and about 30 km from Artova town. The site is situated on a plain surrounded by mountains and the Çekerek river runs near it. The mayor is Şahin Hasgül (MHP).\n",
+    "link": "https://en.wikipedia.org//wiki/Sulusaray",
+    "type": "Greek",
+    "longitude": 36.1
+  },
+  {
+    "name": "Syedra",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Syedra_-_panoramio_-_matzi01.jpg/800px-Syedra_-_panoramio_-_matzi01.jpg",
+    "latitude": 36.4411125,
+    "description": "Syedra (Greek: Σύεδρα)[1] was an ancient port city in region of ancient Cilicia, Pamphylia, or Isauria, on the southern coast of modern-day Turkey between the towns of Alanya and Gazipaşa. Syedra was settled in the 7th century BCE, and abandoned in the 13th century CE. The town had a port at sea level and an upper town 400m above.[2] Ptolemy places it in Cilicia.[3] Stephanus of Byzantium assigns it to Isauria.[4] Hierocles places it in Pamphylia.[5]\n",
+    "link": "https://en.wikipedia.org//wiki/Syedra",
+    "type": "Greek",
+    "longitude": 32.1525
+  },
+  {
+    "name": "Tabala (Lydia)",
+    "imageUrl": "",
+    "latitude": 38.61972,
+    "description": "Tabala (Ancient Greek: Τάβαλα), is the name of a Roman and Byzantine town and a Bishopric in ancient Lydia. Tabala was on the Hermus River, and minted its own coins.[1][2] It is no doubt the same as the one mentioned by Hierocles under the name of Gabala,[3] which is perhaps only miswritten for Tabala. It is even possible that it may be the town of Tabae or Tabai (Τάβαι), which Stephanus of Byzantium assigns to Lydia.[4]\n",
+    "link": "https://en.wikipedia.org//wiki/Tabala_(Lydia)",
+    "type": "Greek",
+    "longitude": 28.810833
+  },
+  {
+    "name": "Tapureli ruins",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tapureli.jpg/800px-Tapureli.jpg",
+    "latitude": 36.65,
+    "description": "Tapureli ruins are in Mersin Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Tapureli_ruins",
+    "type": "Greek",
+    "longitude": 34.0333328
+  },
+  {
+    "name": "Telmessos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkey_relief_location_map.jpg/800px-Turkey_relief_location_map.jpg",
+    "latitude": 36.6183319,
+    "description": "Telmessos or Telmessus (Ancient Greek: Τελμησσός), also Telmissus (Ancient Greek: Τελμισσός),[1] later Anastasiopolis (Ancient Greek: Αναστασιούπολις), then Makri or Macre (Greek: Μάκρη), was the largest city in Lycia, near the Carian border, and is sometimes confused with Telmessos in Caria. It was called Telebehi in the Lycian language. The well-protected harbor of Telmessos is separated from the Gulf of Telmessos by an island.\n",
+    "link": "https://en.wikipedia.org//wiki/Telmessos",
+    "type": "Greek",
+    "longitude": 29.1177769
+  },
+  {
+    "name": "Telmessos (Caria)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Heinrich_Kiepert._Asia_citerior.Caria.jpg/800px-Heinrich_Kiepert._Asia_citerior.Caria.jpg",
+    "latitude": 37.0397224,
+    "description": "Telmessos or Telmessus, also Telmissos (Ancient Greek: Τελμησσός or Τελμισσός), was a town in ancient Caria.\n",
+    "link": "https://en.wikipedia.org//wiki/Telmessos_(Caria)",
+    "type": "Greek",
+    "longitude": 27.3177776
+  },
+  {
+    "name": "Temnos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/MapaTopogr%C3%A1ficoDeAsiaMenor-E%C3%B3lida.svg/432px-MapaTopogr%C3%A1ficoDeAsiaMenor-E%C3%B3lida.svg.png",
+    "latitude": 38.6719437,
+    "description": "Temnos or Temnus (Ancient Greek: Τῆμνος; Aeolic Greek: Τᾶμνος[1]) was a small Greek polis (city-state) of ancient Aeolis, later incorporated in the Roman province of Asia, on the western coast of Anatolia. Its bishopric was a suffragan of Ephesus, the capital and metropolitan see of the province, and is included in the Catholic Church's list of titular sees.[2]\n",
+    "link": "https://en.wikipedia.org//wiki/Temnos",
+    "type": "Greek",
+    "longitude": 27.1969452
+  },
+  {
+    "name": "Tenedos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Bozcaada%2C_%C3%87anakkale%2C_2019_14.jpg/800px-Bozcaada%2C_%C3%87anakkale%2C_2019_14.jpg",
+    "latitude": 39.8219452,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Tenedos",
+    "type": "Greek",
+    "longitude": 26.0288887
+  },
+  {
+    "name": "Teos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/%C4%B0zmir%2C_Turkey_%28Unsplash_fxXoSky-LU4%29.jpg/800px-%C4%B0zmir%2C_Turkey_%28Unsplash_fxXoSky-LU4%29.jpg",
+    "latitude": 38.1772232,
+    "description": "Teos (Ancient Greek: Τέως) or Teo was an ancient Greek city on the coast of Ionia, on a peninsula between Chytrium and Myonnesus. It was founded by Minyans from Orchomenus, Ionians and Boeotians, but the date of its foundation is unknown. Teos was one of the twelve cities which formed the Ionian League. The city was situated on a low hilly isthmus. Its ruins are located to the south of the modern town Sığacık in the Seferihisar district of Izmir Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Teos",
+    "type": "Greek",
+    "longitude": 26.785
+  },
+  {
+    "name": "Themiscyra (Pontus)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Themiscyra_%28Pontus%29_Turkey.jpg/800px-Themiscyra_%28Pontus%29_Turkey.jpg",
+    "latitude": 41.2,
+    "description": "Themiscyra (/ˌθɛmɪˈskɪrə/; Greek: Θεμίσκυρα Themiskyra) was an ancient Greek town in northeastern Anatolia; it was situated on the southern coast of the Black Sea, near the mouth of the Thermodon. \n",
+    "link": "https://en.wikipedia.org//wiki/Themiscyra_(Pontus)",
+    "type": "Greek",
+    "longitude": 36.7166672
+  },
+  {
+    "name": "Thyatira",
+    "imageUrl": "",
+    "latitude": 38.9208336,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Thyatira",
+    "type": "Greek/Roman",
+    "longitude": 27.8361111
+  },
+  {
+    "name": "Tium",
+    "imageUrl": "",
+    "latitude": 41.56139,
+    "description": "Tium (Greek: Τῖον) was an ancient settlement, also known as Filyos (Greek: Φίλειος), on the south coast of the Black Sea at the mouth of the river Billaeus[1] in present-day Turkey. Ancient writers variously assigned it to ancient Paphlagonia or Bithynia.\n",
+    "link": "https://en.wikipedia.org//wiki/Tium",
+    "type": "Greek",
+    "longitude": 32.023056
+  },
+  {
+    "name": "Tlos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Tlos_ruins_Turkey.jpg/800px-Tlos_ruins_Turkey.jpg",
+    "latitude": 36.552536,
+    "description": "Tlos (Ancient Greek: Τλώς or Τλῶς) is an ancient ruined Lycian hilltop citadel near the resort town of Seydikemer in the Mugla Province of southern Turkey, some 4 kilometres northwest of Saklikent Gorge. Tlos is believed to be one of the most important religious Lycian sites and settlement on the site is said to have begun more than 4,000 years ago.\n",
+    "link": "https://en.wikipedia.org//wiki/Tlos",
+    "type": "Greek/Roman",
+    "longitude": 29.4207935
+  },
+  {
+    "name": "Trabzon",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Sumela_From_Across_Valley.JPG/800px-Sumela_From_Across_Valley.JPG",
+    "latitude": 41.005,
+    "description": "Trabzon (Turkish pronunciation: [ˈtɾabzon]; Ophitic Pontic Greek: Τραπεζούντα, (Trapezounta), Armenian: Տրապիզոն, romanized: Trapizon), historically known as Trebizond in English, is a city on the Black Sea coast of northeastern Turkey and the capital of Trabzon Province. Trabzon, located on the historical Silk Road, became a melting pot of religions, languages and culture for centuries and a trade gateway to Persia in the southeast and the Caucasus to the northeast.[3] The Venetian and Genoese merchants paid visits to Trabzon during the medieval period and sold silk, linen and woolen fabric.\nBoth republics had merchant colonies within the city – Leonkastron and the former \"Venetian castle\" – that played a role to Trabzon similar to the one Galata played to Constantinople (modern Istanbul).[4] Trabzon formed the basis of several states in its long history and was the capital city of the Empire of Trebizond between 1204 and 1461. During the early modern period, Trabzon, because of the importance of its port, again became a focal point of trade to Persia and the Caucasus.\n",
+    "link": "https://en.wikipedia.org//wiki/Trabzon",
+    "type": "Greek",
+    "longitude": 39.7225
+  },
+  {
+    "name": "Trebenna",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Trebenna_-_Acropolis.jpg/800px-Trebenna_-_Acropolis.jpg",
+    "latitude": 36.8658333,
+    "description": "Trebenna (Τρεβέννα) or Trabenna (Τραβέννα)[1] was a city in ancient Lycia, at the border with Pamphylia, and at times ascribed to that latter region.[2] Its ruins are located east of the modern town Çağlarca in the Konyaaltı district of Antalya Province, Turkey. The site lies 22 kilometers to the west of Antalya.\n",
+    "link": "https://en.wikipedia.org//wiki/Trebenna",
+    "type": "Greek/Roman",
+    "longitude": 30.4763889
+  },
+  {
+    "name": "Tripolis on the Meander",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Tripolis_on_the_Meander%2C_Lydia%2C_Turkey_%2819499394805%29.jpg/800px-Tripolis_on_the_Meander%2C_Lydia%2C_Turkey_%2819499394805%29.jpg",
+    "latitude": 38.05,
+    "description": "Tripolis on the Meander (Greek: Τρίπολις, Eth. Greek: Τριπολίτης, Latin: Tripolis ad Maeandrum) – also Neapolis (Greek: Νεάπολις), Apollonia (Greek: Απολλωνία), and Antoniopolis – was an ancient city on the borders of Phrygia, Caria and Lydia, on the northern bank of the upper course of the Maeander, and on the road leading from Sardes by Philadelphia to Laodicea ad Lycum. (It. Ant. p. 336; Tab. Peut.) It was situated 20 km to the northwest of Hierapolis.\n",
+    "link": "https://en.wikipedia.org//wiki/Tripolis_on_the_Meander",
+    "type": "Greek/Roman",
+    "longitude": 28.95
+  },
+  {
+    "name": "Troad",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 39.8,
+    "description": "The Troada or Troad (Anglicized; /ˈtroʊˌæd/ or /ˈtroʊəd/; Greek: Τρωάδα, Troáda), or Troas (/ˈtroʊəs/; Ancient Greek: Τρῳάς, Trōiás or Τρωϊάς, Trōïás), is the historical name of the Biga Peninsula (modern Turkish: Biga Yarımadası) in the northwestern part of Anatolia, Turkey. This region now is part of the Çanakkale province of Turkey. Bounded by the Dardanelles to the northwest, by the Aegean Sea to the west and separated from the rest of Anatolia by the massif that forms Mount Ida, the Troad is drained by two main rivers, the Scamander (Karamenderes) and the Simois, which join at the area containing the ruins of Troy.\n",
+    "link": "https://en.wikipedia.org//wiki/Troad",
+    "type": "Greek",
+    "longitude": 26.5
+  },
+  {
+    "name": "Troy",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Walls_of_Troy_%282%29.jpg/800px-Walls_of_Troy_%282%29.jpg",
+    "latitude": 39.9575,
+    "description": "Troy (Greek: Τροία) or Ilion (Greek: Ίλιον) was an ancient city, known as the setting for the Greek myth of the Trojan War. It was located at Hisarlik in present-day Turkey, 30 kilometres (19 mi) south-west of Çanakkale.\n",
+    "link": "https://en.wikipedia.org//wiki/Troy",
+    "type": "Greek",
+    "longitude": 26.23889
+  },
+  {
+    "name": "Urla, İzmir",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/%C4%B0zmir_Urla_%C4%B0skele.jpg/800px-%C4%B0zmir_Urla_%C4%B0skele.jpg",
+    "latitude": 38.3222237,
+    "description": "Urla (Greek: Βουρλά, Vourlá) is a town and the center of the district of the same name in İzmir Province, in Turkey. The district center is located in the middle of the isthmus of a small peninsula which protrudes northwards in the Gulf of İzmir and which carries the same name as the town (Urla Peninsula), but its urban tissue is comparatively loose and extends eastwards to touch the coast and to cover a wide area which also includes a large portion of the peninsula. Sizable parts in the municipal area, owned by absentee landlords, remain uninhabited or are very rural in aspect. The peninsular coastline present a number of compounds constituted by seasonal residences along the beaches and the coves and which are administratively divided between Urla center's municipal area or its depending villages.\n",
+    "link": "https://en.wikipedia.org//wiki/Urla,_%C4%B0zmir",
+    "type": "Greek",
+    "longitude": 26.7647228
+  },
+  {
+    "name": "Uzuncaburç (Diokaisareia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/57608567_-_panoramio.jpg/800px-57608567_-_panoramio.jpg",
+    "latitude": 36.5833321,
+    "description": "Uzuncaburç is an archaeological site in Mersin Province, Turkey, containing the remnants of the ancient city of Diokaisareia or Diocaesarea (Greek: Διοκαισάρεια).\n",
+    "link": "https://en.wikipedia.org//wiki/Uzuncabur%C3%A7_(Diokaisareia)",
+    "type": "Greek/Roman",
+    "longitude": 33.9333344
+  },
+  {
+    "name": "Xanthos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Reconstruction_Nereid_Monument_BM.jpg/660px-Reconstruction_Nereid_Monument_BM.jpg",
+    "latitude": 36.35611,
+    "description": "Xanthos (Lycian: 𐊀𐊕𐊑𐊏𐊀 Arñna, Greek: Ξάνθος, Latin: Xanthus, Turkish: Ksantos) was a city in ancient Lycia, the site of present-day Kınık, Antalya Province, Turkey, and of the river on which the city is situated. The ruins of Xanthus are on the south slopes of a hill, the ancient acropolis, located on the northern outskirts of the modern city, on the left bank of the Xanthus, which flows beneath the hill. A single road, Xantos yolu, encircles the hill and runs through the ruins. Xanthos is a designated UNESCO World Heritage Site together with Letoon, the centre of the Lycian civilization, exerted significant architectural influences upon other cities of the region, with the Nereid Monument directly inspiring the Mausoleum at Halicarnassus in Caria.\n",
+    "link": "https://en.wikipedia.org//wiki/Xanthos",
+    "type": "Greek",
+    "longitude": 29.3186111
+  },
+  {
+    "name": "Yumurtalık",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 36.7677765,
+    "description": "Yumurtalık (meaning \"egg nest\") is a resort town and a district in the Adana Province of Turkey. It was formerly called Aegeae, Ayas or Laiazzo.[3] It is a Mediterranean port at a distance of about 40 km (25 mi) from Adana city. Yumurtalık's population does not exceed 5,000 in winter, but in summer, it rises to 30 to 40,000 people since many inhabitants of Adana have holiday homes here. There are also many daily visitors during the holiday season.\n",
+    "link": "https://en.wikipedia.org//wiki/Yumurtal%C4%B1k",
+    "type": "Greek",
+    "longitude": 35.79222
+  },
+  {
+    "name": "Zaliche",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 41.61,
+    "description": "Zaliche (Greek: Ζαλίχη) or Zaliches (Greek: Ζαλίχης) was an ancient town in the late Roman province of Helenopontus.\n",
+    "link": "https://en.wikipedia.org//wiki/Zaliche",
+    "type": "Greek",
+    "longitude": 35.595
+  },
+  {
+    "name": "Zeugma (Commagene)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Zeugma.jpg/800px-Zeugma.jpg",
+    "latitude": 37.0586128,
+    "description": "Zeugma (Greek: Ζεῦγμα) is an ancient Hellenistic era Greek and then Roman city of Commagene; located in modern Gaziantep Province, Turkey. It was named for the bridge of boats, or zeugma,[1] that crossed the Euphrates river at that location.[2] Zeugma Mosaic Museum contains mosaics from the site, and is one of the largest mosaic museums in the world.\n",
+    "link": "https://en.wikipedia.org//wiki/Zeugma_(Commagene)",
+    "type": "Greek",
+    "longitude": 37.8658333
+  },
+  {
+    "name": "Zile",
+    "imageUrl": "",
+    "latitude": 40.3,
+    "description": "Zile, anciently known as Zela (Greek: Ζῆλα) (still as Latin Catholic titular see), is a city and a district of Tokat Province, Turkey. Zile lies to the south of Amasya and the west of Tokat in north-central Turkey. The city has a long history, including as former bishopric and the site of the Battle of Zela, which prompted the phrase \"Veni, vidi, vici.\"[3] Today the city is a center for agricultural marketing and tourism.\n",
+    "link": "https://en.wikipedia.org//wiki/Zile",
+    "type": "Greek/Roman",
+    "longitude": 35.8833351
+  },
+  {
+    "name": "Adamkayalar",
+    "imageUrl": "",
+    "latitude": 36.525,
+    "description": "Adamkayalar (literally \"man-rocks\") is a location in Mersin Province, Turkey famous for rock carved figures.\n",
+    "link": "https://en.wikipedia.org//wiki/Adamkayalar",
+    "type": "Roman",
+    "longitude": 34.0541649
+  },
+  {
+    "name": "Adana",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Adana_Sabanc%C4%B1_Merkez_Camii_-_panoramio.jpg/800px-Adana_Sabanc%C4%B1_Merkez_Camii_-_panoramio.jpg",
+    "latitude": 37,
+    "description": "\n",
+    "link": "https://en.wikipedia.org//wiki/Adana",
+    "type": "Roman",
+    "longitude": 35.3213348
+  },
+  {
+    "name": "Akkale",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Akkale_spiral_staircase_Mersin_Province.JPG/800px-Akkale_spiral_staircase_Mersin_Province.JPG",
+    "latitude": 36.3666649,
+    "description": "Akkale (literally \"white castle\") is the popular name given to ruins of a building complex in Kumkuyu town of Erdemli district, Mersin Province, Turkey\n",
+    "link": "https://en.wikipedia.org//wiki/Akkale",
+    "type": "Roman",
+    "longitude": 34.2166672
+  },
+  {
+    "name": "Amorium",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Amorion%2C_Unterstadt.jpg/800px-Amorion%2C_Unterstadt.jpg",
+    "latitude": 39.0205574,
+    "description": "Amorium was a city in Phrygia, Asia Minor[1] which was founded in the Hellenistic period, flourished under the Byzantine Empire, and declined after the Arab sack of 838.  It was situated on the Byzantine military road from Constantinople to Cilicia.[2] Its ruins and höyük ('mound, tumulus') are located under and around the modern village of Hisarköy, 13 kilometers east of the district center, Emirdağ, Afyonkarahisar Province, Turkey.[3][4]\n",
+    "link": "https://en.wikipedia.org//wiki/Amorium",
+    "type": "Roman",
+    "longitude": 31.2891674
+  },
+  {
+    "name": "Ancient road in Tarsus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 36.917778,
+    "description": "Ancient road ( Turkish: Antik yol) at (36°55′04″N 34°53′33″E﻿ / ﻿36.91778°N 34.89250°E﻿ / 36.91778; 34.89250 extending to 36°55′02″N 34°53′35″E﻿ / ﻿36.91722°N 34.89306°E﻿ / 36.91722; 34.89306) is the unearthed section of an ancient road in the historical city of Tarsus, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Ancient_road_in_Tarsus",
+    "type": "Roman",
+    "longitude": 34.8925
+  },
+  {
+    "name": "Antioch of Pisidia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/512px-Question_book-new.svg.png",
+    "latitude": 38.30611,
+    "description": "Antioch in Pisidia – alternatively Antiochia in Pisidia or Pisidian Antioch (Greek: Ἀντιόχεια τῆς Πισιδίας) and in Roman Empire, Latin: Antiochia Caesareia or Antiochia Colonia Caesarea – is a city in the Turkish Lakes Region, which is at the crossroads of the Mediterranean, Aegean and Central Anatolian regions, and formerly on the border of Pisidia and Phrygia, hence also known as Antiochia in Phrygia. The site lies approximately 1 km northeast of Yalvaç, the modern town of Isparta Province. The city is on a hill with its highest point of 1236 m in the north.\n",
+    "link": "https://en.wikipedia.org//wiki/Antioch_of_Pisidia",
+    "type": "Roman",
+    "longitude": 31.189167
+  },
+  {
+    "name": "Antiochia ad Pyramum",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Heinrich_Kiepert._Asia_citerior.Cilicia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Cilicia.jpg",
+    "latitude": 36.5441666,
+    "description": "Antiochia ad Pyramum (Greek: Ἀντιόχεια πρὸς τὸν Πύραμον) was an ancient coastal city of Cilicia, on the Pyramus (also Pyramos, now the Ceyhan Nehri) river, in Anatolia. It was the successor settlement to Magarsa.[1] The location of the city is on the Karataş Peninsula, Adana Province, Turkey, a few km from the city of Karataş. The course of the Pyramus has changed markedly since ancient times and the location of the ruins is no longer adjacent to the river, but decidedly west of its present course. The formerly important ancient site of Mallus lies a few km inland from Antiochia ad Pyranum along the former course of the Pyramus.\n",
+    "link": "https://en.wikipedia.org//wiki/Antiochia_ad_Pyramum",
+    "type": "Roman",
+    "longitude": 35.34611
+  },
+  {
+    "name": "Aprus (Thrace)",
+    "imageUrl": "",
+    "latitude": 40.9269447,
+    "description": "Aprus or Apros (Ancient Greek: Ἄπρος), also Apri or Aproi (Ἄπροι), was a town of ancient Thrace and, later, a Roman city established in the Roman province of Europa.\n",
+    "link": "https://en.wikipedia.org//wiki/Aprus_(Thrace)",
+    "type": "Roman",
+    "longitude": 27.1072216
+  },
+  {
+    "name": "Çanakçı rock tombs",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/%C3%87anak%C3%A7%C4%B1.jpg/800px-%C3%87anak%C3%A7%C4%B1.jpg",
+    "latitude": 36.5233345,
+    "description": "Çanakçı rock tombs are a group of rock-carved tombs in Mersin Province, Turkey\n",
+    "link": "https://en.wikipedia.org//wiki/%C3%87anak%C3%A7%C4%B1_rock_tombs",
+    "type": "Roman",
+    "longitude": 34.1741676
+  },
+  {
+    "name": "Corycus (Lycia)",
+    "imageUrl": "",
+    "latitude": 36.43614,
+    "description": "Corycus (Ancient Greek: Κώρυκος, romanized: Korykos) was a Greek port city in ancient Lycia. The location of the city has not been determined with certainty. The Barrington Atlas of the Greek and Roman World places the city at 36°26′10.1″N 30°28′42.8″E﻿ / ﻿36.436139°N 30.478556°E﻿ / 36.436139; 30.478556.[1][2] This is a short distance north of the modern town Çıralı in the Kumluca district of Antalya Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Corycus_(Lycia)",
+    "type": "Roman",
+    "longitude": 30.4785557
+  },
+  {
+    "name": "Dörtayak",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/D%C3%B6rtayak.jpg/449px-D%C3%B6rtayak.jpg",
+    "latitude": 36.148613,
+    "description": "Dörtayak is an ancient cenotaph in Aydıncık of Mersin Province, Turkey\n",
+    "link": "https://en.wikipedia.org//wiki/D%C3%B6rtayak",
+    "type": "Roman",
+    "longitude": 33.32722
+  },
+  {
+    "name": "Edirne",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Edirne_at_sunrise_21_51_28_981000.jpeg/800px-Edirne_at_sunrise_21_51_28_981000.jpeg",
+    "latitude": 41.6769447,
+    "description": "Edirne (US: /eɪˈdɪərnə, ɛˈ-/,[2][3] Turkish: [eˈdiɾne]), historically known as Adrianople (/ˌeɪdriəˈnoʊpəl/; Latin: Hadrianopolis; founded by the Roman emperor Hadrian on the site of a previous Thracian settlement named Uskudama)[4] is a city in Turkey, in the northwestern province of Edirne and East Thrace, close to Turkey's borders with Greece and Bulgaria (3.24 miles or 5.22 kilometers from the Greek border at the closest point).[5] Edirne was the capital city of the Ottoman Empire from 1369 to 1453,[6] before Constantinople became the empire's capital. The estimated population in 2019 was 185,408.\n",
+    "link": "https://en.wikipedia.org//wiki/Edirne",
+    "type": "Roman",
+    "longitude": 26.5555553
+  },
+  {
+    "name": "Emirzeli",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Emirzeli%2C_Church%2C_Mersin_Province%2C_Turkey.JPG/800px-Emirzeli%2C_Church%2C_Mersin_Province%2C_Turkey.JPG",
+    "latitude": 36.5333328,
+    "description": "Emirzeli (İmirzeli) is a group of ruins in Mersin Province, Turkey\n",
+    "link": "https://en.wikipedia.org//wiki/Emirzeli",
+    "type": "Roman",
+    "longitude": 34.1
+  },
+  {
+    "name": "Eukarpia",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Heinrich_Kiepert._Asia_citerior.Phrygia.jpg/541px-Heinrich_Kiepert._Asia_citerior.Phrygia.jpg",
+    "latitude": 38.47222,
+    "description": "Coordinates: 38°28′20″N 30°07′11″E﻿ / ﻿38.4722714°N 30.1196556°E﻿ / 38.4722714; 30.1196556\nEucarpia or Eukarpia (Ancient Greek: Εὐκαρπία) was a city in Phrygia and a bishopric in the late Roman province of Phrygia Salutaris, in Asia Minor.\n",
+    "link": "https://en.wikipedia.org//wiki/Eukarpia",
+    "type": "Roman",
+    "longitude": 30.1197224
+  },
+  {
+    "name": "Helenopolis (Bithynia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Heinrich_Kiepert._Asia_citerior.Bithynia.jpg/800px-Heinrich_Kiepert._Asia_citerior.Bithynia.jpg",
+    "latitude": 40.72333,
+    "description": "Coordinates: 40°43′24″N 29°30′08″E﻿ / ﻿40.72339°N 29.50224°E﻿ / 40.72339; 29.50224\nHelenopolis (Greek: Ἑλενόπολις) or Drepana (Δρέπανα) or Drepanon (Δρέπανον) was an ancient Greco-Roman and Byzantine town and bishopric in Bithynia, Asia Minor, on the southern side of the Gulf of Astacus. It has been identified with the modern village of Hersek, in the district of Altınova, Yalova Province. It is traditionally considered as the birthplace of Saint Helena.\n",
+    "link": "https://en.wikipedia.org//wiki/Helenopolis_(Bithynia)",
+    "type": "Roman",
+    "longitude": 29.5022221
+  },
+  {
+    "name": "İzmir",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/A_panoramic_view_of_the_Alsancak_quarter_in_Izmir.jpg/800px-A_panoramic_view_of_the_Alsancak_quarter_in_Izmir.jpg",
+    "latitude": 38.4166679,
+    "description": "İzmir (UK: /ˈɪzmɪər/ IZ-meer, US: /ɪzˈmɪər/ iz-MEER; Turkish: [ˈizmiɾ]), often spelled Izmir in English, is a metropolitan city in the western extremity of Anatolia, capital of the province of the same name. It is the third most populous city in Turkey, after Istanbul and Ankara; and the second largest urban agglomeration on the Aegean Sea after Athens.\n",
+    "link": "https://en.wikipedia.org//wiki/%C4%B0zmir",
+    "type": "Roman",
+    "longitude": 27.1333332
+  },
+  {
+    "name": "Kabaçam",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kaba%C3%A7am.jpg/791px-Kaba%C3%A7am.jpg",
+    "latitude": 36.5144463,
+    "description": "Kabaçam, a.k.a. Kabaşam, is an archaeological site of a historic settlement in Mersin Province, southern Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Kaba%C3%A7am",
+    "type": "Roman",
+    "longitude": 34.15333
+  },
+  {
+    "name": "Kadirli",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 37.36972,
+    "description": "Kadirli (formerly called Kars, and possibly the ancient Flavias\nor Flaviopolis, Φλαβιόπολη in Ancient Greek), is a town and district of Osmaniye Province in the Mediterranean region of Turkey. It is located in the Çukurova plain, 41 kilometres (25 miles) from the large city of Osmaniye. Population is 84,618 (urban) and 120,950 (including rural areas) (2013 census).\n",
+    "link": "https://en.wikipedia.org//wiki/Kadirli",
+    "type": "Roman",
+    "longitude": 36.1
+  },
+  {
+    "name": "Kayseri",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kayseri_fine_house_4077.jpg/800px-Kayseri_fine_house_4077.jpg",
+    "latitude": 38.7225,
+    "description": "Kayseri (Turkish pronunciation: [ˈkajseɾi]; Greek: Καισάρεια) is a large industrialised city in Central Anatolia, Turkey. It is the seat of Kayseri Province. The city of Kayseri, as defined by the boundaries of Kayseri Metropolitan Municipality, is structurally composed of five metropolitan districts, the two core districts of Kocasinan and Melikgazi, and since 2004, also Hacılar, İncesu and Talas.\n",
+    "link": "https://en.wikipedia.org//wiki/Kayseri",
+    "type": "Roman",
+    "longitude": 35.4875
+  },
+  {
+    "name": "Kelbessos",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg/643px-Map_of_Lycia%2C_from_Travels_in_Lycia%2C_Milyas%2C_and_the_Cibyratis%2C_in_company_with_the_late_Rev._E._T._Daniell.jpg",
+    "latitude": 36.89528,
+    "description": "Kelbessos was a fortified settlement of ancient Lycia, in the territory of Termessos.[1] It was continually inhabited by a military garrison from Hellenistic to Roman times.[1]\n",
+    "link": "https://en.wikipedia.org//wiki/Kelbessos",
+    "type": "Roman",
+    "longitude": 30.4388885
+  },
+  {
+    "name": "Kırşehir",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 39.1455574,
+    "description": "Kırşehir, formerly Mocissus[3] (Ancient Greek: Μωκισσός) and Justinianopolis[3] (Ἰουστινιανούπολις), is a city in Turkey. It is the capital district of the Kırşehir Province. According to the 2000 census, the population of the district is 121,947 of which 105,826 live in the city of Kırşehir.[4][5]\n",
+    "link": "https://en.wikipedia.org//wiki/K%C4%B1r%C5%9Fehir",
+    "type": "Roman",
+    "longitude": 34.16083
+  },
+  {
+    "name": "Kuşkayası Monument",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Amasra_Ku%C5%9Fkayas%C4%B1.jpg/450px-Amasra_Ku%C5%9Fkayas%C4%B1.jpg",
+    "latitude": 41.7183342,
+    "description": "Kuşkayası (Turkish for Bird's rock) is a roadside monument just outside the town of Amasra, in Bartın Province, in the Black Sea Region of Turkey. It was erected in the Roman Imperial age.\n",
+    "link": "https://en.wikipedia.org//wiki/Ku%C5%9Fkayas%C4%B1_Monument",
+    "type": "Roman",
+    "longitude": 32.36361
+  },
+  {
+    "name": "Mastaura (Caria)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Turkey_adm_location_map.svg/800px-Turkey_adm_location_map.svg.png",
+    "latitude": 37.95639,
+    "description": "Mastaura (Ancient Greek: Μάσταυρα), was an ancient Greek town near Dereağzı, Nazilli in northern Caria, not to be confused with ancient Mastaura (Lycia).\n",
+    "link": "https://en.wikipedia.org//wiki/Mastaura_(Caria)",
+    "type": "Roman",
+    "longitude": 28.3416672
+  },
+  {
+    "name": "Nevşehir",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Ortahisar_Castle_-_Ortahisar_Kalesi.jpg/800px-Ortahisar_Castle_-_Ortahisar_Kalesi.jpg",
+    "latitude": 38.62639,
+    "description": "Nevşehir (from the Persian compound نو شهر Naw-shahr meaning \"new city\"), formerly Neapolis and Muşkara, is a city and the capital district of Nevşehir Province in the Central Anatolia Region of Turkey. According to the 2010 census, the population of the district is 117,890 of which 85,634 live in the city of Nevşehir.[3][4] The district covers an area of 535 km2 (207 sq mi),[5] and the town lies at an elevation of 1,224 m (4,016 ft). In recent years, Nevşehir & the surrounding area of Cappadocia have become a huge tourist destination.\n",
+    "link": "https://en.wikipedia.org//wiki/Nev%C5%9Fehir",
+    "type": "Roman",
+    "longitude": 34.71389
+  },
+  {
+    "name": "Pepuza",
+    "imageUrl": "",
+    "latitude": 38.4080544,
+    "description": "Pepuza (also spelled Pepouza) was an ancient town in Phrygia, Asia Minor (in today's Turkish district of Karahallı, Uşak Province, Aegean Region). Coordinates of the central terrasse of the settlement: UTM 35 S 0714926/4253954 (WGS-84), 38.408˚ N, 29.4615˚ E.  \n",
+    "link": "https://en.wikipedia.org//wiki/Pepuza",
+    "type": "Roman",
+    "longitude": 29.46139
+  },
+  {
+    "name": "Selçuk",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sel%C3%A7uk_fortress.jpg/800px-Sel%C3%A7uk_fortress.jpg",
+    "latitude": 37.95,
+    "description": "Selçuk is the central town of Selçuk district, İzmir Province in Turkey, 2 kilometres (1 mile) northeast of the ancient city of Ephesus.\n",
+    "link": "https://en.wikipedia.org//wiki/Sel%C3%A7uk",
+    "type": "Roman",
+    "longitude": 27.3666668
+  },
+  {
+    "name": "Seleucia Pieria",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Roman_Sarcophagus%2C_Seleucia_Pieria.jpg/800px-Roman_Sarcophagus%2C_Seleucia_Pieria.jpg",
+    "latitude": 36.12389,
+    "description": "Seleucia in Pieria (Greek Σελεύκεια ἐν Πιερίᾳ), also known in English as Seleucia by the Sea, and later named Suedia, was a Hellenistic town, the seaport of Antioch ad Orontes (Syria Prima), the Seleucid capital, modern Antakya (Turkey). The city was built slightly to the north of the estuary of the river Orontes, between small rivers on the western slopes of the Coryphaeus, one of the southern summits of the Amanus Mountains.\n",
+    "link": "https://en.wikipedia.org//wiki/Seleucia_Pieria",
+    "type": "Roman",
+    "longitude": 35.9219437
+  },
+  {
+    "name": "Softa Castle",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Softa_Castle_1.jpg/800px-Softa_Castle_1.jpg",
+    "latitude": 36.1044426,
+    "description": "Softa Castle (Turkish: Softa Kalesi) is a ruined castle in Bozyazı ilçe (district) of Mersin Province, Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Softa_Castle",
+    "type": "Roman",
+    "longitude": 33.0172234
+  },
+  {
+    "name": "Sozopolis (Pisidia)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Isparta_location_Uluborlu.png/654px-Isparta_location_Uluborlu.png",
+    "latitude": 38.0725,
+    "description": "Sozopolis in Pisidia (Ancient Greek: Σωζόπολη της Πισιδίας), which had been called Apollonia (Ἀπολλωνία) and Apollonias (Ἀπολλωνίας)[1] during Seleucid times, was a town in the former Roman province of Pisidia, and is not to be confused with the Thracian Sozopolis in Haemimonto in present-day Bulgaria.\n",
+    "link": "https://en.wikipedia.org//wiki/Sozopolis_(Pisidia)",
+    "type": "Roman",
+    "longitude": 30.4705563
+  },
+  {
+    "name": "Tymion",
+    "imageUrl": "",
+    "latitude": 38.4869461,
+    "description": "Tymion was an ancient town in Phrygia, Asia Minor (in today's Uşak Central District, Uşak Province, Aegean Region). Its site is located at the Turkish village of Şükraniye. From the middle of the 2nd century CE to the middle of the 6th century CE, Tymion was an important town for the ancient Christian church of Montanism. The Montanists, whose church spread all over the Roman Empire, expected the New Jerusalem to descend to earth at Tymion and the nearby town of Pepuza; Pepuza was the headquarters of Montanism and the seat of the Montanist patriarch. One of the founders of Montanism, Montanus, called both towns \"Jerusalem.\" In late antiquity, both places attracted crowds of pilgrims from all over the Roman Empire. Women played an emancipated role in Montanism. They could become priests and also bishops. In the 6th century CE, this church became extinct.\n",
+    "link": "https://en.wikipedia.org//wiki/Tymion",
+    "type": "Roman",
+    "longitude": 29.4327774
+  },
+  {
+    "name": "Warrior relief of Efrenk",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Efrenk_Krieger_gesamt.jpg/800px-Efrenk_Krieger_gesamt.jpg",
+    "latitude": 36.6077766,
+    "description": "The Warrior relief of Efrenk is a rock relief from the Greco-Roman period, probably the 2nd century AD, located by the Lamos river (modern day Limonlu) in Cilicia, southern Turkey.\n",
+    "link": "https://en.wikipedia.org//wiki/Warrior_relief_of_Efrenk",
+    "type": "Roman",
+    "longitude": 34.07539
+  },
+  {
+    "name": "Hippodrome of Constantinople",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Hippodrome_of_Constantinople_map.png",
+    "latitude": 41.005321,
+    "longitude": 28.97684,
+    "description": "Originally founded in the Roman period and expanded by Septimius Severus and Constantine the Great, the Hippodrome was the social and sporting center of Roman and later Byzantine Constantinople.",
+    "link": "https://en.wikipedia.org/wiki/Hippodrome_of_Constantinople",
+    "type": "Roman"
+  },
+  {
+    "name": "Serpent Column",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Serpent_Column_Istanbul.jpg",
+    "latitude": 41.005431,
+    "longitude": 28.97691,
+    "description": "A bronze column originally erected at Delphi after the Greek victory over Persia at the Battle of Plataea (5th century BC), later transported to Constantinople in the Roman period.",
+    "link": "https://en.wikipedia.org/wiki/Serpent_Column",
+    "type": "Greek"
+  },
+  {
+    "name": "Obelisk of Theodosius",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Obelisk_of_Theodosius_Istanbul.jpg",
+    "latitude": 41.00547,
+    "longitude": 28.97678,
+    "description": "An ancient Egyptian obelisk re-erected in the Hippodrome by Roman Emperor Theodosius I in the 4th century AD, standing on a Roman marble base.",
+    "link": "https://en.wikipedia.org/wiki/Obelisk_of_Theodosius",
+    "type": "Roman"
+  },
+  {
+    "name": "Binbirdirek Cistern",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Binbirdirek_Cistern_Istanbul.jpg",
+    "latitude": 41.004292,
+    "longitude": 28.973787,
+    "description": "A large Roman-era cistern built in the 4th century AD, featuring reused classical columns and serving as part of the Roman water system of Constantinople.",
+    "link": "https://en.wikipedia.org/wiki/Binbirdirek_Cistern",
+    "type": "Roman"
+  },
+  {
+    "name": "Basilica Cistern",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Basilica_Cistern_Istanbul.jpg",
+    "latitude": 41.008385,
+    "longitude": 28.977914,
+    "description": "A massive underground cistern built during the Roman period under Emperor Justinian I, incorporating reused Greek and Roman architectural elements.",
+    "link": "https://en.wikipedia.org/wiki/Basilica_Cistern",
+    "type": "Roman"
+  },
+  {
+    "name": "Forum of Constantine",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Column_of_Constantine_Istanbul.jpg",
+    "latitude": 41.00859,
+    "longitude": 28.96698,
+    "description": "The remains of the Forum founded by Constantine the Great, once the ceremonial center of Roman Constantinople.",
+    "link": "https://en.wikipedia.org/wiki/Forum_of_Constantine",
+    "type": "Roman"
+  },
+  {
+    "name": "Boukoleon Palace",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Boukoleon_Palace_ruins.jpg",
+    "latitude": 41.003921,
+    "longitude": 28.982222,
+    "description": "A coastal palace complex originally built during the late Roman period and expanded in Byzantine times, incorporating Roman architectural traditions.",
+    "link": "https://en.wikipedia.org/wiki/Boukoleon_Palace",
+    "type": "Roman"
+  },
+  {
+    "name": "Port of Theodosius",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/Port_of_Theodosius_excavations.jpg",
+    "latitude": 41.0049,
+    "longitude": 28.9519,
+    "description": "A major Roman harbor constructed in the late 4th century AD, revealed during Yenikapı excavations, containing ships and harbor structures.",
+    "link": "https://en.wikipedia.org/wiki/Port_of_Theodosius",
+    "type": "Roman"
+  },
+  {
+    "name": "Topkapı Sarayı",
+    "latitude": 41.0128,
+    "longitude": 28.9833,
+    "type": "Ottoman",
+    "description": "Osmanlı İmparatorluğu'nun 400 yıl boyunca idare merkezi olan, Fatih Sultan Mehmet yapımı devasa saray kompleksi.",
+    "link": "https://tr.wikipedia.org/wiki/Topkapı_Saray%C4%B1"
+  },
+  {
+    "name": "Süleymaniye Camii",
+    "latitude": 41.0161,
+    "longitude": 28.9639,
+    "type": "Ottoman",
+    "description": "Mimar Sinan'ın 'kalfalık eseri'; Kanuni Sultan Süleyman adına inşa edilen muazzam külliye.",
+    "link": "https://tr.wikipedia.org/wiki/Süleymaniye_Camii"
+  },
+  {
+    "name": "Selimiye Camii",
+    "latitude": 41.6781,
+    "longitude": 26.5594,
+    "type": "Ottoman",
+    "description": "Mimar Sinan'ın 'ustalık eserim' dediği, dünya mimarlık tarihinin zirve noktalarından biri.",
+    "link": "https://tr.wikipedia.org/wiki/Selimiye_Camii"
+  },
+  {
+    "name": "Sultanahmet Camii",
+    "latitude": 41.0054,
+    "longitude": 28.9768,
+    "type": "Ottoman",
+    "description": "Mavi çinileriyle ünlü, İstanbul'un altı minareli tek orijinal Osmanlı camii.",
+    "link": "https://tr.wikipedia.org/wiki/Sultan_Ahmet_Camii"
+  },
+  {
+    "name": "Bursa Ulu Camii",
+    "latitude": 40.1838,
+    "longitude": 29.062,
+    "type": "Ottoman",
+    "description": "Erken dönem Osmanlı mimarisinin çok kubbeli en görkemli yapısı ve hat sanatı müzesi.",
+    "link": "https://tr.wikipedia.org/wiki/Bursa_Ulu_Camii"
+  },
+  {
+    "name": "İshak Paşa Sarayı",
+    "latitude": 39.4206,
+    "longitude": 44.1297,
+    "type": "Ottoman",
+    "description": "Doğubayazıt'ta Osmanlı, Selçuklu ve Fars mimarisinin birleştiği masalsı sınır sarayı.",
+    "link": "https://tr.wikipedia.org/wiki/İshak_Paşa_Sarayı"
+  },
+  {
+    "name": "Dolmabahçe Sarayı",
+    "latitude": 41.0392,
+    "longitude": 29.0019,
+    "type": "Ottoman",
+    "description": "Osmanlı'nın Batılılaşma dönemini yansıtan, Boğaz kıyısındaki görkemli idare merkezi.",
+    "link": "https://tr.wikipedia.org/wiki/Dolmabahçe_Saray%C4%B1"
+  },
+  {
+    "name": "Edirne Eski Camii",
+    "latitude": 41.675,
+    "longitude": 26.5564,
+    "type": "Ottoman",
+    "description": "Duvarlarındaki devasa hat yazılarıyla bilinen, Edirne'deki en eski Osmanlı yapılarından biri.",
+    "link": "https://tr.wikipedia.org/wiki/Eski_Cami"
+  },
+  {
+    "name": "Yeşil Camii (Bursa)",
+    "latitude": 40.1814,
+    "longitude": 29.075,
+    "type": "Ottoman",
+    "description": "Çini süslemeleriyle dünya çapında tanınan, Bursa'nın sembolü erken dönem yapısı.",
+    "link": "https://tr.wikipedia.org/wiki/Yeşil_Cami_(Bursa)"
+  },
+  {
+    "name": "Rumeli Hisarı",
+    "latitude": 41.0853,
+    "longitude": 29.0564,
+    "type": "Ottoman",
+    "description": "İstanbul'un fethinden önce Boğaz'ın kontrolü için 4 ayda tamamlanan askeri mimari şaheseri.",
+    "link": "https://tr.wikipedia.org/wiki/Rumeli_Hisarı"
+  },
+  {
+    "name": "Anadolu Hisarı",
+    "latitude": 41.0825,
+    "longitude": 29.0667,
+    "type": "Ottoman",
+    "description": "Yıldırım Bayezid tarafından Boğaz'ın en dar noktasında yaptırılan ilk Osmanlı kalesi.",
+    "link": "https://tr.wikipedia.org/wiki/Anadolu_Hisarı"
+  },
+  {
+    "name": "Beylerbeyi Sarayı",
+    "latitude": 41.0428,
+    "longitude": 29.0397,
+    "type": "Ottoman",
+    "description": "Sultanların yazlık ikametgahı ve yabancı devlet başkanlarının ağırlandığı Boğaz sarayı.",
+    "link": "https://tr.wikipedia.org/wiki/Beylerbeyi_Saray%C4%B1"
+  },
+  {
+    "name": "Yıldız Sarayı",
+    "latitude": 41.05,
+    "longitude": 29.0117,
+    "type": "Ottoman",
+    "description": "II. Abdülhamid döneminde devletin yönetim merkezi olan geniş bahçeli saray kompleksi.",
+    "link": "https://tr.wikipedia.org/wiki/Yıldız_Saray%C4%B1"
+  },
+  {
+    "name": "Çırağan Sarayı",
+    "latitude": 41.0436,
+    "longitude": 29.0169,
+    "type": "Ottoman",
+    "description": "Boğaz üzerindeki 'mermer saray', Osmanlı'nın lüks ve zarafet anlayışının zirvesi.",
+    "link": "https://tr.wikipedia.org/wiki/Çırağan_Saray%C4%B1"
+  },
+  {
+    "name": "Şehzade Camii",
+    "latitude": 41.0139,
+    "longitude": 28.9575,
+    "type": "Ottoman",
+    "description": "Mimar Sinan'ın 'çıraklık eserim' dediği, simetrik yapısıyla dikkat çeken şaheser.",
+    "link": "https://tr.wikipedia.org/wiki/Şehzade_Camii"
+  },
+  {
+    "name": "Fatih Camii",
+    "latitude": 41.0197,
+    "longitude": 28.9494,
+    "type": "Ottoman",
+    "description": "İstanbul'un fethinden sonra şehre vurulan ilk büyük Türk mührü ve külliyesi.",
+    "link": "https://tr.wikipedia.org/wiki/Fatih_Camii_(İstanbul)"
+  },
+  {
+    "name": "Yeni Cami",
+    "latitude": 41.0169,
+    "longitude": 28.9719,
+    "type": "Ottoman",
+    "description": "Eminönü meydanında, inşası yarım asırdan fazla süren görkemli sahil camii.",
+    "link": "https://tr.wikipedia.org/wiki/Yeni_Cami_(İstanbul)"
+  },
+  {
+    "name": "Ortaköy Camii",
+    "latitude": 41.0472,
+    "longitude": 29.0267,
+    "type": "Ottoman",
+    "description": "Balyan ailesi yapımı, Boğaz köprüsü ile özdeşleşen barok tarzı estetik yapı.",
+    "link": "https://tr.wikipedia.org/wiki/Ortaköy_Camii"
+  },
+  {
+    "name": "Eyüp Sultan Camii",
+    "latitude": 41.0475,
+    "longitude": 28.9333,
+    "type": "Ottoman",
+    "description": "İstanbul'un en kutsal noktalarından biri kabul edilen ilk büyük külliye merkezi.",
+    "link": "https://tr.wikipedia.org/wiki/Eyüp_Sultan_Camii"
+  },
+  {
+    "name": "Nuruosmaniye Camii",
+    "latitude": 41.01,
+    "longitude": 28.97,
+    "type": "Ottoman",
+    "description": "Osmanlı mimarisinde Barok akımının başladığı, kavisli avlusuyla ünlü ilk yapı.",
+    "link": "https://tr.wikipedia.org/wiki/Nuruosmaniye_Camii"
+  },
+  {
+    "name": "Mihrimah Sultan Camii (Üsküdar)",
+    "latitude": 41.0267,
+    "longitude": 29.0158,
+    "type": "Ottoman",
+    "description": "Mimar Sinan'ın Kanuni'nin kızı için yaptığı, Üsküdar iskelesindeki zarif yapı.",
+    "link": "https://tr.wikipedia.org/wiki/Mihrimah_Sultan_Camii_(Üsküdar)"
+  },
+  {
+    "name": "Mihrimah Sultan Camii (Edirnekapı)",
+    "latitude": 41.0294,
+    "longitude": 28.9358,
+    "type": "Ottoman",
+    "description": "İstanbul'un en yüksek tepesinde, iç mekanı aydınlatan yüzlerce penceresiyle ünlü eser.",
+    "link": "https://tr.wikipedia.org/wiki/Mihrimah_Sultan_Camii_(Edirnekapı)"
+  },
+  {
+    "name": "Kılıç Ali Paşa Camii",
+    "latitude": 41.0264,
+    "longitude": 28.9811,
+    "type": "Ottoman",
+    "description": "Ayasofya'nın mimari planının küçültülmüş ve mükemmelleştirilmiş bir Sinan yorumu.",
+    "link": "https://tr.wikipedia.org/wiki/Kılıç_Ali_Paşa_Camii"
+  },
+  {
+    "name": "Rüstem Paşa Camii",
+    "latitude": 41.0178,
+    "longitude": 28.9689,
+    "type": "Ottoman",
+    "description": "İç duvarlarını kaplayan dünyanın en nadide İznik çinileriyle ünlü Sinan eseri.",
+    "link": "https://tr.wikipedia.org/wiki/Rüstem_Paşa_Camii"
+  },
+  {
+    "name": "Sokollu Mehmet Paşa Camii",
+    "latitude": 41.0047,
+    "longitude": 28.9719,
+    "type": "Ottoman",
+    "description": "Kadırga'da yer alan, içinde Hacer-ül Esved parçaları barındıran mimari mücevher.",
+    "link": "https://tr.wikipedia.org/wiki/Sokollu_Mehmed_Paşa_Camii_(Kadırga)"
+  },
+  {
+    "name": "Bayezid Camii",
+    "latitude": 41.0103,
+    "longitude": 28.965,
+    "type": "Ottoman",
+    "description": "İstanbul'da orijinalliğini koruyan en eski sultan camii; klasik dönemin başlangıcı.",
+    "link": "https://tr.wikipedia.org/wiki/Bayezid_Camii"
+  },
+  {
+    "name": "Haseki Külliyesi",
+    "latitude": 41.0089,
+    "longitude": 28.9419,
+    "type": "Ottoman",
+    "description": "Hürrem Sultan adına Mimar Sinan tarafından yapılan ilk büyük sosyal kompleks.",
+    "link": "https://tr.wikipedia.org/wiki/Haseki_Külliyesi"
+  },
+  {
+    "name": "Muradiye Külliyesi",
+    "latitude": 40.1914,
+    "longitude": 29.0464,
+    "type": "Ottoman",
+    "description": "Bursa'da Osmanlı sultanlarının ve ailelerinin mezarlarını barındıran huzur dolu bahçe.",
+    "link": "https://tr.wikipedia.org/wiki/Muradiye_Külliyesi"
+  },
+  {
+    "name": "Emir Sultan Camii",
+    "latitude": 40.18,
+    "longitude": 29.08,
+    "type": "Ottoman",
+    "description": "Bursa'nın manevi merkezi, Yıldırım Bayezid'in kızı tarafından yaptırılan zarif eser.",
+    "link": "https://tr.wikipedia.org/wiki/Emir_Sultan_Camii"
+  },
+  {
+    "name": "Yıldırım Camii",
+    "latitude": 40.1811,
+    "longitude": 29.0833,
+    "type": "Ottoman",
+    "description": "Bursa'da Yıldırım Bayezid tarafından yaptırılan, 'T' planlı erken dönem mimari örneği.",
+    "link": "https://tr.wikipedia.org/wiki/Yıldırım_Camii"
+  },
+  {
+    "name": "Üç Şerefeli Cami",
+    "latitude": 41.6775,
+    "longitude": 26.5539,
+    "type": "Ottoman",
+    "description": "Edirne'de Sinan öncesi mimarinin en yenilikçi ve büyük kubbeli denemesi.",
+    "link": "https://tr.wikipedia.org/wiki/Üç_Şerefeli_Cami"
+  },
+  {
+    "name": "II. Bayezid Külliyesi",
+    "latitude": 41.685,
+    "longitude": 26.5433,
+    "type": "Ottoman",
+    "description": "Edirne'de dönemin tıp merkezi olan, müzik ve su sesiyle tedavi yapılan şifahane.",
+    "link": "https://tr.wikipedia.org/wiki/II._Bayezid_Külliyesi"
+  },
+  {
+    "name": "Aziziye Camii",
+    "latitude": 37.87,
+    "longitude": 32.4933,
+    "type": "Ottoman",
+    "description": "Konya'da Osmanlı'nın son dönem barok ve ampir tarzını yansıtan geniş pencereli cami.",
+    "link": "https://tr.wikipedia.org/wiki/Aziziye_Camii_(Konya)"
+  },
+  {
+    "name": "Kapu Camii",
+    "latitude": 37.8714,
+    "longitude": 32.4967,
+    "type": "Ottoman",
+    "description": "Konya şehir merkezindeki en büyük ve görkemli Osmanlı yapılarından biridir.",
+    "link": "https://tr.wikipedia.org/wiki/Kapu_Camii"
+  },
+  {
+    "name": "Hacı Bayram Camii",
+    "latitude": 39.9444,
+    "longitude": 32.8581,
+    "type": "Ottoman",
+    "description": "Ankara'da Augustus Tapınağı ile bitişik olan, şehrin en önemli manevi mekanı.",
+    "link": "https://tr.wikipedia.org/wiki/Hacı_Bayram_Camii"
+  },
+  {
+    "name": "Kurşunlu Külliyesi",
+    "latitude": 39.7594,
+    "longitude": 30.5258,
+    "type": "Ottoman",
+    "description": "Eskişehir Odunpazarı'nda Mimar Sinan öncesi klasik Osmanlı külliye mimarisi.",
+    "link": "https://tr.wikipedia.org/wiki/Kurşunlu_Külliyesi"
+  },
+  {
+    "name": "Çoban Mustafa Paşa Külliyesi",
+    "latitude": 40.7994,
+    "longitude": 29.43,
+    "type": "Ottoman",
+    "description": "Gebze'de Mimar Sinan ve ekibi tarafından inşa edilen devasa menzil külliyesi.",
+    "link": "https://tr.wikipedia.org/wiki/Çoban_Mustafa_Paşa_Külliyesi"
+  },
+  {
+    "name": "Meryem Ana Kilisesi (Efes-Osmanlı)",
+    "latitude": 37.9133,
+    "longitude": 27.3317,
+    "type": "Ottoman",
+    "description": "Antik kalıntılar üzerine Osmanlı döneminde de saygı gören kutsal ziyaret mekanı.",
+    "link": "https://tr.wikipedia.org/wiki/Meryem_Ana_Evi"
+  },
+  {
+    "name": "Lala Mustafa Paşa Külliyesi",
+    "latitude": 38.3517,
+    "longitude": 31.415,
+    "type": "Ottoman",
+    "description": "Ilgın'da ticaret yolu üzerinde kervansaray odaklı inşa edilmiş büyük Sinan eseri.",
+    "link": "https://tr.wikipedia.org/wiki/Lala_Mustafa_Paşa_Külliyesi"
+  },
+  {
+    "name": "Sokollu Mehmet Paşa Köprüsü",
+    "latitude": 41.4136,
+    "longitude": 27.3514,
+    "type": "Ottoman",
+    "description": "Lüleburgaz'da Mimar Sinan'ın mühendislik dehasını sergilediği tarihi köprü.",
+    "link": "https://tr.wikipedia.org/wiki/Sokollu_Mehmed_Paşa_Köprüsü_(Lüleburgaz)"
+  },
+  {
+    "name": "Büyükçekmece Köprüsü",
+    "latitude": 41.0211,
+    "longitude": 28.57,
+    "type": "Ottoman",
+    "description": "Mimar Sinan'ın 'Eserlerimin içine mührümü bastığım eser budur' dediği 4 bölümlü köprü.",
+    "link": "https://tr.wikipedia.org/wiki/Kanuni_Sultan_Süleyman_Köprüsü"
+  },
+  {
+    "name": "Meriç Köprüsü",
+    "latitude": 41.6622,
+    "longitude": 26.5503,
+    "type": "Ottoman",
+    "description": "Edirne'de Meriç Nehri üzerinde sultanların güneşin batışını izlediği köşk balkonlu köprü.",
+    "link": "https://tr.wikipedia.org/wiki/Meriç_Köprüsü"
+  },
+  {
+    "name": "Tunca Köprüsü",
+    "latitude": 41.6689,
+    "longitude": 26.5544,
+    "type": "Ottoman",
+    "description": "Edirne'nin girişinde Tunca Nehri'ni süsleyen, Osmanlı ulaşım ağının kritik noktası.",
+    "link": "https://tr.wikipedia.org/wiki/Tunca_Köprüsü"
+  },
+  {
+    "name": "Uzun Köprü",
+    "latitude": 41.2747,
+    "longitude": 26.685,
+    "type": "Ottoman",
+    "description": "Dünyanın en uzun taş köprülerinden biri; Ergene Nehri üzerinde 174 kemerli dev yapı.",
+    "link": "https://tr.wikipedia.org/wiki/Uzun_Köprü"
+  },
+  {
+    "name": "Irgandı Köprüsü",
+    "latitude": 40.1814,
+    "longitude": 29.0719,
+    "type": "Ottoman",
+    "description": "Bursa'da dünyadaki nadir çarşılı köprülerden biri; üzerinde dükkanlar barındıran yapı.",
+    "link": "https://tr.wikipedia.org/wiki/Irgandı_Köprüsü"
+  },
+  {
+    "name": "Abdal Köprüsü",
+    "latitude": 40.21,
+    "longitude": 29.04,
+    "type": "Ottoman",
+    "description": "Bursa'da Nilüfer Çayı üzerinde 17. yüzyıldan kalma klasik Osmanlı köprüsü.",
+    "link": "https://tr.wikipedia.org/wiki/Abdal_Köprüsü"
+  },
+  {
+    "name": "Malabadi Köprüsü",
+    "latitude": 38.1539,
+    "longitude": 41.2017,
+    "type": "Ottoman",
+    "description": "Osmanlı döneminde de onarılarak kullanılan, dünyanın en geniş taş kemerli köprülerinden.",
+    "link": "https://tr.wikipedia.org/wiki/Malabadi_Köprüsü"
+  },
+  {
+    "name": "Çifte Minareli Medrese (Erzurum)",
+    "latitude": 39.9061,
+    "longitude": 41.2778,
+    "type": "Ottoman",
+    "description": "Selçuklu yapısı olsa da Osmanlı döneminde ordugah ve medrese olarak uzun süre kullanıldı.",
+    "link": "https://tr.wikipedia.org/wiki/Çifte_Minareli_Medrese_(Erzurum)"
+  },
+  {
+    "name": "Yakutiye Medrecesi",
+    "latitude": 39.9075,
+    "longitude": 41.2725,
+    "type": "Ottoman",
+    "description": "Erzurum'un merkezinde Osmanlı döneminde de eğitim işlevini sürdüren görkemli yapı.",
+    "link": "https://tr.wikipedia.org/wiki/Yakutiye_Medresesi"
+  },
+  {
+    "name": "Gök Medrese (Sivas)",
+    "latitude": 39.7436,
+    "longitude": 37.0142,
+    "type": "Ottoman",
+    "description": "Mavi çinileriyle ünlü, Osmanlı döneminde de şehrin en önemli ilim merkezi olan yapı.",
+    "link": "https://tr.wikipedia.org/wiki/Gök_Medrese_(Sivas)"
+  },
+  {
+    "name": "Zinciriye Medresesi",
+    "latitude": 37.3136,
+    "longitude": 40.7383,
+    "type": "Ottoman",
+    "description": "Mardin'de Artuklu yapısı olup Osmanlı eyalet yönetiminde merkezi rol oynamış eser.",
+    "link": "https://tr.wikipedia.org/wiki/Zinciriye_Medresesi_(Mardin)"
+  },
+  {
+    "name": "Kasimiye Medresesi",
+    "latitude": 37.3083,
+    "longitude": 40.725,
+    "type": "Ottoman",
+    "description": "Mardin'de astronomi ve tıp eğitiminin verildiği, havuzlu avlusuyla ünlü Osmanlı mekanı.",
+    "link": "https://tr.wikipedia.org/wiki/Kasımiye_Medresesi"
+  },
+  {
+    "name": "Koza Han",
+    "latitude": 40.1844,
+    "longitude": 29.0631,
+    "type": "Ottoman",
+    "description": "Bursa'da ipek ticaretinin kalbi; II. Bayezid tarafından yaptırılan muazzam ticaret merkezi.",
+    "link": "https://tr.wikipedia.org/wiki/Koza_Han"
+  },
+  {
+    "name": "Pirinç Han",
+    "latitude": 40.1856,
+    "longitude": 29.0628,
+    "type": "Ottoman",
+    "description": "Bursa'da yabancı tüccarların konakladığı, şehrin en büyük han yapılarından biri.",
+    "link": "https://tr.wikipedia.org/wiki/Pirinç_Han"
+  },
+  {
+    "name": "Fidan Han",
+    "latitude": 40.185,
+    "longitude": 29.0642,
+    "type": "Ottoman",
+    "description": "Bursa çarşı bölgesinde yer alan, ortasındaki 12 köşeli şadırvanıyla ünlü tarihi han.",
+    "link": "https://tr.wikipedia.org/wiki/Fidan_Han"
+  },
+  {
+    "name": "Mısır Çarşısı",
+    "latitude": 41.0164,
+    "longitude": 28.9706,
+    "type": "Ottoman",
+    "description": "İstanbul'un baharat kokulu tarihi merkezi; Hatice Turhan Sultan tarafından yaptırılmıştır.",
+    "link": "https://tr.wikipedia.org/wiki/Mısır_Çarşısı"
+  },
+  {
+    "name": "Kapalıçarşı",
+    "latitude": 41.0108,
+    "longitude": 28.9681,
+    "type": "Ottoman",
+    "description": "Fatih tarafından başlatılan, 61 sokağıyla dünyanın en eski ve büyük alışveriş merkezi.",
+    "link": "https://tr.wikipedia.org/wiki/Kapalıçarşı"
+  },
+  {
+    "name": "Sahaflar Çarşısı",
+    "latitude": 41.0114,
+    "longitude": 28.9664,
+    "type": "Ottoman",
+    "description": "Osmanlı'da kitap ticaretinin kalbi; ilim adamlarının ve öğrencilerin buluşma noktası.",
+    "link": "https://tr.wikipedia.org/wiki/Sahaflar_Çarşısı"
+  },
+  {
+    "name": "Sultan Sazlığı (Hüseyinli Hanı)",
+    "latitude": 38.33,
+    "longitude": 35.25,
+    "type": "Ottoman",
+    "description": "Kayseri'de eski kervansaray yolu üzerinde yer alan Osmanlı konaklama yapısı.",
+    "link": "https://tr.wikipedia.org/wiki/Sultan_Sazlığı"
+  },
+  {
+    "name": "Kıbrıs Hanı",
+    "latitude": 37.0658,
+    "longitude": 37.3828,
+    "type": "Ottoman",
+    "description": "Gaziantep'te ipek yolu ticaretinin konaklama noktalarından olan tarihi taş han.",
+    "link": "https://tr.wikipedia.org/wiki/Kıbrıs_Hanı"
+  },
+  {
+    "name": "Gümrük Hanı",
+    "latitude": 37.1511,
+    "longitude": 38.7889,
+    "type": "Ottoman",
+    "description": "Şanlıurfa'da Kanuni döneminde inşa edilen, avlusundan nehir geçen estetik han.",
+    "link": "https://tr.wikipedia.org/wiki/Gümrük_Hanı"
+  },
+  {
+    "name": "Büyük Yeni Han",
+    "latitude": 41.0147,
+    "longitude": 28.9686,
+    "type": "Ottoman",
+    "description": "III. Mustafa tarafından yaptırılan, İstanbul'un en büyük ikinci han yapısı.",
+    "link": "https://tr.wikipedia.org/wiki/Büyük_Yeni_Han"
+  },
+  {
+    "name": "Büyük Valide Han",
+    "latitude": 41.0139,
+    "longitude": 28.9689,
+    "type": "Ottoman",
+    "description": "Kösem Sultan tarafından yaptırılan, İstanbul'un en devasa ve gizemli hanlarından biri.",
+    "link": "https://tr.wikipedia.org/wiki/Büyük_Valide_Han"
+  },
+  {
+    "name": "Ihlamur Kasrı",
+    "latitude": 41.0506,
+    "longitude": 29.0014,
+    "type": "Ottoman",
+    "description": "Beşiktaş'ta sultanların dinlenme yeri olan, barok süslemeli zarif biniş kasrı.",
+    "link": "https://tr.wikipedia.org/wiki/Ihlamur_Kasrı"
+  },
+  {
+    "name": "Küçüksu Kasrı",
+    "latitude": 41.08,
+    "longitude": 29.0653,
+    "type": "Ottoman",
+    "description": "Boğaz kıyısında 'kabartma heykel' gibi işlenmiş dış cephesiyle ünlü av köşkü.",
+    "link": "https://tr.wikipedia.org/wiki/Küçüksu_Kasrı"
+  },
+  {
+    "name": "Aynalıkavak Kasrı",
+    "latitude": 41.0367,
+    "longitude": 28.9489,
+    "type": "Ottoman",
+    "description": "Haliç kıyısında bulunan, III. Selim'in bestelerini yaptığı musiki kültür merkezi.",
+    "link": "https://tr.wikipedia.org/wiki/Aynalıkavak_Kasrı"
+  },
+  {
+    "name": "Maslak Kasırları",
+    "latitude": 41.1167,
+    "longitude": 29.025,
+    "type": "Ottoman",
+    "description": "II. Abdülhamid'in şehzadelik döneminde çiftlik hayatı sürdüğü kasır topluluğu.",
+    "link": "https://tr.wikipedia.org/wiki/Maslak_Kasırları"
+  },
+  {
+    "name": "Yedikule Zindanları",
+    "latitude": 40.9936,
+    "longitude": 28.9228,
+    "type": "Ottoman",
+    "description": "Bizans'ın Altın Kapısı ile Osmanlı kulelerinin birleştiği, önemli devlet mahkumlarının tutulduğu hisar.",
+    "link": "https://tr.wikipedia.org/wiki/Yedikule_Hisarı"
+  },
+  {
+    "name": "Galata Kulesi",
+    "latitude": 41.0256,
+    "longitude": 28.9742,
+    "type": "Ottoman",
+    "description": "Ceneviz yapısı olsa da Osmanlı döneminde yangın kulesi ve rasathane olarak kullanılan sembol.",
+    "link": "https://tr.wikipedia.org/wiki/Galata_Kulesi"
+  },
+  {
+    "name": "Kız Kulesi",
+    "latitude": 41.0211,
+    "longitude": 29.0041,
+    "type": "Ottoman",
+    "description": "Boğaz'ın ortasında Osmanlı döneminde fener ve karantina istasyonu olarak kullanılan kule.",
+    "link": "https://tr.wikipedia.org/wiki/Kız_Kulesi"
+  },
+  {
+    "name": "Tophane-i Amire",
+    "latitude": 41.0275,
+    "longitude": 28.9814,
+    "type": "Ottoman",
+    "description": "Osmanlı ordusunun top döküm merkezi olan, kubbeleriyle ünlü endüstriyel mimari.",
+    "link": "https://tr.wikipedia.org/wiki/Tophane-i_Amire"
+  },
+  {
+    "name": "Darphane-i Amire",
+    "latitude": 41.0117,
+    "longitude": 28.9839,
+    "type": "Ottoman",
+    "description": "Osmanlı İmparatorluğu'nun para basım merkezi olan Topkapı Sarayı yanındaki tesis.",
+    "link": "https://tr.wikipedia.org/wiki/Darphane-i_Amire"
+  },
+  {
+    "name": "Sepetçiler Kasrı",
+    "latitude": 41.0175,
+    "longitude": 28.98,
+    "type": "Ottoman",
+    "description": "Sarayburnu sahilinde, sultanların deniz donanmasını izlediği tarihi köşk.",
+    "link": "https://tr.wikipedia.org/wiki/Sepetçiler_Kasrı"
+  },
+  {
+    "name": "Hünkar Kasrı (Bursa)",
+    "latitude": 40.18,
+    "longitude": 29.075,
+    "type": "Ottoman",
+    "description": "Sultan Abdülmecid için 19 günde inşa edilen, Atatürk'ün de konakladığı Bursa köşkü.",
+    "link": "https://tr.wikipedia.org/wiki/Hünkar_Kasrı"
+  },
+  {
+    "name": "İvaz Efendi Camii",
+    "latitude": 41.0369,
+    "longitude": 28.9397,
+    "type": "Ottoman",
+    "description": "Haliç surları üzerinde, Mimar Sinan'ın en geç dönem ve en aydınlık eserlerinden biri.",
+    "link": "https://tr.wikipedia.org/wiki/İvaz_Efendi_Camii"
+  },
+  {
+    "name": "Zal Mahmut Paşa Külliyesi",
+    "latitude": 41.045,
+    "longitude": 28.935,
+    "type": "Ottoman",
+    "description": "Eyüp'te Sinan'ın mimari oranları zorladığı, iki katlı avlusuyla özgün bir yapı.",
+    "link": "https://tr.wikipedia.org/wiki/Zal_Mahmut_Paşa_Külliyesi"
+  },
+  {
+    "name": "Piyale Paşa Camii",
+    "latitude": 41.0431,
+    "longitude": 28.9667,
+    "type": "Ottoman",
+    "description": "Kasım Paşa'da gemi formunu andıran, çok kubbeli Sinan tasarımı özgün cami.",
+    "link": "https://tr.wikipedia.org/wiki/Piyale_Paşa_Camii"
+  },
+  {
+    "name": "Atik Valide Külliyesi",
+    "latitude": 41.0194,
+    "longitude": 29.0258,
+    "type": "Ottoman",
+    "description": "Üsküdar'da Mimar Sinan'ın yaptığı en büyük ve kapsamlı külliye yapılarından biri.",
+    "link": "https://tr.wikipedia.org/wiki/Atik_Valide_Külliyesi"
+  },
+  {
+    "name": "Şemsi Paşa Camii",
+    "latitude": 41.0264,
+    "longitude": 29.0117,
+    "type": "Ottoman",
+    "description": "Üsküdar sahilinde 'Kuşkonmaz Camii' olarak bilinen, denize sıfır minyatür şaheser.",
+    "link": "https://tr.wikipedia.org/wiki/Şemsi_Paşa_Camii"
+  },
+  {
+    "name": "Yeni Valide Camii",
+    "latitude": 41.0269,
+    "longitude": 29.015,
+    "type": "Ottoman",
+    "description": "Üsküdar'da kuş evleri ve dantel gibi işlenmiş şadırvan kafesiyle ünlü Lale Devri eseri.",
+    "link": "https://tr.wikipedia.org/wiki/Yeni_Valide_Camii"
+  },
+  {
+    "name": "Hamidiye Camii (Büyükada)",
+    "latitude": 40.8583,
+    "longitude": 29.1283,
+    "type": "Ottoman",
+    "description": "Büyükada'da II. Abdülhamid tarafından yaptırılan, eklektik tarzın adadaki temsilcisi.",
+    "link": "https://tr.wikipedia.org/wiki/Hamidiye_Camii_(Büyükada)"
+  },
+  {
+    "name": "Yıldız Hamidiye Camii",
+    "latitude": 41.0494,
+    "longitude": 29.0103,
+    "type": "Ottoman",
+    "description": "Beşiktaş'ta II. Abdülhamid'in yaptırdığı, oryantalist süslemeli sultan camii.",
+    "link": "https://tr.wikipedia.org/wiki/Yıldız_Hamidiye_Camii"
+  },
+  {
+    "name": "Nusretiye Camii",
+    "latitude": 41.0269,
+    "longitude": 28.9839,
+    "type": "Ottoman",
+    "description": "Tophane'de ampir tarzın en önemli örneği; Sultan II. Mahmut'un zafer anıtı.",
+    "link": "https://tr.wikipedia.org/wiki/Nusretiye_Camii"
+  },
+  {
+    "name": "Laleli Camii",
+    "latitude": 41.01,
+    "longitude": 28.9589,
+    "type": "Ottoman",
+    "description": "İstanbul'da III. Mustafa yapımı, altında büyük bir çarşı (katlı çarşı) bulunan barok cami.",
+    "link": "https://tr.wikipedia.org/wiki/Laleli_Camii"
+  },
+  {
+    "name": "Pertevniyal Valide Sultan Camii",
+    "latitude": 41.0106,
+    "longitude": 28.9519,
+    "type": "Ottoman",
+    "description": "Aksaray'da gotik, Hint ve Osmanlı mimarisinin karıştığı en süslü geç dönem yapısı.",
+    "link": "https://tr.wikipedia.org/wiki/Pertevniyal_Valide_Sultan_Camii"
+  },
+  {
+    "name": "Teşvikiye Camii",
+    "latitude": 41.0503,
+    "longitude": 28.9942,
+    "type": "Ottoman",
+    "description": "Nişantaşı'nda Neo-Barok tarzda inşa edilen, semte adını veren 'teşvik' abidesi.",
+    "link": "https://tr.wikipedia.org/wiki/Teşvikiye_Camii"
+  },
+  {
+    "name": "Sultanahmet Meydanı Çeşmesi",
+    "latitude": 41.0067,
+    "longitude": 28.9772,
+    "type": "Ottoman",
+    "description": "Alman Çeşmesi ile yan yana, III. Ahmet tarafından yaptırılan Türk barokunun şaheseri.",
+    "link": "https://tr.wikipedia.org/wiki/III._Ahmed_Çeşmesi_(Sultanahmet)"
+  },
+  {
+    "name": "III. Ahmet Çeşmesi (Üsküdar)",
+    "latitude": 41.0267,
+    "longitude": 29.015,
+    "type": "Ottoman",
+    "description": "Üsküdar meydanını süsleyen, her köşesi şiirlerle bezeli devasa meydan çeşmesi.",
+    "link": "https://tr.wikipedia.org/wiki/III._Ahmed_Çeşmesi_(Üsküdar)"
+  },
+  {
+    "name": "Tophane Çeşmesi",
+    "latitude": 41.0261,
+    "longitude": 28.9814,
+    "type": "Ottoman",
+    "description": "I. Mahmut tarafından yaptırılan, İstanbul'un en yüksek ve süslü duvar çeşmelerinden.",
+    "link": "https://tr.wikipedia.org/wiki/Tophane_Çeşmesi"
+  },
+  {
+    "name": "Alman Çeşmesi",
+    "latitude": 41.0072,
+    "longitude": 28.9767,
+    "type": "Ottoman",
+    "description": "Kayser II. Wilhelm'in hediyesi olsa da Osmanlı başkentinin kalbinde yükselen neo-bizanten yapı.",
+    "link": "https://tr.wikipedia.org/wiki/Alman_Çeşmesi"
+  },
+  {
+    "name": "Galatasaray Lisesi",
+    "latitude": 41.0325,
+    "longitude": 28.9778,
+    "type": "Ottoman",
+    "description": "II. Bayezid tarafından kurulan 'Galata Sarayı Hümayun Mektebi'nin devamı olan tarihi kurum.",
+    "link": "https://tr.wikipedia.org/wiki/Galatasaray_Lisesi"
+  },
+  {
+    "name": "Haydarpaşa Lisesi",
+    "latitude": 41.0019,
+    "longitude": 29.0208,
+    "type": "Ottoman",
+    "description": "Osmanlı'nın ilk tıp okulu (Tıbbiye-i Şahane) olarak inşa edilen devasa taş bina.",
+    "link": "https://tr.wikipedia.org/wiki/Marmara_Üniversitesi_Haydarpaşa_Yerleşkesi"
+  },
+  {
+    "name": "Kuleli Askeri Lisesi",
+    "latitude": 41.0583,
+    "longitude": 29.0525,
+    "type": "Ottoman",
+    "description": "Boğaz'ın en görkemli askeri yapısı; Osmanlı ordusuna subay yetiştiren tarihi kışla.",
+    "link": "https://tr.wikipedia.org/wiki/Kuleli_Askerî_Lisesi"
+  },
+  {
+    "name": "Selimiye Kışlası",
+    "latitude": 41.0011,
+    "longitude": 29.0169,
+    "type": "Ottoman",
+    "description": "Üsküdar'da III. Selim tarafından kurulan, devasa kuleleriyle ünlü askeri kompleks.",
+    "link": "https://tr.wikipedia.org/wiki/Selimiye_Kışlası"
+  },
+  {
+    "name": "Davutpaşa Kışlası",
+    "latitude": 41.0261,
+    "longitude": 28.8911,
+    "type": "Ottoman",
+    "description": "Osmanlı ordusunun Avrupa seferlerine çıkarken toplandığı tarihi askeri merkez.",
+    "link": "https://tr.wikipedia.org/wiki/Davutpaşa_Kışlası"
+  },
+  {
+    "name": "Yıldız Porselen Fabrikası",
+    "latitude": 41.0486,
+    "longitude": 29.0156,
+    "type": "Ottoman",
+    "description": "II. Abdülhamid tarafından sarayın porselen ihtiyacı için kurulan sanayi mirası.",
+    "link": "https://tr.wikipedia.org/wiki/Yıldız_Porselen_Fabrikası"
+  },
+  {
+    "name": "Darülaceze",
+    "latitude": 41.06,
+    "longitude": 28.96,
+    "type": "Ottoman",
+    "description": "Sultan II. Abdülhamid'in din, dil, ırk ayrımı gözetmeden kurduğu tarihi şefkat yuvası.",
+    "link": "https://tr.wikipedia.org/wiki/Darülaceze"
+  },
+  {
+    "name": "Gülhane Parkı",
+    "latitude": 41.0125,
+    "longitude": 28.9806,
+    "type": "Ottoman",
+    "description": "Topkapı Sarayı'nın dış bahçesi; Tanzimat Fermanı'nın okunduğu tarihi demokrasi alanı.",
+    "link": "https://tr.wikipedia.org/wiki/Gülhane_Parkı"
+  },
+  {
+    "name": "Emirgan Korusu",
+    "latitude": 41.1083,
+    "longitude": 29.0525,
+    "type": "Ottoman",
+    "description": "Osmanlı paşalarının mülkü olan, içindeki tarihi köşklerle ünlü İstanbul'un akciğeri.",
+    "link": "https://tr.wikipedia.org/wiki/Emirgan_Korusu"
+  },
+  {
+    "name": "İkinci Mahmut Türbesi",
+    "latitude": 41.0089,
+    "longitude": 28.9717,
+    "type": "Ottoman",
+    "description": "Çemberlitaş'ta bulunan, Osmanlı hanedanının son büyük türbe kompleksi.",
+    "link": "https://tr.wikipedia.org/wiki/II._Mahmud_Türbesi"
+  }
+];
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = ANCIENT_SITES;
+}

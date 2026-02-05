@@ -56,6 +56,16 @@ function applyFilters() {
     });
 
     renderMarkers(filtered);
+    
+    // Ancient sites filtreleme
+    if (typeof renderAncientSiteMarkers === 'function') {
+        renderAncientSiteMarkers();
+        
+        // Medeniyet değiştiğinde ancient language slogan göster
+        if (civ !== 'all') {
+            showAncientSlogan(civ);
+        }
+    }
 
     // KAMERA PAN & ZOOM (AKICI GEÇİŞ)
     if(filtered.length > 0) {
@@ -68,4 +78,52 @@ function applyFilters() {
             duration: 1.5
         });
     }
+}
+
+function showAncientSlogan(civilization) {
+    const slogans = {
+        'Greek': {
+            text: 'Γνῶθι σεαυτόν',
+            translation: 'Kendini Bil (Know Thyself)'
+        },
+        'Roman': {
+            text: 'SPQR',
+            translation: 'Senatus Populusque Romanus (Roma Senatosu ve Halkı)'
+        },
+        'Ottoman': {
+            text: 'دولت ابد مدت',
+            translation: 'Devlet-i Ebed-Müddet (Ebedi Devlet)'
+        }
+    };
+    
+    const slogan = slogans[civilization];
+    if (!slogan) return;
+    
+    const sloganDiv = document.getElementById('ancientSlogan');
+    const sloganText = document.getElementById('sloganText');
+    const sloganTranslation = document.getElementById('sloganTranslation');
+    
+    if (!sloganDiv || !sloganText || !sloganTranslation) return;
+    
+    sloganText.textContent = slogan.text;
+    sloganTranslation.textContent = slogan.translation;
+    
+    // Göster
+    sloganDiv.style.display = 'block';
+    sloganDiv.style.opacity = '0';
+    
+    // Fade in
+    setTimeout(() => {
+        sloganDiv.style.transition = 'opacity 0.5s ease';
+        sloganDiv.style.opacity = '1';
+    }, 10);
+    
+    // 5 saniye sonra gizle
+    setTimeout(() => {
+        sloganDiv.style.transition = 'opacity 0.5s ease';
+        sloganDiv.style.opacity = '0';
+        setTimeout(() => {
+            sloganDiv.style.display = 'none';
+        }, 500);
+    }, 5000);
 }
