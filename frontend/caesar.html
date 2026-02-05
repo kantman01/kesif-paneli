@@ -42,11 +42,11 @@
             position: fixed;
             left: 0;
             top: 0;
+            transition: transform 0.4s ease-in-out;
         }
 
         #sidebar-left.closed {
             transform: translateX(-100%);
-            transition: transform 0.4s ease-in-out;
         }
 
         .sidebar-title {
@@ -116,6 +116,14 @@
 
         #toggle-sidebar:active {
             transform: scale(0.95);
+        }
+
+        #toggle-sidebar:focus-visible,
+        #open-sidebar:focus-visible,
+        #caesarOverlayClose:focus-visible,
+        .caesar-info-btn:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
         }
 
         #open-sidebar {
@@ -366,6 +374,12 @@
             #sidebar-left { width: 280px; }
         }
 
+        @media (max-width: 900px) {
+            #sidebar-left { width: 260px; }
+            #caesarTimeline { height: 55vh; }
+            .caesar-info-card { width: 320px; right: 96px; }
+        }
+
         @media (max-width: 768px) {
             #sidebar-left {
                 width: 100%;
@@ -399,11 +413,18 @@
             .caesar-overlay-card { padding: 24px; }
             .caesar-overlay-title { font-size: 1.5rem; }
         }
+
+        @media (max-width: 640px) {
+            .caesar-overlay-card { padding: 20px; }
+            .caesar-overlay-title { font-size: 1.35rem; }
+            .caesar-overlay-summary { font-size: 0.95rem; }
+            .caesar-info-body { font-size: 0.82rem; }
+        }
     </style>
 </head>
 <body>
     <div id="sidebar-left">
-        <button id="toggle-sidebar" onclick="toggleSidebar()">❮</button>
+        <button id="toggle-sidebar" onclick="toggleSidebar()" aria-label="Sol paneli kapat">❮</button>
         <h2 class="sidebar-title">KEŞFE BAŞLA</h2>
         <div class="single-post" id="caesarTrigger">
             <div class="single-post-title" id="caesarPostTitle">Sezar: Zarlar Atıldı</div>
@@ -412,7 +433,7 @@
         <a href="../index.html" class="back-home">Ana Sayfaya Dön</a>
     </div>
 
-    <button id="open-sidebar" onclick="toggleSidebar()">❯</button>
+    <button id="open-sidebar" onclick="toggleSidebar()" aria-label="Sol paneli aç">❯</button>
 
     <div id="map"></div>
 
@@ -434,7 +455,7 @@
                 <div>25.04.2025</div>
                 <div>"Alea iacta est"</div>
             </div>
-            <button id="caesarOverlayClose" title="Devam">❯</button>
+            <button id="caesarOverlayClose" title="Devam" aria-label="Devam">❯</button>
         </div>
     </div>
 
@@ -450,8 +471,8 @@
             <div class="caesar-info-meta" id="caesarInfoMeta">MÖ 49 · Kuzey İtalya</div>
             <div id="caesarInfoText"></div>
             <div class="caesar-info-actions">
-                <button class="caesar-info-btn" id="caesarPrev" title="Önceki">❮</button>
-                <button class="caesar-info-btn" id="caesarNext" title="Sonraki">❯</button>
+                <button class="caesar-info-btn" id="caesarPrev" title="Önceki" aria-label="Önceki adım">❮</button>
+                <button class="caesar-info-btn" id="caesarNext" title="Sonraki" aria-label="Sonraki adım">❯</button>
             </div>
         </div>
     </div>
@@ -511,11 +532,23 @@
         L.control.zoom({ position: 'bottomright' }).addTo(map);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-        const caesarIcon = L.icon({
-            iconUrl: 'assets/caesar.png',
-            iconSize: [90, 90],
-            iconAnchor: [45, 80]
-        });
+        function getCaesarIconSize() {
+            const width = window.innerWidth;
+            if (width <= 640) return { size: 56, anchor: [28, 50] };
+            if (width <= 900) return { size: 70, anchor: [35, 62] };
+            return { size: 90, anchor: [45, 80] };
+        }
+
+        function createCaesarIcon() {
+            const cfg = getCaesarIconSize();
+            return L.icon({
+                iconUrl: 'assets/caesar.png',
+                iconSize: [cfg.size, cfg.size],
+                iconAnchor: cfg.anchor
+            });
+        }
+
+        let caesarIcon = createCaesarIcon();
 
         const routeLatLngs = caesarRoute.map(p => [p.lat, p.lon]);
         const routeLine = L.polyline(routeLatLngs, {
@@ -673,8 +706,31 @@
             }, 400);
         }
 
+        function applyResponsiveState() {
+            const sidebar = document.getElementById('sidebar-left');
+            const openBtn = document.getElementById('open-sidebar');
+            const isTablet = window.innerWidth <= 1024;
+
+            if (isTablet) {
+                sidebar.classList.add('closed');
+                if (openBtn) openBtn.style.display = 'block';
+            }
+
+            caesarIcon = createCaesarIcon();
+            caesarMarker.setIcon(caesarIcon);
+
+            if (typeof map !== 'undefined') {
+                map.invalidateSize();
+            }
+        }
+
         // Initial state
         loadCaesarPost();
+        applyResponsiveState();
+
+        window.addEventListener('resize', () => {
+            applyResponsiveState();
+        });
     </script>
 </body>
 </html>

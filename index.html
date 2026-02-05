@@ -133,6 +133,17 @@
             .button-group { gap: 8px; }
         }
 
+        @media (max-width: 640px) {
+            .landing-container { width: 92%; padding: 16px; }
+            .detail-card { padding: 16px 18px; }
+            .button-group { flex-direction: column; }
+            .explore-btn { width: 100%; }
+        }
+
+        @media (max-height: 700px) {
+            .landing-container { top: 46%; }
+        }
+
         @media (max-width: 480px) {
             .main-title { font-size: 2rem; letter-spacing: 4px; }
             .tagline { font-size: 0.75rem; }

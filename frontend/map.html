@@ -203,6 +203,17 @@
             }
         }
 
+        @media (max-width: 640px) {
+            #map { height: 100dvh; }
+            .card-container {
+                width: 94% !important;
+                left: 3% !important;
+                bottom: 12px !important;
+                max-height: 55vh;
+            }
+            .card-content { padding: 16px; }
+        }
+
         /* RESPONSIVE DÜZENLEMELER - KÜÇÜK MOBİL (max 480px) */
         @media (max-width: 480px) {
             #sidebar-left {
@@ -392,6 +403,13 @@
             document.getElementById('count').innerText = totalCount;
         }
 
+        function getAncientMarkerSizing() {
+            const width = window.innerWidth;
+            if (width <= 640) return { fontSize: 16, iconSize: [24, 24], anchor: [12, 24] };
+            if (width <= 900) return { fontSize: 18, iconSize: [28, 28], anchor: [14, 28] };
+            return { fontSize: 20, iconSize: [30, 30], anchor: [15, 30] };
+        }
+
         function renderAncientSiteMarkers() {
             // Eski marker'ları temizle
             ancientMarkers.forEach(m => map.removeLayer(m));
@@ -409,6 +427,7 @@
             // Marker'ları render et
             filteredSites.forEach(site => {
                 if (site.latitude && site.longitude) {
+                    const sizing = getAncientMarkerSizing();
                     // Tür ve renge göre marker rengi
                     let markerColor = '#8b0000'; // Kırmızı - varsayılan
                     let markerChar = '🏛️';
@@ -423,9 +442,9 @@
                     
                     const icon = L.divIcon({
                         className: 'ancient-marker',
-                        html: `<div style="font-size:20px; color:${markerColor}; text-shadow:0 1px 3px rgba(0,0,0,0.3);">${markerChar}</div>`,
-                        iconSize: [30, 30],
-                        iconAnchor: [15, 30]
+                        html: `<div style="font-size:${sizing.fontSize}px; color:${markerColor}; text-shadow:0 1px 3px rgba(0,0,0,0.3);">${markerChar}</div>`,
+                        iconSize: sizing.iconSize,
+                        iconAnchor: sizing.anchor
                     });
                     
                     const marker = L.marker([site.latitude, site.longitude], { icon: icon }).addTo(map);
@@ -472,6 +491,10 @@
         }
 
         loadData();
+
+        window.addEventListener('resize', () => {
+            renderAncientSiteMarkers();
+        });
     </script>
 </body>
 </html>
