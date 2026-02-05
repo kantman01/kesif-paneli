@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sezar: Zarlar Atıldı | Keşfe Başla</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Fauna+One&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --deep: #8b0000;
+            --ink: #1c1c1c;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background: #fdfaf3;
+            overflow: hidden;
+            font-family: 'Fauna One', serif;
+        }
+
+        #map {
+            flex-grow: 1;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #sidebar-left {
+            width: 320px;
+            background: #f4f1ea;
+            border-right: 3px solid var(--gold);
+            padding: 24px;
+            z-index: 1000;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        #sidebar-left.closed {
+            transform: translateX(-100%);
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .sidebar-title {
+            font-family: 'Cinzel', serif;
+            color: var(--deep);
+            border-bottom: 2px solid var(--gold);
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .single-post {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            border-left: 3px solid var(--gold);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .single-post:hover {
+            background: #fff7e6;
+            border-left-color: var(--deep);
+            transform: translateX(4px);
+            box-shadow: 0 6px 16px rgba(139,0,0,0.08);
+        }
+
+        .single-post-title {
+            font-family: 'Cinzel', serif;
+            color: var(--deep);
+            font-size: 0.95rem;
+            margin: 0 0 8px 0;
+        }
+
+        .single-post-sub {
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(212,175,55,0.3);
+            color: var(--deep);
+            text-decoration: none;
+            font-family: 'Cinzel';
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        #toggle-sidebar {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--deep);
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        #toggle-sidebar:active {
+            transform: scale(0.95);
+        }
+
+        #open-sidebar {
+            position: fixed;
+            left: 10px;
+            top: 20px;
+            z-index: 999;
+            background: #f4f1ea;
+            border: 2px solid var(--gold);
+            color: var(--deep);
+            padding: 10px 15px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        #open-sidebar:active {
+            transform: scale(0.95);
+        }
+
+        /* Caesar overlay */
+        #caesarOverlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 10, 0.55);
+            backdrop-filter: blur(6px);
+            z-index: 3200;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .caesar-overlay-card {
+            max-width: 760px;
+            width: 92%;
+            background: rgba(255, 255, 255, 0.96);
+            border: 2px solid var(--gold);
+            border-radius: 14px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+            padding: 32px 36px 28px;
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .caesar-overlay-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--deep);
+            margin: 0 0 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .caesar-overlay-summary {
+            font-family: 'Fauna One', serif;
+            color: #333;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin: 0 0 16px;
+        }
+
+        .caesar-overlay-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            color: #6a4a1f;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        #caesarOverlayClose {
+            position: absolute;
+            right: 22px;
+            bottom: 18px;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            background: #fff;
+            color: var(--deep);
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #caesarOverlayClose:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 26px rgba(0,0,0,0.2);
+        }
+
+        /* Timeline */
+        #caesarTimeline {
+            position: fixed;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60vh;
+            width: 64px;
+            z-index: 2500;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .caesar-timeline-track {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold), var(--deep));
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(139, 0, 0, 0.25);
+        }
+
+        #caesarSlider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 60vh;
+            height: 24px;
+            transform: rotate(-90deg);
+            background: transparent;
+            z-index: 2;
+        }
+
+        #caesarSlider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid var(--deep);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        #caesarSlider::-moz-range-thumb {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid var(--deep);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        #caesarTimelineLabel {
+            position: absolute;
+            right: 24px;
+            transform: translateX(-115%);
+            color: var(--deep);
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            padding: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+
+
+        .caesar-info-card {
+            position: fixed;
+            right: 120px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 360px;
+            background: #fff;
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+            z-index: 2400;
+            display: none;
+            overflow: hidden;
+            animation: cardIn 0.35s ease;
+            max-height: 70vh;
+        }
+
+
+        @keyframes cardIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .caesar-info-header {
+            padding: 12px 14px;
+            background: #f4f1ea;
+            border-bottom: 1px solid rgba(212,175,55,0.4);
+            font-family: 'Cinzel', serif;
+            color: var(--deep);
+            font-size: 0.95rem;
+        }
+
+        .caesar-info-body {
+            padding: 14px;
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.5;
+            max-height: 55vh;
+            overflow-y: auto;
+        }
+
+        .caesar-info-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            margin-top: 12px;
+        }
+
+        .caesar-info-btn {
+            border: 1px solid var(--gold);
+            background: #fff;
+            color: var(--deep);
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .caesar-info-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 18px rgba(0,0,0,0.16);
+        }
+
+        .caesar-info-meta {
+            color: #6a4a1f;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 0.8rem;
+        }
+
+        #caesarInfoText {
+            white-space: pre-line;
+        }
+
+        @media (max-width: 1024px) {
+            #sidebar-left { width: 280px; }
+        }
+
+        @media (max-width: 768px) {
+            #sidebar-left {
+                width: 100%;
+                height: auto;
+                max-height: 100vh;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 2000;
+                border-right: none;
+                border-bottom: 3px solid var(--gold);
+            }
+
+            #toggle-sidebar {
+                padding: 8px 12px;
+                font-size: 1.5rem;
+                right: 15px;
+                top: 15px;
+            }
+
+            #open-sidebar {
+                top: 15px;
+                left: 15px;
+                padding: 12px 18px;
+                font-size: 1.3rem;
+            }
+
+            #caesarTimeline { right: 10px; }
+            #caesarTimelineLabel { right: 10px; transform: translateX(-110%); min-width: 160px; }
+            .caesar-info-card { right: 12px; left: 12px; width: auto; top: auto; transform: none; bottom: 12px; max-height: 55vh; }
+            .caesar-overlay-card { padding: 24px; }
+            .caesar-overlay-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar-left">
+        <button id="toggle-sidebar" onclick="toggleSidebar()">❮</button>
+        <h2 class="sidebar-title">KEŞFE BAŞLA</h2>
+        <div class="single-post" id="caesarTrigger">
+            <div class="single-post-title" id="caesarPostTitle">Sezar: Zarlar Atıldı</div>
+            <div class="single-post-sub" id="caesarPostSub">Rubicon'u geçen karar</div>
+        </div>
+        <a href="../index.html" class="back-home">Ana Sayfaya Dön</a>
+    </div>
+
+    <button id="open-sidebar" onclick="toggleSidebar()">❯</button>
+
+    <div id="map"></div>
+
+    <div id="caesarOverlay">
+        <div class="caesar-overlay-card">
+            <div class="caesar-overlay-title" id="caesarOverlayTitle">Jül Sezar: Zarlar Atıldı</div>
+            <p class="caesar-overlay-summary" id="caesarOverlaySummary">
+                Tarih boyunca bazı anlar vardır ki, yalnızca bir kişinin aldığı kararlarla imparatorluklar doğar,
+                cumhuriyetler yıkılır ve çağlar kapanır. MÖ 49 yılının soğuk bir Ocak gecesi, Jül Sezar küçük ama
+                sembolik bir nehri geçtiğinde, Roma’nın kaderini ebediyen değiştirecek bir zincirleme olaylar silsiri
+                başlamış oldu. O nehrin adı Rubicon’du. Ve o an, tarihin geri dönüşü olmayan noktalarından birine
+                dönüştü. Rubicon Nehri sıradan bir coğrafi sınır değil, Roma Cumhuriyeti’nin yasalarının ve siyasi
+                düzeninin simgesiydi. O nehri bir orduyla geçmek, yalnızca bir isyan değil, bizzat devlete karşı
+                silahlı bir başkaldırı sayılırdı. Ancak Sezar, Roma Senatosu’nun baskısıyla köşeye sıkışmış,
+                siyasi geleceği...
+            </p>
+            <div class="caesar-overlay-meta" id="caesarOverlayMeta">
+                <div>Rubicon Nehri, Kuzey İtalya</div>
+                <div>25.04.2025</div>
+                <div>"Alea iacta est"</div>
+            </div>
+            <button id="caesarOverlayClose" title="Devam">❯</button>
+        </div>
+    </div>
+
+    <div id="caesarTimeline">
+        <div class="caesar-timeline-track"></div>
+        <input id="caesarSlider" type="range" min="0" max="0" value="0" step="1" aria-label="Sezar Kronolojisi">
+        <div id="caesarTimelineLabel">Rubicon Nehri</div>
+    </div>
+
+    <div id="caesarInfoCard" class="caesar-info-card">
+        <div class="caesar-info-header" id="caesarInfoTitle">Rubicon Nehri</div>
+        <div class="caesar-info-body">
+            <div class="caesar-info-meta" id="caesarInfoMeta">MÖ 49 · Kuzey İtalya</div>
+            <div id="caesarInfoText"></div>
+            <div class="caesar-info-actions">
+                <button class="caesar-info-btn" id="caesarPrev" title="Önceki">❮</button>
+                <button class="caesar-info-btn" id="caesarNext" title="Sonraki">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const CAESAR_SLUG = 'bir-nehir-bir-cumle-bir-imparatorluk-zar-atildi';
+        const CAESAR_URL = `https://sarpkantman.com/wp-json/wp/v2/posts?slug=${CAESAR_SLUG}&_embed`;
+
+        let caesarPost = null;
+        let postSnippet = '';
+
+        const caesarRoute = [
+            {
+                
+                year: 'MÖ 49',
+                location: 'Ravenna, İtalya',
+                description: 'Sezar ordusunu burada topladı ve son kararını verdi.',
+                lat: 44.4184,
+                lon: 12.2035
+            },
+            {
+                
+                year: 'MÖ 49',
+                location: 'Rubicon, Kuzey İtalya',
+                description: 'Roma Cumhuriyeti için geri dönüş olmayan eşik.',
+                lat: 44.0140,
+                lon: 12.2310
+            },
+            {
+                
+                year: 'MÖ 49',
+                location: 'Rimini, İtalya',
+                description: 'Sezar, Rubicon sonrası ilk büyük kente girdi.',
+                lat: 44.0678,
+                lon: 12.5695
+            },
+            {
+                
+                year: 'MÖ 49',
+                location: 'Arezzo, İtalya',
+                description: 'Roma yolu üzerinde kritik bir askeri durak.',
+                lat: 43.4643,
+                lon: 11.8796
+            },
+            {
+               
+                year: 'MÖ 49',
+                location: 'Roma, İtalya',
+                description: 'Siyasi gücün merkezine doğru son yürüyüş.',
+                lat: 41.9028,
+                lon: 12.4964
+            }
+        ];
+
+        const map = L.map('map', { zoomControl: false }).setView([39.0, 35.2], 6);
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        const caesarIcon = L.icon({
+            iconUrl: 'assets/caesar.png',
+            iconSize: [90, 90],
+            iconAnchor: [45, 80]
+        });
+
+        const routeLatLngs = caesarRoute.map(p => [p.lat, p.lon]);
+        const routeLine = L.polyline(routeLatLngs, {
+            color: '#8b0000',
+            weight: 3,
+            opacity: 0.8,
+            dashArray: '6 8'
+        });
+
+        const caesarMarker = L.marker(routeLatLngs[0], { icon: caesarIcon });
+        let routeActive = false;
+
+        const slider = document.getElementById('caesarSlider');
+        const label = document.getElementById('caesarTimelineLabel');
+        const infoCard = document.getElementById('caesarInfoCard');
+        const infoTitle = document.getElementById('caesarInfoTitle');
+        const infoMeta = document.getElementById('caesarInfoMeta');
+        const infoText = document.getElementById('caesarInfoText');
+
+        const overlayTitle = document.getElementById('caesarOverlayTitle');
+        const overlaySummary = document.getElementById('caesarOverlaySummary');
+        const overlayMeta = document.getElementById('caesarOverlayMeta');
+        const sidebarTitle = document.getElementById('caesarPostTitle');
+        const sidebarSub = document.getElementById('caesarPostSub');
+        const prevBtn = document.getElementById('caesarPrev');
+        const nextBtn = document.getElementById('caesarNext');
+
+        slider.max = String(caesarRoute.length - 1);
+
+        function updateStep(index) {
+            const step = caesarRoute[index];
+            if (!step) return;
+
+            caesarMarker.setLatLng([step.lat, step.lon]);
+            map.flyTo([step.lat, step.lon], 8, { animate: true, duration: 1.2 });
+
+            label.textContent = step.name;
+            infoTitle.textContent = step.name;
+            infoMeta.textContent = step.year + ' · ' + step.location;
+            infoText.textContent = postSnippet ? `${step.description}\n\n${postSnippet}` : step.description;
+
+            infoCard.style.display = 'block';
+        }
+
+        slider.addEventListener('input', (e) => {
+            const index = parseInt(e.target.value, 10);
+            updateStep(index);
+        });
+
+        function htmlToText(html) {
+            const div = document.createElement('div');
+            div.innerHTML = html || '';
+            return (div.textContent || div.innerText || '').trim();
+        }
+
+        function makeSnippet(text, maxLen) {
+            const cleaned = text.replace(/\s+/g, ' ').trim();
+            if (cleaned.length <= maxLen) return cleaned;
+            return cleaned.slice(0, maxLen).trim() + '...';
+        }
+
+        function setOverlayMeta(locationText, dateText) {
+            if (!overlayMeta) return;
+            overlayMeta.innerHTML = '';
+            const loc = document.createElement('div');
+            loc.textContent = locationText || 'Rubicon Nehri, Kuzey İtalya';
+            const date = document.createElement('div');
+            date.textContent = dateText || '25.04.2025';
+            const motto = document.createElement('div');
+            motto.textContent = '"Alea iacta est"';
+            overlayMeta.appendChild(loc);
+            overlayMeta.appendChild(date);
+            overlayMeta.appendChild(motto);
+        }
+
+        async function loadCaesarPost() {
+            try {
+                const resp = await fetch(CAESAR_URL);
+                if (!resp.ok) throw new Error('Post not found');
+                const data = await resp.json();
+                const post = Array.isArray(data) ? data[0] : null;
+                if (!post) throw new Error('Post not found');
+
+                caesarPost = post;
+                const titleText = htmlToText(post.title?.rendered || 'Sezar: Zarlar Atıldı');
+                const excerptText = htmlToText(post.excerpt?.rendered || '');
+                const contentText = htmlToText(post.content?.rendered || excerptText || '');
+                const dateText = post.date ? new Date(post.date).toLocaleDateString('tr-TR') : '';
+                const locationText = post.meta?.location || 'Rubicon Nehri, Kuzey İtalya';
+
+                sidebarTitle.textContent = titleText;
+                sidebarSub.textContent = excerptText ? makeSnippet(excerptText, 120) : 'Rubicon\'u geçen karar';
+
+                overlayTitle.textContent = titleText;
+                overlaySummary.textContent = makeSnippet(contentText || excerptText || '', 700) || 'Rubicon Nehri\'ni geçtiği an, Roma Cumhuriyeti\'nin kaderini geri döndürülemez şekilde değiştirdi.';
+                setOverlayMeta(locationText, dateText);
+
+                postSnippet = makeSnippet(contentText || excerptText || '', 650);
+            } catch (err) {
+                sidebarTitle.textContent = 'Sezar: Zarlar Atıldı';
+                sidebarSub.textContent = 'Rubicon\'u geçen karar';
+                overlaySummary.textContent = 'Rubicon Nehri\'ni geçtiği an, Roma Cumhuriyeti\'nin kaderini geri döndürülemez şekilde değiştirdi. Sezar\'ın sözleri tarihe kazındı ve yeni bir çağın kapısı aralandı.';
+                setOverlayMeta('Rubicon Nehri, Kuzey İtalya', 'MÖ 49');
+                postSnippet = '';
+            }
+        }
+
+        function activateRoute() {
+            if (routeActive) return;
+            routeLine.addTo(map);
+            caesarMarker.addTo(map);
+            routeActive = true;
+        }
+
+        function stepTo(index) {
+            const nextIndex = Math.max(0, Math.min(caesarRoute.length - 1, index));
+            slider.value = String(nextIndex);
+            updateStep(nextIndex);
+        }
+
+        function openOverlay() {
+            document.getElementById('caesarOverlay').style.display = 'flex';
+            document.getElementById('caesarTimeline').style.display = 'none';
+            infoCard.style.display = 'none';
+        }
+
+        function closeOverlay() {
+            document.getElementById('caesarOverlay').style.display = 'none';
+            document.getElementById('caesarTimeline').style.display = 'flex';
+            activateRoute();
+            updateStep(parseInt(slider.value, 10));
+        }
+
+        document.getElementById('caesarTrigger').addEventListener('click', openOverlay);
+        document.getElementById('caesarOverlayClose').addEventListener('click', closeOverlay);
+        prevBtn.addEventListener('click', () => stepTo(parseInt(slider.value, 10) - 1));
+        nextBtn.addEventListener('click', () => stepTo(parseInt(slider.value, 10) + 1));
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar-left');
+            const openBtn = document.getElementById('open-sidebar');
+
+            sidebar.classList.toggle('closed');
+
+            if (sidebar.classList.contains('closed')) {
+                setTimeout(() => { if (openBtn) openBtn.style.display = 'block'; }, 300);
+            } else {
+                if (openBtn) openBtn.style.display = 'none';
+            }
+
+            setTimeout(() => {
+                if (typeof map !== 'undefined') {
+                    map.invalidateSize();
+                }
+            }, 400);
+        }
+
+        // Initial state
+        loadCaesarPost();
+    </script>
+</body>
+</html>
