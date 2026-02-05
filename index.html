@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         * { margin: 0; padding: 0; }
-        html, body { width: 100%; height: 100%; }
+        html, body { width: 100%; height: 100%; background: #fdfaf3; }
         
         #map {
             width: 100%;
@@ -156,7 +156,7 @@
 
         <div class="button-group">
             <button onclick="runDiscovery()" class="explore-btn" id="actionBtn">KEŞFE BAŞLA</button>
-            <a href="frontend/map.html" class="explore-btn">HARITA</a>
+            <a href="frontend/map.html" class="explore-btn">TÜRKİYE</a>
             <a href="frontend/posts.html" class="explore-btn">SON PAYLAŞIMLAR</a>
         </div>
     </div>
@@ -200,27 +200,102 @@
                         location: post.meta?.location || post.meta?.country || null
                     }));
 
-                    // Tüm gönderilere konum ata - varsayılan konumlar listesi
-                    const defaultLocations = [
-                        { location: 'Corleone, Sicilya, İtalya', latitude: 37.7722, longitude: 13.3055 },
-                        { location: 'Rashid, Mısır', latitude: 31.2753, longitude: 30.4265 },
-                        { location: 'İstanbul, Türkiye', latitude: 41.0082, longitude: 28.9784 },
-                        { location: 'Kahire, Mısır', latitude: 30.0444, longitude: 31.2357 },
-                        { location: 'Roma, İtalya', latitude: 41.9028, longitude: 12.4964 },
-                        { location: 'İskenderiye, Mısır', latitude: 31.2001, longitude: 29.9187 },
-                        { location: 'İskenderiye, Mısır', latitude: 31.2001, longitude: 29.9187 },
-                        { location: 'Venedik, İtalya', latitude: 45.4408, longitude: 12.3155 },
-                        { location: 'Mekke, Suudi Arabistan', latitude: 21.4225, longitude: 39.8262 },
-                        { location: 'Bağdat, Irak', latitude: 33.3128, longitude: 44.3615 }
-                    ];
+                    // Doğru konum eşlemesi - başlıklara göre
+                    const locationMap = {
+                        "Corleone": { location: "Corleone, Sicilya, İtalya", latitude: 37.7722, longitude: 13.3055 },
+                        "Rashid": { location: "Rashid, Mısır", latitude: 31.2753, longitude: 30.4265 },
+                        "Konfederasyon Antietam": { location: "Maryland, ABD (Antietam Muharebe Alanı)", latitude: 39.2704, longitude: -77.7338 },
+                        "Etrüskler": { location: "Toskana/Lazio Bölgesi, İtalya", latitude: 42.5, longitude: 12.0 },
+                        "Hiper-Karmaşıklığın Bedeli": { location: "Doğu Akdeniz Havzası", latitude: 36.5, longitude: 30.0 },
+                        "Le Grand Bleu": { location: "Amorgos Adası, Yunanistan", latitude: 36.8327, longitude: 25.8827 },
+                        "İskenderiye'de Zamanın Tanrısı": { location: "İskenderiye, Mısır", latitude: 31.2001, longitude: 29.9187 },
+                        "Kom el Shoqafa": { location: "İskenderiye, Mısır", latitude: 31.2001, longitude: 29.9187 },
+                        "Tüylerimizi Diken Diken": { location: "Evrensel", latitude: 0, longitude: 0 },
+                        "Appalachian Gothic": { location: "Appalaş Dağları, Doğu ABD", latitude: 37.5, longitude: -82.5 },
+                        "Grizzly Man": { location: "Katmai Ulusal Parkı, Alaska, ABD", latitude: 58.5, longitude: -155.3 },
+                        "İngiliz Kooperatifi": { location: "Kadıköy, İstanbul, Türkiye", latitude: 40.9913, longitude: 29.0214 },
+                        "Tsavo": { location: "Tsavo Nehri Bölgesi, Kenya", latitude: -3.4, longitude: 38.8 },
+                        "Korku Sineması": { location: "Evrensel", latitude: 0, longitude: 0 },
+                        "Çaykovski": { location: "Votkinsk/St. Petersburg, Rusya", latitude: 57.1939, longitude: 30.2642 },
+                        "Dr. Seuss": { location: "Springfield, Massachusetts, ABD", latitude: 42.1015, longitude: -72.5898 },
+                        "Polar Gigantism": { location: "Arktik ve Antarktika", latitude: 70.0, longitude: 0.0 },
+                        "Wes Anderson": { location: "New York City, ABD", latitude: 40.7128, longitude: -74.0060 },
+                        "Wardruna": { location: "Bergen, Norveç", latitude: 60.3913, longitude: 5.3221 },
+                        "Boğaziçi": { location: "İstanbul, Türkiye", latitude: 41.0082, longitude: 28.9784 },
+                        "Serafim'in Kanatlarında": { location: "Halep, Suriye / İstanbul, Türkiye", latitude: 34.7315, longitude: 36.2384 },
+                        "Morna": { location: "Mindelo, Yeşil Burun Adaları", latitude: 16.8829, longitude: -24.6605 },
+                        "Tarih Boyunca Kılıcın": { location: "Evrensel", latitude: 0, longitude: 0 },
+                        "Kyliks": { location: "Atina, Yunanistan / Vatikan Müzeleri", latitude: 37.9838, longitude: 23.7275 },
+                        "İstanbul ve Kediler": { location: "İstanbul, Türkiye", latitude: 41.0082, longitude: 28.9784 },
+                        "Attu Station": { location: "Aleut Adaları, Alaska, ABD", latitude: 52.9385, longitude: -173.1984 },
+                        "Gölgeden Kültüre": { location: "Paris, Fransa", latitude: 48.8566, longitude: 2.3522 },
+                        "Tabloların Ardındaki Gizem": { location: "Floransa/Paris/Roma", latitude: 43.7696, longitude: 11.2558 },
+                        "Şeytanın Akordu": { location: "Mississippi Deltası, ABD", latitude: 32.3792, longitude: -90.1848 },
+                        "Zihinle Evrune": { location: "Atina, Yunanistan", latitude: 37.9838, longitude: 23.7275 },
+                        "Bir Nehir, Bir Cümle": { location: "Rubicon Nehri, Kuzey İtalya", latitude: 44.0, longitude: 12.6 },
+                        "İsa'dan Önce Roma": { location: "Kudüs ve Roma", latitude: 41.9028, longitude: 12.4964 },
+                        "Normandiya": { location: "Normandiya, Fransa", latitude: 49.3530, longitude: -0.5898 },
+                        "Leedsichthys": { location: "Peterborough, İngiltere", latitude: 52.5707, longitude: -0.2447 },
+                        "Zdzisław Beksiński": { location: "Sanok/Varşova, Polonya", latitude: 52.2297, longitude: 21.0122 },
+                        "Shadow Wolves": { location: "Tohono O'odham Toprakları, Arizona, ABD", latitude: 32.2326, longitude: -111.0806 },
+                        "Kim Jong-il": { location: "Pyongyang, Kuzey Kore", latitude: 39.0194, longitude: 125.7482 },
+                        "Nazi U-Bootları": { location: "Atlantik Okyanusu", latitude: 30.0, longitude: -40.0 },
+                        "Louisiana Blues": { location: "Louisiana, ABD", latitude: 31.1695, longitude: -91.8749 },
+                        "Neandertal": { location: "Krapina, Hırvatistan / Los Aviones Mağarası, İspanya", latitude: 46.2031, longitude: 15.8191 },
+                        "Country": { location: "Austin, Teksas / Nashville, Tennessee, ABD", latitude: 36.1627, longitude: -86.7816 },
+                        "Ben Sana Mecburum": { location: "İstanbul, Türkiye", latitude: 41.0082, longitude: 28.9784 },
+                        "İstanbul'un İlçeleri": { location: "İstanbul, Türkiye", latitude: 41.0082, longitude: 28.9784 },
+                        "Marcus Aurelius": { location: "Roma, İtalya", latitude: 41.9028, longitude: 12.4964 },
+                        "Cezzar Ahmet Paşa": { location: "Akka, Filistin / İstanbul, Türkiye", latitude: 32.9254, longitude: 35.0818 },
+                        "Büyük İskender": { location: "Bergama, Türkiye / Atina, Yunanistan", latitude: 39.1258, longitude: 27.1848 },
+                        "Pan Heykeli": { location: "Tırnovo, Bulgaristan / İstanbul Arkeoloji Müzesi", latitude: 43.1975, longitude: 25.3192 },
+                        "Theodosius": { location: "Sultanahmet, İstanbul, Türkiye", latitude: 41.0054, longitude: 28.9769 },
+                        "Yoros Kalesi": { location: "Anadolu Kavağı, Beykoz, İstanbul, Türkiye", latitude: 41.1516, longitude: 29.1648 },
+                        "Franz Liszt": { location: "Beyoğlu, İstanbul, Türkiye", latitude: 41.0373, longitude: 28.9754 },
+                        "İshak Ağa": { location: "Beykoz, İstanbul, Türkiye", latitude: 41.1516, longitude: 29.0286 },
+                        "Mehmet Kethüda": { location: "Beşiktaş, İstanbul, Türkiye", latitude: 41.0429, longitude: 29.0029 },
+                        "Merkez Efendi": { location: "Zeytinburnu, İstanbul, Türkiye", latitude: 40.9839, longitude: 28.8965 },
+                        "Örme Dikilitaş": { location: "Sultanahmet, İstanbul, Türkiye", latitude: 41.0054, longitude: 28.9769 },
+                        "Sultan Ahmet Sebili": { location: "Sultanahmet, İstanbul, Türkiye", latitude: 41.0054, longitude: 28.9769 },
+                        "Yahya Efendi": { location: "Beşiktaş, İstanbul, Türkiye", latitude: 41.0429, longitude: 29.0029 },
+                        "Nazır İsmail": { location: "Sultanahmet, İstanbul, Türkiye", latitude: 41.0054, longitude: 28.9769 },
+                        "Brezilya": { location: "Rio de Janeiro, Brezilya", latitude: -22.9068, longitude: -43.1729 },
+                        "Buena Vista": { location: "Havana, Küba", latitude: 23.1291, longitude: -82.3794 },
+                        "Selamiçeşme": { location: "Kadıköy, İstanbul, Türkiye", latitude: 40.9913, longitude: 29.0214 },
+                        "Markiz ve Lebon": { location: "İstiklal Caddesi, Beyoğlu, İstanbul, Türkiye", latitude: 41.0373, longitude: 28.9754 },
+                        "Strigilis": { location: "İstanbul Arkeoloji Müzesi", latitude: 41.0137, longitude: 28.9839 },
+                        "Hüseyin Nihal": { location: "Karacaahmet Mezarlığı, Üsküdar, İstanbul, Türkiye", latitude: 41.0216, longitude: 29.0271 },
+                        "Desafinado": { location: "Rio de Janeiro, Brezilya", latitude: -22.9068, longitude: -43.1729 },
+                        "Tombak At": { location: "Askeri Müze, İstanbul / Topkapı Sarayı", latitude: 41.0137, longitude: 28.9839 },
+                        "Caligula": { location: "Assos (Behramkale), Çanakkale, Türkiye", latitude: 39.5764, longitude: 26.3622 },
+                        "Villa Mon Plasir": { location: "Fenerbahçe, Kadıköy, İstanbul, Türkiye", latitude: 40.9736, longitude: 29.0303 },
+                        "İstanbul Siluet": { location: "İstanbul, Türkiye", latitude: 41.0082, longitude: 28.9784 },
+                        "Rüstem Paşa": { location: "Eminönü, Fatih, İstanbul, Türkiye", latitude: 41.0166, longitude: 28.9703 },
+                        "Marmara Denizi": { location: "Marmara Denizi / İstanbul, Türkiye", latitude: 40.8, longitude: 28.5 },
+                        "İskender Lahdi": { location: "İstanbul Arkeoloji Müzesi", latitude: 41.0137, longitude: 28.9839 }
+                    };
 
-                    wpPosts.forEach((post, index) => {
-                        // Eğer meta'da konum yoksa, varsayılan konumlardan döngü ile ata
-                        if (!post.location || !post.latitude || !post.longitude) {
-                            const locIndex = index % defaultLocations.length;
-                            post.location = defaultLocations[locIndex].location;
-                            post.latitude = defaultLocations[locIndex].latitude;
-                            post.longitude = defaultLocations[locIndex].longitude;
+                    wpPosts.forEach((post) => {
+                        const title = post.title?.rendered || '';
+                        let foundLocation = null;
+
+                        // Başlığa göre konum ara
+                        for (const [key, loc] of Object.entries(locationMap)) {
+                            if (title.includes(key)) {
+                                foundLocation = loc;
+                                break;
+                            }
+                        }
+
+                        if (foundLocation) {
+                            post.location = foundLocation.location;
+                            post.latitude = foundLocation.latitude;
+                            post.longitude = foundLocation.longitude;
+                        } else if (!post.location || !post.latitude || !post.longitude) {
+                            // Eğer eş bir konum bulunamazsa, varsayılan olarak İstanbul'u kullan
+                            post.location = 'İstanbul, Türkiye';
+                            post.latitude = 41.0082;
+                            post.longitude = 28.9784;
                         }
                     });
 
@@ -265,6 +340,17 @@
             }
 
             renderMarkers();
+
+            // Yunan ve Roma eserleri de yükle ve göster
+            try {
+                const ancientResponse = await fetch('data/ancient-sites.json');
+                if (ancientResponse.ok) {
+                    const ancientSites = await ancientResponse.json();
+                    renderAncientSiteMarkers(ancientSites);
+                }
+            } catch (err) {
+                console.error("Ancient sites load error:", err);
+            }
         }
 
         function renderMarkers() {
@@ -283,6 +369,32 @@
                     });
                     var marker = L.marker([latitude, longitude], { icon: icon }).addTo(map);
                     markers.push(marker);
+                }
+            });
+        }
+
+        function renderAncientSiteMarkers(sites) {
+            sites.forEach(site => {
+                if (site.latitude && site.longitude) {
+                    let markerChar = '🏛️';
+                    let markerColor = '#8b0000';
+                    
+                    if (site.type.includes('Greek')) {
+                        markerColor = '#0066cc';
+                        markerChar = '🏛️';
+                    } else if (site.type.includes('Roman')) {
+                        markerColor = '#cc6600';
+                        markerChar = '⚔️';
+                    }
+                    
+                    const icon = L.divIcon({
+                        className: 'ancient-marker',
+                        html: `<div style="font-size:18px; color:${markerColor}; text-shadow:0 1px 3px rgba(0,0,0,0.3);">${markerChar}</div>`,
+                        iconSize: [25, 25],
+                        iconAnchor: [12, 25]
+                    });
+                    
+                    const marker = L.marker([site.latitude, site.longitude], { icon: icon }).addTo(map);
                 }
             });
         }

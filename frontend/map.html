@@ -29,6 +29,94 @@
             transition: margin-left 0.4s ease;
         }
 
+        /* Ancient Site Card Styles */
+        .card-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            z-index: 1500;
+            max-height: 80vh;
+            overflow: hidden;
+        }
+
+        .close-card {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #fff;
+            border: 1px solid #d4af37;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: #8b0000;
+            border-radius: 4px;
+            z-index: 10;
+        }
+
+        .close-card:hover {
+            background: #8b0000;
+            color: #fff;
+        }
+
+        .ancient-site-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-description-wrapper {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            padding-right: 5px;
+        }
+
+        .card-description-wrapper::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .card-description-wrapper::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .card-description-wrapper::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 3px;
+        }
+
         /* RESPONSIVE DÜZENLEMELER - TABLET (768px-1024px) */
         @media (max-width: 1024px) {
             #sidebar-left {
@@ -82,8 +170,13 @@
             .card-container {
                 width: 90% !important;
                 left: 5% !important;
+                right: auto !important;
                 bottom: 20px !important;
                 max-height: 60vh;
+            }
+
+            .card-image {
+                height: 200px;
             }
 
             .filter-title {
@@ -203,18 +296,24 @@
     <div id="map"></div>
 
     <div class="card-container" id="infoCard" style="display:none;">
-        <div class="close-card" onclick="document.getElementById('infoCard').style.display='none'">×</div>
-        <div class="flip-card-inner" id="cardInner" onclick="this.classList.toggle('is-flipped')">
-            <div class="card-front">
-                <div class="image-box"><img id="cardImg" src="" alt="Antik Görsel"></div>
-                <div style="padding:15px; text-align:center;">
-                    <h2 id="cardTitle" style="font-family:'Cinzel'; color:#8b0000; margin-bottom:5px;"></h2>
-                    <span id="cardType" style="color:#d4af37; font-weight:bold; letter-spacing:1px;"></span>
-                </div>
-                <p style="text-align:center; font-size:0.7rem; color:#888;">(Detaylar için dokun)</p>
+        <div class="close-card" onclick="closeAncientSiteCard()">×</div>
+        <div class="ancient-site-card">
+            <div class="card-image" id="cardImageBox">
+                <img id="cardImg" src="" alt="Antik Görsel" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'">
             </div>
-            <div class="card-back" id="cardDetails" style="padding: 20px; overflow-y: auto;">
+            <div class="card-content">
+                <h2 id="cardTitle" style="font-family:'Cinzel'; color:#8b0000; margin-bottom:10px; font-size:1.3rem;"></h2>
+                <div id="cardType" style="color:#d4af37; font-weight:bold; letter-spacing:1px; margin-bottom:15px; font-size:0.9rem;"></div>
+                
+                <div class="card-description-wrapper">
+                    <div id="cardDetails" style="font-size:0.9rem; line-height:1.6; color:#444; max-height:300px; overflow-y: auto; padding-right:10px;">
+                    </div>
                 </div>
+                
+                <div id="cardLink" style="margin-top:15px; text-align:center;">
+                    <a id="wikiLink" href="#" target="_blank" style="color:#d4af37; text-decoration:none; font-family:'Cinzel'; border-bottom:2px solid #d4af37; padding-bottom:5px;">Wikipedia</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -234,10 +333,11 @@
 
         var markers = [];
         var allData = [];
+        var ancientSites = [];
 
         async function loadData() {
             try {
-                // Not: Kendi API endpoint'ini buraya bağla
+                // Eski veri yükleme (posts/)
                 const response = await fetch('/.netlify/functions/scan'); 
                 if (response.ok) {
                     allData = await response.json();
@@ -245,6 +345,17 @@
                 }
             } catch (err) {
                 console.error("Veri yüklenemedi:", err);
+            }
+            
+            // Yunan ve Roma eserleri yükle
+            try {
+                const ancientResponse = await fetch('../data/ancient-sites.json');
+                if (ancientResponse.ok) {
+                    ancientSites = await ancientResponse.json();
+                    renderAncientSiteMarkers(ancientSites);
+                }
+            } catch (err) {
+                console.error("Ancient sites verileri yüklenemedi:", err);
             }
         }
 
@@ -255,13 +366,75 @@
                 if (site.Latitude && site.Longitude) {
                     var m = L.marker([site.Latitude, site.Longitude]).addTo(map);
                     m.on('click', () => {
-                        if (window.innerWidth < 768) toggleSidebar(); // Mobilde marker'a tıklayınca sidebar'ı kapat ki kart görünsün
+                        if (window.innerWidth < 768) toggleSidebar();
                         updateAndShowCard(site);
                     });
                     markers.push(m);
                 }
             });
             document.getElementById('count').innerText = markers.length;
+        }
+
+        function renderAncientSiteMarkers(sites) {
+            sites.forEach(site => {
+                if (site.latitude && site.longitude) {
+                    // Tür ve renge göre marker rengi
+                    let markerColor = '#8b0000'; // Kırmızı - varsayılan
+                    let markerChar = '🏛️';
+                    
+                    if (site.type.includes('Greek')) {
+                        markerColor = '#0066cc'; // Mavi - Yunan
+                        markerChar = '🏛️';
+                    } else if (site.type.includes('Roman')) {
+                        markerColor = '#cc6600'; // Turuncu - Roma
+                        markerChar = '⚔️';
+                    }
+                    
+                    const icon = L.divIcon({
+                        className: 'ancient-marker',
+                        html: `<div style="font-size:20px; color:${markerColor}; text-shadow:0 1px 3px rgba(0,0,0,0.3);">${markerChar}</div>`,
+                        iconSize: [30, 30],
+                        iconAnchor: [15, 30]
+                    });
+                    
+                    const marker = L.marker([site.latitude, site.longitude], { icon: icon }).addTo(map);
+                    marker.on('click', () => {
+                        showAncientSiteCard(site);
+                    });
+                }
+            });
+        }
+
+        function showAncientSiteCard(site) {
+            const card = document.getElementById('infoCard');
+            document.getElementById('cardTitle').textContent = site.name;
+            document.getElementById('cardType').textContent = `${site.type} | Türkiye`;
+            
+            // Fotoğraf
+            const img = document.getElementById('cardImg');
+            img.src = site.imageUrl || 'https://via.placeholder.com/400x300?text=No+Image';
+            
+            // Açıklama
+            const descDiv = document.getElementById('cardDetails');
+            descDiv.textContent = site.description;
+            
+            // Wikipedia linki
+            const wikiLink = document.getElementById('wikiLink');
+            wikiLink.href = site.link || '#';
+            
+            card.style.display = 'flex';
+            
+            // Mobilde sidebar'ı kapat
+            if (window.innerWidth < 768) {
+                const sidebar = document.getElementById('sidebar-left');
+                if (sidebar) sidebar.classList.add('closed');
+                const openBtn = document.getElementById('open-sidebar');
+                if (openBtn) openBtn.style.display = 'block';
+            }
+        }
+
+        function closeAncientSiteCard() {
+            document.getElementById('infoCard').style.display = 'none';
         }
 
         loadData();
