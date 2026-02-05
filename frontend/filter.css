@@ -7,6 +7,10 @@
     box-shadow: 5px 0 15px rgba(0,0,0,0.1);
     overflow-y: auto;
     height: 100vh;
+    transition: transform 0.4s ease-in-out;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .filter-title {
@@ -15,6 +19,7 @@
     border-bottom: 2px solid #d4af37;
     margin-bottom: 20px;
     padding-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 .filter-group {
@@ -39,9 +44,12 @@
     background: #fff;
     font-family: 'Fauna One', serif;
     outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
 }
 
-.filter-group input:focus {
+.filter-group input:focus, .filter-group select:focus {
     border-color: #8b0000;
     box-shadow: 0 0 5px rgba(139, 0, 0, 0.2);
 }
@@ -53,15 +61,6 @@
     font-style: italic;
     border-top: 1px solid rgba(212, 175, 55, 0.3);
     padding-top: 15px;
-}
-
-/* Sidebar'a geçiş efekti ekle */
-#sidebar-left {
-    /* ... mevcut kodların ... */
-    transition: transform 0.4s ease-in-out;
-    position: fixed; /* Ekranın solunda sabit kalması için */
-    left: 0;
-    top: 0;
 }
 
 /* Sidebar kapandığında uygulanacak class */
@@ -80,6 +79,13 @@
     cursor: pointer;
     font-size: 1.2rem;
     padding: 5px 10px;
+    transition: all 0.3s ease;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#toggle-sidebar:active {
+    transform: scale(0.95);
 }
 
 /* Açma Butonu Stili */
@@ -95,14 +101,122 @@
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
     font-weight: bold;
+    transition: all 0.3s ease;
+    -webkit-user-select: none;
+    user-select: none;
 }
-#sidebar-left {
-    width: 320px;
-    height: 100vh;
-    background: #f4f1ea;
-    transition: transform 0.4s ease;
-    z-index: 1000;
+
+#open-sidebar:active {
+    transform: scale(0.95);
 }
-#sidebar-left.closed {
-    transform: translateX(-100%);
+
+/* TABLET RESPONSIVE (768px - 1024px) */
+@media (max-width: 1024px) {
+    #sidebar-left {
+        width: 280px;
+        padding: 20px;
+    }
+
+    .filter-title {
+        font-size: 1.1rem;
+    }
+
+    .filter-group label {
+        font-size: 0.8rem;
+    }
+
+    .filter-group select, .filter-group input {
+        padding: 8px;
+    }
+}
+
+/* MOBİL RESPONSIVE (max 768px) */
+@media (max-width: 768px) {
+    #sidebar-left {
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 3px solid #d4af37;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .filter-title {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .filter-group {
+        margin-bottom: 12px;
+    }
+
+    .filter-group label {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+
+    .filter-group select, .filter-group input {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    #toggle-sidebar {
+        padding: 8px 12px;
+        font-size: 1.5rem;
+        right: 15px;
+        top: 15px;
+    }
+
+    #open-sidebar {
+        top: 15px;
+        left: 15px;
+        padding: 12px 18px;
+        font-size: 1.3rem;
+    }
+
+    #stats {
+        font-size: 0.7rem;
+        margin-top: 20px;
+    }
+}
+
+/* KÜÇÜK MOBİL RESPONSIVE (max 480px) */
+@media (max-width: 480px) {
+    #sidebar-left {
+        padding: 15px;
+    }
+
+    .filter-title {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .filter-group {
+        margin-bottom: 10px;
+    }
+
+    .filter-group label {
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+    }
+
+    .filter-group select, .filter-group input {
+        padding: 7px;
+        font-size: 14px;
+    }
+
+    #toggle-sidebar {
+        padding: 6px 10px;
+        font-size: 1.3rem;
+    }
+
+    #open-sidebar {
+        padding: 10px 14px;
+        font-size: 1.1rem;
+    }
+
+    #stats {
+        font-size: 0.65rem;
+    }
 }
