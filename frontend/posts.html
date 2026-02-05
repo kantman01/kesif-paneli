@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Son Paylaşımlar | Harita</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Fauna+One&display=swap" rel="stylesheet">
+    
+    <style>
+        /* TEMEL YERLEŞİM */
+        body { 
+            margin: 0; 
+            display: flex; 
+            height: 100vh; 
+            background: #fdfaf3; 
+            overflow: hidden; 
+            font-family: 'Fauna One', serif; 
+        }
+
+        #sidebar-left {
+            width: 350px;
+            background: #f4f1ea;
+            border-right: 3px solid #d4af37;
+            padding: 25px;
+            z-index: 1000;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            height: 100vh;
+            transition: transform 0.4s ease-in-out;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        #map { 
+            flex-grow: 1; 
+            height: 100%; 
+            z-index: 1; 
+        }
+
+        .sidebar-title {
+            font-family: 'Cinzel', serif;
+            color: #8b0000;
+            border-bottom: 2px solid #d4af37;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .posts-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post-item {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 3px solid #d4af37;
+        }
+
+        .post-item:hover {
+            background: #f9f9f9;
+            border-left-color: #8b0000;
+            box-shadow: 0 2px 8px rgba(139, 0, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .post-item.active {
+            background: #fff9f0;
+            border-left-color: #8b0000;
+            box-shadow: 0 2px 8px rgba(139, 0, 0, 0.2);
+        }
+
+        .post-item-title {
+            font-family: 'Cinzel', serif;
+            color: #8b0000;
+            font-size: 0.95rem;
+            margin: 0 0 8px 0;
+            line-height: 1.3;
+            font-weight: bold;
+        }
+
+        .post-item-meta {
+            font-size: 0.75rem;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .post-item-location {
+            font-size: 0.8rem;
+            color: #8b0000;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .post-item-excerpt {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            color: #8b0000;
+            text-decoration: none;
+            font-family: 'Cinzel';
+            font-size: 0.9rem;
+            border-bottom: 1px solid #d4af37;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            color: #d4af37;
+            border-color: #8b0000;
+        }
+
+        /* Sidebar kapandığında uygulanacak class */
+        #sidebar-left.closed {
+            transform: translateX(-100%);
+        }
+
+        /* Kapatma Butonu Stili */
+        #toggle-sidebar {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: transparent;
+            border: 1px solid #d4af37;
+            color: #8b0000;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        #toggle-sidebar:active {
+            transform: scale(0.95);
+        }
+
+        /* Açma Butonu Stili */
+        #open-sidebar {
+            position: fixed;
+            left: 10px;
+            top: 20px;
+            z-index: 999;
+            background: #f4f1ea;
+            border: 2px solid #d4af37;
+            color: #8b0000;
+            padding: 10px 15px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        #open-sidebar:active {
+            transform: scale(0.95);
+        }
+
+        .loading {
+            text-align: center;
+            color: #999;
+            padding: 20px;
+            font-style: italic;
+        }
+
+        /* RESPONSIVE DÜZENLEMELER - TABLET (768px-1024px) */
+        @media (max-width: 1024px) {
+            #sidebar-left {
+                width: 300px;
+                padding: 20px;
+            }
+
+            .sidebar-title {
+                font-size: 1.1rem;
+            }
+
+            .post-item {
+                padding: 12px;
+                margin-bottom: 12px;
+            }
+
+            .post-item-title {
+                font-size: 0.9rem;
+            }
+
+            .post-item-excerpt {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* RESPONSIVE DÜZENLEMELER - MOBİL (max 768px) */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            #sidebar-left {
+                width: 100%;
+                height: auto;
+                max-height: 100vh;
+                padding: 20px;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 2000;
+                border-right: none;
+                border-bottom: 3px solid #d4af37;
+            }
+            
+            #map {
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            #toggle-sidebar {
+                padding: 8px 12px;
+                font-size: 1.5rem;
+                right: 15px;
+                top: 15px;
+            }
+
+            #open-sidebar {
+                top: 15px;
+                left: 15px;
+                padding: 12px 18px;
+                font-size: 1.3rem;
+            }
+
+            .sidebar-title {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+            }
+
+            .post-item {
+                padding: 10px;
+                margin-bottom: 10px;
+                gap: 10px;
+            }
+
+            .post-item-image {
+                width: 70px;
+                height: 70px;
+            }
+
+            .post-item-title {
+                font-size: 0.9rem;
+            }
+
+            .post-item-excerpt {
+                font-size: 0.75rem;
+                -webkit-line-clamp: 2;
+            }
+        }
+
+        /* RESPONSIVE DÜZENLEMELER - KÜÇÜK MOBİL (max 480px) */
+        @media (max-width: 480px) {
+            #sidebar-left {
+                padding: 15px;
+            }
+
+            #toggle-sidebar {
+                padding: 6px 10px;
+                font-size: 1.3rem;
+            }
+
+            #open-sidebar {
+                padding: 10px 14px;
+                font-size: 1.1rem;
+            }
+
+            .sidebar-title {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+
+            .post-item {
+                padding: 8px;
+                margin-bottom: 8px;
+                gap: 8px;
+            }
+
+            .post-item-image {
+                width: 60px;
+                height: 60px;
+            }
+
+            .post-item-title {
+                font-size: 0.85rem;
+            }
+
+            .post-item-excerpt {
+                font-size: 0.7rem;
+                -webkit-line-clamp: 2;
+            }
+
+            .post-item-meta {
+                font-size: 0.65rem;
+            }
+
+            .post-item-location {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar-left">
+        <button id="toggle-sidebar" onclick="toggleSidebar()">❮</button>
+        
+        <h2 class="sidebar-title">SON PAYLAŞIMLAR</h2>
+
+        <div class="loading" id="loadingMsg">Paylaşımlar yükleniyor...</div>
+        <ul class="posts-list" id="postsList"></ul>
+
+        <a href="../index.html" class="back-home">← Ana Sayfaya Dön</a>
+    </div>
+
+    <button id="open-sidebar" onclick="toggleSidebar()">❯</button>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Harita Başlatma
+        var map = L.map('map', {
+            zoomControl: false
+        }).setView([39.0, 35.2], 6);
+
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        var markers = [];
+        var posts = [];
+        var currentPostId = null;
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar-left');
+            const openBtn = document.getElementById('open-sidebar');
+            
+            sidebar.classList.toggle('closed');
+            
+            if (sidebar.classList.contains('closed')) {
+                setTimeout(() => { openBtn.style.display = 'block'; }, 300);
+            } else {
+                openBtn.style.display = 'none';
+            }
+
+            setTimeout(() => {
+                if (typeof map !== 'undefined') {
+                    map.invalidateSize();
+                }
+            }, 400);
+        }
+
+        // WordPress API'den paylaşımları yükle
+        async function loadPosts() {
+            // İlk olarak hardcoded konumlar
+            const baseLocations = [
+                {
+                    id: 1,
+                    title: { rendered: 'Corleone' },
+                    excerpt: { rendered: 'Sicilya\'daki tarihi yerleşim bölgesi ve antik kalıntıları' },
+                    location: 'Corleone, Sicilya, İtalya',
+                    latitude: 37.7722,
+                    longitude: 13.3055,
+                    date: '2026-02-05',
+                    meta: {}
+                },
+                {
+                    id: 2,
+                    title: { rendered: 'Town of Rashid (Rosetta)' },
+                    excerpt: { rendered: 'Rosetta Taşı\'nın bulunduğu antik Mısır şehri' },
+                    location: 'Rashid, Mısır',
+                    latitude: 31.2753,
+                    longitude: 30.4265,
+                    date: '2026-02-05',
+                    meta: {}
+                }
+            ];
+
+            // WordPress API'den paylaşımları al
+            try {
+                const response = await fetch('https://sarpkantman.com/wp-json/wp/v2/posts?per_page=100&_fields=id,title,excerpt,content,meta,link,date');
+                let wpPosts = await response.json();
+
+                if (wpPosts && Array.isArray(wpPosts)) {
+                    wpPosts = wpPosts.map((post, index) => ({
+                        ...post,
+                        id: 100 + index,
+                        latitude: post.meta?.latitude || null,
+                        longitude: post.meta?.longitude || null,
+                        location: post.meta?.location || post.meta?.country || 'Bilinmeyen Konum'
+                    }));
+                    posts = [...baseLocations, ...wpPosts];
+                } else {
+                    posts = baseLocations;
+                }
+            } catch (err) {
+                console.error("WordPress paylaşımları yüklenemedi:", err);
+                posts = baseLocations;
+            }
+
+            renderPostsList();
+            renderMarkers();
+        }
+
+        function renderPostsList() {
+            const list = document.getElementById('postsList');
+            const loadingMsg = document.getElementById('loadingMsg');
+            
+            loadingMsg.style.display = 'none';
+            list.innerHTML = '';
+
+            posts.forEach(post => {
+                const li = document.createElement('li');
+                li.className = 'post-item';
+                li.id = 'post-' + post.id;
+                
+                const location = post.location || 'Bilinmeyen Konum';
+                const latitude = post.latitude || null;
+                const longitude = post.longitude || null;
+                
+                const excerpt = post.excerpt?.rendered?.replace(/<[^>]*>/g, '').substring(0, 100) + '...';
+                const date = new Date(post.date).toLocaleDateString('tr-TR');
+
+                li.innerHTML = `
+                    <div class="post-item-title">${post.title.rendered}</div>
+                    <div class="post-item-meta">${date}</div>
+                    <div class="post-item-location">📍 ${location}</div>
+                    <div class="post-item-excerpt">${excerpt}</div>
+                `;
+
+                li.onclick = () => selectPost(post.id, latitude, longitude);
+                list.appendChild(li);
+            });
+        }
+
+        function renderMarkers() {
+            markers.forEach(m => map.removeLayer(m));
+            markers = [];
+
+            posts.forEach(post => {
+                const latitude = post.meta?.latitude;
+                const longitude = post.meta?.longitude;
+
+                if (latitude && longitude) {
+                    var marker = L.marker([latitude, longitude]).addTo(map);
+                    marker.on('click', () => selectPost(post.id, latitude, longitude));
+                    markers.push({ marker, postId: post.id });
+                }
+            });
+        }
+
+        function selectPost(postId, lat, lon) {
+            // Eski aktif item'ı kaldır
+            if (currentPostId) {
+                const oldItem = document.getElementById('post-' + currentPostId);
+                if (oldItem) oldItem.classList.remove('active');
+            }
+
+            // Yeni aktif item'ı ayarla
+            currentPostId = postId;
+            const newItem = document.getElementById('post-' + postId);
+            if (newItem) newItem.classList.add('active');
+
+            // Mobilde sidebar'ı kapat
+            if (window.innerWidth < 768) {
+                toggleSidebar();
+            }
+
+            // Haritaya zoom ve pan yap
+            if (lat && lon) {
+                map.flyTo([lat, lon], 13, {
+                    animate: true,
+                    duration: 1.5
+                });
+            }
+        }
+
+        // Sayfa yüklendiğinde paylaşımları getir
+        loadPosts();
+    </script>
+</body>
+</html>
