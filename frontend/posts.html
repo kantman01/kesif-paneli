@@ -277,6 +277,29 @@
             transform: scale(0.95);
         }
 
+        /* overlay close helper (mobile) */
+        #overlayCloseHelper {
+            position: fixed;
+            right: 12px;
+            top: 12px;
+            z-index: 3500;
+            background: #ffffff;
+            border: 2px solid #d4af37;
+            color: #8b0000;
+            font-size: 1.4rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px) {
+            #overlayCloseHelper { display:flex; }
+        }
+
         .loading {
             text-align: center;
             color: #999;
@@ -476,6 +499,9 @@
         <div id="floatingModalImage" class="floating-modal-image"></div>
         <div id="floatingModalContent" class="floating-modal-content"></div>
     </div>
+
+    <!-- Mobile helper: always-visible close button for overlays (touch devices) -->
+    <button id="overlayCloseHelper" title="Kapat" style="display:none;">×</button>
 
     <div id="map"></div>
 
@@ -792,12 +818,15 @@
             modal.style.display = 'flex';
             // center modal
             modal.style.left = '50%'; modal.style.top = '50%'; modal.style.transform = 'translate(-50%, -50%)';
+            // show mobile overlay close helper so user can always close if dragged
+            try{ const helper = document.getElementById('overlayCloseHelper'); if(helper) helper.style.display = window.innerWidth <= 768 ? 'flex' : 'none'; }catch(e){}
             setTimeout(()=>{ map.invalidateSize(); }, 200);
         }
 
         function closeFloatingModal(){
             const modal = document.getElementById('floatingModal');
             modal.style.display = 'none';
+            try{ const helper = document.getElementById('overlayCloseHelper'); if(helper) helper.style.display = 'none'; }catch(e){}
         }
 
         // make floating modal draggable
@@ -823,7 +852,19 @@
                 modal.style.left = Math.max(8, Math.min(window.innerWidth - modal.offsetWidth - 8, origLeft + dx)) + 'px';
                 modal.style.top = Math.max(8, Math.min(window.innerHeight - modal.offsetHeight - 8, origTop + dy)) + 'px';
             }
-            function up(){ dragging = false; }
+            function up(){ 
+                dragging = false; 
+                // ensure modal remains visible (snap back if near edges)
+                try{
+                    const rect = modal.getBoundingClientRect();
+                    const left = Math.min(Math.max(rect.left, 8), Math.max(8, window.innerWidth - modal.offsetWidth - 8));
+                    const top = Math.min(Math.max(rect.top, 8), Math.max(8, window.innerHeight - modal.offsetHeight - 8));
+                    modal.style.transition = 'left 160ms, top 160ms';
+                    modal.style.left = left + 'px';
+                    modal.style.top = top + 'px';
+                    setTimeout(()=>{ modal.style.transition = ''; }, 200);
+                }catch(e){}
+            }
 
             header.addEventListener('mousedown', down);
             header.addEventListener('touchstart', down);
@@ -856,6 +897,7 @@
             document.getElementById('open-sidebar').style.display = 'block';
 
             info.style.display = 'flex';
+            try{ const helper = document.getElementById('overlayCloseHelper'); if(helper) helper.style.display = window.innerWidth <= 768 ? 'flex' : 'none'; }catch(e){}
             // position info card where sidebar was; ensure map resize
             setTimeout(() => { map.invalidateSize(); }, 400);
         }
@@ -863,6 +905,7 @@
         function closeInfoCard() {
             const info = document.getElementById('infoCard');
             info.style.display = 'none';
+            try{ const helper = document.getElementById('overlayCloseHelper'); if(helper) helper.style.display = 'none'; }catch(e){}
             // re-open sidebar
             const sidebar = document.getElementById('sidebar-left');
             sidebar.classList.remove('closed');
@@ -894,7 +937,20 @@
                 info.style.left = newLeft + 'px';
                 info.style.top = newTop + 'px';
             }
-            function pointerUp(){ isDown = false; document.body.style.userSelect = ''; }
+            function pointerUp(){ 
+                isDown = false; 
+                document.body.style.userSelect = ''; 
+                try{
+                    const rect = info.getBoundingClientRect();
+                    const minLeft = -info.offsetWidth + 56; // keep ~56px visible
+                    const left = Math.min(Math.max(rect.left, minLeft), 50);
+                    const top = Math.min(Math.max(rect.top, 0), Math.max(0, window.innerHeight - 100));
+                    info.style.transition = 'left 160ms, top 160ms';
+                    info.style.left = left + 'px';
+                    info.style.top = top + 'px';
+                    setTimeout(()=>{ info.style.transition = ''; }, 200);
+                }catch(e){}
+            }
 
             header.addEventListener('mousedown', pointerDown);
             header.addEventListener('touchstart', pointerDown);
@@ -902,6 +958,20 @@
             window.addEventListener('touchmove', pointerMove);
             window.addEventListener('mouseup', pointerUp);
             window.addEventListener('touchend', pointerUp);
+        })();
+
+        // overlay close helper: always-available close on touch devices
+        (function overlayHelperInit(){
+            const helper = document.getElementById('overlayCloseHelper');
+            if(!helper) return;
+            helper.addEventListener('click', ()=>{
+                try{ closeFloatingModal(); }catch(e){}
+                try{ closeInfoCard(); }catch(e){}
+                helper.style.display = 'none';
+            });
+            window.addEventListener('resize', ()=>{
+                if(window.innerWidth > 768) helper.style.display = 'none';
+            });
         })();
 
         // Sayfa yüklendiğinde paylaşımları getir
