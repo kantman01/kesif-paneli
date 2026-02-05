@@ -588,17 +588,38 @@
                         location: post.meta?.location || post.meta?.country || null
                     }));
 
-                    // İlk iki gönderiye özel etiketler/koordinatlar ata (sırasıyla Corleone ve Rashid)
-                    if (wpPosts[0]) {
-                        wpPosts[0].location = 'Corleone, Sicilya, İtalya';
-                        wpPosts[0].latitude = wpPosts[0].latitude || 37.7722;
-                        wpPosts[0].longitude = wpPosts[0].longitude || 13.3055;
-                    }
-                    if (wpPosts[1]) {
-                        wpPosts[1].location = 'Rashid, Mısır';
-                        wpPosts[1].latitude = wpPosts[1].latitude || 31.2753;
-                        wpPosts[1].longitude = wpPosts[1].longitude || 30.4265;
-                    }
+                    // Tüm gönderilere konum ata - varsayılan konumlar listesi
+                    const defaultLocations = [
+                        { location: 'Corleone, Sicilya, İtalya', latitude: 37.7722, longitude: 13.3055 },
+                        { location: 'Rashid, Mısır', latitude: 31.2753, longitude: 30.4265 },
+                        { location: 'İstanbul, Türkiye', latitude: 41.0082, longitude: 28.9784 },
+                        { location: 'Kahire, Mısır', latitude: 30.0444, longitude: 31.2357 },
+                        { location: 'Roma, İtalya', latitude: 41.9028, longitude: 12.4964 },
+                        { location: 'Giza, Mısır', latitude: 30.0131, longitude: 31.1589 },
+                        { location: 'Ankara, Türkiye', latitude: 39.9334, longitude: 32.8597 },
+                        { location: 'Venedik, İtalya', latitude: 45.4408, longitude: 12.3155 },
+                        { location: 'Mekke, Suudi Arabistan', latitude: 21.4225, longitude: 39.8262 },
+                        { location: 'Bağdat, Irak', latitude: 33.3128, longitude: 44.3615 }
+                    ];
+
+                    wpPosts.forEach((post, index) => {
+                        // Hard coded konumlar
+                        if (index === 5) { // 6. gönderi
+                            post.location = 'İskenderiye, Mısır';
+                            post.latitude = 31.2001;
+                            post.longitude = 29.9187;
+                        } else if (index === 6) { // 7. gönderi
+                            post.location = 'İskenderiye, Mısır';
+                            post.latitude = 31.2001;
+                            post.longitude = 29.9187;
+                        } else if (!post.location || !post.latitude || !post.longitude) {
+                            // Eğer meta'da konum yoksa, varsayılan konumlardan döngü ile ata
+                            const locIndex = index % defaultLocations.length;
+                            post.location = defaultLocations[locIndex].location;
+                            post.latitude = defaultLocations[locIndex].latitude;
+                            post.longitude = defaultLocations[locIndex].longitude;
+                        }
+                    });
 
                     posts = wpPosts;
                 } else {

@@ -107,6 +107,12 @@
         }
 
         /* Marker styles */
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+        }
+
         .custom-marker .marker-pin {
             font-size: 20px;
             line-height: 1;
@@ -114,6 +120,7 @@
             text-shadow: 0 1px 0 rgba(255,255,255,0.6), 0 2px 6px rgba(0,0,0,0.15);
             transform: translateY(-2px);
             display: inline-block;
+            animation: heartbeat 1.5s ease-in-out infinite;
         }
         .custom-marker { transform: translate(-50%, -100%); }
 
@@ -144,7 +151,7 @@
         </header>
 
         <div class="detail-card">
-            <p>Keşif Paneli — dijital varlıkların görünmez izlerini izleme aracı. <span style="color:#d4af37;font-family:'Cinzel';">ayın altınısı</span> stilinde vurgu uygulanmıştır.</p>
+            <p>"Tarihsiz coğrafya, hareketsiz bir ceset gibidir; coğrafyasız tarih ise belli bir yurdu olmayan bir avare gibi başıboş gezer." <span style="color:#d4af37;font-family:'Cinzel';">- John Smith</span></p>
         </div>
 
         <div class="button-group">
@@ -193,17 +200,29 @@
                         location: post.meta?.location || post.meta?.country || null
                     }));
 
-                    // Map first two posts to Corleone and Rashid
-                    if (wpPosts[0]) {
-                        wpPosts[0].location = 'Corleone, Sicilya, İtalya';
-                        wpPosts[0].latitude = wpPosts[0].latitude || 37.7722;
-                        wpPosts[0].longitude = wpPosts[0].longitude || 13.3055;
-                    }
-                    if (wpPosts[1]) {
-                        wpPosts[1].location = 'Rashid, Mısır';
-                        wpPosts[1].latitude = wpPosts[1].latitude || 31.2753;
-                        wpPosts[1].longitude = wpPosts[1].longitude || 30.4265;
-                    }
+                    // Tüm gönderilere konum ata - varsayılan konumlar listesi
+                    const defaultLocations = [
+                        { location: 'Corleone, Sicilya, İtalya', latitude: 37.7722, longitude: 13.3055 },
+                        { location: 'Rashid, Mısır', latitude: 31.2753, longitude: 30.4265 },
+                        { location: 'İstanbul, Türkiye', latitude: 41.0082, longitude: 28.9784 },
+                        { location: 'Kahire, Mısır', latitude: 30.0444, longitude: 31.2357 },
+                        { location: 'Roma, İtalya', latitude: 41.9028, longitude: 12.4964 },
+                        { location: 'İskenderiye, Mısır', latitude: 31.2001, longitude: 29.9187 },
+                        { location: 'İskenderiye, Mısır', latitude: 31.2001, longitude: 29.9187 },
+                        { location: 'Venedik, İtalya', latitude: 45.4408, longitude: 12.3155 },
+                        { location: 'Mekke, Suudi Arabistan', latitude: 21.4225, longitude: 39.8262 },
+                        { location: 'Bağdat, Irak', latitude: 33.3128, longitude: 44.3615 }
+                    ];
+
+                    wpPosts.forEach((post, index) => {
+                        // Eğer meta'da konum yoksa, varsayılan konumlardan döngü ile ata
+                        if (!post.location || !post.latitude || !post.longitude) {
+                            const locIndex = index % defaultLocations.length;
+                            post.location = defaultLocations[locIndex].location;
+                            post.latitude = defaultLocations[locIndex].latitude;
+                            post.longitude = defaultLocations[locIndex].longitude;
+                        }
+                    });
 
                     posts = wpPosts;
                 } else {
