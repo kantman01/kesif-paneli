@@ -15,6 +15,27 @@ function updateDistricts() {
     applyFilters();
 }
 
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar-left');
+    const openBtn = document.getElementById('open-sidebar');
+    
+    sidebar.classList.toggle('closed');
+    
+    // Sidebar kapandığında açma butonunu göster, açıldığında gizle
+    if (sidebar.classList.contains('closed')) {
+        setTimeout(() => { openBtn.style.display = 'block'; }, 300);
+    } else {
+        openBtn.style.display = 'none';
+    }
+
+    // Harita varsa, sidebar kapandıktan sonra haritayı tam ekrana yaymak için invalidateSize tetiklenebilir
+    setTimeout(() => {
+        if (typeof map !== 'undefined') {
+            map.invalidateSize();
+        }
+    }, 400);
+}
+
 function applyFilters() {
     const q = document.getElementById('quickSearch').value.toLowerCase();
     const city = document.getElementById('cityFilter').value;
@@ -25,7 +46,7 @@ function applyFilters() {
         const name = s.Name.toLowerCase();
         // Kadıköy araması Haydarpaşa'yı da kapsasın
         const isKadikoyRelated = q === "kadıköy" && (name.includes("haydarpaşa") || name.includes("kadıköy"));
-        const matchesSsearch = isKadikoyRelated || name.includes(q);
+        const matchesSearch = isKadikoyRelated || name.includes(q);
         
         const matchesCity = (city === 'all' || s.Name.includes(city));
         const matchesDistrict = (dist === 'all' || s.Name.includes(dist) || (dist === "Kadıköy" && s.Name.includes("Haydarpaşa")));
@@ -47,25 +68,4 @@ function applyFilters() {
             duration: 1.5
         });
     }
-
-    function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar-left');
-    const openBtn = document.getElementById('open-sidebar');
-    
-    sidebar.classList.toggle('closed');
-    
-    // Sidebar kapandığında açma butonunu göster, açıldığında gizle
-    if (sidebar.classList.contains('closed')) {
-        setTimeout(() => { openBtn.style.display = 'block'; }, 300);
-    } else {
-        openBtn.style.display = 'none';
-    }
-
-    // Harita varsa, sidebar kapandıktan sonra haritayı tam ekrana yaymak için invalidateSize tetiklenebilir
-    setTimeout(() => {
-        if (typeof map !== 'undefined') {
-            map.invalidateSize();
-        }
-    }, 400);
-}
 }
