@@ -277,6 +277,26 @@
             transform: scale(0.95);
         }
 
+        /* Home button (appears next to open-sidebar) */
+        #home-button {
+            position: fixed;
+            left: 70px;
+            top: 20px;
+            z-index: 999;
+            background: #f4f1ea;
+            border: 2px solid #d4af37;
+            color: #8b0000;
+            padding: 10px 12px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: none;
+            border-radius: 6px;
+        }
+        #home-button:active { transform: scale(0.95); }
+        @media (max-width: 768px) { #home-button { left: 70px; top: 15px; padding: 10px; } }
+
         /* overlay close helper (mobile) */
         #overlayCloseHelper {
             position: fixed;
@@ -481,6 +501,7 @@
     </div>
 
     <button id="open-sidebar" onclick="toggleSidebar()">❯</button>
+    <button id="home-button" onclick="goHome()" title="Ana Sayfa" style="display:none;">🏠</button>
 
     <div id="infoCard" class="info-card" style="display:none;">
         <div class="info-card-header">
@@ -529,13 +550,14 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar-left');
             const openBtn = document.getElementById('open-sidebar');
+            const homeBtn = document.getElementById('home-button');
             
             sidebar.classList.toggle('closed');
             
             if (sidebar.classList.contains('closed')) {
-                setTimeout(() => { openBtn.style.display = 'block'; }, 300);
+                setTimeout(() => { if(openBtn) openBtn.style.display = 'block'; if(homeBtn) homeBtn.style.display = 'block'; }, 300);
             } else {
-                openBtn.style.display = 'none';
+                if(openBtn) openBtn.style.display = 'none'; if(homeBtn) homeBtn.style.display = 'none';
             }
 
             setTimeout(() => {
@@ -543,6 +565,11 @@
                     map.invalidateSize();
                 }
             }, 400);
+        }
+
+        function goHome(){
+            // navigate to index (same as back-home link)
+            window.location.href = '../index.html';
         }
 
         // WordPress API'den paylaşımları yükle
@@ -734,8 +761,10 @@
             try{
                 const sidebar = document.getElementById('sidebar-left');
                 const openBtn = document.getElementById('open-sidebar');
+                const homeBtn = document.getElementById('home-button');
                 sidebar.classList.add('closed');
                 if(openBtn) openBtn.style.display = 'block';
+                if(homeBtn) homeBtn.style.display = 'block';
             }catch(e){/* ignore */}
 
             // Haritaya zoom ve pan yap
@@ -827,6 +856,7 @@
             const modal = document.getElementById('floatingModal');
             modal.style.display = 'none';
             try{ const helper = document.getElementById('overlayCloseHelper'); if(helper) helper.style.display = 'none'; }catch(e){}
+            if(document.getElementById('home-button')) document.getElementById('home-button').style.display = 'none';
         }
 
         // make floating modal draggable
@@ -895,6 +925,7 @@
             const sidebar = document.getElementById('sidebar-left');
             sidebar.classList.add('closed');
             document.getElementById('open-sidebar').style.display = 'block';
+            if(document.getElementById('home-button')) document.getElementById('home-button').style.display = 'block';
 
             info.style.display = 'flex';
             try{ const helper = document.getElementById('overlayCloseHelper'); if(helper) helper.style.display = window.innerWidth <= 768 ? 'flex' : 'none'; }catch(e){}
@@ -910,6 +941,7 @@
             const sidebar = document.getElementById('sidebar-left');
             sidebar.classList.remove('closed');
             document.getElementById('open-sidebar').style.display = 'none';
+            if(document.getElementById('home-button')) document.getElementById('home-button').style.display = 'none';
             setTimeout(() => { map.invalidateSize(); }, 400);
         }
 
