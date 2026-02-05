@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Epigraph Lens | Stratejik Harita</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -12,71 +12,51 @@
     <link rel="stylesheet" href="filter.css">
     
     <style>
-        body { margin: 0; display: flex; height: 100vh; background: #fdfaf3; overflow: hidden; font-family: 'Fauna One', serif; }
-        #map { flex-grow: 1; height: 100%; z-index: 1; }
-
-        /* ZAMANDA YOLCULUK BUTONU STİLİ */
-        #time-travel-launcher {
-            position: absolute;
-            right: 40px;
-            top: 40px;
-            z-index: 3000;
-            background: #8b0000; 
-            color: #d4af37; 
-            border: 3px solid #d4af37;
-            padding: 18px 30px;
-            font-family: 'Cinzel', serif;
-            font-weight: bold;
-            font-size: 1.1rem;
-            cursor: pointer;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            box-shadow: 0 0 20px rgba(139, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* TEMEL YERLEŞİM */
+        body { 
+            margin: 0; 
+            display: flex; 
+            height: 100vh; 
+            background: #fdfaf3; 
+            overflow: hidden; 
+            font-family: 'Fauna One', serif; 
         }
 
-        #time-travel-launcher:hover {
-            background: #d4af37;
-            color: #8b0000;
-            transform: scale(1.1) rotate(2deg);
-            box-shadow: 0 0 30px #d4af37;
+        #map { 
+            flex-grow: 1; 
+            height: 100%; 
+            z-index: 1; 
+            transition: margin-left 0.4s ease;
         }
 
-        #time-travel-launcher span {
-            position: relative;
-            z-index: 2;
-        }
+        /* RESPONSIVE DÜZENLEMELER */
+        @media (max-width: 768px) {
+            #sidebar-left {
+                width: 100% !important; /* Mobilde tam ekran */
+                position: fixed;
+                z-index: 2000;
+            }
+            
+            #open-sidebar {
+                top: 20px !important;
+                left: 10px !important;
+                transform: none !important;
+            }
 
-        .glow-effect {
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(212,175,55,0.3) 0%, transparent 70%);
-            animation: rotateGlow 5s linear infinite;
-            z-index: 1;
-        }
-
-        @keyframes rotateGlow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            .card-container {
+                width: 90% !important;
+                left: 5% !important;
+            }
         }
     </style>
 </head>
 <body>
 
-    <button id="time-travel-launcher" onclick="location.href='../index.html'">
-        <div class="glow-effect"></div>
-        <span>⌛ KEŞİF PANELİNE DÖN</span>
-    </button>
-
     <div id="sidebar-left">
-        <h2 class="filter-title">KEŞİF PANELİ</h2>
+        <button id="toggle-sidebar" onclick="toggleSidebar()">❮</button>
         
+        <h2 class="filter-title">KEŞİF PANELİ</h2>
+
         <div class="filter-group">
             <label>Hızlı Arama</label>
             <input type="text" id="quickSearch" placeholder="Kadıköy, Haydarpaşa..." onkeyup="applyFilters()">
@@ -108,12 +88,18 @@
             </select>
         </div>
 
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="../index.html" style="color: #8b0000; text-decoration: none; font-family: 'Cinzel'; font-size: 0.9rem; border-bottom: 1px solid #d4af37;">← Ana Sayfaya Dön</a>
+        </div>
+
         <div id="stats">Toplam <span id="count">0</span> eser aktif.</div>
     </div>
 
+    <button id="open-sidebar" onclick="toggleSidebar()" style="display:none;">❯</button>
+
     <div id="map"></div>
 
-    <div class="card-container" id="infoCard">
+    <div class="card-container" id="infoCard" style="display:none;">
         <div class="close-card" onclick="document.getElementById('infoCard').style.display='none'">×</div>
         <div class="flip-card-inner" id="cardInner" onclick="this.classList.toggle('is-flipped')">
             <div class="card-front">
@@ -121,13 +107,11 @@
                 <div style="padding:15px; text-align:center;">
                     <h2 id="cardTitle" style="font-family:'Cinzel'; color:#8b0000; margin-bottom:5px;"></h2>
                     <span id="cardType" style="color:#d4af37; font-weight:bold; letter-spacing:1px;"></span>
-                    <div id="frontStats" style="margin-top:15px; display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-                    </div>
                 </div>
-                <p style="text-align:center; font-size:0.7rem; color:#888; margin-top:10px;">(Rapor için kartı çevir)</p>
+                <p style="text-align:center; font-size:0.7rem; color:#888;">(Detaylar için dokun)</p>
             </div>
-            <div class="card-back" id="cardDetails">
-            </div>
+            <div class="card-back" id="cardDetails" style="padding: 20px; overflow-y: auto;">
+                </div>
         </div>
     </div>
 
@@ -135,64 +119,48 @@
     <script src="card.js"></script>
     <script src="filter.js"></script>
     <script>
-        var map = L.map('map').setView([39.0, 35.2], 6);
+        // Harita Başlatma
+        var map = L.map('map', {
+            zoomControl: false // Mobilde yanlışlıkla dokunmayı önlemek için kapattık
+        }).setView([39.0, 35.2], 6);
+
+        // Zoom kontrolünü sağ alta alalım (Sidebar ile çakışmasın)
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
         var markers = [];
         var allData = [];
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap'
-        }).addTo(map);
-
-        // --- VERİ ÇEKME MANTIĞI GÜNCELLENDİ ---
         async function loadData() {
             try {
-                // 1. Önce LocalStorage kontrol et (Hızlı yanıt için)
-                const localData = localStorage.getItem('lastScan');
-                if (localData) {
-                    console.log("Veriler yerel bellekten yüklendi.");
-                    allData = JSON.parse(localData).subdomains || [];
-                    // Not: Eğer subdomain verilerinde koordinat yoksa renderMarkers hata verebilir.
-                    // Bu kısım senin veri yapına göre (site.Latitude vb.) düzenlenmelidir.
-                    renderMarkers(allData);
-                }
-
-                // 2. Netlify Functions üzerinden güncel veriyi çek (Canlı ortam için)
-                // URL'yi kendi endpoint'ine göre güncelle (Örn: /.netlify/functions/get-locations)
+                // Not: Kendi API endpoint'ini buraya bağla
                 const response = await fetch('/.netlify/functions/scan'); 
                 if (response.ok) {
-                    const data = await response.json();
-                    allData = data;
-                    renderMarkers(data);
+                    allData = await response.json();
+                    renderMarkers(allData);
                 }
             } catch (err) {
-                console.error("Veri yükleme hatası:", err);
+                console.error("Veri yüklenemedi:", err);
             }
         }
 
         function renderMarkers(data) {
-            if (!Array.isArray(data)) return;
-
             markers.forEach(m => map.removeLayer(m));
             markers = [];
-
             data.forEach(site => {
-                // Veri setinde koordinat varsa marker oluştur
                 if (site.Latitude && site.Longitude) {
                     var m = L.marker([site.Latitude, site.Longitude]).addTo(map);
-                    
                     m.on('click', () => {
-                        if (typeof updateAndShowCard === "function") {
-                            updateAndShowCard(site);
-                        }
+                        if (window.innerWidth < 768) toggleSidebar(); // Mobilde marker'a tıklayınca sidebar'ı kapat ki kart görünsün
+                        updateAndShowCard(site);
                     });
-                    
                     markers.push(m);
                 }
             });
             document.getElementById('count').innerText = markers.length;
         }
 
-        // Başlat
         loadData();
     </script>
 </body>
