@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epigraph Lens | Stratejik Harita</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Fauna+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="filter.css">
+    
+    <style>
+        body { margin: 0; display: flex; height: 100vh; background: #fdfaf3; overflow: hidden; font-family: 'Fauna One', serif; }
+        #map { flex-grow: 1; height: 100%; z-index: 1; }
+
+        /* ZAMANDA YOLCULUK BUTONU STİLİ */
+        #time-travel-launcher {
+            position: absolute;
+            right: 40px;
+            top: 40px;
+            z-index: 3000;
+            background: #8b0000; /* Koyu Al kan rengi */
+            color: #d4af37; /* Altın varak */
+            border: 3px solid #d4af37;
+            padding: 18px 30px;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 20px rgba(139, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #time-travel-launcher:hover {
+            background: #d4af37;
+            color: #8b0000;
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 0 30px #d4af37;
+        }
+
+        #time-travel-launcher span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .glow-effect {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.3) 0%, transparent 70%);
+            animation: rotateGlow 5s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rotateGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <button id="time-travel-launcher" onclick="location.href='quest.html'">
+        <div class="glow-effect"></div>
+        <span>⌛ ZAMANDA YOLCULUK</span>
+    </button>
+
+    <div id="sidebar-left">
+        <h2 class="filter-title">KEŞİF PANELİ</h2>
+        
+        <div class="filter-group">
+            <label>Hızlı Arama</label>
+            <input type="text" id="quickSearch" placeholder="Kadıköy, Haydarpaşa..." onkeyup="applyFilters()">
+        </div>
+
+        <div class="filter-group">
+            <label>Şehir</label>
+            <select id="cityFilter" onchange="updateDistricts()">
+                <option value="all">Tüm Şehirler</option>
+                <option value="Istanbul">İstanbul</option>
+                <option value="Izmir">İzmir</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>İlçe</label>
+            <select id="districtFilter" onchange="applyFilters()">
+                <option value="all">Tüm İlçeler</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Medeniyet</label>
+            <select id="civilizationFilter" onchange="applyFilters()">
+                <option value="all">Hepsi</option>
+                <option value="Greek">Yunan</option>
+                <option value="Roman">Roma</option>
+                <option value="Ottoman">Osmanlı</option>
+            </select>
+        </div>
+
+        <div id="stats">Toplam <span id="count">0</span> eser aktif.</div>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="card-container" id="infoCard">
+        <div class="close-card" onclick="document.getElementById('infoCard').style.display='none'">×</div>
+        <div class="flip-card-inner" id="cardInner" onclick="this.classList.toggle('is-flipped')">
+            <div class="card-front">
+                <div class="image-box"><img id="cardImg" src="" alt="Antik Görsel"></div>
+                <div style="padding:15px; text-align:center;">
+                    <h2 id="cardTitle" style="font-family:'Cinzel'; color:#8b0000; margin-bottom:5px;"></h2>
+                    <span id="cardType" style="color:#d4af37; font-weight:bold; letter-spacing:1px;"></span>
+                    <div id="frontStats" style="margin-top:15px; display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+                        </div>
+                </div>
+                <p style="text-align:center; font-size:0.7rem; color:#888; margin-top:10px;">(Rapor için kartı çevir)</p>
+            </div>
+            <div class="card-back" id="cardDetails">
+                </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="card.js"></script>
+    <script src="filter.js"></script>
+    <script>
+        // Haritayı başlat (Türkiye Odaklı)
+        var map = L.map('map').setView([39.0, 35.2], 6);
+        var markers = [];
+        var allData = [];
+
+        // Aydınlık Katman
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
+
+        // Verileri API'den çek
+        fetch('http://127.0.0.1:5000/api/konumlar')
+            .then(res => res.json())
+            .then(data => {
+                allData = data;
+                renderMarkers(data);
+            })
+            .catch(err => console.error("Veri çekme hatası:", err));
+
+        function renderMarkers(data) {
+            // Mevcut markerları temizle
+            markers.forEach(m => map.removeLayer(m));
+            markers = [];
+
+            data.forEach(site => {
+                var m = L.marker([site.Latitude, site.Longitude]).addTo(map);
+                
+                // Marker'a tıklayınca card.js fonksiyonunu çalıştır
+                m.on('click', () => {
+                    if (typeof updateAndShowCard === "function") {
+                        updateAndShowCard(site);
+                    }
+                });
+                
+                markers.push(m);
+            });
+            document.getElementById('count').innerText = data.length;
+        }
+    </script>
+</body>
+</html>
