@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sarp Kantman | Recon Lens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Fauna+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: #0a0a0a;
+            color: #c4a484;
+            font-family: 'Fauna One', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .landing-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+        .main-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            letter-spacing: 10px;
+            color: #fff;
+            margin-bottom: 0;
+            text-shadow: 0 0 20px rgba(196, 164, 132, 0.3);
+        }
+        .tagline {
+            font-size: 1rem;
+            letter-spacing: 3px;
+            opacity: 0.7;
+            margin-bottom: 40px;
+        }
+        .detail-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #333;
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .search-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(196, 164, 132, 0.3);
+            padding: 30px;
+            margin: 20px 0;
+        }
+        .search-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #c4a484;
+            color: #fff;
+            font-family: 'Fauna One', serif;
+            font-size: 1.4rem;
+            width: 90%;
+            outline: none;
+            padding: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .results-wrapper {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .result-item {
+            padding: 12px;
+            border-bottom: 1px solid rgba(196, 164, 132, 0.1);
+            font-size: 0.9rem;
+            color: #d1d1d1;
+        }
+        .explore-btn {
+            background: #8b0000;
+            color: #fff;
+            border: 1px solid #c4a484;
+            padding: 15px 40px;
+            font-family: 'Cinzel';
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.4s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .explore-btn:hover:not(:disabled) {
+            background: #c4a484;
+            color: #000;
+        }
+        #status-msg {
+            font-size: 0.85rem;
+            color: #c4a484;
+            margin-top: 15px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <header>
+            <h1 class="main-title">RECON LENS</h1>
+            <p class="tagline">Dijital Varlıkların Görünmez İzleri</p>
+        </header>
+
+        <div class="detail-card">
+            <h2 style="font-family: 'Cinzel';">Subdomain Keşfi</h2>
+            <div class="search-box">
+                <input type="text" id="domainInput" class="search-input" placeholder="sarpkantman.com">
+                <div id="status-msg">Tarama başlatılmaya hazır...</div>
+            </div>
+            <div class="results-wrapper">
+                <ul id="period-list" style="list-style: none; padding: 0;"></ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <button onclick="runDiscovery()" class="explore-btn" id="actionBtn">KEŞFE BAŞLA</button>
+            <a href="frontend/map.html" class="explore-btn" style="margin-left: 10px; opacity: 0.8;">HARİTAYI GÖR</a>
+        </div>
+    </div>
+
+    <script>
+        async function runDiscovery() {
+            const domainInput = document.getElementById('domainInput');
+            const domain = domainInput.value.trim();
+            const status = document.getElementById('status-msg');
+            const list = document.getElementById('period-list');
+            const btn = document.getElementById('actionBtn');
+
+            if (!domain) {
+                status.innerText = "Lütfen geçerli bir domain giriniz.";
+                return;
+            }
+
+            status.innerText = "Veritabanları taranıyor...";
+            list.innerHTML = "";
+            btn.innerText = "TARANIYOR...";
+            btn.disabled = true;
+
+            try {
+                const response = await fetch('/.netlify/functions/scan', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ domain: domain })
+                });
+
+                const data = await response.json();
+
+                if (data.subdomains && data.subdomains.length > 0) {
+                    status.innerText = `${data.subdomains.length} adet dijital iz bulundu.`;
+                    localStorage.setItem('lastScan', JSON.stringify(data));
+
+                    data.subdomains.forEach(sub => {
+                        const li = document.createElement('li');
+                        li.className = "result-item";
+                        li.innerText = sub;
+                        list.appendChild(li);
+                    });
+                } else {
+                    status.innerText = "Hiçbir iz bulunamadı.";
+                }
+            } catch (err) {
+                status.innerText = "Bağlantı hatası.";
+                console.error(err);
+            } finally {
+                btn.innerText = "YENİ KEŞİF";
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
