@@ -126,18 +126,20 @@
         /* Info card (appears where sidebar was) */
         .info-card {
             position: fixed;
-            left: 0;
-            top: 0;
-            width: 350px;
-            height: 100vh;
+            left: 10px;
+            top: 10px;
+            width: 320px;
+            max-height: calc(100vh - 20px);
             background: #fdfdfb;
             border-right: 3px solid #d4af37;
             z-index: 1200;
-            box-shadow: 5px 0 20px rgba(0,0,0,0.15);
+            box-shadow: 5px 8px 30px rgba(0,0,0,0.12);
             display: flex;
             flex-direction: column;
             overflow: hidden;
             touch-action: none;
+            border-radius: 10px;
+            box-sizing: border-box;
         }
 
         .info-card-header {
@@ -167,11 +169,17 @@
         }
 
         .info-card-body {
-            padding: 16px;
+            padding: 12px 14px;
             overflow-y: auto;
             font-size: 0.9rem;
             color: #444;
         }
+
+        .info-card-footer{
+            display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-top:1px solid rgba(212,175,55,0.12);background:transparent}
+        .info-card-nav{display:flex;gap:6px}
+        .info-nav-btn{background:#f4f1ea;border:1px solid #d4af37;color:#8b0000;padding:6px 8px;border-radius:6px;cursor:pointer}
+        .info-nav-btn:active{transform:scale(.98)}
 
         /* Floating modal styles */
         .floating-modal {
@@ -526,6 +534,13 @@
             <button class="info-card-close" onclick="closeInfoCard()">×</button>
         </div>
         <div class="info-card-body"></div>
+        <div class="info-card-footer">
+            <a id="infoCardFullLink" href="#" target="_blank" style="color:#d4af37; text-decoration:none; font-weight:bold;">Tam Yazıyı Oku →</a>
+            <div class="info-card-nav">
+                <button id="infoPrev" class="info-nav-btn">◀</button>
+                <button id="infoNext" class="info-nav-btn">▶</button>
+            </div>
+        </div>
     </div>
 
     <!-- Floating modal for interactive preview -->
@@ -1012,18 +1027,35 @@
             const info = document.getElementById('infoCard');
             const titleEl = info.querySelector('.info-card-title');
             const bodyEl = info.querySelector('.info-card-body');
+            const fullLink = document.getElementById('infoCardFullLink');
 
-            titleEl.innerText = post.title?.rendered || 'Detay';
+            // ensure we have site intro loaded (loaded async on startup)
+            const introHtml = window.__siteIntro || '';
+
+            titleEl.innerText = htmlToText(post.title?.rendered || 'Detay');
             const date = post.date ? new Date(post.date).toLocaleDateString('tr-TR') : '';
-            const excerpt = post.excerpt?.rendered?.replace(/<[^>]*>/g, '');
+            const excerpt = htmlToText(post.excerpt?.rendered || '');
             const location = post.location || '';
 
-            bodyEl.innerHTML = `
-                <div style="font-size:0.85rem;color:#999;margin-bottom:8px;">${date}</div>
-                ${location ? `<div style="color:#8b0000;font-weight:bold;margin-bottom:8px;">📍 ${location}</div>` : ''}
-                <div style="line-height:1.4;color:#444">${excerpt}</div>
-                ${post.link ? `<div style="margin-top:12px;"><a href="${post.link}" target="_blank" style="color:#d4af37;">Tam Yazıyı Oku →</a></div>` : ''}
-            `;
+            // Combine site intro (if any) + post excerpt inside the info card body
+            bodyEl.innerHTML = '';
+            if(introHtml){
+                const introDiv = document.createElement('div');
+                introDiv.style.fontSize = '0.85rem';
+                introDiv.style.color = '#666';
+                introDiv.style.marginBottom = '10px';
+                introDiv.innerHTML = introHtml;
+                bodyEl.appendChild(introDiv);
+            }
+            const metaDiv = document.createElement('div');
+            metaDiv.style.fontSize = '0.8rem'; metaDiv.style.color = '#999'; metaDiv.style.marginBottom = '8px';
+            metaDiv.textContent = date;
+            bodyEl.appendChild(metaDiv);
+            if(location){ const locNode = document.createElement('div'); locNode.style.color='#8b0000'; locNode.style.fontWeight='bold'; locNode.style.marginBottom='8px'; locNode.textContent = '📍 '+location; bodyEl.appendChild(locNode); }
+
+            const excerptDiv = document.createElement('div'); excerptDiv.style.lineHeight='1.4'; excerptDiv.style.color='#444'; excerptDiv.textContent = excerpt; bodyEl.appendChild(excerptDiv);
+            // set full link in footer
+            if(post.link){ fullLink.href = post.link; fullLink.style.display='inline-block'; } else { fullLink.href = '#'; fullLink.style.display='none'; }
 
             // Hide sidebar and show info card in same place
             const sidebar = document.getElementById('sidebar-left');
@@ -1041,12 +1073,8 @@
             const info = document.getElementById('infoCard');
             info.style.display = 'none';
             try{ const helper = document.getElementById('overlayCloseHelper'); if(helper) helper.style.display = 'none'; }catch(e){}
-            // re-open sidebar
-            const sidebar = document.getElementById('sidebar-left');
-            sidebar.classList.remove('closed');
-            document.getElementById('open-sidebar').style.display = 'none';
-            if(document.getElementById('home-button')) document.getElementById('home-button').style.display = 'none';
-            setTimeout(() => { map.invalidateSize(); }, 400);
+            // Do NOT reopen sidebar — only hide this info card so map state remains unchanged
+            setTimeout(() => { if(typeof map !== 'undefined') map.invalidateSize(); }, 200);
         }
 
         // Make info card draggable by header
@@ -1108,6 +1136,33 @@
             window.addEventListener('resize', ()=>{
                 if(window.innerWidth > 768) helper.style.display = 'none';
             });
+        })();
+
+        // Fetch site intro (homepage first paragraph or meta description) to show in info card
+        (function fetchSiteIntro(){
+            window.__siteIntro = '';
+            fetch('https://sarpkantman.com').then(r=>r.text()).then(html=>{
+                try{
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html,'text/html');
+                    // prefer meta description
+                    const meta = doc.querySelector('meta[name="description"]');
+                    if(meta && meta.content) { window.__siteIntro = '<div>'+meta.content+'</div>'; return; }
+                    // otherwise first paragraph
+                    const p = doc.querySelector('p');
+                    if(p && p.textContent) { window.__siteIntro = '<div>'+p.textContent+'</div>'; }
+                }catch(e){/* ignore */}
+            }).catch(()=>{/* ignore */});
+        })();
+
+        // Info card nav: scroll body by visible height
+        (function infoCardNavInit(){
+            const prev = document.getElementById('infoPrev');
+            const next = document.getElementById('infoNext');
+            const body = document.querySelector('#infoCard .info-card-body');
+            if(!prev || !next || !body) return;
+            prev.addEventListener('click', ()=>{ body.scrollBy({top:-body.clientHeight,behavior:'smooth'}); });
+            next.addEventListener('click', ()=>{ body.scrollBy({top:body.clientHeight,behavior:'smooth'}); });
         })();
 
         // Sayfa yüklendiğinde paylaşımları getir
