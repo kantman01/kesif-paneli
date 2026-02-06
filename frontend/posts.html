@@ -128,10 +128,10 @@
             position: fixed;
             left: 12px;
             top: 12px;
-            width: 240px;
+            width: 200px;
             max-height: calc(100vh - 24px);
             background: #fdfdfb;
-            border-right: 3px solid #d4af37;
+            border: 2px solid #d4af37;
             z-index: 1200;
             box-shadow: 5px 8px 30px rgba(0,0,0,0.12);
             display: flex;
@@ -140,7 +140,7 @@
             touch-action: none;
             border-radius: 10px;
             box-sizing: border-box;
-            padding-bottom: 48px; /* leave space for pager */
+            padding-bottom: 52px; /* leave space for pager */
         }
 
         .info-card-header {
@@ -182,8 +182,8 @@
         .info-nav-btn{background:#f4f1ea;border:1px solid #d4af37;color:#8b0000;padding:6px 8px;border-radius:6px;cursor:pointer}
         .info-nav-btn:active{transform:scale(.98)}
 
-        .info-pager{position:absolute;right:8px;bottom:8px;display:flex;gap:6px;z-index:1250}
-        .info-pager .info-nav-btn{padding:8px 10px}
+        .info-pager{position:absolute;right:6px;bottom:6px;display:flex;gap:6px;z-index:1250;background:rgba(244,241,234,0.95);padding:4px;border-radius:8px;border:1px solid #d4af37}
+        .info-pager .info-nav-btn{padding:8px 12px;font-size:1rem}
 
         /* Floating modal styles */
         .floating-modal {
@@ -415,8 +415,8 @@
                 padding: 12px 18px;
                 font-size: 1.3rem;
             }
-            /* Hide duplicate in-header close buttons on mobile — use the floating overlay helper instead */
-            .info-card-close, .floating-modal-close { display: none; }
+            /* Hide floating modal close on mobile (use overlay helper) but keep info-card close visible */
+            .floating-modal-close { display: none; }
 
             .sidebar-title {
                 font-size: 1.1rem;
