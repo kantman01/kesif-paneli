@@ -24,7 +24,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100%;
+            width: auto;
             max-width: 800px;
             padding: 20px;
             text-align: center;
@@ -33,6 +33,7 @@
             background: rgba(10, 10, 10, 0.25);
             border-radius: 8px;
             backdrop-filter: blur(8px);
+            box-sizing: border-box;
         }
 
         .landing-container > * { pointer-events: auto; }
@@ -91,8 +92,13 @@
             cursor: pointer;
             transition: all 0.4s ease;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             letter-spacing: 1px;
+            min-width: 140px;
+            height: 48px;
+            box-sizing: border-box;
         }
 
         .explore-btn:hover:not(:disabled) {
@@ -129,15 +135,15 @@
             .main-title { font-size: 2.5rem; letter-spacing: 6px; }
             .tagline { font-size: 0.85rem; letter-spacing: 2px; }
             .detail-card { padding: 20px 25px; }
-            .explore-btn { padding: 10px 20px; font-size: 0.9rem; }
+            .explore-btn { padding: 10px 20px; font-size: 0.9rem; height:44px; }
             .button-group { gap: 8px; }
         }
 
         @media (max-width: 640px) {
             .landing-container { width: 92%; padding: 16px; }
             .detail-card { padding: 16px 18px; }
-            .button-group { flex-direction: column; }
-            .explore-btn { width: 100%; }
+            .button-group { flex-direction: column; gap: 10px; }
+            .explore-btn { width: 100%; min-width: 0; }
         }
 
         @media (max-height: 700px) {
