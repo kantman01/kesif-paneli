@@ -137,7 +137,6 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            touch-action: none;
             border-radius: 10px;
             box-sizing: border-box;
             padding-bottom: 52px; /* leave space for pager */
@@ -150,9 +149,11 @@
             padding: 14px 16px;
             background: #f4f1ea;
             border-bottom: 1px solid rgba(212,175,55,0.2);
-            cursor: move;
             -webkit-user-select: none;
             user-select: none;
+        }
+        @media (min-width: 769px) {
+            .info-card-header { cursor: move; }
         }
 
         .info-card-title {
@@ -417,6 +418,16 @@
             }
             /* Hide floating modal close on mobile (use overlay helper) but keep info-card close visible */
             .floating-modal-close { display: none; }
+
+            /* Center info-card on mobile and prevent position changes */
+            .info-card {
+                left: 50% !important;
+                top: 50% !important;
+                transform: translate(-50%, -50%);
+                width: calc(100% - 32px);
+                max-width: 340px;
+                max-height: calc(100vh - 80px);
+            }
 
             .sidebar-title {
                 font-size: 1.1rem;
@@ -1040,21 +1051,21 @@
             const date = post.date ? new Date(post.date).toLocaleDateString('tr-TR') : '';
             const location = post.location || '';
 
-            // Fetch full content if available, otherwise fallback to excerpt
+            // Fetch ONLY excerpt/intro (giriş kısmı) from WP API, not full content
             let contentHtml = '';
             try{
                 if(post.wp_id){
                     const resp = await fetch(`https://sarpkantman.com/wp-json/wp/v2/posts/${post.wp_id}`);
                     if(resp.ok){
                         const data = await resp.json();
-                        contentHtml = data.content?.rendered || (post.content?.rendered || post.excerpt?.rendered || '');
+                        contentHtml = data.excerpt?.rendered || post.excerpt?.rendered || '';
                     } else {
-                        contentHtml = post.content?.rendered || post.excerpt?.rendered || '';
+                        contentHtml = post.excerpt?.rendered || '';
                     }
                 } else {
-                    contentHtml = post.content?.rendered || post.excerpt?.rendered || '';
+                    contentHtml = post.excerpt?.rendered || '';
                 }
-            }catch(e){ contentHtml = post.content?.rendered || post.excerpt?.rendered || ''; }
+            }catch(e){ contentHtml = post.excerpt?.rendered || ''; }
 
             // Combine site intro (if any) + full content inside the info card body
             bodyEl.innerHTML = '';
@@ -1100,13 +1111,15 @@
             setTimeout(() => { if(typeof map !== 'undefined') map.invalidateSize(); }, 200);
         }
 
-        // Make info card draggable by header
+        // Make info card draggable by header (desktop only)
         (function makeInfoCardDraggable(){
             const info = document.getElementById('infoCard');
             const header = info.querySelector('.info-card-header');
             let isDown = false; let startY=0, startX=0, origY=0, origX=0;
 
             function pointerDown(e){
+                // Disable dragging on mobile (<=768px)
+                if(window.innerWidth <= 768) return;
                 isDown = true;
                 startX = e.clientX || e.touches && e.touches[0].clientX;
                 startY = e.clientY || e.touches && e.touches[0].clientY;
