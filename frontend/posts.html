@@ -126,10 +126,10 @@
         /* Info card (appears where sidebar was) */
         .info-card {
             position: fixed;
-            left: 10px;
-            top: 10px;
-            width: 320px;
-            max-height: calc(100vh - 20px);
+            left: 12px;
+            top: 12px;
+            width: 240px;
+            max-height: calc(100vh - 24px);
             background: #fdfdfb;
             border-right: 3px solid #d4af37;
             z-index: 1200;
@@ -140,6 +140,7 @@
             touch-action: none;
             border-radius: 10px;
             box-sizing: border-box;
+            padding-bottom: 48px; /* leave space for pager */
         }
 
         .info-card-header {
@@ -176,10 +177,13 @@
         }
 
         .info-card-footer{
-            display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-top:1px solid rgba(212,175,55,0.12);background:transparent}
+            display:flex;align-items:center;justify-content:flex-start;padding:8px 12px;border-top:1px solid rgba(212,175,55,0.12);background:transparent}
         .info-card-nav{display:flex;gap:6px}
         .info-nav-btn{background:#f4f1ea;border:1px solid #d4af37;color:#8b0000;padding:6px 8px;border-radius:6px;cursor:pointer}
         .info-nav-btn:active{transform:scale(.98)}
+
+        .info-pager{position:absolute;right:8px;bottom:8px;display:flex;gap:6px;z-index:1250}
+        .info-pager .info-nav-btn{padding:8px 10px}
 
         /* Floating modal styles */
         .floating-modal {
@@ -536,10 +540,10 @@
         <div class="info-card-body"></div>
         <div class="info-card-footer">
             <a id="infoCardFullLink" href="#" target="_blank" style="color:#d4af37; text-decoration:none; font-weight:bold;">Tam Yazıyı Oku →</a>
-            <div class="info-card-nav">
-                <button id="infoPrev" class="info-nav-btn">◀</button>
-                <button id="infoNext" class="info-nav-btn">▶</button>
-            </div>
+        </div>
+        <div class="info-pager" aria-hidden="false">
+            <button id="infoPrev" class="info-nav-btn">◀</button>
+            <button id="infoNext" class="info-nav-btn">▶</button>
         </div>
     </div>
 
@@ -1023,7 +1027,7 @@
             window.addEventListener('touchend', up);
         })();
 
-        function openInfoCard(post) {
+        async function openInfoCard(post) {
             const info = document.getElementById('infoCard');
             const titleEl = info.querySelector('.info-card-title');
             const bodyEl = info.querySelector('.info-card-body');
@@ -1034,10 +1038,25 @@
 
             titleEl.innerText = htmlToText(post.title?.rendered || 'Detay');
             const date = post.date ? new Date(post.date).toLocaleDateString('tr-TR') : '';
-            const excerpt = htmlToText(post.excerpt?.rendered || '');
             const location = post.location || '';
 
-            // Combine site intro (if any) + post excerpt inside the info card body
+            // Fetch full content if available, otherwise fallback to excerpt
+            let contentHtml = '';
+            try{
+                if(post.wp_id){
+                    const resp = await fetch(`https://sarpkantman.com/wp-json/wp/v2/posts/${post.wp_id}`);
+                    if(resp.ok){
+                        const data = await resp.json();
+                        contentHtml = data.content?.rendered || (post.content?.rendered || post.excerpt?.rendered || '');
+                    } else {
+                        contentHtml = post.content?.rendered || post.excerpt?.rendered || '';
+                    }
+                } else {
+                    contentHtml = post.content?.rendered || post.excerpt?.rendered || '';
+                }
+            }catch(e){ contentHtml = post.content?.rendered || post.excerpt?.rendered || ''; }
+
+            // Combine site intro (if any) + full content inside the info card body
             bodyEl.innerHTML = '';
             if(introHtml){
                 const introDiv = document.createElement('div');
@@ -1053,7 +1072,11 @@
             bodyEl.appendChild(metaDiv);
             if(location){ const locNode = document.createElement('div'); locNode.style.color='#8b0000'; locNode.style.fontWeight='bold'; locNode.style.marginBottom='8px'; locNode.textContent = '📍 '+location; bodyEl.appendChild(locNode); }
 
-            const excerptDiv = document.createElement('div'); excerptDiv.style.lineHeight='1.4'; excerptDiv.style.color='#444'; excerptDiv.textContent = excerpt; bodyEl.appendChild(excerptDiv);
+            const contentContainer = document.createElement('div');
+            contentContainer.style.lineHeight='1.4'; contentContainer.style.color='#444';
+            contentContainer.innerHTML = contentHtml || '';
+            bodyEl.appendChild(contentContainer);
+
             // set full link in footer
             if(post.link){ fullLink.href = post.link; fullLink.style.display='inline-block'; } else { fullLink.href = '#'; fullLink.style.display='none'; }
 
@@ -1161,8 +1184,9 @@
             const next = document.getElementById('infoNext');
             const body = document.querySelector('#infoCard .info-card-body');
             if(!prev || !next || !body) return;
-            prev.addEventListener('click', ()=>{ body.scrollBy({top:-body.clientHeight,behavior:'smooth'}); });
-            next.addEventListener('click', ()=>{ body.scrollBy({top:body.clientHeight,behavior:'smooth'}); });
+            // Pager scrolls the content inside the info card by one view height
+            prev.addEventListener('click', ()=>{ body.scrollBy({top: -body.clientHeight + 16, behavior:'smooth'}); });
+            next.addEventListener('click', ()=>{ body.scrollBy({top: body.clientHeight - 16, behavior:'smooth'}); });
         })();
 
         // Sayfa yüklendiğinde paylaşımları getir
