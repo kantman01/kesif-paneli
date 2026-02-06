@@ -136,14 +136,18 @@
             }
 
             #sidebar-left {
-                width: 100%;
+                width: calc(100% - 32px);
                 height: auto;
-                max-height: 100vh;
-                padding: 20px;
+                max-height: calc(100vh - 32px);
+                padding: 14px;
                 position: fixed;
-                left: 0;
-                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 8px;
                 z-index: 2000;
+                border-radius: 10px;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+                box-sizing: border-box;
             }
             
             #map {
@@ -410,18 +414,18 @@
             return { fontSize: 20, iconSize: [30, 30], anchor: [15, 30] };
         }
 
-        function renderAncientSiteMarkers() {
+        function renderAncientSiteMarkers(sites) {
             // Eski marker'ları temizle
             ancientMarkers.forEach(m => map.removeLayer(m));
             ancientMarkers = [];
             
-            // Filtreleri al
-            const civFilter = document.getElementById('civilizationFilter').value;
-            
-            // Filtreleme
-            let filteredSites = allAncientSites;
-            if (civFilter !== 'all') {
-                filteredSites = allAncientSites.filter(site => site.type.includes(civFilter));
+            // Filtreleme (liste verildiyse onu kullan, yoksa medeniyet filtresi uygula)
+            let filteredSites = sites || allAncientSites;
+            if (!sites) {
+                const civFilter = document.getElementById('civilizationFilter').value;
+                if (civFilter !== 'all') {
+                    filteredSites = allAncientSites.filter(site => site.type.includes(civFilter));
+                }
             }
             
             // Marker'ları render et
