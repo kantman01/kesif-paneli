@@ -142,6 +142,11 @@
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
+    /* When closed on mobile, move panel fully off-screen upwards */
+    #sidebar-left.closed {
+        transform: translate(-50%, -120%);
+    }
+
     .filter-title {
         font-size: 1.1rem;
         margin-bottom: 15px;

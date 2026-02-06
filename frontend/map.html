@@ -34,7 +34,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 400px;
+            width: 340px;
             display: flex;
             flex-direction: column;
             background: #fff;
@@ -95,6 +95,8 @@
             overflow-y: auto;
             display: flex;
             flex-direction: column;
+            position: relative;
+            padding-bottom: 48px; /* pager space */
         }
 
         .card-description-wrapper {
@@ -102,6 +104,34 @@
             overflow-y: auto;
             margin-bottom: 15px;
             padding-right: 5px;
+            max-height: 260px;
+        }
+
+        .card-pager {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            display: flex;
+            gap: 8px;
+            background: rgba(244, 241, 234, 0.96);
+            border: 1px solid #d4af37;
+            border-radius: 10px;
+            padding: 6px;
+        }
+
+        .card-pager button {
+            background: transparent;
+            border: 1px solid #d4af37;
+            color: #8b0000;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            padding: 6px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .card-pager button:active {
+            transform: scale(0.98);
         }
 
         .card-description-wrapper::-webkit-scrollbar {
@@ -143,7 +173,7 @@
                 padding: 14px;
                 position: fixed;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translate(-50%, 0);
                 top: 8px;
                 z-index: 2000;
                 border-radius: 10px;
@@ -322,7 +352,7 @@
         <div class="close-card" onclick="closeAncientSiteCard()">×</div>
         <div class="ancient-site-card">
             <div class="card-image" id="cardImageBox">
-                <img id="cardImg" src="" alt="Antik Görsel" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'">
+                <img id="cardImg" src="" alt="Antik Görsel" onerror="this.src='https://placehold.co/400x300?text=Resim+Yok'">
             </div>
             <div class="card-content">
                 <h2 id="cardTitle" style="font-family:'Cinzel'; color:#8b0000; margin-bottom:10px; font-size:1.3rem;"></h2>
@@ -331,6 +361,10 @@
                 <div class="card-description-wrapper">
                     <div id="cardDetails" style="font-size:0.9rem; line-height:1.6; color:#444; max-height:300px; overflow-y: auto; padding-right:10px;">
                     </div>
+                </div>
+                <div class="card-pager" aria-hidden="false">
+                    <button id="cardPrev">◀</button>
+                    <button id="cardNext">▶</button>
                 </div>
                 
                 <div id="cardLink" style="margin-top:15px; text-align:center;">
@@ -471,7 +505,7 @@
             
             // Fotoğraf
             const img = document.getElementById('cardImg');
-            img.src = site.imageUrl || 'https://via.placeholder.com/400x300?text=No+Image';
+            img.src = site.imageUrl || 'https://placehold.co/400x300?text=Resim+Yok';
             
             // Açıklama
             const descDiv = document.getElementById('cardDetails');
@@ -495,6 +529,20 @@
         function closeAncientSiteCard() {
             document.getElementById('infoCard').style.display = 'none';
         }
+
+        // Card pager: scroll long description inside the card
+        (function initCardPager(){
+            const prev = document.getElementById('cardPrev');
+            const next = document.getElementById('cardNext');
+            const wrapper = document.querySelector('.card-description-wrapper');
+            if (!prev || !next || !wrapper) return;
+            prev.addEventListener('click', () => {
+                wrapper.scrollBy({ top: -wrapper.clientHeight + 12, behavior: 'smooth' });
+            });
+            next.addEventListener('click', () => {
+                wrapper.scrollBy({ top: wrapper.clientHeight - 12, behavior: 'smooth' });
+            });
+        })();
 
         loadData();
 

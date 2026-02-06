@@ -3,6 +3,27 @@ const distData = {
     "Izmir": ["Selçuk", "Bergama"] 
 };
 
+function normalizeText(value) {
+    const raw = (value || '').toString().replace(/İ/g, 'I');
+    return raw
+        .toLowerCase()
+        .replace(/i̇/g, 'i')
+        .replace(/ı/g, 'i')
+        .replace(/ğ/g, 'g')
+        .replace(/ü/g, 'u')
+        .replace(/ş/g, 's')
+        .replace(/ö/g, 'o')
+        .replace(/ç/g, 'c');
+}
+
+function closeSidebarOnMobile() {
+    if (window.innerWidth > 768) return;
+    const sidebar = document.getElementById('sidebar-left');
+    const openBtn = document.getElementById('open-sidebar');
+    if (sidebar) sidebar.classList.add('closed');
+    if (openBtn) openBtn.style.display = 'block';
+}
+
 function updateDistricts() {
     const city = document.getElementById('cityFilter').value;
     const dSel = document.getElementById('districtFilter');
@@ -37,19 +58,20 @@ function toggleSidebar() {
 }
 
 function applyFilters() {
-    const q = document.getElementById('quickSearch').value.toLowerCase();
+    const qRaw = document.getElementById('quickSearch').value;
+    const q = normalizeText(qRaw);
     const city = document.getElementById('cityFilter').value;
     const dist = document.getElementById('districtFilter').value;
     const civ = document.getElementById('civilizationFilter').value;
 
     const filtered = allData.filter(s => {
-        const name = s.Name.toLowerCase();
+        const name = normalizeText(s.Name);
         // Kadıköy araması Haydarpaşa'yı da kapsasın
-        const isKadikoyRelated = q === "kadıköy" && (name.includes("haydarpaşa") || name.includes("kadıköy"));
-        const matchesSearch = isKadikoyRelated || name.includes(q);
+        const isKadikoyRelated = q === "kadikoy" && (name.includes("haydarpasa") || name.includes("kadikoy"));
+        const matchesSearch = !q || isKadikoyRelated || name.includes(q);
         
-        const matchesCity = (city === 'all' || s.Name.includes(city));
-        const matchesDistrict = (dist === 'all' || s.Name.includes(dist) || (dist === "Kadıköy" && s.Name.includes("Haydarpaşa")));
+        const matchesCity = (city === 'all' || name.includes(normalizeText(city)));
+        const matchesDistrict = (dist === 'all' || name.includes(normalizeText(dist)) || (normalizeText(dist) === "kadikoy" && name.includes("haydarpasa")));
         const matchesCiv = (civ === 'all' || s.Type === civ);
 
         return matchesSearch && matchesCity && matchesDistrict && matchesCiv;
@@ -57,14 +79,31 @@ function applyFilters() {
 
     renderMarkers(filtered);
     
-    // Ancient sites filtreleme
+    // Ancient sites filtreleme (hizli arama + sehir/ilce + medeniyet)
     if (typeof renderAncientSiteMarkers === 'function') {
-        renderAncientSiteMarkers();
+        const qLower = q;
+        const cityLower = normalizeText(city);
+        const distLower = normalizeText(dist);
+        const filteredAncient = allAncientSites.filter(site => {
+            const name = normalizeText(site.name || '');
+            const matchesSearch = !qLower || name.includes(qLower);
+            const matchesCity = (city === 'all' || name.includes(cityLower));
+            const matchesDistrict = (dist === 'all' || name.includes(distLower));
+            const matchesCiv = (civ === 'all' || (site.type || '').includes(civ));
+            return matchesSearch && matchesCity && matchesDistrict && matchesCiv;
+        });
+        renderAncientSiteMarkers(filteredAncient);
         
         // Medeniyet değiştiğinde ancient language slogan göster
         if (civ !== 'all') {
             showAncientSlogan(civ);
         }
+    }
+
+    // On mobile, close panel after select changes (not while typing)
+    const active = document.activeElement;
+    if (active && (active.id === 'cityFilter' || active.id === 'districtFilter' || active.id === 'civilizationFilter')) {
+        closeSidebarOnMobile();
     }
 
     // KAMERA PAN & ZOOM (AKICI GEÇİŞ)
