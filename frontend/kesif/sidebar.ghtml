@@ -1,0 +1,24 @@
+<!-- Sidebar şablonu: frontend/kesif/sidebar.ghtml -->
+<script>
+// Bu dosya, aktif_linkler dizisine göre menüyü dinamik oluşturur.
+function renderSidebar(aktif_linkler) {
+    const menuItems = [
+        { id: 'rubicon', title: "Rubicon'u Geçmek", subtitle: "Jül Sezar'ın tarihi kararı", url: 'map2.html' },
+        { id: 'nehir', title: "Bir Nehir, Bir Cümle, Bir İmparatorluk", subtitle: "Zar Atıldı", url: 'https://sarpkantman.com/bir-nehir-bir-cumle-bir-imparatorluk-zar-atildi' },
+        { id: 'dday', title: "Normandiya Çıkarması Başarısız Olsaydı Ne Olurdu?", subtitle: "Normandiya Çıkarması Başarısız Olsaydı Ne Olurdu?", url: 'https://sarpkantman.com/tag/d-day' },
+    ];
+    let html = '';
+    html += '<button id="toggle-sidebar" onclick="toggleSidebar()">❮</button>';
+    html += '<h2 class="sidebar-title">KEŞİF PANELİ</h2>';
+    menuItems.forEach(item => {
+        if (aktif_linkler.includes(item.id) || aktif_linkler.includes(item.url)) {
+            html += `<div class="single-post" onclick="window.location.href='${item.url}'">
+                <div class="single-post-title">${item.title}</div>
+                <div class="single-post-sub">${item.subtitle}</div>
+            </div>`;
+        }
+    });
+    html += '<a href="../index.html" class="back-home">← Ana Sayfaya Dön</a>';
+    document.getElementById('sidebar-left').innerHTML = html;
+}
+</script>

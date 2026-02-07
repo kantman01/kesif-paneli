@@ -250,7 +250,7 @@
             -webkit-appearance: none;
             appearance: none;
             width: 60vh;
-            height: 24px;
+            height: 20px;
             transform: rotate(-90deg);
             background: transparent;
             z-index: 2;
@@ -415,10 +415,100 @@
         }
 
         @media (max-width: 640px) {
-            .caesar-overlay-card { padding: 20px; }
-            .caesar-overlay-title { font-size: 1.35rem; }
-            .caesar-overlay-summary { font-size: 0.95rem; }
-            .caesar-info-body { font-size: 0.82rem; }
+            .caesar-overlay-card {
+                padding: 12px !important;
+                font-size: 0.97rem !important;
+                max-width: 98vw !important;
+                width: 98vw !important;
+                border-radius: 8px !important;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+            }
+            .caesar-overlay-title {
+                font-size: 1.15rem !important;
+                margin-bottom: 8px !important;
+            }
+            .caesar-overlay-summary {
+                font-size: 0.92rem !important;
+                line-height: 1.5 !important;
+            }
+            .caesar-overlay-meta {
+                font-size: 0.8rem !important;
+                flex-direction: column !important;
+                gap: 4px !important;
+            }
+            .caesar-overlay-nav {
+                display: none !important;
+            }
+            #caesarOverlayMobileBtn {
+                display: flex !important;
+                justify-content: center;
+                margin: 0 0 0 0;
+                position: fixed;
+                left: 0;
+                bottom: 25px;
+                width: 100vw;
+                background: transparent;
+                z-index: 3300;
+                box-shadow: none;
+            }
+            #caesarOverlayMobileBtn button {
+                border: 1px solid var(--gold);
+                background: #fff;
+                color: var(--deep);
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: 1.25rem;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+                transition: transform 0.2s, box-shadow 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #caesarOverlayMobileBtn button:hover {
+                background: #fff7e6;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 10px rgba(139,0,0,0.10);
+            }
+        }
+
+        /* Caesar overlay navigation button */
+        .caesar-overlay-nav {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 18px;
+        }
+        .caesar-overlay-nav .caesar-info-btn {
+            border: 1px solid var(--gold);
+            background: #fff;
+            color: var(--deep);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .caesar-overlay-nav .caesar-info-btn:hover {
+            background: #fff7e6;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(139,0,0,0.10);
+        }
+        @media (max-width: 640px) {
+            .caesar-overlay-nav {
+                justify-content: center;
+                margin-top: 12px;
+            }
+            .caesar-overlay-nav .caesar-info-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 1.6rem;
+            }
         }
     </style>
 </head>
@@ -426,11 +516,8 @@
     <div id="sidebar-left">
         <button id="toggle-sidebar" onclick="toggleSidebar()" aria-label="Sol paneli kapat">❮</button>
         <h2 class="sidebar-title">KEŞFE BAŞLA</h2>
-        <div class="single-post" id="caesarTrigger">
-            <div class="single-post-title" id="caesarPostTitle">Sezar: Zarlar Atıldı</div>
-            <div class="single-post-sub" id="caesarPostSub">Rubicon'u geçen karar</div>
-        </div>
-        <a href="../index.html" class="back-home">Ana Sayfaya Dön</a>
+        <div id="customPostsList">Yükleniyor...</div>
+        <a href="../../index.html" class="back-home">Ana Sayfaya Dön</a>
     </div>
 
     <button id="open-sidebar" onclick="toggleSidebar()" aria-label="Sol paneli aç">❯</button>
@@ -441,21 +528,19 @@
         <div class="caesar-overlay-card">
             <div class="caesar-overlay-title" id="caesarOverlayTitle">Jül Sezar: Zarlar Atıldı</div>
             <p class="caesar-overlay-summary" id="caesarOverlaySummary">
-                Tarih boyunca bazı anlar vardır ki, yalnızca bir kişinin aldığı kararlarla imparatorluklar doğar,
-                cumhuriyetler yıkılır ve çağlar kapanır. MÖ 49 yılının soğuk bir Ocak gecesi, Jül Sezar küçük ama
-                sembolik bir nehri geçtiğinde, Roma’nın kaderini ebediyen değiştirecek bir zincirleme olaylar silsiri
-                başlamış oldu. O nehrin adı Rubicon’du. Ve o an, tarihin geri dönüşü olmayan noktalarından birine
-                dönüştü. Rubicon Nehri sıradan bir coğrafi sınır değil, Roma Cumhuriyeti’nin yasalarının ve siyasi
-                düzeninin simgesiydi. O nehri bir orduyla geçmek, yalnızca bir isyan değil, bizzat devlete karşı
-                silahlı bir başkaldırı sayılırdı. Ancak Sezar, Roma Senatosu’nun baskısıyla köşeye sıkışmış,
-                siyasi geleceği...
+                Tarih boyunca bazı anlar vardır ki, yalnızca bir kişinin aldığı kararlarla imparatorluklar doğar, cumhuriyetler yıkılır ve çağlar kapanır. MÖ 49 yılının soğuk bir Ocak gecesi, Jül Sezar küçük ama sembolik bir nehri geçtiğinde, Roma’nın kaderini ebediyen değiştirecek bir zincirleme olaylar silsilesi başlamış oldu. O nehrin adı Rubicon’du ve o an, tarihin geri dönüşü olmayan noktalarından birine dönüştü.<br><br>
+Rubicon Nehri sıradan bir coğrafi sınır değil, Roma Cumhuriyeti’nin yasalarının ve siyasi düzeninin simgesiydi. O nehri bir orduyla geçmek, yalnızca bir isyan değil, bizzat devlete karşı silahlı bir başkaldırı sayılırdı. Ancak Sezar, Roma Senatosu’nun baskısıyla köşeye sıkışmış, siyasi geleceği tehdit altına girmişti. Ya boyun eğecek ve halk kahramanlığını, askeri zaferlerini, hatta hayatını kaybedecekti… ya da Rubicon’u geçip tarihin en büyük siyasi hamlelerinden birini gerçekleştirecekti.<br><br>
+“Alea iacta est” — “Zar atıldı.”<br><br>
+Bu sözle birlikte Sezar yalnızca nehri değil, Roma’nın geleceğini de geçti. Onun bu kararı; iç savaşları, ihanetleri, suikastleri ve en nihayetinde Roma Cumhuriyeti’nin çöküşünü ve bir imparatorluğa dönüşmesini beraberinde getirdi. Sezar’ı Rubicon’un kıyısına getiren bu süreç, Pompey ve Senato ile olan çatışmaları ve bu cesur hamlenin Roma’yı kökten sarsışı, bugün bile “Rubicon’u geçmek” ifadesinin neden bu kadar güçlü bir metafor olarak kaldığını kanıtlar niteliktedir. Roma’nın kalbinde başlayan bu yolculuk, yalnızca antik dünyanın değil, günümüz siyasal kültürünün de temel taşlarından biridir.
             </p>
             <div class="caesar-overlay-meta" id="caesarOverlayMeta">
                 <div>Rubicon Nehri, Kuzey İtalya</div>
                 <div>25.04.2025</div>
                 <div>"Alea iacta est"</div>
             </div>
-            <button id="caesarOverlayClose" title="Devam" aria-label="Devam">❯</button>
+            <div class="caesar-overlay-nav">
+                <button class="caesar-info-btn" id="caesarOverlayClose" title="İleri" aria-label="İleri">❯</button>
+            </div>
         </div>
     </div>
 
@@ -477,7 +562,98 @@
         </div>
     </div>
 
+    <div id="caesarOverlayMobileBtn" style="display:none;">
+        <button id="caesarOverlayCloseMobile" title="İleri" aria-label="İleri">❯</button>
+    </div>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script>
+        // Eğer URL'de ?from=map2 varsa, sidebar'ı kapat ve kronolojiyi başlat
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const fromMap2 = params.get('from') === 'map2';
+            var sidebar = document.getElementById('sidebar-left');
+            var openBtn = document.getElementById('open-sidebar');
+            if (sidebar) sidebar.classList.add('closed'); // Her zaman kapalı başlat
+            if (openBtn) openBtn.style.display = 'block'; // Ok butonu her zaman görünüyor
+            fetchCustomSidebar();
+            var overlay = document.getElementById('caesarOverlay');
+            var infoCard = document.getElementById('caesarInfoCard');
+            var timeline = document.getElementById('caesarTimeline');
+            var devambtn = document.getElementById('caesarOverlayClose');
+            var devambtnMobile = document.getElementById('caesarOverlayCloseMobile');
+            // Overlay her zaman açılışta gösterilsin
+            if (overlay) overlay.style.display = 'flex';
+            if (infoCard) infoCard.style.display = 'none';
+            if (timeline) timeline.style.display = 'none';
+            if (openBtn) openBtn.style.display = 'block';
+            if (devambtn) {
+                devambtn.onclick = function() {
+                    if (overlay) overlay.style.display = 'none';
+                    if (timeline) timeline.style.display = 'flex';
+                    if (infoCard) infoCard.style.display = 'block';
+                    activateRoute();
+                    updateStep(0);
+                }
+            }
+            if (devambtnMobile) {
+                devambtnMobile.onclick = function() {
+                    if (overlay) overlay.style.display = 'none';
+                    if (timeline) timeline.style.display = 'flex';
+                    if (infoCard) infoCard.style.display = 'block';
+                    activateRoute();
+                    updateStep(0);
+                }
+            }
+        };
+        // Sadece belirli sayfaları gösterecek şekilde dinamik sidebar
+        const customPages = [
+            {
+                url: 'https://sarpkantman.com/bir-nehir-bir-cumle-bir-imparatorluk-zar-atildi',
+                slug: 'bir-nehir-bir-cumle-bir-imparatorluk-zar-atildi',
+                sub: "Rubicon'u geçen karar",
+                local: 'caesar.html'
+            },
+            {
+                url: 'https://sarpkantman.com/tag/d-day',
+                slug: 'd-day',
+                sub: "II. Dünya Savaşı",
+                local: 'd-day.html'
+            }
+        ];
+
+        async function fetchCustomSidebar() {
+            const container = document.getElementById('customPostsList');
+            let html = '';
+            for (const page of customPages) {
+                try {
+                    let title = '';
+                    if (page.url.includes('/tag/')) {
+                        title = 'D-Day ve Normandiya';
+                    } else {
+                        const resp = await fetch(`https://sarpkantman.com/wp-json/wp/v2/posts?slug=${page.slug}`);
+                        const data = await resp.json();
+                        title = data && data[0] && data[0].title && data[0].title.rendered ? data[0].title.rendered : page.slug;
+                    }
+                    if (page.local) {
+                        html += `<div class="single-post" onclick="window.location.href='${page.local}'">
+                            <div class="single-post-title">${title}</div>
+                            <div class="single-post-sub">${page.sub}</div>
+                        </div>`;
+                    } else {
+                        html += `<div class="single-post" onclick="window.open('${page.url}','_blank')">
+                            <div class="single-post-title">${title}</div>
+                            <div class="single-post-sub">${page.sub}</div>
+                        </div>`;
+                    }
+                } catch (e) {
+                    html += `<div class="single-post"><div class="single-post-title">${page.slug}</div><div class="single-post-sub">(Başlık alınamadı)</div></div>`;
+                }
+            }
+            container.innerHTML = html;
+        }
+        fetchCustomSidebar();
+        </script>
     <script>
         const CAESAR_SLUG = 'bir-nehir-bir-cumle-bir-imparatorluk-zar-atildi';
         const CAESAR_URL = `https://sarpkantman.com/wp-json/wp/v2/posts?slug=${CAESAR_SLUG}&_embed`;
@@ -585,8 +761,8 @@
             caesarMarker.setLatLng([step.lat, step.lon]);
             map.flyTo([step.lat, step.lon], 8, { animate: true, duration: 1.2 });
 
-            label.textContent = step.name;
-            infoTitle.textContent = step.name;
+            label.textContent = step.location;
+            infoTitle.textContent = step.location;
             infoMeta.textContent = step.year + ' · ' + step.location;
             infoText.textContent = postSnippet ? `${step.description}\n\n${postSnippet}` : step.description;
 
@@ -690,15 +866,12 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar-left');
             const openBtn = document.getElementById('open-sidebar');
-
             sidebar.classList.toggle('closed');
-
             if (sidebar.classList.contains('closed')) {
                 setTimeout(() => { if (openBtn) openBtn.style.display = 'block'; }, 300);
             } else {
                 if (openBtn) openBtn.style.display = 'none';
             }
-
             setTimeout(() => {
                 if (typeof map !== 'undefined') {
                     map.invalidateSize();
